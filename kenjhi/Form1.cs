@@ -58,6 +58,8 @@ namespace kenjhi
         {
             try
             {
+                lbl1.Visible = false; // Restablece el estado de lbl1 antes de verificar el acceso
+
                 MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
                 conexion.Open();
 
@@ -71,19 +73,13 @@ namespace kenjhi
 
                 if (datos.Read())
                 {
-                    //MessageBox.Show("Bienvenido " + datos["nombre_usuario"] + "\nTu contraseña es: " + datos["contrasena"]);
-
-
                     frmPrincipal principal = new frmPrincipal();
                     principal.Show();
                     this.Hide();
-                    lbl1.Visible = false;
-
                 }
                 else
                 {
-                    lbl1.Visible = true;
-                    //MessageBox.Show("Acceso Denegado");
+                    lbl1.Visible = true; // Muestra el mensaje de error si el acceso es denegado
                 }
 
             }
