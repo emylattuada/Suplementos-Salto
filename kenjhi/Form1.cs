@@ -58,13 +58,13 @@ namespace kenjhi
         {
             try
             {
-                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=negocio_comida_rapida; Uid=jhin; Pwd=jhin444_2023;");
+                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
                 conexion.Open();
 
                 MySqlCommand comandos = new MySqlCommand();
                 comandos.Connection = conexion;
 
-                string consulta = "SELECT nombre_usuario, contrasena FROM usuarios WHERE nombre_usuario = '" + txtUsuario.Text + "' AND contrasena = '" + txtContrasena.Text + "'";
+                string consulta = "SELECT NombreUsuario, Contraseña FROM usuarios WHERE NombreUsuario = '" + txtUsuario.Text + "' AND Contraseña = '" + txtContrasena.Text + "'";
 
                 comandos.CommandText = consulta;
                 MySqlDataReader datos = comandos.ExecuteReader();
@@ -106,13 +106,13 @@ namespace kenjhi
 
                 try
                 {
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=negocio_comida_rapida; Uid=jhin; Pwd=jhin444_2023;");
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
                     conexion.Open();
 
                     MySqlCommand comandos = new MySqlCommand();
                     comandos.Connection = conexion;
 
-                    string consulta = "SELECT nombre_usuario, contrasena FROM usuarios WHERE nombre_usuario = '" + txtUsuario.Text + "' AND contrasena = '" + txtContrasena.Text + "'";
+                    string consulta = "SELECT NombreUsuario, Contraseña FROM usuarios WHERE NombreUsuario = '" + txtUsuario.Text + "' AND Contraseña = '" + txtContrasena.Text + "'";
 
                     comandos.CommandText = consulta;
                     MySqlDataReader datos = comandos.ExecuteReader();
