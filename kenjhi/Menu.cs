@@ -89,7 +89,7 @@ namespace kenjhi
 
         private void btnModificarCliente_Click(object sender, EventArgs e)
         {
-            openChildForm(new Modificar_Cliente());
+            openChildForm(new Ver_Clientes());
             hideSubMenu();
 
         }

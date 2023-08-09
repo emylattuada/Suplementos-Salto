@@ -13,46 +13,43 @@ namespace kenjhi
 {
     public partial class Ver_Clientes : Form
     {
+
         public Ver_Clientes()
         {
             InitializeComponent();
-            // Conexión a la base de datos
-            using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=negocio_comida_rapida; Uid=jhin; Pwd=jhin444_2023;"))
+
+            try
             {
-                connection.Open();
+                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"); ;
+                conexion.Open();
 
-                // Consulta SQL para obtener todos los clientes
-                string query = "SELECT id_cliente AS 'ID', nombre_completo AS 'Nombre', numero_telefono AS 'Número de teléfono', direccion AS 'Dirección' FROM clientes";
+                string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente";
 
-                using (MySqlCommand command = new MySqlCommand(query, connection))
-                {
-                    // Crear un objeto DataTable para almacenar los resultados de la consulta
-                    DataTable dataTable = new DataTable();
+                MySqlCommand comandos = new MySqlCommand(consulta, conexion);
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
 
-                    // Utilizar un objeto MySqlDataAdapter para llenar el DataTable con los resultados de la consulta
-                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(command))
-                    {
-                        adapter.Fill(dataTable);
-                    }
+                System.Data.DataTable tablaClientes = new System.Data.DataTable();
+                adaptador.Fill(tablaClientes);
 
-                    // Asignar el DataTable como origen de datos del DataGridView
-                    dataGridClientes.DataSource = dataTable;
+                dataGridClientes.DataSource = tablaClientes;
 
-                    // Establecer los encabezados de columna personalizados
-                    dataGridClientes.Columns["ID"].HeaderText = "ID";
-                    dataGridClientes.Columns["Nombre"].HeaderText = "Nombre";
-                    dataGridClientes.Columns["Número de teléfono"].HeaderText = "Número de teléfono";
-                    dataGridClientes.Columns["Dirección"].HeaderText = "Dirección";
-                }
+                // Configurar las columnas
+                dataGridClientes.Columns["ID_Cliente"].HeaderText = "ID";
+                dataGridClientes.Columns["ID_Cliente"].Visible = false;
+                dataGridClientes.Columns["Nombre"].HeaderText = "Cliente";
+                dataGridClientes.Columns["Telefono"].HeaderText = "Numero de teléfono";
+                dataGridClientes.Columns["Direccion"].HeaderText = "Dirección";
+                dataGridClientes.Columns["Email"].HeaderText = "Correo electrónico";
+
+                // Ajustar el ancho de las columnas
+                dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                conexion.Close();
             }
-
-            // Establecer el tamaño mínimo de la columna "Nombre" a 100
-            dataGridClientes.Columns["Nombre"].MinimumWidth = 100;
-            // Establecer el tamaño mínimo de la columna "Número de teléfono" a 80
-            dataGridClientes.Columns["Número de teléfono"].MinimumWidth = 150;
-            // Establecer el tamaño mínimo de la columna "Dirección" a 30
-            dataGridClientes.Columns["Dirección"].MinimumWidth = 245;
-
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
 
         }
@@ -60,6 +57,39 @@ namespace kenjhi
         private void btnVolver_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnGuardarCambios_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+                {
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT ID_Cliente, Nombre, Email, Telefono FROM Cliente", connection))
+                    {
+                        MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(adapter);
+                        adapter.Update((DataTable)dataGridClientes.DataSource);
+                    }
+
+                    MessageBox.Show("Datos actualizados.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    lblSinGuardar.Visible = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al guardar los cambios: " + ex.Message);
+            }
+        }
+
+        private void dataGridClientes_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            lblSinGuardar.Visible = true;
+            btnGuardarCambios.Visible = true;
+        }
+
+        private void dataGridClientes_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            //lblSinGuardar.Visible = true;
         }
     }
 }

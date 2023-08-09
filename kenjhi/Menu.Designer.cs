@@ -46,7 +46,6 @@
             this.btnAgregarPlato = new System.Windows.Forms.Button();
             this.btnMenu = new System.Windows.Forms.Button();
             this.panelClientesSubmenu = new System.Windows.Forms.Panel();
-            this.btnVerClientes = new System.Windows.Forms.Button();
             this.btnModificarCliente = new System.Windows.Forms.Button();
             this.btnAgregarCliente = new System.Windows.Forms.Button();
             this.btnClientes = new System.Windows.Forms.Button();
@@ -143,7 +142,7 @@
             this.panelPedidosSubmenu.Controls.Add(this.btnModificarPedido);
             this.panelPedidosSubmenu.Controls.Add(this.btnNuevoPedido);
             this.panelPedidosSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPedidosSubmenu.Location = new System.Drawing.Point(0, 396);
+            this.panelPedidosSubmenu.Location = new System.Drawing.Point(0, 368);
             this.panelPedidosSubmenu.Name = "panelPedidosSubmenu";
             this.panelPedidosSubmenu.Size = new System.Drawing.Size(181, 103);
             this.panelPedidosSubmenu.TabIndex = 6;
@@ -210,7 +209,7 @@
             this.btnPedidos.ForeColor = System.Drawing.Color.Black;
             this.btnPedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnPedidos.Image")));
             this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedidos.Location = new System.Drawing.Point(0, 366);
+            this.btnPedidos.Location = new System.Drawing.Point(0, 338);
             this.btnPedidos.Name = "btnPedidos";
             this.btnPedidos.Padding = new System.Windows.Forms.Padding(0, 0, 66, 0);
             this.btnPedidos.Size = new System.Drawing.Size(181, 30);
@@ -226,7 +225,7 @@
             this.panelMenuSubmenu.Controls.Add(this.btnModificarMenu);
             this.panelMenuSubmenu.Controls.Add(this.btnAgregarPlato);
             this.panelMenuSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuSubmenu.Location = new System.Drawing.Point(0, 263);
+            this.panelMenuSubmenu.Location = new System.Drawing.Point(0, 235);
             this.panelMenuSubmenu.Name = "panelMenuSubmenu";
             this.panelMenuSubmenu.Size = new System.Drawing.Size(181, 103);
             this.panelMenuSubmenu.TabIndex = 4;
@@ -295,7 +294,7 @@
             this.btnMenu.ForeColor = System.Drawing.Color.Black;
             this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(0, 233);
+            this.btnMenu.Location = new System.Drawing.Point(0, 205);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Padding = new System.Windows.Forms.Padding(0, 0, 55, 0);
             this.btnMenu.Size = new System.Drawing.Size(181, 30);
@@ -307,32 +306,13 @@
             // panelClientesSubmenu
             // 
             this.panelClientesSubmenu.BackColor = System.Drawing.Color.White;
-            this.panelClientesSubmenu.Controls.Add(this.btnVerClientes);
             this.panelClientesSubmenu.Controls.Add(this.btnModificarCliente);
             this.panelClientesSubmenu.Controls.Add(this.btnAgregarCliente);
             this.panelClientesSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelClientesSubmenu.Location = new System.Drawing.Point(0, 130);
             this.panelClientesSubmenu.Name = "panelClientesSubmenu";
-            this.panelClientesSubmenu.Size = new System.Drawing.Size(181, 103);
+            this.panelClientesSubmenu.Size = new System.Drawing.Size(181, 75);
             this.panelClientesSubmenu.TabIndex = 2;
-            // 
-            // btnVerClientes
-            // 
-            this.btnVerClientes.BackColor = System.Drawing.Color.White;
-            this.btnVerClientes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVerClientes.FlatAppearance.BorderSize = 0;
-            this.btnVerClientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVerClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVerClientes.ForeColor = System.Drawing.Color.Black;
-            this.btnVerClientes.Location = new System.Drawing.Point(0, 60);
-            this.btnVerClientes.Name = "btnVerClientes";
-            this.btnVerClientes.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnVerClientes.Size = new System.Drawing.Size(181, 30);
-            this.btnVerClientes.TabIndex = 5;
-            this.btnVerClientes.Text = "Ver todos los clientes";
-            this.btnVerClientes.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVerClientes.UseVisualStyleBackColor = false;
-            this.btnVerClientes.Click += new System.EventHandler(this.btnVerClientes_Click);
             // 
             // btnModificarCliente
             // 
@@ -347,7 +327,7 @@
             this.btnModificarCliente.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnModificarCliente.Size = new System.Drawing.Size(181, 30);
             this.btnModificarCliente.TabIndex = 4;
-            this.btnModificarCliente.Text = "Modificar cliente";
+            this.btnModificarCliente.Text = "Ver todos los clientes";
             this.btnModificarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificarCliente.UseVisualStyleBackColor = false;
             this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);
@@ -536,7 +516,6 @@
         private System.Windows.Forms.Panel panelClientesSubmenu;
         private System.Windows.Forms.Button btnAgregarCliente;
         private System.Windows.Forms.Button btnModificarCliente;
-        private System.Windows.Forms.Button btnVerClientes;
         private System.Windows.Forms.Panel panelMenuSubmenu;
         private System.Windows.Forms.Button btnVerMenu;
         private System.Windows.Forms.Button btnModificarMenu;

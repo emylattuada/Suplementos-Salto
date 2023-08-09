@@ -118,12 +118,6 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modificar_Cliente.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Modificar_Cliente.Designer.cs">
-      <DependentUpon>Modificar_Cliente.cs</DependentUpon>
-    </Compile>
     <Compile Include="Nuevo_Pedido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -149,9 +143,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Modificar_Cliente.resx">
-      <DependentUpon>Modificar_Cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Nuevo_Pedido.resx">
       <DependentUpon>Nuevo_Pedido.cs</DependentUpon>

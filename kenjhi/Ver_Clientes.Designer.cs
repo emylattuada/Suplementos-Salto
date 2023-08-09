@@ -33,6 +33,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridClientes = new System.Windows.Forms.DataGridView();
             this.btnVolver = new kenjhi.RJButton();
+            this.lblSinGuardar = new System.Windows.Forms.Label();
+            this.btnGuardarCambios = new kenjhi.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -71,7 +73,6 @@
             this.dataGridClientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.dataGridClientes.Location = new System.Drawing.Point(95, -3);
             this.dataGridClientes.Name = "dataGridClientes";
-            this.dataGridClientes.ReadOnly = true;
             this.dataGridClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -81,8 +82,10 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dataGridClientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.dataGridClientes.Size = new System.Drawing.Size(578, 508);
+            this.dataGridClientes.Size = new System.Drawing.Size(578, 475);
             this.dataGridClientes.TabIndex = 0;
+            this.dataGridClientes.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridClientes_CellMouseDoubleClick);
+            this.dataGridClientes.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridClientes_CellValueChanged);
             // 
             // btnVolver
             // 
@@ -104,18 +107,54 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // lblSinGuardar
+            // 
+            this.lblSinGuardar.AutoSize = true;
+            this.lblSinGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSinGuardar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(94)))), ((int)(((byte)(95)))));
+            this.lblSinGuardar.Location = new System.Drawing.Point(92, 487);
+            this.lblSinGuardar.Name = "lblSinGuardar";
+            this.lblSinGuardar.Size = new System.Drawing.Size(126, 13);
+            this.lblSinGuardar.TabIndex = 23;
+            this.lblSinGuardar.Text = "Hay cambios sin guardar.";
+            this.lblSinGuardar.Visible = false;
+            // 
+            // btnGuardarCambios
+            // 
+            this.btnGuardarCambios.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btnGuardarCambios.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.btnGuardarCambios.BorderColor = System.Drawing.Color.Transparent;
+            this.btnGuardarCambios.BorderRadius = 10;
+            this.btnGuardarCambios.BorderSize = 0;
+            this.btnGuardarCambios.FlatAppearance.BorderSize = 0;
+            this.btnGuardarCambios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarCambios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarCambios.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarCambios.Location = new System.Drawing.Point(482, 476);
+            this.btnGuardarCambios.Name = "btnGuardarCambios";
+            this.btnGuardarCambios.Size = new System.Drawing.Size(179, 26);
+            this.btnGuardarCambios.TabIndex = 25;
+            this.btnGuardarCambios.Text = "Guardar cambios";
+            this.btnGuardarCambios.TextColor = System.Drawing.Color.White;
+            this.btnGuardarCambios.UseVisualStyleBackColor = false;
+            this.btnGuardarCambios.Visible = false;
+            this.btnGuardarCambios.Click += new System.EventHandler(this.btnGuardarCambios_Click);
+            // 
             // Ver_Clientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(673, 505);
+            this.Controls.Add(this.btnGuardarCambios);
+            this.Controls.Add(this.lblSinGuardar);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.dataGridClientes);
             this.Name = "Ver_Clientes";
             this.Text = "Kenjhi";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClientes)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -123,5 +162,7 @@
 
         private System.Windows.Forms.DataGridView dataGridClientes;
         private RJButton btnVolver;
+        private System.Windows.Forms.Label lblSinGuardar;
+        private RJButton btnGuardarCambios;
     }
 }
