@@ -73,6 +73,7 @@ namespace kenjhi
 
                     MessageBox.Show("Datos actualizados.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     lblSinGuardar.Visible = false;
+                    btnGuardarCambios.Visible = false;
                 }
             }
             catch (Exception ex)

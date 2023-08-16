@@ -100,12 +100,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Agregar Categoria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar Categoria.Designer.cs">
+      <DependentUpon>Agregar Categoria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Agregar Producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Agregar Producto.Designer.cs">
+      <DependentUpon>Agregar Producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Agregar_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Agregar_Clientes.Designer.cs">
       <DependentUpon>Agregar_Clientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="CategoriaItem.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +148,12 @@
     <Compile Include="Ver_Clientes.Designer.cs">
       <DependentUpon>Ver_Clientes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Agregar Categoria.resx">
+      <DependentUpon>Agregar Categoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Agregar Producto.resx">
+      <DependentUpon>Agregar Producto.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Agregar_Clientes.resx">
       <DependentUpon>Agregar_Clientes.cs</DependentUpon>
     </EmbeddedResource>

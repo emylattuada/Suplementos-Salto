@@ -109,6 +109,7 @@ namespace kenjhi
 
         private void btnAgregarPlato_Click(object sender, EventArgs e)
         {
+            openChildForm(new Agregar_Producto());
             hideSubMenu();
 
         }

@@ -75,7 +75,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.pictureBox2);
@@ -121,7 +121,7 @@
             // 
             // panelSideMenu
             // 
-            this.panelSideMenu.BackColor = System.Drawing.Color.White;
+            this.panelSideMenu.BackColor = System.Drawing.Color.Yellow;
             this.panelSideMenu.Controls.Add(this.panelPedidosSubmenu);
             this.panelSideMenu.Controls.Add(this.btnPedidos);
             this.panelSideMenu.Controls.Add(this.panelMenuSubmenu);
@@ -137,7 +137,7 @@
             // 
             // panelPedidosSubmenu
             // 
-            this.panelPedidosSubmenu.BackColor = System.Drawing.Color.White;
+            this.panelPedidosSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panelPedidosSubmenu.Controls.Add(this.btnVerPedidos);
             this.panelPedidosSubmenu.Controls.Add(this.btnModificarPedido);
             this.panelPedidosSubmenu.Controls.Add(this.btnNuevoPedido);
@@ -149,7 +149,7 @@
             // 
             // btnVerPedidos
             // 
-            this.btnVerPedidos.BackColor = System.Drawing.Color.White;
+            this.btnVerPedidos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnVerPedidos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnVerPedidos.FlatAppearance.BorderSize = 0;
             this.btnVerPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -166,7 +166,7 @@
             // 
             // btnModificarPedido
             // 
-            this.btnModificarPedido.BackColor = System.Drawing.Color.White;
+            this.btnModificarPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnModificarPedido.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnModificarPedido.FlatAppearance.BorderSize = 0;
             this.btnModificarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -183,7 +183,7 @@
             // 
             // btnNuevoPedido
             // 
-            this.btnNuevoPedido.BackColor = System.Drawing.Color.White;
+            this.btnNuevoPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnNuevoPedido.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnNuevoPedido.FlatAppearance.BorderSize = 0;
             this.btnNuevoPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -220,7 +220,7 @@
             // 
             // panelMenuSubmenu
             // 
-            this.panelMenuSubmenu.BackColor = System.Drawing.Color.White;
+            this.panelMenuSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panelMenuSubmenu.Controls.Add(this.btnVerMenu);
             this.panelMenuSubmenu.Controls.Add(this.btnModificarMenu);
             this.panelMenuSubmenu.Controls.Add(this.btnAgregarPlato);
@@ -232,7 +232,7 @@
             // 
             // btnVerMenu
             // 
-            this.btnVerMenu.BackColor = System.Drawing.Color.White;
+            this.btnVerMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnVerMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnVerMenu.FlatAppearance.BorderSize = 0;
             this.btnVerMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -250,7 +250,7 @@
             // 
             // btnModificarMenu
             // 
-            this.btnModificarMenu.BackColor = System.Drawing.Color.White;
+            this.btnModificarMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnModificarMenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnModificarMenu.FlatAppearance.BorderSize = 0;
             this.btnModificarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -261,14 +261,14 @@
             this.btnModificarMenu.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnModificarMenu.Size = new System.Drawing.Size(181, 30);
             this.btnModificarMenu.TabIndex = 4;
-            this.btnModificarMenu.Text = "Modificar el menú";
+            this.btnModificarMenu.Text = "Ver todos los produtos";
             this.btnModificarMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificarMenu.UseVisualStyleBackColor = false;
             this.btnModificarMenu.Click += new System.EventHandler(this.btnModificarMenu_Click);
             // 
             // btnAgregarPlato
             // 
-            this.btnAgregarPlato.BackColor = System.Drawing.Color.White;
+            this.btnAgregarPlato.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAgregarPlato.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAgregarPlato.FlatAppearance.BorderSize = 0;
             this.btnAgregarPlato.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -279,7 +279,7 @@
             this.btnAgregarPlato.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnAgregarPlato.Size = new System.Drawing.Size(181, 30);
             this.btnAgregarPlato.TabIndex = 3;
-            this.btnAgregarPlato.Text = "Agregar plato al menú";
+            this.btnAgregarPlato.Text = "Agregar producto";
             this.btnAgregarPlato.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarPlato.UseVisualStyleBackColor = false;
             this.btnAgregarPlato.Click += new System.EventHandler(this.btnAgregarPlato_Click);
@@ -305,7 +305,7 @@
             // 
             // panelClientesSubmenu
             // 
-            this.panelClientesSubmenu.BackColor = System.Drawing.Color.White;
+            this.panelClientesSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panelClientesSubmenu.Controls.Add(this.btnModificarCliente);
             this.panelClientesSubmenu.Controls.Add(this.btnAgregarCliente);
             this.panelClientesSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
@@ -316,7 +316,7 @@
             // 
             // btnModificarCliente
             // 
-            this.btnModificarCliente.BackColor = System.Drawing.Color.White;
+            this.btnModificarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnModificarCliente.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnModificarCliente.FlatAppearance.BorderSize = 0;
             this.btnModificarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -334,7 +334,7 @@
             // 
             // btnAgregarCliente
             // 
-            this.btnAgregarCliente.BackColor = System.Drawing.Color.White;
+            this.btnAgregarCliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btnAgregarCliente.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAgregarCliente.FlatAppearance.BorderSize = 0;
             this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -371,7 +371,7 @@
             // 
             // panelLogo
             // 
-            this.panelLogo.BackColor = System.Drawing.Color.Black;
+            this.panelLogo.BackColor = System.Drawing.Color.Yellow;
             this.panelLogo.Controls.Add(this.pictureBox1);
             this.panelLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelLogo.Location = new System.Drawing.Point(0, 0);
