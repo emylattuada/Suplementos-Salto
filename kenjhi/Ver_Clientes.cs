@@ -65,7 +65,7 @@ namespace kenjhi
             {
                 using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
                 {
-                    using (MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT ID_Cliente, Nombre, Email, Telefono FROM Cliente", connection))
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT ID_Cliente, Nombre, Email, Telefono, Direccion FROM Cliente", connection))
                     {
                         MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(adapter);
                         adapter.Update((DataTable)dataGridClientes.DataSource);

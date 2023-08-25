@@ -147,6 +147,10 @@ namespace kenjhi
             // Obtener el ID de la categoría desde la base de datos (puede ser necesario modificar esto)
             int categoriaID = ObtenerCategoriaIDDesdeBaseDeDatos(nombreCategoria);
 
+            //byte[] imagenBytes = ConvertirImagenABytes(rutaImagen);
+
+
+
             // Insertar los datos en la base de datos
             InsertProductIntoDatabase(nombreProducto, categoriaID, precio, cantidad);
 
@@ -219,6 +223,7 @@ namespace kenjhi
                     insertCommand.Parameters.AddWithValue("@categoriaID", categoriaID);
                     insertCommand.Parameters.AddWithValue("@precio", precio);
                     insertCommand.Parameters.AddWithValue("@cantidad", cantidad);
+                    //insertCommand.Parameters.AddWithValue("@imagen", imagen);
 
                     insertCommand.ExecuteNonQuery(); // Ejecuta la consulta de inserción
                 }
@@ -230,10 +235,28 @@ namespace kenjhi
             }
         }
 
-
+        private string rutaImagen;
         private void linkProductoImagen_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            //using (OpenFileDialog openFileDialog = new OpenFileDialog())
+            //{
+            //    openFileDialog.Filter = "Archivos de imagen|*.jpg;*.jpeg;*.png;*.gif;*.bmp";
+            //    if (openFileDialog.ShowDialog() == DialogResult.OK)
+            //    {
+            //        // Mostrar la imagen seleccionada en una vista previa (opcional)
+            //        Image imagenSeleccionada = Image.FromFile(openFileDialog.FileName);
+            //        // Puedes mostrar la imagen en un PictureBox o en otro control visual.
 
+            //        // Guarda la ruta de la imagen seleccionada en una variable (rutaImagen)
+            //        string rutaImagen = openFileDialog.FileName;
+            //        imagenProducto.Image = Image.FromFile(rutaImagen);
+
+
+            //        // Puedes guardar la rutaImagen en una variable miembro del formulario para acceder a ella en el botón Agregar.
+            //        // this.rutaImagen = rutaImagen;
+            //    }
+            //}
+            //linklabel eliminado, no logramos hacerlo funcionar
         }
 
         private void timerCategoria_Tick(object sender, EventArgs e)
@@ -291,5 +314,49 @@ namespace kenjhi
             //comboCategoriaProducto.Items.Clear();
 
         }
+
+        //private byte[] ConvertirImagenABytes(string rutaImagen)
+        //{
+        //    byte[] imagenBytes = null;
+        //    if (!string.IsNullOrEmpty(rutaImagen))
+        //    {
+        //        using (FileStream stream = new FileStream(rutaImagen, FileMode.Open, FileAccess.Read))
+        //        {
+        //            using (BinaryReader reader = new BinaryReader(stream))
+        //            {
+        //                imagenBytes = reader.ReadBytes((int)stream.Length);
+        //            }
+        //        }
+        //    }
+        //    return imagenBytes;
+        //}
+
+        private void pictureBoxCerrarImagen_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void linkLabelPrevisualizar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            //if (!string.IsNullOrEmpty(rutaImagen))
+            //{
+            //    // Mostrar la imagen en el PictureBox dentro del panel
+            //    imagenProducto.Image = Image.FromFile(rutaImagen);
+            //    imagenProducto.Visible = true;
+            //}
+            //else
+            //{
+            //    // Si no se ha subido una imagen, mostrar un mensaje
+            //    MessageBox.Show("No has cargado una imagen.", "Previsualización de Imagen", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //}
+        }
+
+        
+
+       
+
+        
+
+        
     }
 }

@@ -116,6 +116,7 @@ namespace kenjhi
 
         private void btnModificarMenu_Click(object sender, EventArgs e)
         {
+            openChildForm(new Ver_Productos());
             hideSubMenu();
 
         }
@@ -158,6 +159,11 @@ namespace kenjhi
         private void btnNuevoPedido_Click(object sender, EventArgs e)
         {
             openChildForm(new Nuevo_Pedido());
+        }
+
+        private void SeccionAdmin_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void openChildForm(Form childform)

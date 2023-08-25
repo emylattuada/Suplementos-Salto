@@ -42,26 +42,20 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.comboCategoriaProducto = new System.Windows.Forms.ComboBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.linkProductoImagen = new System.Windows.Forms.LinkLabel();
             this.lblAgregarProducto = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.numericUpDownCantidad = new System.Windows.Forms.NumericUpDown();
             this.linkCrearCategoria = new System.Windows.Forms.LinkLabel();
-            this.imagenProducto = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.numericUpDownPrecio = new System.Windows.Forms.NumericUpDown();
             this.timerCategoria2 = new System.Windows.Forms.Timer(this.components);
             this.picActualizarCategoria = new System.Windows.Forms.PictureBox();
+            this.labelActualizacionCate = new System.Windows.Forms.Label();
             this.btnAgregarProducto = new kenjhi.RJButton();
             this.btnVolver = new kenjhi.RJButton();
-            this.labelActualizacionCate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCantidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imagenProducto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picActualizarCategoria)).BeginInit();
             this.SuspendLayout();
@@ -213,57 +207,6 @@
             this.comboCategoriaProducto.Size = new System.Drawing.Size(343, 24);
             this.comboCategoriaProducto.TabIndex = 69;
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(515, 342);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(61, 16);
-            this.label8.TabIndex = 73;
-            this.label8.Text = "Opcional";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.Color.Transparent;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label9.Location = new System.Drawing.Point(120, 339);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(52, 16);
-            this.label9.TabIndex = 71;
-            this.label9.Text = "Imagen";
-            // 
-            // textBox5
-            // 
-            this.textBox5.BackColor = System.Drawing.Color.Yellow;
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox5.Enabled = false;
-            this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(123, 386);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(120, 1);
-            this.textBox5.TabIndex = 70;
-            // 
-            // linkProductoImagen
-            // 
-            this.linkProductoImagen.ActiveLinkColor = System.Drawing.Color.White;
-            this.linkProductoImagen.AutoSize = true;
-            this.linkProductoImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkProductoImagen.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.linkProductoImagen.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.linkProductoImagen.Location = new System.Drawing.Point(120, 367);
-            this.linkProductoImagen.Name = "linkProductoImagen";
-            this.linkProductoImagen.Size = new System.Drawing.Size(127, 16);
-            this.linkProductoImagen.TabIndex = 74;
-            this.linkProductoImagen.TabStop = true;
-            this.linkProductoImagen.Text = "Seleccionar imagen";
-            this.linkProductoImagen.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkProductoImagen_LinkClicked_1);
-            // 
             // lblAgregarProducto
             // 
             this.lblAgregarProducto.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -272,7 +215,7 @@
             this.lblAgregarProducto.AutoSize = true;
             this.lblAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgregarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(94)))), ((int)(((byte)(95)))));
-            this.lblAgregarProducto.Location = new System.Drawing.Point(273, 407);
+            this.lblAgregarProducto.Location = new System.Drawing.Point(273, 356);
             this.lblAgregarProducto.Name = "lblAgregarProducto";
             this.lblAgregarProducto.Size = new System.Drawing.Size(152, 13);
             this.lblAgregarProducto.TabIndex = 76;
@@ -346,14 +289,6 @@
             this.linkCrearCategoria.Text = "Crear categoría";
             this.linkCrearCategoria.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCrearCategoria_LinkClicked);
             // 
-            // imagenProducto
-            // 
-            this.imagenProducto.Location = new System.Drawing.Point(443, 339);
-            this.imagenProducto.Name = "imagenProducto";
-            this.imagenProducto.Size = new System.Drawing.Size(66, 48);
-            this.imagenProducto.TabIndex = 83;
-            this.imagenProducto.TabStop = false;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
@@ -390,6 +325,21 @@
             this.picActualizarCategoria.Tag = "Actualizar categorias";
             this.picActualizarCategoria.Click += new System.EventHandler(this.picActualizarCategoria_Click);
             // 
+            // labelActualizacionCate
+            // 
+            this.labelActualizacionCate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelActualizacionCate.AutoSize = true;
+            this.labelActualizacionCate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelActualizacionCate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.labelActualizacionCate.Location = new System.Drawing.Point(270, 356);
+            this.labelActualizacionCate.Name = "labelActualizacionCate";
+            this.labelActualizacionCate.Size = new System.Drawing.Size(168, 13);
+            this.labelActualizacionCate.TabIndex = 86;
+            this.labelActualizacionCate.Text = "Se han actualizado las categorías";
+            this.labelActualizacionCate.Visible = false;
+            // 
             // btnAgregarProducto
             // 
             this.btnAgregarProducto.BackColor = System.Drawing.Color.Yellow;
@@ -401,7 +351,7 @@
             this.btnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarProducto.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(123, 434);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(123, 383);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(450, 44);
             this.btnAgregarProducto.TabIndex = 75;
@@ -430,21 +380,6 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // labelActualizacionCate
-            // 
-            this.labelActualizacionCate.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelActualizacionCate.AutoSize = true;
-            this.labelActualizacionCate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelActualizacionCate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.labelActualizacionCate.Location = new System.Drawing.Point(273, 407);
-            this.labelActualizacionCate.Name = "labelActualizacionCate";
-            this.labelActualizacionCate.Size = new System.Drawing.Size(168, 13);
-            this.labelActualizacionCate.TabIndex = 86;
-            this.labelActualizacionCate.Text = "Se han actualizado las categorías";
-            this.labelActualizacionCate.Visible = false;
-            // 
             // Agregar_Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -454,7 +389,6 @@
             this.Controls.Add(this.labelActualizacionCate);
             this.Controls.Add(this.picActualizarCategoria);
             this.Controls.Add(this.numericUpDownPrecio);
-            this.Controls.Add(this.imagenProducto);
             this.Controls.Add(this.linkCrearCategoria);
             this.Controls.Add(this.numericUpDownCantidad);
             this.Controls.Add(this.label10);
@@ -462,10 +396,6 @@
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.lblAgregarProducto);
             this.Controls.Add(this.btnAgregarProducto);
-            this.Controls.Add(this.linkProductoImagen);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.comboCategoriaProducto);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label7);
@@ -482,7 +412,6 @@
             this.Name = "Agregar_Producto";
             this.Text = "Agregar_Producto";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCantidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imagenProducto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picActualizarCategoria)).EndInit();
             this.ResumeLayout(false);
@@ -505,10 +434,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.ComboBox comboCategoriaProducto;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.LinkLabel linkProductoImagen;
         private RJButton btnAgregarProducto;
         private System.Windows.Forms.Label lblAgregarProducto;
         private System.Windows.Forms.Label label10;
@@ -516,7 +441,6 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.NumericUpDown numericUpDownCantidad;
         private System.Windows.Forms.LinkLabel linkCrearCategoria;
-        private System.Windows.Forms.PictureBox imagenProducto;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.NumericUpDown numericUpDownPrecio;
         private System.Windows.Forms.Timer timerCategoria;
