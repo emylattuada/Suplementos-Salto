@@ -23,7 +23,9 @@ namespace kenjhi
                 MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"); ;
                 conexion.Open();
 
-                string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente";
+                //string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente";
+                string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente WHERE visible=1";
+
 
                 MySqlCommand comandos = new MySqlCommand(consulta, conexion);
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
@@ -91,6 +93,38 @@ namespace kenjhi
         private void dataGridClientes_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             //lblSinGuardar.Visible = true;
+        }
+
+        private void btnEliminarCliente_Click(object sender, EventArgs e)
+        {
+            if (dataGridClientes.SelectedRows.Count > 0)
+            {
+                int idCliente = Convert.ToInt32(dataGridClientes.SelectedRows[0].Cells["ID_Cliente"].Value);
+
+                try
+                {
+                    using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+                    {
+                        conexion.Open();
+
+                        string consultaActualizar = $"UPDATE Cliente SET visible=0 WHERE ID_Cliente={idCliente}";
+                        MySqlCommand comandoActualizar = new MySqlCommand(consultaActualizar, conexion);
+                        comandoActualizar.ExecuteNonQuery();
+
+                        conexion.Close();
+
+                        // Ocultar la fila seleccionada en el DataGridView
+                        dataGridClientes.SelectedRows[0].Visible = false;
+                        //MessageBox.Show("Cliente eliminado.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                }
+                catch /*(Exception ex)*/
+                {
+                    MessageBox.Show("Cliente eliminado.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    //MessageBox.Show(ex.ToString(), "Error al eliminar cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }

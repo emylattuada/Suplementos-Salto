@@ -163,6 +163,7 @@ namespace kenjhi
 
         private void SeccionAdmin_Click(object sender, EventArgs e)
         {
+            openChildForm(new Nuevo_Pedido()); //cambiar al form que debo crear
 
         }
 
