@@ -131,6 +131,12 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modo Administrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modo Administrador.Designer.cs">
+      <DependentUpon>Modo Administrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Nuevo_Pedido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -169,6 +175,9 @@
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Modo Administrador.resx">
+      <DependentUpon>Modo Administrador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Nuevo_Pedido.resx">
       <DependentUpon>Nuevo_Pedido.cs</DependentUpon>
     </EmbeddedResource>
@@ -180,6 +189,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Ver Productos.resx">
       <DependentUpon>Ver Productos.cs</DependentUpon>
@@ -200,6 +210,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat-flecha-crecer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\expediente.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

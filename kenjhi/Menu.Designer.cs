@@ -37,7 +37,6 @@
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelPedidosSubmenu = new System.Windows.Forms.Panel();
             this.btnVerPedidos = new System.Windows.Forms.Button();
-            this.btnModificarPedido = new System.Windows.Forms.Button();
             this.btnNuevoPedido = new System.Windows.Forms.Button();
             this.btnPedidos = new System.Windows.Forms.Button();
             this.panelMenuSubmenu = new System.Windows.Forms.Panel();
@@ -51,6 +50,12 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureCerrarSesion = new System.Windows.Forms.PictureBox();
+            this.labelADM = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.SeccionAdmin = new System.Windows.Forms.PictureBox();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.labelUser = new System.Windows.Forms.Label();
@@ -58,9 +63,6 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
-            this.SeccionAdmin = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -72,9 +74,11 @@
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelChildForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SeccionAdmin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureCerrarSesion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeccionAdmin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -104,9 +108,9 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(799, 4);
+            this.pictureBox3.Location = new System.Drawing.Point(800, 2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(19, 21);
+            this.pictureBox3.Size = new System.Drawing.Size(16, 20);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
@@ -144,12 +148,11 @@
             // 
             this.panelPedidosSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panelPedidosSubmenu.Controls.Add(this.btnVerPedidos);
-            this.panelPedidosSubmenu.Controls.Add(this.btnModificarPedido);
             this.panelPedidosSubmenu.Controls.Add(this.btnNuevoPedido);
             this.panelPedidosSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPedidosSubmenu.Location = new System.Drawing.Point(0, 340);
             this.panelPedidosSubmenu.Name = "panelPedidosSubmenu";
-            this.panelPedidosSubmenu.Size = new System.Drawing.Size(184, 106);
+            this.panelPedidosSubmenu.Size = new System.Drawing.Size(184, 75);
             this.panelPedidosSubmenu.TabIndex = 6;
             // 
             // btnVerPedidos
@@ -160,7 +163,7 @@
             this.btnVerPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVerPedidos.ForeColor = System.Drawing.Color.Black;
-            this.btnVerPedidos.Location = new System.Drawing.Point(0, 60);
+            this.btnVerPedidos.Location = new System.Drawing.Point(0, 30);
             this.btnVerPedidos.Name = "btnVerPedidos";
             this.btnVerPedidos.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnVerPedidos.Size = new System.Drawing.Size(184, 30);
@@ -168,23 +171,6 @@
             this.btnVerPedidos.Text = "Ver todos las ventas";
             this.btnVerPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVerPedidos.UseVisualStyleBackColor = false;
-            // 
-            // btnModificarPedido
-            // 
-            this.btnModificarPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.btnModificarPedido.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnModificarPedido.FlatAppearance.BorderSize = 0;
-            this.btnModificarPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificarPedido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificarPedido.ForeColor = System.Drawing.Color.Black;
-            this.btnModificarPedido.Location = new System.Drawing.Point(0, 30);
-            this.btnModificarPedido.Name = "btnModificarPedido";
-            this.btnModificarPedido.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnModificarPedido.Size = new System.Drawing.Size(184, 30);
-            this.btnModificarPedido.TabIndex = 4;
-            this.btnModificarPedido.Text = "Modificar venta";
-            this.btnModificarPedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnModificarPedido.UseVisualStyleBackColor = false;
             // 
             // btnNuevoPedido
             // 
@@ -378,7 +364,10 @@
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelChildForm.Controls.Add(this.pictureBox8);
             this.panelChildForm.Controls.Add(this.label1);
+            this.panelChildForm.Controls.Add(this.pictureCerrarSesion);
+            this.panelChildForm.Controls.Add(this.labelADM);
             this.panelChildForm.Controls.Add(this.pictureBox7);
             this.panelChildForm.Controls.Add(this.SeccionAdmin);
             this.panelChildForm.Controls.Add(this.lblFecha);
@@ -392,6 +381,78 @@
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(670, 505);
             this.panelChildForm.TabIndex = 4;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Yellow;
+            this.pictureBox8.Enabled = false;
+            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
+            this.pictureBox8.Location = new System.Drawing.Point(513, 31);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(36, 38);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox8.TabIndex = 11;
+            this.pictureBox8.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Yellow;
+            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(556, 41);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(87, 16);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Cerrar sesión";
+            // 
+            // pictureCerrarSesion
+            // 
+            this.pictureCerrarSesion.BackColor = System.Drawing.Color.Black;
+            this.pictureCerrarSesion.Image = ((System.Drawing.Image)(resources.GetObject("pictureCerrarSesion.Image")));
+            this.pictureCerrarSesion.Location = new System.Drawing.Point(496, -31);
+            this.pictureCerrarSesion.Name = "pictureCerrarSesion";
+            this.pictureCerrarSesion.Size = new System.Drawing.Size(171, 161);
+            this.pictureCerrarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureCerrarSesion.TabIndex = 9;
+            this.pictureCerrarSesion.TabStop = false;
+            this.pictureCerrarSesion.Click += new System.EventHandler(this.pictureCerrarSesion_Click);
+            // 
+            // labelADM
+            // 
+            this.labelADM.AutoSize = true;
+            this.labelADM.BackColor = System.Drawing.Color.Yellow;
+            this.labelADM.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.labelADM.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelADM.Location = new System.Drawing.Point(556, 451);
+            this.labelADM.Name = "labelADM";
+            this.labelADM.Size = new System.Drawing.Size(90, 16);
+            this.labelADM.TabIndex = 8;
+            this.labelADM.Text = "Administrador";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Yellow;
+            this.pictureBox7.Enabled = false;
+            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
+            this.pictureBox7.Location = new System.Drawing.Point(513, 441);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(36, 38);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox7.TabIndex = 7;
+            this.pictureBox7.TabStop = false;
+            // 
+            // SeccionAdmin
+            // 
+            this.SeccionAdmin.BackColor = System.Drawing.Color.Black;
+            this.SeccionAdmin.Image = ((System.Drawing.Image)(resources.GetObject("SeccionAdmin.Image")));
+            this.SeccionAdmin.Location = new System.Drawing.Point(496, 379);
+            this.SeccionAdmin.Name = "SeccionAdmin";
+            this.SeccionAdmin.Size = new System.Drawing.Size(171, 161);
+            this.SeccionAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.SeccionAdmin.TabIndex = 6;
+            this.SeccionAdmin.TabStop = false;
+            this.SeccionAdmin.Click += new System.EventHandler(this.SeccionAdmin_Click);
             // 
             // lblFecha
             // 
@@ -464,40 +525,6 @@
             this.horafecha.Enabled = true;
             this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
             // 
-            // SeccionAdmin
-            // 
-            this.SeccionAdmin.BackColor = System.Drawing.Color.Black;
-            this.SeccionAdmin.Image = ((System.Drawing.Image)(resources.GetObject("SeccionAdmin.Image")));
-            this.SeccionAdmin.Location = new System.Drawing.Point(496, 379);
-            this.SeccionAdmin.Name = "SeccionAdmin";
-            this.SeccionAdmin.Size = new System.Drawing.Size(171, 161);
-            this.SeccionAdmin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.SeccionAdmin.TabIndex = 6;
-            this.SeccionAdmin.TabStop = false;
-            this.SeccionAdmin.Click += new System.EventHandler(this.SeccionAdmin_Click);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Yellow;
-            this.pictureBox7.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox7.Image")));
-            this.pictureBox7.Location = new System.Drawing.Point(513, 441);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(36, 38);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 7;
-            this.pictureBox7.TabStop = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Yellow;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(556, 451);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 16);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Administrador";
-            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -524,9 +551,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelChildForm.ResumeLayout(false);
             this.panelChildForm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.SeccionAdmin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureCerrarSesion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.SeccionAdmin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -547,7 +576,6 @@
         private System.Windows.Forms.Button btnMenu;
         private System.Windows.Forms.Panel panelPedidosSubmenu;
         private System.Windows.Forms.Button btnVerPedidos;
-        private System.Windows.Forms.Button btnModificarPedido;
         private System.Windows.Forms.Button btnNuevoPedido;
         private System.Windows.Forms.Button btnPedidos;
         private System.Windows.Forms.Button btnClientes;
@@ -562,7 +590,10 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox SeccionAdmin;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label labelADM;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox pictureCerrarSesion;
+        private System.Windows.Forms.PictureBox pictureBox8;
     }
 }

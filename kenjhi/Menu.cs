@@ -20,6 +20,7 @@ namespace kenjhi
         {
             InitializeComponent();
             customizeDesign();
+            
 
 
 
@@ -163,8 +164,15 @@ namespace kenjhi
 
         private void SeccionAdmin_Click(object sender, EventArgs e)
         {
-            openChildForm(new Nuevo_Pedido()); //cambiar al form que debo crear
+            openChildForm(new Modo_Administrador()); //cambiar al form que debo crear
 
+        }
+
+        private void pictureCerrarSesion_Click(object sender, EventArgs e)
+        {
+            formLogin login= new formLogin();
+            login.Show();
+            this.Hide();
         }
 
         private void openChildForm(Form childform)
