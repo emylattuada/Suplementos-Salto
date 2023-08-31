@@ -107,9 +107,8 @@
             this.txtCambiarPassUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCambiarPassUser.ForeColor = System.Drawing.Color.White;
             this.txtCambiarPassUser.Location = new System.Drawing.Point(26, 122);
-            this.txtCambiarPassUser.Multiline = true;
             this.txtCambiarPassUser.Name = "txtCambiarPassUser";
-            this.txtCambiarPassUser.Size = new System.Drawing.Size(288, 20);
+            this.txtCambiarPassUser.Size = new System.Drawing.Size(288, 15);
             this.txtCambiarPassUser.TabIndex = 10;
             this.txtCambiarPassUser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtCambiarPassUser_MouseClick);
             // 
@@ -156,9 +155,8 @@
             this.txtCambiarContra1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCambiarContra1.ForeColor = System.Drawing.Color.White;
             this.txtCambiarContra1.Location = new System.Drawing.Point(26, 185);
-            this.txtCambiarContra1.Multiline = true;
             this.txtCambiarContra1.Name = "txtCambiarContra1";
-            this.txtCambiarContra1.Size = new System.Drawing.Size(288, 20);
+            this.txtCambiarContra1.Size = new System.Drawing.Size(288, 15);
             this.txtCambiarContra1.TabIndex = 14;
             // 
             // label3
@@ -191,9 +189,8 @@
             this.txtCambiarContra2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCambiarContra2.ForeColor = System.Drawing.Color.White;
             this.txtCambiarContra2.Location = new System.Drawing.Point(26, 252);
-            this.txtCambiarContra2.Multiline = true;
             this.txtCambiarContra2.Name = "txtCambiarContra2";
-            this.txtCambiarContra2.Size = new System.Drawing.Size(288, 20);
+            this.txtCambiarContra2.Size = new System.Drawing.Size(288, 15);
             this.txtCambiarContra2.TabIndex = 17;
             // 
             // label4
@@ -285,6 +282,7 @@
             this.btnGuardarNuevaPass.Text = "Guardar";
             this.btnGuardarNuevaPass.TextColor = System.Drawing.Color.Black;
             this.btnGuardarNuevaPass.UseVisualStyleBackColor = false;
+            this.btnGuardarNuevaPass.Click += new System.EventHandler(this.btnGuardarNuevaPass_Click);
             // 
             // Cambiar_Pass
             // 
