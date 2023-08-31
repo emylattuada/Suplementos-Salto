@@ -21,5 +21,15 @@ namespace kenjhi
         {
             this.Close();
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picEstadisticas_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

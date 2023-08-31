@@ -175,6 +175,12 @@ namespace kenjhi
             this.Hide();
         }
 
+        private void labelADM_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Modo_Administrador()); //cambiar al form que debo crear
+
+        }
+
         private void openChildForm(Form childform)
         {
             if(activeForm != null)

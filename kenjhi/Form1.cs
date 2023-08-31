@@ -147,6 +147,11 @@ namespace kenjhi
 
         }
 
+        private void linkCambiarPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+           //pendiente
+        }
+
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {
             if (e.Button != MouseButtons.Left)

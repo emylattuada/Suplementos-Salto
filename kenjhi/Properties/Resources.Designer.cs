@@ -73,6 +73,16 @@ namespace kenjhi.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap circulo_amarillo_panel {
+            get {
+                object obj = ResourceManager.GetObject("circulo-amarillo-panel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap expediente {
             get {
                 object obj = ResourceManager.GetObject("expediente", resourceCulture);
