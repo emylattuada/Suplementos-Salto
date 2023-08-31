@@ -149,7 +149,8 @@ namespace kenjhi
 
         private void linkCambiarPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-           //pendiente
+            Cambiar_Pass formCambiarContrasenia = new Cambiar_Pass();
+            formCambiarContrasenia.Show();
         }
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)
