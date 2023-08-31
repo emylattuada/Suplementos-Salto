@@ -78,7 +78,7 @@
             this.picEmpleados.BackColor = System.Drawing.Color.Yellow;
             this.picEmpleados.Enabled = false;
             this.picEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("picEmpleados.Image")));
-            this.picEmpleados.Location = new System.Drawing.Point(504, 176);
+            this.picEmpleados.Location = new System.Drawing.Point(501, 176);
             this.picEmpleados.Name = "picEmpleados";
             this.picEmpleados.Size = new System.Drawing.Size(100, 50);
             this.picEmpleados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -90,7 +90,7 @@
             this.picEstadisticas.BackColor = System.Drawing.Color.Yellow;
             this.picEstadisticas.Enabled = false;
             this.picEstadisticas.Image = global::kenjhi.Properties.Resources.chat_flecha_crecer;
-            this.picEstadisticas.Location = new System.Drawing.Point(292, 176);
+            this.picEstadisticas.Location = new System.Drawing.Point(289, 176);
             this.picEstadisticas.Name = "picEstadisticas";
             this.picEstadisticas.Size = new System.Drawing.Size(91, 50);
             this.picEstadisticas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -112,7 +112,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::kenjhi.Properties.Resources.circulo_amarillo_panel;
-            this.pictureBox2.Location = new System.Drawing.Point(232, 133);
+            this.pictureBox2.Location = new System.Drawing.Point(229, 133);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(252, 153);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,7 +122,7 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::kenjhi.Properties.Resources.circulo_amarillo_panel;
-            this.pictureBox3.Location = new System.Drawing.Point(449, 133);
+            this.pictureBox3.Location = new System.Drawing.Point(446, 133);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(252, 153);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -132,7 +132,7 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::kenjhi.Properties.Resources.circulo_amarillo_panel;
-            this.pictureBox4.Location = new System.Drawing.Point(431, 133);
+            this.pictureBox4.Location = new System.Drawing.Point(428, 133);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(252, 153);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -142,7 +142,7 @@
             // pictureBox5
             // 
             this.pictureBox5.Image = global::kenjhi.Properties.Resources.circulo_amarillo_panel;
-            this.pictureBox5.Location = new System.Drawing.Point(214, 133);
+            this.pictureBox5.Location = new System.Drawing.Point(211, 133);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(252, 153);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -152,7 +152,7 @@
             // pictureBox7
             // 
             this.pictureBox7.Image = global::kenjhi.Properties.Resources.circulo_amarillo_panel;
-            this.pictureBox7.Location = new System.Drawing.Point(-6, 133);
+            this.pictureBox7.Location = new System.Drawing.Point(-9, 133);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(252, 153);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -163,7 +163,7 @@
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Yellow;
             this.pictureBox8.Image = global::kenjhi.Properties.Resources.expediente;
-            this.pictureBox8.Location = new System.Drawing.Point(70, 176);
+            this.pictureBox8.Location = new System.Drawing.Point(67, 176);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(100, 50);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -176,7 +176,7 @@
             this.label1.BackColor = System.Drawing.Color.Yellow;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(93, 229);
+            this.label1.Location = new System.Drawing.Point(90, 229);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 16);
             this.label1.TabIndex = 65;
@@ -188,7 +188,7 @@
             this.label2.BackColor = System.Drawing.Color.Yellow;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(298, 229);
+            this.label2.Location = new System.Drawing.Point(295, 229);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 16);
             this.label2.TabIndex = 66;
@@ -201,7 +201,7 @@
             this.label3.BackColor = System.Drawing.Color.Yellow;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(518, 229);
+            this.label3.Location = new System.Drawing.Point(515, 229);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 16);
             this.label3.TabIndex = 67;
