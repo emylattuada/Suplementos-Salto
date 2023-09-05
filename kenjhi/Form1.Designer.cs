@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formLogin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.picNoVer = new System.Windows.Forms.PictureBox();
+            this.picPass = new System.Windows.Forms.PictureBox();
             this.lbl1 = new System.Windows.Forms.Label();
             this.linkCambiarPass = new System.Windows.Forms.LinkLabel();
             this.txtContrasena = new System.Windows.Forms.TextBox();
@@ -45,6 +47,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picNoVer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPass)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -55,6 +59,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Controls.Add(this.picNoVer);
+            this.panel1.Controls.Add(this.picPass);
             this.panel1.Controls.Add(this.lbl1);
             this.panel1.Controls.Add(this.linkCambiarPass);
             this.panel1.Controls.Add(this.txtContrasena);
@@ -71,6 +77,29 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(291, 419);
             this.panel1.TabIndex = 0;
+            // 
+            // picNoVer
+            // 
+            this.picNoVer.Image = global::kenjhi.Properties.Resources.ojos_cruzados__1_;
+            this.picNoVer.Location = new System.Drawing.Point(232, 262);
+            this.picNoVer.Name = "picNoVer";
+            this.picNoVer.Size = new System.Drawing.Size(33, 22);
+            this.picNoVer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picNoVer.TabIndex = 13;
+            this.picNoVer.TabStop = false;
+            this.picNoVer.Visible = false;
+            this.picNoVer.Click += new System.EventHandler(this.picNoVer_Click);
+            // 
+            // picPass
+            // 
+            this.picPass.Image = ((System.Drawing.Image)(resources.GetObject("picPass.Image")));
+            this.picPass.Location = new System.Drawing.Point(232, 262);
+            this.picPass.Name = "picPass";
+            this.picPass.Size = new System.Drawing.Size(33, 22);
+            this.picPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPass.TabIndex = 12;
+            this.picPass.TabStop = false;
+            this.picPass.Click += new System.EventHandler(this.picPass_Click);
             // 
             // lbl1
             // 
@@ -108,7 +137,7 @@
             this.txtContrasena.Location = new System.Drawing.Point(26, 263);
             this.txtContrasena.Multiline = true;
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(239, 20);
+            this.txtContrasena.Size = new System.Drawing.Size(202, 20);
             this.txtContrasena.TabIndex = 9;
             this.txtContrasena.Click += new System.EventHandler(this.txtContrasena_Click);
             this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
@@ -263,6 +292,8 @@
             this.Text = "Suplementos Salto";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picNoVer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPass)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -289,6 +320,8 @@
         private System.Windows.Forms.LinkLabel linkCambiarPass;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.PictureBox picPass;
+        private System.Windows.Forms.PictureBox picNoVer;
     }
 }
 

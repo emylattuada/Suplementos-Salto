@@ -92,7 +92,7 @@ namespace kenjhi
         public static class Utilidad
         {
             public static string NombreUsuarioActual { get; set; }
-        }
+        }//sin utilidad aun
 
 
         private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
@@ -151,6 +151,33 @@ namespace kenjhi
         {
             Cambiar_Pass formCambiarContrasenia = new Cambiar_Pass();
             formCambiarContrasenia.Show();
+        }
+
+        private void picPass_Click(object sender, EventArgs e)
+        {
+            if (txtContrasena.PasswordChar == '*')
+            {
+                // Cambia el carácter de contraseña a texto normal
+                txtContrasena.PasswordChar = '\0'; // '\0' representa el carácter nulo
+            }
+            //else
+            //{
+            //    // Cambia el carácter de contraseña de vuelta a '*'
+            //    txtContrasena.PasswordChar = '*';
+            //}
+            picPass.Visible=false;
+            picNoVer.Visible = true;
+        }
+
+        private void picNoVer_Click(object sender, EventArgs e)
+        {
+            if (txtContrasena.PasswordChar == '\0')
+            {
+               
+                txtContrasena.PasswordChar = '*';  //cambia de nuevo a vista previa de password
+            }
+            picNoVer.Visible = false;
+            picPass.Visible = true;
         }
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)
