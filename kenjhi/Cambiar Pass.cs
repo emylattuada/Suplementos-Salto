@@ -64,53 +64,53 @@ namespace kenjhi
 
         private void btnGuardarNuevaPass_Click(object sender, EventArgs e)
         {
-            string usuario = txtCambiarPassUser.Text.Trim();
-            string nuevaContraseña = txtCambiarContra1.Text;
-            string confirmarContraseña = txtCambiarContra2.Text;
+            //string usuario = txtCambiarPassUser.Text.Trim();
+            //string nuevaContraseña = txtCambiarContra1.Text;
+            //string confirmarContraseña = txtCambiarContra2.Text;
 
-            if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(nuevaContraseña) || string.IsNullOrEmpty(confirmarContraseña))
-            {
-                MessageBox.Show("Por favor, completa todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
+            //if (string.IsNullOrEmpty(usuario) || string.IsNullOrEmpty(nuevaContraseña) || string.IsNullOrEmpty(confirmarContraseña))
+            //{
+            //    MessageBox.Show("Por favor, completa todos los campos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
 
-            if (nuevaContraseña != confirmarContraseña)
-            {
-                lblError.Visible = true;
+            //if (nuevaContraseña != confirmarContraseña)
+            //{
+            //    lblError.Visible = true;
                 
-                return;
-            }
+            //    return;
+            //}
 
-            using (MySqlConnection connection = new MySqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    string updateQuery = "UPDATE usuarios SET Contraseña = @nuevaContraseña WHERE NombreUsuario = @usuario";
-                    MySqlCommand command = new MySqlCommand(updateQuery, connection);
-                    command.Parameters.AddWithValue("@nuevaContraseña", nuevaContraseña);
-                    command.Parameters.AddWithValue("@usuario", usuario);
+            //using (MySqlConnection connection = new MySqlConnection(connectionString))
+            //{
+            //    try
+            //    {
+            //        connection.Open();
+            //        string updateQuery = "UPDATE usuarios SET Contraseña = @nuevaContraseña WHERE NombreUsuario = @usuario";
+            //        MySqlCommand command = new MySqlCommand(updateQuery, connection);
+            //        command.Parameters.AddWithValue("@nuevaContraseña", nuevaContraseña);
+            //        command.Parameters.AddWithValue("@usuario", usuario);
 
-                    int rowsAffected = command.ExecuteNonQuery();
+            //        int rowsAffected = command.ExecuteNonQuery();
 
-                    if (rowsAffected > 0)
-                    {
-                        MessageBox.Show("Contraseña cambiada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        LimpiarFormulario();
-                    }
-                    else
-                    {
-                        lblError.Visible = true;
-                        //SystemSounds.Hand.Play();
-                        System.Media.SystemSounds.Exclamation.Play();
+            //        if (rowsAffected > 0)
+            //        {
+            //            MessageBox.Show("Contraseña cambiada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //            LimpiarFormulario();
+            //        }
+            //        else
+            //        {
+            //            lblError.Visible = true;
+            //            //SystemSounds.Hand.Play();
+            //            System.Media.SystemSounds.Exclamation.Play();
 
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            //        }
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show("Ocurrió un error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
         }
         private void LimpiarFormulario()
         {

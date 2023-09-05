@@ -48,6 +48,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.btnGuardarNuevaPass = new kenjhi.RJButton();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtEmailCambiarPass = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.btnVerificarEmail = new kenjhi.RJButton();
             this.panelArribaCambiarPass.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimizar)).BeginInit();
@@ -154,7 +159,7 @@
             this.txtCambiarContra1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCambiarContra1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCambiarContra1.ForeColor = System.Drawing.Color.White;
-            this.txtCambiarContra1.Location = new System.Drawing.Point(26, 185);
+            this.txtCambiarContra1.Location = new System.Drawing.Point(26, 389);
             this.txtCambiarContra1.Name = "txtCambiarContra1";
             this.txtCambiarContra1.Size = new System.Drawing.Size(288, 15);
             this.txtCambiarContra1.TabIndex = 14;
@@ -165,7 +170,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(23, 163);
+            this.label3.Location = new System.Drawing.Point(23, 367);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 16);
             this.label3.TabIndex = 13;
@@ -176,7 +181,7 @@
             this.textBox3.BackColor = System.Drawing.Color.Yellow;
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(26, 210);
+            this.textBox3.Location = new System.Drawing.Point(26, 414);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(288, 1);
@@ -188,7 +193,7 @@
             this.txtCambiarContra2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtCambiarContra2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCambiarContra2.ForeColor = System.Drawing.Color.White;
-            this.txtCambiarContra2.Location = new System.Drawing.Point(26, 252);
+            this.txtCambiarContra2.Location = new System.Drawing.Point(26, 456);
             this.txtCambiarContra2.Name = "txtCambiarContra2";
             this.txtCambiarContra2.Size = new System.Drawing.Size(288, 15);
             this.txtCambiarContra2.TabIndex = 17;
@@ -199,7 +204,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(23, 230);
+            this.label4.Location = new System.Drawing.Point(23, 434);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(174, 16);
             this.label4.TabIndex = 16;
@@ -210,7 +215,7 @@
             this.textBox5.BackColor = System.Drawing.Color.Yellow;
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(26, 277);
+            this.textBox5.Location = new System.Drawing.Point(26, 481);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(288, 1);
@@ -221,7 +226,7 @@
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(94)))), ((int)(((byte)(95)))));
-            this.lblError.Location = new System.Drawing.Point(54, 300);
+            this.lblError.Location = new System.Drawing.Point(54, 513);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(224, 26);
             this.lblError.TabIndex = 19;
@@ -246,7 +251,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(241, 163);
+            this.label6.Location = new System.Drawing.Point(241, 367);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 16);
             this.label6.TabIndex = 62;
@@ -258,7 +263,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(241, 230);
+            this.label7.Location = new System.Drawing.Point(241, 434);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 16);
             this.label7.TabIndex = 63;
@@ -275,7 +280,7 @@
             this.btnGuardarNuevaPass.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarNuevaPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarNuevaPass.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardarNuevaPass.Location = new System.Drawing.Point(26, 329);
+            this.btnGuardarNuevaPass.Location = new System.Drawing.Point(26, 542);
             this.btnGuardarNuevaPass.Name = "btnGuardarNuevaPass";
             this.btnGuardarNuevaPass.Size = new System.Drawing.Size(288, 44);
             this.btnGuardarNuevaPass.TabIndex = 18;
@@ -284,12 +289,82 @@
             this.btnGuardarNuevaPass.UseVisualStyleBackColor = false;
             this.btnGuardarNuevaPass.Click += new System.EventHandler(this.btnGuardarNuevaPass_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.DimGray;
+            this.label8.Location = new System.Drawing.Point(106, 168);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(73, 16);
+            this.label8.TabIndex = 71;
+            this.label8.Text = "Obligatorio";
+            // 
+            // txtEmailCambiarPass
+            // 
+            this.txtEmailCambiarPass.BackColor = System.Drawing.Color.Black;
+            this.txtEmailCambiarPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmailCambiarPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmailCambiarPass.ForeColor = System.Drawing.Color.White;
+            this.txtEmailCambiarPass.Location = new System.Drawing.Point(26, 190);
+            this.txtEmailCambiarPass.Name = "txtEmailCambiarPass";
+            this.txtEmailCambiarPass.Size = new System.Drawing.Size(153, 15);
+            this.txtEmailCambiarPass.TabIndex = 70;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label9.Location = new System.Drawing.Point(23, 168);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(41, 16);
+            this.label9.TabIndex = 69;
+            this.label9.Text = "Email";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.Yellow;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Enabled = false;
+            this.textBox4.Location = new System.Drawing.Point(26, 215);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(153, 1);
+            this.textBox4.TabIndex = 68;
+            // 
+            // btnVerificarEmail
+            // 
+            this.btnVerificarEmail.BackColor = System.Drawing.Color.Yellow;
+            this.btnVerificarEmail.BackgroundColor = System.Drawing.Color.Yellow;
+            this.btnVerificarEmail.BorderColor = System.Drawing.Color.Transparent;
+            this.btnVerificarEmail.BorderRadius = 10;
+            this.btnVerificarEmail.BorderSize = 0;
+            this.btnVerificarEmail.FlatAppearance.BorderSize = 0;
+            this.btnVerificarEmail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerificarEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerificarEmail.ForeColor = System.Drawing.Color.Black;
+            this.btnVerificarEmail.Location = new System.Drawing.Point(200, 184);
+            this.btnVerificarEmail.Name = "btnVerificarEmail";
+            this.btnVerificarEmail.Size = new System.Drawing.Size(114, 28);
+            this.btnVerificarEmail.TabIndex = 72;
+            this.btnVerificarEmail.Text = "Verificar";
+            this.btnVerificarEmail.TextColor = System.Drawing.Color.Black;
+            this.btnVerificarEmail.UseVisualStyleBackColor = false;
+            // 
             // Cambiar_Pass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(341, 419);
+            this.ClientSize = new System.Drawing.Size(341, 600);
+            this.Controls.Add(this.btnVerificarEmail);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.txtEmailCambiarPass);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -341,5 +416,10 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox txtEmailCambiarPass;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBox4;
+        private RJButton btnVerificarEmail;
     }
 }
