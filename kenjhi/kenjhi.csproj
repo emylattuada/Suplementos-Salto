@@ -118,11 +118,11 @@
     <Compile Include="Agregar_Clientes.Designer.cs">
       <DependentUpon>Agregar_Clientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cambiar Pass.cs">
+    <Compile Include="Cambiar_Pass.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cambiar Pass.Designer.cs">
-      <DependentUpon>Cambiar Pass.cs</DependentUpon>
+    <Compile Include="Cambiar_Pass.Designer.cs">
+      <DependentUpon>Cambiar_Pass.cs</DependentUpon>
     </Compile>
     <Compile Include="CategoriaItem.cs" />
     <Compile Include="Form1.cs">
@@ -180,8 +180,8 @@
     <EmbeddedResource Include="Agregar_Clientes.resx">
       <DependentUpon>Agregar_Clientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cambiar Pass.resx">
-      <DependentUpon>Cambiar Pass.cs</DependentUpon>
+    <EmbeddedResource Include="Cambiar_Pass.resx">
+      <DependentUpon>Cambiar_Pass.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
