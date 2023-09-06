@@ -40,7 +40,7 @@ namespace kenjhi
                     if (count > 0)
                     {
                         MessageBox.Show("Usuario y correo válidos.");
-                        txtCambiarCodigo.Enabled = true;
+                        //txtCambiarCodigo.Enabled = true;
                         btnEnviarCodigo.Enabled = true;
                         txtCambiarCodigo.Visible= true;
                     }
@@ -151,6 +151,41 @@ namespace kenjhi
             Random rand = new Random();
             int codigo = rand.Next(100000, 999999);
             return codigo.ToString();
+        }
+
+        private void btnVerificarCodigo_Click(object sender, EventArgs e)
+        {
+            string correo = txtCambiarEmail.Text;
+            string codigoIngresado = txtCambiarCodigo.Text;
+            string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT codigo FROM usuarios WHERE email = @Email";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@Email", correo);
+
+                    object result = cmd.ExecuteScalar();
+                    if (result != null)
+                    {
+                        string codigoBaseDeDatos = result.ToString();
+
+                        if (codigoIngresado == codigoBaseDeDatos)
+                        {
+                            MessageBox.Show("El código es válido.");
+                        }
+                        else
+                        {
+                            MessageBox.Show("El código no es válido.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("El correo no está registrado en la base de datos.");
+                    }
+                }
+            }
         }
     }
 }

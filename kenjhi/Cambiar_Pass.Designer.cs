@@ -313,6 +313,7 @@
             this.btnVerificarCodigo.TextColor = System.Drawing.Color.Black;
             this.btnVerificarCodigo.UseVisualStyleBackColor = false;
             this.btnVerificarCodigo.Visible = false;
+            this.btnVerificarCodigo.Click += new System.EventHandler(this.btnVerificarCodigo_Click);
             // 
             // Cambiar_Pass
             // 
@@ -338,9 +339,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Cambiar_Pass";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Cambiar_Pass";
+            this.Text = "Suplementos Salto";
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
