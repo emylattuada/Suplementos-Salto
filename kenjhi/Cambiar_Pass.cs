@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
 using MySql.Data.MySqlClient;
+using System.Media;
 
 namespace kenjhi
 {
@@ -18,7 +19,9 @@ namespace kenjhi
         public Cambiar_Pass()
         {
             InitializeComponent();
+
         }
+        private int ClickX = 0, ClickY = 0;
 
         private void btnVerificarCorreo_Click(object sender, EventArgs e)
         {
@@ -173,7 +176,12 @@ namespace kenjhi
 
                         if (codigoIngresado == codigoBaseDeDatos)
                         {
-                            MessageBox.Show("El código es válido.");
+                            //MessageBox.Show("El código es válido.");
+                            MessageBox.Show("Código válido. Puede ingresar la nueva contraseña.", "Código Validado");
+                            //y habilitamos los ultimos txt y boton para poder subir esos datos a la bd y terminar el cambio de password
+                            txtNuevaContraseña.Enabled = true;
+                            btnGuardarNuevaContraseña.Enabled=true;
+
                         }
                         else
                         {
@@ -182,10 +190,71 @@ namespace kenjhi
                     }
                     else
                     {
-                        MessageBox.Show("El correo no está registrado en la base de datos.");
+                        //MessageBox.Show("El correo no está registrado en la base de datos."); esto no lo vamos a usar, pero lo puse para poder darme cuenta si se cargaba o no sin ir al localhost
                     }
                 }
             }
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {   
+            this.Close();
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button != MouseButtons.Left)
+            {
+                ClickX = e.X;
+                ClickY = e.Y;
+            }
+            else
+            {
+                this.Left = this.Left + (e.X - ClickX);
+                this.Top = this.Top + (e.Y - ClickY);
+            }
+        }
+
+        private void btnGuardarNuevaContraseña_Click(object sender, EventArgs e)
+        {
+            string usuario = txtCambiarUsuario.Text;
+            string nuevaContraseña = txtNuevaContraseña.Text;
+
+            // Realiza la actualización de la contraseña en la base de datos
+            string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "UPDATE usuarios SET Contraseña = @NuevaContraseña WHERE NombreUsuario = @Usuario";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@NuevaContraseña", nuevaContraseña);
+                    cmd.Parameters.AddWithValue("@Usuario", usuario);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        SystemSounds.Asterisk.Play(); 
+                        MessageBox.Show("Contraseña actualizada. Inicia sesión nuevamente.", "Contraseña Actualizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        SystemSounds.Exclamation.Play(); 
+                        MessageBox.Show("No se pudo actualizar la contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+
         }
     }
 }

@@ -49,6 +49,10 @@
             this.txtCodigoAbajo = new System.Windows.Forms.TextBox();
             this.labelCodigo2 = new System.Windows.Forms.Label();
             this.btnVerificarCodigo = new kenjhi.RJButton();
+            this.txtNuevaContraseña = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.btnGuardarNuevaContraseña = new kenjhi.RJButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -66,6 +70,8 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(291, 25);
             this.panel2.TabIndex = 3;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
             // 
             // pictureBox4
             // 
@@ -87,6 +93,7 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
             // pictureBox2
             // 
@@ -97,6 +104,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // label1
             // 
@@ -315,12 +323,73 @@
             this.btnVerificarCodigo.Visible = false;
             this.btnVerificarCodigo.Click += new System.EventHandler(this.btnVerificarCodigo_Click);
             // 
+            // txtNuevaContraseña
+            // 
+            this.txtNuevaContraseña.BackColor = System.Drawing.Color.Black;
+            this.txtNuevaContraseña.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNuevaContraseña.Enabled = false;
+            this.txtNuevaContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNuevaContraseña.ForeColor = System.Drawing.Color.White;
+            this.txtNuevaContraseña.Location = new System.Drawing.Point(26, 301);
+            this.txtNuevaContraseña.Multiline = true;
+            this.txtNuevaContraseña.Name = "txtNuevaContraseña";
+            this.txtNuevaContraseña.Size = new System.Drawing.Size(239, 20);
+            this.txtNuevaContraseña.TabIndex = 71;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label7.Location = new System.Drawing.Point(23, 279);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(179, 16);
+            this.label7.TabIndex = 70;
+            this.label7.Text = "Ingrese su nueva contraseña";
+            // 
+            // textBox4
+            // 
+            this.textBox4.BackColor = System.Drawing.Color.Yellow;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox4.Enabled = false;
+            this.textBox4.Location = new System.Drawing.Point(26, 326);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(239, 1);
+            this.textBox4.TabIndex = 69;
+            // 
+            // btnGuardarNuevaContraseña
+            // 
+            this.btnGuardarNuevaContraseña.BackColor = System.Drawing.Color.Yellow;
+            this.btnGuardarNuevaContraseña.BackgroundColor = System.Drawing.Color.Yellow;
+            this.btnGuardarNuevaContraseña.BorderColor = System.Drawing.Color.Transparent;
+            this.btnGuardarNuevaContraseña.BorderRadius = 10;
+            this.btnGuardarNuevaContraseña.BorderSize = 0;
+            this.btnGuardarNuevaContraseña.Enabled = false;
+            this.btnGuardarNuevaContraseña.FlatAppearance.BorderSize = 0;
+            this.btnGuardarNuevaContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarNuevaContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarNuevaContraseña.ForeColor = System.Drawing.Color.Black;
+            this.btnGuardarNuevaContraseña.Location = new System.Drawing.Point(26, 348);
+            this.btnGuardarNuevaContraseña.Name = "btnGuardarNuevaContraseña";
+            this.btnGuardarNuevaContraseña.Size = new System.Drawing.Size(239, 44);
+            this.btnGuardarNuevaContraseña.TabIndex = 72;
+            this.btnGuardarNuevaContraseña.Text = "Guardar";
+            this.btnGuardarNuevaContraseña.TextColor = System.Drawing.Color.Black;
+            this.btnGuardarNuevaContraseña.UseVisualStyleBackColor = false;
+            this.btnGuardarNuevaContraseña.Click += new System.EventHandler(this.btnGuardarNuevaContraseña_Click);
+            // 
             // Cambiar_Pass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(291, 422);
+            this.Controls.Add(this.btnGuardarNuevaContraseña);
+            this.Controls.Add(this.txtNuevaContraseña);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.textBox4);
             this.Controls.Add(this.btnVerificarCodigo);
             this.Controls.Add(this.btnEnviarCodigo);
             this.Controls.Add(this.labelCodigo2);
@@ -374,5 +443,9 @@
         private System.Windows.Forms.TextBox txtCodigoAbajo;
         private System.Windows.Forms.Label labelCodigo2;
         private RJButton btnVerificarCodigo;
+        private System.Windows.Forms.TextBox txtNuevaContraseña;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox textBox4;
+        private RJButton btnGuardarNuevaContraseña;
     }
 }
