@@ -48,6 +48,7 @@
             this.labelCodigo = new System.Windows.Forms.Label();
             this.txtCodigoAbajo = new System.Windows.Forms.TextBox();
             this.labelCodigo2 = new System.Windows.Forms.Label();
+            this.btnVerificarCodigo = new kenjhi.RJButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -280,7 +281,6 @@
             this.txtCodigoAbajo.Name = "txtCodigoAbajo";
             this.txtCodigoAbajo.Size = new System.Drawing.Size(133, 1);
             this.txtCodigoAbajo.TabIndex = 63;
-            this.txtCodigoAbajo.Visible = false;
             // 
             // labelCodigo2
             // 
@@ -294,12 +294,33 @@
             this.labelCodigo2.TabIndex = 66;
             this.labelCodigo2.Text = "Obligatorio";
             // 
+            // btnVerificarCodigo
+            // 
+            this.btnVerificarCodigo.BackColor = System.Drawing.Color.Yellow;
+            this.btnVerificarCodigo.BackgroundColor = System.Drawing.Color.Yellow;
+            this.btnVerificarCodigo.BorderColor = System.Drawing.Color.Transparent;
+            this.btnVerificarCodigo.BorderRadius = 10;
+            this.btnVerificarCodigo.BorderSize = 0;
+            this.btnVerificarCodigo.FlatAppearance.BorderSize = 0;
+            this.btnVerificarCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerificarCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerificarCodigo.ForeColor = System.Drawing.Color.Black;
+            this.btnVerificarCodigo.Location = new System.Drawing.Point(166, 228);
+            this.btnVerificarCodigo.Name = "btnVerificarCodigo";
+            this.btnVerificarCodigo.Size = new System.Drawing.Size(99, 30);
+            this.btnVerificarCodigo.TabIndex = 68;
+            this.btnVerificarCodigo.Text = "Verificar";
+            this.btnVerificarCodigo.TextColor = System.Drawing.Color.Black;
+            this.btnVerificarCodigo.UseVisualStyleBackColor = false;
+            this.btnVerificarCodigo.Visible = false;
+            // 
             // Cambiar_Pass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(291, 422);
+            this.Controls.Add(this.btnVerificarCodigo);
             this.Controls.Add(this.btnEnviarCodigo);
             this.Controls.Add(this.labelCodigo2);
             this.Controls.Add(this.txtCambiarCodigo);
@@ -350,5 +371,6 @@
         private System.Windows.Forms.Label labelCodigo;
         private System.Windows.Forms.TextBox txtCodigoAbajo;
         private System.Windows.Forms.Label labelCodigo2;
+        private RJButton btnVerificarCodigo;
     }
 }

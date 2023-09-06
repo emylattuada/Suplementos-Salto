@@ -42,6 +42,7 @@ namespace kenjhi
                         MessageBox.Show("Usuario y correo válidos.");
                         txtCambiarCodigo.Enabled = true;
                         btnEnviarCodigo.Enabled = true;
+                        txtCambiarCodigo.Visible= true;
                     }
                     else
                     {
@@ -53,17 +54,41 @@ namespace kenjhi
 
         private void btnEnviarCodigo_Click(object sender, EventArgs e)
         {
+            //string correoOrigen = "info3emt@edusalto.uy"; // Correo de origen
+            //string contraseniaOrigen = "info3emt21"; // Contraseña del correo de origen
+            //string correoDestino = txtCambiarEmail.Text; // Correo de destino
+            //string codigo = GenerarCodigoVerificacion(); // Genera el code de verificar
+
+            //string mensaje = $"Tu código de verificación es: {codigo}";
+
+            //try
+            //{
+            //    enviarCorreo(correoOrigen, contraseniaOrigen, correoDestino, mensaje);
+            //    MessageBox.Show("Mensaje enviado al correo. Ingresa el código de 6 dígitos.");
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show($"Error al enviar el correo: {ex.Message}");
+            //}
+
             string correoOrigen = "info3emt@edusalto.uy"; // Correo de origen
             string contraseniaOrigen = "info3emt21"; // Contraseña del correo de origen
             string correoDestino = txtCambiarEmail.Text; // Correo de destino
-            string codigo = GenerarCodigoVerificacion(); // Genera el code de verificar
+            string codigo = GenerarCodigoVerificacion(); // Genera el código de verificación
 
             string mensaje = $"Tu código de verificación es: {codigo}";
 
             try
             {
                 enviarCorreo(correoOrigen, contraseniaOrigen, correoDestino, mensaje);
-                MessageBox.Show("Mensaje enviado al correo. Ingresa el código de 6 dígitos.");
+                MessageBox.Show("Mensaje enviado al correo. Ingresa el código.");
+
+                // Actualizar el código en la base de datos
+                string usuario = txtCambiarUsuario.Text;
+                ActualizarCodigoEnBaseDeDatos(usuario, codigo);
+                btnEnviarCodigo.Visible=false;
+                btnVerificarCodigo.Visible=true;   
+                txtCambiarCodigo.Enabled=true;
             }
             catch (Exception ex)
             {
@@ -94,6 +119,30 @@ namespace kenjhi
             correo.From = new MailAddress(emisor);
 
             cliente.Send(correo);
+        }
+
+        private void ActualizarCodigoEnBaseDeDatos(string usuario, string codigo)
+        {
+            string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "UPDATE usuarios SET codigo = @Codigo WHERE NombreUsuario = @Usuario";
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    cmd.Parameters.AddWithValue("@Codigo", codigo);
+                    cmd.Parameters.AddWithValue("@Usuario", usuario);
+                    int rowsAffected = cmd.ExecuteNonQuery();
+                    if (rowsAffected > 0)
+                    {
+                        //MessageBox.Show("Código actualizado en la base de datos.");
+                    }
+                    else
+                    {
+                        //MessageBox.Show("No se pudo actualizar el código en la base de datos.");
+                    }
+                }
+            }
         }
 
         private string GenerarCodigoVerificacion()
