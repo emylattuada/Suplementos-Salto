@@ -53,10 +53,14 @@
             this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.btnGuardarNuevaContraseña = new kenjhi.RJButton();
+            this.picNoVer = new System.Windows.Forms.PictureBox();
+            this.picPass = new System.Windows.Forms.PictureBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picNoVer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPass)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -333,7 +337,7 @@
             this.txtNuevaContraseña.Location = new System.Drawing.Point(26, 301);
             this.txtNuevaContraseña.Multiline = true;
             this.txtNuevaContraseña.Name = "txtNuevaContraseña";
-            this.txtNuevaContraseña.Size = new System.Drawing.Size(239, 20);
+            this.txtNuevaContraseña.Size = new System.Drawing.Size(200, 20);
             this.txtNuevaContraseña.TabIndex = 71;
             // 
             // label7
@@ -380,12 +384,37 @@
             this.btnGuardarNuevaContraseña.UseVisualStyleBackColor = false;
             this.btnGuardarNuevaContraseña.Click += new System.EventHandler(this.btnGuardarNuevaContraseña_Click);
             // 
+            // picNoVer
+            // 
+            this.picNoVer.Image = global::kenjhi.Properties.Resources.ojos_cruzados__1_;
+            this.picNoVer.Location = new System.Drawing.Point(232, 300);
+            this.picNoVer.Name = "picNoVer";
+            this.picNoVer.Size = new System.Drawing.Size(33, 22);
+            this.picNoVer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picNoVer.TabIndex = 74;
+            this.picNoVer.TabStop = false;
+            this.picNoVer.Visible = false;
+            this.picNoVer.Click += new System.EventHandler(this.picNoVer_Click);
+            // 
+            // picPass
+            // 
+            this.picPass.Image = ((System.Drawing.Image)(resources.GetObject("picPass.Image")));
+            this.picPass.Location = new System.Drawing.Point(232, 300);
+            this.picPass.Name = "picPass";
+            this.picPass.Size = new System.Drawing.Size(33, 22);
+            this.picPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPass.TabIndex = 73;
+            this.picPass.TabStop = false;
+            this.picPass.Click += new System.EventHandler(this.picPass_Click);
+            // 
             // Cambiar_Pass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(291, 422);
+            this.Controls.Add(this.picNoVer);
+            this.Controls.Add(this.picPass);
             this.Controls.Add(this.btnGuardarNuevaContraseña);
             this.Controls.Add(this.txtNuevaContraseña);
             this.Controls.Add(this.label7);
@@ -416,6 +445,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picNoVer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPass)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -447,5 +478,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox4;
         private RJButton btnGuardarNuevaContraseña;
+        private System.Windows.Forms.PictureBox picNoVer;
+        private System.Windows.Forms.PictureBox picPass;
     }
 }

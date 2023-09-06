@@ -27,6 +27,8 @@ namespace kenjhi
         {
             string usuario = txtCambiarUsuario.Text;
             string correo = txtCambiarEmail.Text;
+            txtNuevaContraseña.PasswordChar = '*';
+
 
             string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";
             using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -241,6 +243,7 @@ namespace kenjhi
                     {
                         SystemSounds.Asterisk.Play(); 
                         MessageBox.Show("Contraseña actualizada. Inicia sesión nuevamente.", "Contraseña Actualizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        this.Close();
                     }
                     else
                     {
@@ -249,6 +252,30 @@ namespace kenjhi
                     }
                 }
             }
+        }
+
+        private void picPass_Click(object sender, EventArgs e)
+        {
+
+            if (txtNuevaContraseña.PasswordChar == '*')
+            {
+                
+                txtNuevaContraseña.PasswordChar = '\0'; 
+            }
+           
+            picPass.Visible = false;
+            picNoVer.Visible = true;
+        }
+
+        private void picNoVer_Click(object sender, EventArgs e)
+        {
+            if (txtNuevaContraseña.PasswordChar == '\0')
+            {
+
+                txtNuevaContraseña.PasswordChar = '*';  //cambia de nuevo a vista previa de password
+            }
+            picNoVer.Visible = false;
+            picPass.Visible = true;
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
