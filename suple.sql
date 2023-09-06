@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 30-08-2023 a las 19:42:58
+-- Tiempo de generación: 06-09-2023 a las 19:35:58
 -- Versión del servidor: 8.0.32
 -- Versión de PHP: 8.0.26
 
@@ -172,6 +172,8 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `NombreUsuario` varchar(50) DEFAULT NULL,
   `Contraseña` varchar(100) DEFAULT NULL,
   `Rol` varchar(20) DEFAULT NULL,
+  `codigo` varchar(10) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`ID_Usuario`),
   UNIQUE KEY `NombreUsuario` (`NombreUsuario`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -180,9 +182,9 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 -- Volcado de datos para la tabla `usuarios`
 --
 
-INSERT INTO `usuarios` (`ID_Usuario`, `NombreUsuario`, `Contraseña`, `Rol`) VALUES
-(1, 'nicosuple', 'admin', 'admin'),
-(2, 'empleadosuple', 'empleado', 'empleado');
+INSERT INTO `usuarios` (`ID_Usuario`, `NombreUsuario`, `Contraseña`, `Rol`, `codigo`, `email`) VALUES
+(1, 'nicosuple', 'admin', 'admin', '704346', '5dxuruguay@gmail.com'),
+(2, 'empleadosuple', 'empleado', 'empleado', '234', NULL);
 
 -- --------------------------------------------------------
 
