@@ -168,14 +168,22 @@ namespace kenjhi
 
         }
 
-        private void pictureCerrarSesion_Click(object sender, EventArgs e)
+        
+
+        private void labelADM_Click(object sender, EventArgs e)
         {
-            formLogin login= new formLogin();
+            openChildForm(new Modo_Administrador()); //cambiar al form que debo crear
+
+        }
+
+        private void btnCerrarSesion_Click(object sender, EventArgs e)
+        {
+            formLogin login = new formLogin();
             login.Show();
             this.Hide();
         }
 
-        private void labelADM_Click(object sender, EventArgs e)
+        private void btnAdm_Click(object sender, EventArgs e)
         {
             openChildForm(new Modo_Administrador()); //cambiar al form que debo crear
 

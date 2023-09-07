@@ -76,6 +76,7 @@ namespace kenjhi
                     MessageBox.Show("Datos actualizados.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     lblSinGuardar.Visible = false;
                     btnGuardarCambios.Visible = false;
+                    btnEliminarCliente.Visible = false;
                 }
             }
             catch (Exception ex)
@@ -88,6 +89,7 @@ namespace kenjhi
         {
             lblSinGuardar.Visible = true;
             btnGuardarCambios.Visible = true;
+            btnEliminarCliente.Visible = true;
         }
 
         private void dataGridClientes_CellValueChanged(object sender, DataGridViewCellEventArgs e)

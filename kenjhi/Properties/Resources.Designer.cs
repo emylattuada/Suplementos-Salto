@@ -63,6 +63,16 @@ namespace kenjhi.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap adm {
+            get {
+                object obj = ResourceManager.GetObject("adm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap chat_flecha_crecer {
             get {
                 object obj = ResourceManager.GetObject("chat-flecha-crecer", resourceCulture);
@@ -96,6 +106,16 @@ namespace kenjhi.Properties {
         internal static System.Drawing.Bitmap ingresar {
             get {
                 object obj = ResourceManager.GetObject("ingresar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ingresar__1_ {
+            get {
+                object obj = ResourceManager.GetObject("ingresar (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
