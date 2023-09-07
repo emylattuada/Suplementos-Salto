@@ -35,9 +35,9 @@
             this.picImprimir = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.picAdmEmpleados = new System.Windows.Forms.PictureBox();
+            this.picAdmEstadisticas = new System.Windows.Forms.PictureBox();
+            this.picAdmImprimir = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,9 +47,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picImprimir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAdmEmpleados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAdmEstadisticas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAdmImprimir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.SuspendLayout();
             // 
@@ -78,7 +78,7 @@
             this.picEmpleados.BackColor = System.Drawing.Color.Yellow;
             this.picEmpleados.Enabled = false;
             this.picEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("picEmpleados.Image")));
-            this.picEmpleados.Location = new System.Drawing.Point(501, 176);
+            this.picEmpleados.Location = new System.Drawing.Point(501, 207);
             this.picEmpleados.Name = "picEmpleados";
             this.picEmpleados.Size = new System.Drawing.Size(100, 50);
             this.picEmpleados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -90,7 +90,7 @@
             this.picEstadisticas.BackColor = System.Drawing.Color.Yellow;
             this.picEstadisticas.Enabled = false;
             this.picEstadisticas.Image = global::kenjhi.Properties.Resources.chat_flecha_crecer;
-            this.picEstadisticas.Location = new System.Drawing.Point(289, 176);
+            this.picEstadisticas.Location = new System.Drawing.Point(289, 207);
             this.picEstadisticas.Name = "picEstadisticas";
             this.picEstadisticas.Size = new System.Drawing.Size(91, 50);
             this.picEstadisticas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -102,7 +102,7 @@
             // 
             this.picImprimir.BackColor = System.Drawing.Color.Yellow;
             this.picImprimir.Image = global::kenjhi.Properties.Resources.expediente;
-            this.picImprimir.Location = new System.Drawing.Point(87, 182);
+            this.picImprimir.Location = new System.Drawing.Point(87, 213);
             this.picImprimir.Name = "picImprimir";
             this.picImprimir.Size = new System.Drawing.Size(100, 50);
             this.picImprimir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -112,7 +112,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::kenjhi.Properties.Resources.circulo_amarillo_panel;
-            this.pictureBox2.Location = new System.Drawing.Point(229, 133);
+            this.pictureBox2.Location = new System.Drawing.Point(229, 164);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(252, 153);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -122,48 +122,49 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = global::kenjhi.Properties.Resources.circulo_amarillo_panel;
-            this.pictureBox3.Location = new System.Drawing.Point(446, 133);
+            this.pictureBox3.Location = new System.Drawing.Point(446, 164);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(252, 153);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 64;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox4
+            // picAdmEmpleados
             // 
-            this.pictureBox4.Image = global::kenjhi.Properties.Resources.circulo_amarillo_panel;
-            this.pictureBox4.Location = new System.Drawing.Point(428, 133);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(252, 153);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 64;
-            this.pictureBox4.TabStop = false;
+            this.picAdmEmpleados.Image = global::kenjhi.Properties.Resources.circulo_amarillo_panel;
+            this.picAdmEmpleados.Location = new System.Drawing.Point(428, 164);
+            this.picAdmEmpleados.Name = "picAdmEmpleados";
+            this.picAdmEmpleados.Size = new System.Drawing.Size(252, 153);
+            this.picAdmEmpleados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAdmEmpleados.TabIndex = 64;
+            this.picAdmEmpleados.TabStop = false;
+            this.picAdmEmpleados.Click += new System.EventHandler(this.picAdmEmpleados_Click);
             // 
-            // pictureBox5
+            // picAdmEstadisticas
             // 
-            this.pictureBox5.Image = global::kenjhi.Properties.Resources.circulo_amarillo_panel;
-            this.pictureBox5.Location = new System.Drawing.Point(211, 133);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(252, 153);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 63;
-            this.pictureBox5.TabStop = false;
+            this.picAdmEstadisticas.Image = global::kenjhi.Properties.Resources.circulo_amarillo_panel;
+            this.picAdmEstadisticas.Location = new System.Drawing.Point(211, 164);
+            this.picAdmEstadisticas.Name = "picAdmEstadisticas";
+            this.picAdmEstadisticas.Size = new System.Drawing.Size(252, 153);
+            this.picAdmEstadisticas.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAdmEstadisticas.TabIndex = 63;
+            this.picAdmEstadisticas.TabStop = false;
             // 
-            // pictureBox7
+            // picAdmImprimir
             // 
-            this.pictureBox7.Image = global::kenjhi.Properties.Resources.circulo_amarillo_panel;
-            this.pictureBox7.Location = new System.Drawing.Point(-9, 133);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(252, 153);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 62;
-            this.pictureBox7.TabStop = false;
+            this.picAdmImprimir.Image = global::kenjhi.Properties.Resources.circulo_amarillo_panel;
+            this.picAdmImprimir.Location = new System.Drawing.Point(-9, 164);
+            this.picAdmImprimir.Name = "picAdmImprimir";
+            this.picAdmImprimir.Size = new System.Drawing.Size(252, 153);
+            this.picAdmImprimir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picAdmImprimir.TabIndex = 62;
+            this.picAdmImprimir.TabStop = false;
             // 
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Yellow;
             this.pictureBox8.Image = global::kenjhi.Properties.Resources.expediente;
-            this.pictureBox8.Location = new System.Drawing.Point(67, 176);
+            this.pictureBox8.Location = new System.Drawing.Point(67, 207);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(100, 50);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -176,7 +177,7 @@
             this.label1.BackColor = System.Drawing.Color.Yellow;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(90, 229);
+            this.label1.Location = new System.Drawing.Point(90, 260);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(54, 16);
             this.label1.TabIndex = 65;
@@ -188,7 +189,7 @@
             this.label2.BackColor = System.Drawing.Color.Yellow;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(295, 229);
+            this.label2.Location = new System.Drawing.Point(295, 260);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 16);
             this.label2.TabIndex = 66;
@@ -201,7 +202,7 @@
             this.label3.BackColor = System.Drawing.Color.Yellow;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(515, 229);
+            this.label3.Location = new System.Drawing.Point(515, 260);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 16);
             this.label3.TabIndex = 67;
@@ -218,12 +219,12 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.picEstadisticas);
-            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.picAdmImprimir);
             this.Controls.Add(this.picImprimir);
             this.Controls.Add(this.btnVolver);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.picAdmEstadisticas);
             this.Controls.Add(this.picEmpleados);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.picAdmEmpleados);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox3);
             this.Name = "Modo_Administrador";
@@ -233,9 +234,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.picImprimir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAdmEmpleados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAdmEstadisticas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picAdmImprimir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -250,9 +251,9 @@
         private System.Windows.Forms.PictureBox picImprimir;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox picAdmEmpleados;
+        private System.Windows.Forms.PictureBox picAdmEstadisticas;
+        private System.Windows.Forms.PictureBox picAdmImprimir;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

@@ -100,6 +100,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Adm Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Adm Empleados.Designer.cs">
+      <DependentUpon>Adm Empleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="Agregar Categoria.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -171,6 +177,9 @@
     <Compile Include="Ver_Clientes.Designer.cs">
       <DependentUpon>Ver_Clientes.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Adm Empleados.resx">
+      <DependentUpon>Adm Empleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Agregar Categoria.resx">
       <DependentUpon>Agregar Categoria.cs</DependentUpon>
     </EmbeddedResource>
@@ -234,6 +243,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ojos-cruzados %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ingresar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

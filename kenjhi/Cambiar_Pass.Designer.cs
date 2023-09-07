@@ -43,7 +43,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.btnVerificarCorreo = new kenjhi.RJButton();
-            this.btnEnviarCodigo = new kenjhi.RJButton();
             this.txtCambiarCodigo = new System.Windows.Forms.TextBox();
             this.labelCodigo = new System.Windows.Forms.Label();
             this.txtCodigoAbajo = new System.Windows.Forms.TextBox();
@@ -55,6 +54,9 @@
             this.btnGuardarNuevaContraseña = new kenjhi.RJButton();
             this.picNoVer = new System.Windows.Forms.PictureBox();
             this.picPass = new System.Windows.Forms.PictureBox();
+            this.txtNuevaContraseña2 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -236,27 +238,6 @@
             this.btnVerificarCorreo.UseVisualStyleBackColor = false;
             this.btnVerificarCorreo.Click += new System.EventHandler(this.btnVerificarCorreo_Click);
             // 
-            // btnEnviarCodigo
-            // 
-            this.btnEnviarCodigo.BackColor = System.Drawing.Color.Yellow;
-            this.btnEnviarCodigo.BackgroundColor = System.Drawing.Color.Yellow;
-            this.btnEnviarCodigo.BorderColor = System.Drawing.Color.Transparent;
-            this.btnEnviarCodigo.BorderRadius = 10;
-            this.btnEnviarCodigo.BorderSize = 0;
-            this.btnEnviarCodigo.Enabled = false;
-            this.btnEnviarCodigo.FlatAppearance.BorderSize = 0;
-            this.btnEnviarCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEnviarCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEnviarCodigo.ForeColor = System.Drawing.Color.Black;
-            this.btnEnviarCodigo.Location = new System.Drawing.Point(166, 228);
-            this.btnEnviarCodigo.Name = "btnEnviarCodigo";
-            this.btnEnviarCodigo.Size = new System.Drawing.Size(99, 30);
-            this.btnEnviarCodigo.TabIndex = 67;
-            this.btnEnviarCodigo.Text = "Enviar";
-            this.btnEnviarCodigo.TextColor = System.Drawing.Color.Black;
-            this.btnEnviarCodigo.UseVisualStyleBackColor = false;
-            this.btnEnviarCodigo.Click += new System.EventHandler(this.btnEnviarCodigo_Click);
-            // 
             // txtCambiarCodigo
             // 
             this.txtCambiarCodigo.BackColor = System.Drawing.Color.Black;
@@ -269,7 +250,6 @@
             this.txtCambiarCodigo.Name = "txtCambiarCodigo";
             this.txtCambiarCodigo.Size = new System.Drawing.Size(133, 20);
             this.txtCambiarCodigo.TabIndex = 65;
-            this.txtCambiarCodigo.Visible = false;
             // 
             // labelCodigo
             // 
@@ -313,6 +293,7 @@
             this.btnVerificarCodigo.BorderColor = System.Drawing.Color.Transparent;
             this.btnVerificarCodigo.BorderRadius = 10;
             this.btnVerificarCodigo.BorderSize = 0;
+            this.btnVerificarCodigo.Enabled = false;
             this.btnVerificarCodigo.FlatAppearance.BorderSize = 0;
             this.btnVerificarCodigo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVerificarCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -324,7 +305,6 @@
             this.btnVerificarCodigo.Text = "Verificar";
             this.btnVerificarCodigo.TextColor = System.Drawing.Color.Black;
             this.btnVerificarCodigo.UseVisualStyleBackColor = false;
-            this.btnVerificarCodigo.Visible = false;
             this.btnVerificarCodigo.Click += new System.EventHandler(this.btnVerificarCodigo_Click);
             // 
             // txtNuevaContraseña
@@ -375,7 +355,7 @@
             this.btnGuardarNuevaContraseña.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarNuevaContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarNuevaContraseña.ForeColor = System.Drawing.Color.Black;
-            this.btnGuardarNuevaContraseña.Location = new System.Drawing.Point(26, 348);
+            this.btnGuardarNuevaContraseña.Location = new System.Drawing.Point(26, 424);
             this.btnGuardarNuevaContraseña.Name = "btnGuardarNuevaContraseña";
             this.btnGuardarNuevaContraseña.Size = new System.Drawing.Size(239, 44);
             this.btnGuardarNuevaContraseña.TabIndex = 72;
@@ -398,6 +378,7 @@
             // 
             // picPass
             // 
+            this.picPass.Enabled = false;
             this.picPass.Image = ((System.Drawing.Image)(resources.GetObject("picPass.Image")));
             this.picPass.Location = new System.Drawing.Point(232, 300);
             this.picPass.Name = "picPass";
@@ -407,12 +388,51 @@
             this.picPass.TabStop = false;
             this.picPass.Click += new System.EventHandler(this.picPass_Click);
             // 
+            // txtNuevaContraseña2
+            // 
+            this.txtNuevaContraseña2.BackColor = System.Drawing.Color.Black;
+            this.txtNuevaContraseña2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNuevaContraseña2.Enabled = false;
+            this.txtNuevaContraseña2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNuevaContraseña2.ForeColor = System.Drawing.Color.White;
+            this.txtNuevaContraseña2.Location = new System.Drawing.Point(26, 368);
+            this.txtNuevaContraseña2.Multiline = true;
+            this.txtNuevaContraseña2.Name = "txtNuevaContraseña2";
+            this.txtNuevaContraseña2.Size = new System.Drawing.Size(239, 20);
+            this.txtNuevaContraseña2.TabIndex = 77;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label6.Location = new System.Drawing.Point(23, 346);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(174, 16);
+            this.label6.TabIndex = 76;
+            this.label6.Text = "Repita su nueva contraseña";
+            // 
+            // textBox5
+            // 
+            this.textBox5.BackColor = System.Drawing.Color.Yellow;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox5.Enabled = false;
+            this.textBox5.Location = new System.Drawing.Point(26, 393);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(239, 1);
+            this.textBox5.TabIndex = 75;
+            // 
             // Cambiar_Pass
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(291, 422);
+            this.ClientSize = new System.Drawing.Size(291, 500);
+            this.Controls.Add(this.txtNuevaContraseña2);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox5);
             this.Controls.Add(this.picNoVer);
             this.Controls.Add(this.picPass);
             this.Controls.Add(this.btnGuardarNuevaContraseña);
@@ -420,7 +440,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.btnVerificarCodigo);
-            this.Controls.Add(this.btnEnviarCodigo);
             this.Controls.Add(this.labelCodigo2);
             this.Controls.Add(this.txtCambiarCodigo);
             this.Controls.Add(this.labelCodigo);
@@ -468,7 +487,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox3;
         private RJButton btnVerificarCorreo;
-        private RJButton btnEnviarCodigo;
         private System.Windows.Forms.TextBox txtCambiarCodigo;
         private System.Windows.Forms.Label labelCodigo;
         private System.Windows.Forms.TextBox txtCodigoAbajo;
@@ -480,5 +498,8 @@
         private RJButton btnGuardarNuevaContraseña;
         private System.Windows.Forms.PictureBox picNoVer;
         private System.Windows.Forms.PictureBox picPass;
+        private System.Windows.Forms.TextBox txtNuevaContraseña2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox textBox5;
     }
 }

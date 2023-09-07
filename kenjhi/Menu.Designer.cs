@@ -199,7 +199,7 @@
             this.btnAgregarPlato.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnAgregarPlato.Size = new System.Drawing.Size(184, 30);
             this.btnAgregarPlato.TabIndex = 3;
-            this.btnAgregarPlato.Text = "Agregar producto";
+            this.btnAgregarPlato.Text = "Ingreso productos";
             this.btnAgregarPlato.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarPlato.UseVisualStyleBackColor = false;
             this.btnAgregarPlato.Click += new System.EventHandler(this.btnAgregarPlato_Click);

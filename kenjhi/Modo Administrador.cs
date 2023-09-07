@@ -31,5 +31,10 @@ namespace kenjhi
         {
 
         }
+
+        private void picAdmEmpleados_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
