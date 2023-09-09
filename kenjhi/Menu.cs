@@ -194,6 +194,12 @@ namespace kenjhi
             openChildForm(new Version());
         }
 
+        private void btnIngresoProductos_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Ingresos_Producto());
+
+        }
+
         private void openChildForm(Form childform)
         {
             if(activeForm != null)

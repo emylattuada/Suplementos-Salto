@@ -409,8 +409,9 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Agregar_Producto";
-            this.Text = "Agregar_Producto";
+            this.Text = "Suplementos Salto";
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCantidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPrecio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picActualizarCategoria)).EndInit();
