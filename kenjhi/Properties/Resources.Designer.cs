@@ -103,6 +103,16 @@ namespace kenjhi.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap infinity_amarillo {
+            get {
+                object obj = ResourceManager.GetObject("infinity-amarillo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap informacion__1_ {
             get {
                 object obj = ResourceManager.GetObject("informacion (1)", resourceCulture);
@@ -126,6 +136,16 @@ namespace kenjhi.Properties {
         internal static System.Drawing.Bitmap ingresar__1_ {
             get {
                 object obj = ResourceManager.GetObject("ingresar (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo_infinity_amarillo {
+            get {
+                object obj = ResourceManager.GetObject("logo-infinity-amarillo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -265,5 +265,11 @@
   <ItemGroup>
     <None Include="Resources\informacion %281%29.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo-infinity-amarillo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\infinity-amarillo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
