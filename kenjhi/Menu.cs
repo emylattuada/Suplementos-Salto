@@ -189,6 +189,11 @@ namespace kenjhi
 
         }
 
+        private void btnVersion_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Version());
+        }
+
         private void openChildForm(Form childform)
         {
             if(activeForm != null)

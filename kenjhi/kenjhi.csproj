@@ -171,6 +171,12 @@
     <Compile Include="Ver Productos.Designer.cs">
       <DependentUpon>Ver Productos.cs</DependentUpon>
     </Compile>
+    <Compile Include="Version.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Version.Designer.cs">
+      <DependentUpon>Version.cs</DependentUpon>
+    </Compile>
     <Compile Include="Ver_Clientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -212,6 +218,9 @@
     <EmbeddedResource Include="Ver Productos.resx">
       <DependentUpon>Ver Productos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Version.resx">
+      <DependentUpon>Version.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Ver_Clientes.resx">
       <DependentUpon>Ver_Clientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -252,6 +261,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\adm.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\informacion %281%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
