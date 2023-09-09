@@ -22,5 +22,12 @@ namespace kenjhi
             this.Close();
 
         }
+
+        private void btnOpinion_Click(object sender, EventArgs e)
+        {
+            Enviar_Opinion opinion = new Enviar_Opinion();
+            opinion.Show();
+            this.Hide();
+        }
     }
 }
