@@ -63,7 +63,7 @@ namespace kenjhi
             string correoOrigen = "info3emt@edusalto.uy"; 
             string contraseniaOrigen = "info3emt21"; 
             string correoDestino = "infinity.codeuy@gmail.com";
-            string mensaje = $"Sugerencia para el equipo de desarrollo, enviada por: " + nombre + "\n" + "Sugerencia: " + sugerencia;
+            string mensaje = $"Sugerencia para el equipo de desarrollo, enviada por: " + nombre  + "Sugerencia: " + sugerencia;
             enviarCorreo(correoOrigen, contraseniaOrigen, correoDestino, mensaje);
             MessageBox.Show("¡Sugerencia enviada con éxito!");
 

@@ -27,7 +27,7 @@ namespace kenjhi
         {
             Enviar_Opinion opinion = new Enviar_Opinion();
             opinion.Show();
-            this.Hide();
+            
         }
     }
 }
