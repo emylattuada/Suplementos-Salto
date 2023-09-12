@@ -131,7 +131,8 @@ namespace kenjhi
                     }
                     else
                     {
-                        MessageBox.Show("Credenciales incorrectas");
+                        //MessageBox.Show("Credenciales incorrectas");
+                        lbl1.Visible = true;
                     }
                 }
                 catch (Exception ex)

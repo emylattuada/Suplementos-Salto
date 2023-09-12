@@ -20,14 +20,8 @@ namespace kenjhi
         {
             InitializeComponent();
             customizeDesign();
-            
-
-
 
         }
-
-
-
 
         private void customizeDesign()
         {

@@ -42,7 +42,7 @@ namespace kenjhi
             {
                 connection.Open();
 
-                // Crea una consulta SQL para obtener los nombres y IDs de los productos
+                //consulta y sacamos el id del producto
                 string query = "SELECT ID_Producto, Nombre FROM producto";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
@@ -102,7 +102,7 @@ namespace kenjhi
                         cmd.ExecuteNonQuery();
                     }
 
-                    // Actualizar la cantidad en la tabla "producto"
+                    // Actualizar la cantidad en la tabla de producto
                     string updateProductoQuery = "UPDATE producto SET Cantidad = Cantidad + @Cantidad WHERE ID_Producto = @ID_Producto";
                     using (MySqlCommand cmd = new MySqlCommand(updateProductoQuery, connection))
                     {
@@ -121,3 +121,4 @@ namespace kenjhi
         }
     }
 }
+//funciono, no toquen nada porque se rompe todo, no tocar la clase comboboxitem

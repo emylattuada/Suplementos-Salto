@@ -85,7 +85,7 @@ namespace kenjhi
                     command.Parameters.AddWithValue("@Telefono", telefono);
                     command.Parameters.AddWithValue("@Direccion", direccion);
                     command.Parameters.AddWithValue("@Email", email);
-                    command.ExecuteNonQuery();
+                    command.ExecuteNonQuery();// para verificar si la operación se realizó correctamente o para llevar a cabo un seguimiento de cuántos registros se modificaron.
                 }
             }
         }

@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using MySqlX.XDevAPI.Relational;
 
 namespace kenjhi
 {
@@ -17,6 +18,7 @@ namespace kenjhi
         public Ver_Clientes()
         {
             InitializeComponent();
+
 
             try
             {
@@ -45,7 +47,10 @@ namespace kenjhi
 
                 // Ajustar el ancho de las columnas
                 dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
+                foreach (DataGridViewColumn column in dataGridClientes.Columns)
+                {
+                    column.ReadOnly = true;
+                }
                 conexion.Close();
             }
             catch (Exception ex)
@@ -74,9 +79,16 @@ namespace kenjhi
                     }
 
                     MessageBox.Show("Datos actualizados.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    lblSinGuardar.Visible = false;
+                    //lblSinGuardar.Visible = false;
                     btnGuardarCambios.Visible = false;
                     btnEliminarCliente.Visible = false;
+                    btnCancelarModificacion.Visible = false;
+                    foreach (DataGridViewColumn column in dataGridClientes.Columns)
+                    {
+                        column.ReadOnly = true;
+                    }
+                    btnModificar.Visible = true;
+
                 }
             }
             catch (Exception ex)
@@ -87,14 +99,27 @@ namespace kenjhi
 
         private void dataGridClientes_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            lblSinGuardar.Visible = true;
-            btnGuardarCambios.Visible = true;
             btnEliminarCliente.Visible = true;
+
         }
 
         private void dataGridClientes_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             //lblSinGuardar.Visible = true;
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) // Asegúrate de que se haya cambiado una celda válida
+            {
+                // Verifica si se ha cambiado el valor en una celda
+                if (dataGridClientes.IsCurrentCellDirty)
+                {
+                    // Mostrar un mensaje al usuario.
+                    //MessageBox.Show("Has cambiado el valor en una celda."); //esto es para probar que funcione nada mas
+                    // no tocar, funciona
+                    btnGuardarCambios.Visible = true;
+                     
+                    
+                }
+            }
+
         }
 
         private void btnEliminarCliente_Click(object sender, EventArgs e)
@@ -127,6 +152,32 @@ namespace kenjhi
                     //MessageBox.Show(ex.ToString(), "Error al eliminar cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void btnCancelarModificacion_Click(object sender, EventArgs e)
+        {
+            btnEliminarCliente.Visible = false;
+            btnGuardarCambios.Visible = false;
+            btnCancelarModificacion.Visible = false;
+            btnModificar.Visible = false;
+            foreach (DataGridViewColumn column in dataGridClientes.Columns)
+            {
+                column.ReadOnly = true;
+            }
+            btnModificar.Visible = true;
+
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            foreach (DataGridViewColumn column in dataGridClientes.Columns)
+            {
+                column.ReadOnly = false;
+            }
+            //btnGuardarCambios.Visible=true;
+            btnModificar.Visible = false;
+            if (btnModificar.Visible = false) { btnCancelarModificacion.Visible = true; }
+            if (btnCancelarModificacion.Visible = true) { btnModificar.Visible = false; }
         }
     }
 }
