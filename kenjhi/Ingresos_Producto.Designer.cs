@@ -189,6 +189,8 @@
             // 
             // dataAgregarIngreso
             // 
+            this.dataAgregarIngreso.CalendarForeColor = System.Drawing.Color.White;
+            this.dataAgregarIngreso.CalendarMonthBackground = System.Drawing.Color.Black;
             this.dataAgregarIngreso.Location = new System.Drawing.Point(120, 315);
             this.dataAgregarIngreso.Name = "dataAgregarIngreso";
             this.dataAgregarIngreso.Size = new System.Drawing.Size(450, 20);

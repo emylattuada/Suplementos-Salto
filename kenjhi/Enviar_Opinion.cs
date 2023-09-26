@@ -98,7 +98,7 @@ namespace kenjhi
             correo.From = new MailAddress(emisor);
 
             cliente.Send(correo);
-        } //codigo reciclado de cambiar pass form
+        } //codigo reciclado de cambiar pass form 
 
     }
 }

@@ -144,7 +144,7 @@ namespace kenjhi
                 return;
             }
 
-            // Obtener el ID de la categoría desde la base de datos (puede ser necesario modificar esto)
+            // Obtener el ID de la categoría desde la base de datos (puede ser necesario modificar esto) al final anduvo no lo toquen o se rompe
             int categoriaID = ObtenerCategoriaIDDesdeBaseDeDatos(nombreCategoria);
 
             //byte[] imagenBytes = ConvertirImagenABytes(rutaImagen);
@@ -349,6 +349,7 @@ namespace kenjhi
             //    // Si no se ha subido una imagen, mostrar un mensaje
             //    MessageBox.Show("No has cargado una imagen.", "Previsualización de Imagen", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //}
+            //esto queda por hacer funcionar, pero no le dare prioridad
         }
 
         

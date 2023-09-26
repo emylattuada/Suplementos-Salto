@@ -21,6 +21,6 @@ namespace kenjhi
         {
             return Nombre;
         }
-
+        //no tocar esta clase, lo usamos para representarlo como cadena de texto. to string
     }
 }

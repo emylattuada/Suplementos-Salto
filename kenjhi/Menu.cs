@@ -158,15 +158,15 @@ namespace kenjhi
 
         private void SeccionAdmin_Click(object sender, EventArgs e)
         {
-            openChildForm(new Modo_Administrador()); //cambiar al form que debo crear
-
+            
+            //falta implementar
         }
 
         
 
         private void labelADM_Click(object sender, EventArgs e)
         {
-            openChildForm(new Modo_Administrador()); //cambiar al form que debo crear
+            
 
         }
 
@@ -179,7 +179,7 @@ namespace kenjhi
 
         private void btnAdm_Click(object sender, EventArgs e)
         {
-            openChildForm(new Modo_Administrador()); //cambiar al form que debo crear
+            
 
         }
 
