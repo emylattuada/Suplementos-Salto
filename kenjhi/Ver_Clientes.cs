@@ -182,7 +182,33 @@ namespace kenjhi
 
         private void picBusqueda_Click(object sender, EventArgs e)
         {
-
+            string textoBusqueda = txtBusquedaDGV.Text;
+            using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+            {
+                conexion.Open();
+                string consulta = "SELECT * FROM cliente WHERE Visible = 1 AND Nombre LIKE @textoBusqueda";
+                using (MySqlCommand cmd = new MySqlCommand(consulta, conexion))
+                {
+                    cmd.Parameters.AddWithValue("@textoBusqueda", "%" + textoBusqueda + "%");
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    DataTable dataTable = new DataTable();
+                    adapter.Fill(dataTable);
+                    dataGridClientes.DataSource = dataTable;
+                    dataGridClientes.Columns["Visible"].Visible = false;
+                    if (dataTable.Rows.Count == 0)
+                    {
+                        // Si no hay resultados, muestra el Label
+                        lblSinResultado.Visible = true;
+                        lblSinResultado2.Visible = true;
+                    }
+                    else
+                    {
+                        // Si hay resultados, oculta el Label
+                        lblSinResultado.Visible = false;
+                        lblSinResultado2.Visible = false;
+                    }
+                }
+            }
         }
     }
 }
