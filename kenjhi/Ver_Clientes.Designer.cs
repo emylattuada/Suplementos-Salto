@@ -33,12 +33,17 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridClientes = new System.Windows.Forms.DataGridView();
+            this.txtBusquedaDGV = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.picBusqueda = new System.Windows.Forms.PictureBox();
             this.btnModificar = new kenjhi.RJButton();
             this.btnCancelarModificacion = new kenjhi.RJButton();
             this.btnEliminarCliente = new kenjhi.RJButton();
             this.btnGuardarCambios = new kenjhi.RJButton();
             this.btnVolver = new kenjhi.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBusqueda)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridClientes
@@ -56,7 +61,7 @@
             this.dataGridClientes.BackgroundColor = System.Drawing.Color.Black;
             this.dataGridClientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridClientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dataGridClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridClientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -77,7 +82,7 @@
             this.dataGridClientes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridClientes.EnableHeadersVisualStyles = false;
             this.dataGridClientes.GridColor = System.Drawing.Color.Yellow;
-            this.dataGridClientes.Location = new System.Drawing.Point(95, -3);
+            this.dataGridClientes.Location = new System.Drawing.Point(95, 73);
             this.dataGridClientes.Name = "dataGridClientes";
             this.dataGridClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -92,14 +97,60 @@
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridClientes.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridClientes.Size = new System.Drawing.Size(578, 508);
+            this.dataGridClientes.Size = new System.Drawing.Size(578, 432);
             this.dataGridClientes.TabIndex = 0;
             this.dataGridClientes.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridClientes_CellMouseDoubleClick);
             this.dataGridClientes.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridClientes_CellValueChanged);
+            // 
+            // txtBusquedaDGV
+            // 
+            this.txtBusquedaDGV.BackColor = System.Drawing.Color.Black;
+            this.txtBusquedaDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBusquedaDGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBusquedaDGV.ForeColor = System.Drawing.Color.White;
+            this.txtBusquedaDGV.Location = new System.Drawing.Point(110, 32);
+            this.txtBusquedaDGV.Multiline = true;
+            this.txtBusquedaDGV.Name = "txtBusquedaDGV";
+            this.txtBusquedaDGV.Size = new System.Drawing.Size(453, 20);
+            this.txtBusquedaDGV.TabIndex = 31;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.label1.Location = new System.Drawing.Point(107, 10);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(49, 16);
+            this.label1.TabIndex = 30;
+            this.label1.Text = "Buscar";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Yellow;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(110, 57);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(453, 1);
+            this.textBox1.TabIndex = 29;
+            // 
+            // picBusqueda
+            // 
+            this.picBusqueda.Image = global::kenjhi.Properties.Resources.busqueda;
+            this.picBusqueda.Location = new System.Drawing.Point(569, 25);
+            this.picBusqueda.Name = "picBusqueda";
+            this.picBusqueda.Size = new System.Drawing.Size(66, 33);
+            this.picBusqueda.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBusqueda.TabIndex = 32;
+            this.picBusqueda.TabStop = false;
+            this.picBusqueda.Click += new System.EventHandler(this.picBusqueda_Click);
             // 
             // btnModificar
             // 
@@ -210,6 +261,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 505);
+            this.Controls.Add(this.picBusqueda);
+            this.Controls.Add(this.txtBusquedaDGV);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnCancelarModificacion);
             this.Controls.Add(this.btnEliminarCliente);
@@ -219,7 +274,9 @@
             this.Name = "Ver_Clientes";
             this.Text = "Kenjhi";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBusqueda)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -231,5 +288,9 @@
         private RJButton btnEliminarCliente;
         private RJButton btnCancelarModificacion;
         private RJButton btnModificar;
+        private System.Windows.Forms.TextBox txtBusquedaDGV;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.PictureBox picBusqueda;
     }
 }

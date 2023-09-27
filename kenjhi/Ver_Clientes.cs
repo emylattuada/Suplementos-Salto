@@ -179,5 +179,10 @@ namespace kenjhi
             if (btnModificar.Visible = false) { btnCancelarModificacion.Visible = true; }
             if (btnCancelarModificacion.Visible = true) { btnModificar.Visible = false; }
         }
+
+        private void picBusqueda_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

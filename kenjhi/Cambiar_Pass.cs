@@ -262,7 +262,7 @@ namespace kenjhi
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
                     connection.Open();
-                    string query = "UPDATE usuarios SET Contraseña = @NuevaContraseña WHERE NombreUsuario = @Usuario";
+                    string query = "UPDATE usuarios SET Contraseña = SHA(@NuevaContraseña) WHERE NombreUsuario = @Usuario";
                     using (MySqlCommand cmd = new MySqlCommand(query, connection))
                     {
                         cmd.Parameters.AddWithValue("@NuevaContraseña", nuevaContraseña);
