@@ -31,11 +31,11 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.btnVersion = new System.Windows.Forms.Button();
-            this.btnAdm = new System.Windows.Forms.Button();
             this.btnCerrarSesion = new System.Windows.Forms.Button();
             this.panelPedidosSubmenu = new System.Windows.Forms.Panel();
             this.btnVerPedidos = new System.Windows.Forms.Button();
@@ -60,7 +60,12 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
-            this.label4 = new System.Windows.Forms.Label();
+            this.panelSubMenuADM = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnAdm = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -72,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelChildForm.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.panelSubMenuADM.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -86,6 +92,18 @@
             this.panel2.Size = new System.Drawing.Size(854, 25);
             this.panel2.TabIndex = 3;
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Enabled = false;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(94, 16);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Menú principal";
             // 
             // pictureBox3
             // 
@@ -113,8 +131,9 @@
             // 
             this.panelSideMenu.AutoScroll = true;
             this.panelSideMenu.BackColor = System.Drawing.Color.Yellow;
-            this.panelSideMenu.Controls.Add(this.btnVersion);
+            this.panelSideMenu.Controls.Add(this.panelSubMenuADM);
             this.panelSideMenu.Controls.Add(this.btnAdm);
+            this.panelSideMenu.Controls.Add(this.btnVersion);
             this.panelSideMenu.Controls.Add(this.btnCerrarSesion);
             this.panelSideMenu.Controls.Add(this.panelPedidosSubmenu);
             this.panelSideMenu.Controls.Add(this.btnPedidos);
@@ -139,7 +158,7 @@
             this.btnVersion.ForeColor = System.Drawing.Color.Black;
             this.btnVersion.Image = global::kenjhi.Properties.Resources.informacion__1_;
             this.btnVersion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVersion.Location = new System.Drawing.Point(0, 450);
+            this.btnVersion.Location = new System.Drawing.Point(0, 614);
             this.btnVersion.Name = "btnVersion";
             this.btnVersion.Padding = new System.Windows.Forms.Padding(0, 0, 80, 0);
             this.btnVersion.Size = new System.Drawing.Size(167, 40);
@@ -147,25 +166,6 @@
             this.btnVersion.Text = "Versión";
             this.btnVersion.UseVisualStyleBackColor = false;
             this.btnVersion.Click += new System.EventHandler(this.btnVersion_Click);
-            // 
-            // btnAdm
-            // 
-            this.btnAdm.BackColor = System.Drawing.Color.Yellow;
-            this.btnAdm.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnAdm.FlatAppearance.BorderSize = 0;
-            this.btnAdm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdm.ForeColor = System.Drawing.Color.Black;
-            this.btnAdm.Image = global::kenjhi.Properties.Resources.adm;
-            this.btnAdm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdm.Location = new System.Drawing.Point(0, 490);
-            this.btnAdm.Name = "btnAdm";
-            this.btnAdm.Padding = new System.Windows.Forms.Padding(0, 0, 44, 0);
-            this.btnAdm.Size = new System.Drawing.Size(167, 40);
-            this.btnAdm.TabIndex = 8;
-            this.btnAdm.Text = "Administrador";
-            this.btnAdm.UseVisualStyleBackColor = false;
-            this.btnAdm.Click += new System.EventHandler(this.btnAdm_Click);
             // 
             // btnCerrarSesion
             // 
@@ -177,7 +177,7 @@
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.Black;
             this.btnCerrarSesion.Image = global::kenjhi.Properties.Resources.ingresar__1_;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 530);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 654);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
             this.btnCerrarSesion.Size = new System.Drawing.Size(167, 40);
@@ -508,17 +508,105 @@
             this.horafecha.Enabled = true;
             this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
             // 
-            // label4
+            // panelSubMenuADM
             // 
-            this.label4.AutoSize = true;
-            this.label4.Enabled = false;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 4);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(94, 16);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Menú principal";
+            this.panelSubMenuADM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panelSubMenuADM.Controls.Add(this.button4);
+            this.panelSubMenuADM.Controls.Add(this.button3);
+            this.panelSubMenuADM.Controls.Add(this.button1);
+            this.panelSubMenuADM.Controls.Add(this.button2);
+            this.panelSubMenuADM.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelSubMenuADM.Location = new System.Drawing.Point(0, 480);
+            this.panelSubMenuADM.Name = "panelSubMenuADM";
+            this.panelSubMenuADM.Size = new System.Drawing.Size(167, 134);
+            this.panelSubMenuADM.TabIndex = 11;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(0, 30);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button1.Size = new System.Drawing.Size(167, 30);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Ver todos los Empleados";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(0, 0);
+            this.button2.Name = "button2";
+            this.button2.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button2.Size = new System.Drawing.Size(167, 30);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Agregar empleado";
+            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // btnAdm
+            // 
+            this.btnAdm.BackColor = System.Drawing.Color.Yellow;
+            this.btnAdm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAdm.FlatAppearance.BorderSize = 0;
+            this.btnAdm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdm.ForeColor = System.Drawing.Color.Black;
+            this.btnAdm.Image = global::kenjhi.Properties.Resources.adm;
+            this.btnAdm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAdm.Location = new System.Drawing.Point(0, 450);
+            this.btnAdm.Name = "btnAdm";
+            this.btnAdm.Padding = new System.Windows.Forms.Padding(0, 0, 44, 0);
+            this.btnAdm.Size = new System.Drawing.Size(167, 30);
+            this.btnAdm.TabIndex = 10;
+            this.btnAdm.Text = "Administrador";
+            this.btnAdm.UseVisualStyleBackColor = false;
+            this.btnAdm.Click += new System.EventHandler(this.btnAdm_Click_1);
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button3.ForeColor = System.Drawing.Color.Black;
+            this.button3.Location = new System.Drawing.Point(0, 60);
+            this.button3.Name = "button3";
+            this.button3.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button3.Size = new System.Drawing.Size(167, 30);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Imprimir";
+            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.button4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(0, 90);
+            this.button4.Name = "button4";
+            this.button4.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.button4.Size = new System.Drawing.Size(167, 30);
+            this.button4.TabIndex = 6;
+            this.button4.Text = "Estadísticas";
+            this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button4.UseVisualStyleBackColor = false;
             // 
             // frmPrincipal
             // 
@@ -547,6 +635,7 @@
             this.panelChildForm.ResumeLayout(false);
             this.panelChildForm.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.panelSubMenuADM.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -580,9 +669,14 @@
         private System.Windows.Forms.Timer horafecha;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Button btnCerrarSesion;
-        private System.Windows.Forms.Button btnAdm;
         private System.Windows.Forms.Button btnVersion;
         private System.Windows.Forms.Button btnIngresoProductos;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Panel panelSubMenuADM;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnAdm;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button4;
     }
 }

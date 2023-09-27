@@ -29,6 +29,7 @@ namespace kenjhi
             panelClientesSubmenu.Visible= false;
             panelMenuSubmenu.Visible= false;
             panelPedidosSubmenu.Visible= false;
+            panelSubMenuADM.Visible= false;
         }
 
         private void hideSubMenu()
@@ -40,6 +41,8 @@ namespace kenjhi
                 panelMenuSubmenu.Visible = false;
             if(panelPedidosSubmenu.Visible ==true)
                 panelPedidosSubmenu.Visible=false;
+            if (panelSubMenuADM.Visible == true)
+                panelSubMenuADM.Visible = false;
         }
 
         private void showSubMenu(Panel subMenu)
@@ -167,6 +170,7 @@ namespace kenjhi
         private void labelADM_Click(object sender, EventArgs e)
         {
             
+            //sin uso
 
         }
 
@@ -180,7 +184,7 @@ namespace kenjhi
         private void btnAdm_Click(object sender, EventArgs e)
         {
             
-
+            //usamos el 1
         }
 
         private void btnVersion_Click(object sender, EventArgs e)
@@ -191,6 +195,12 @@ namespace kenjhi
         private void btnIngresoProductos_Click(object sender, EventArgs e)
         {
             openChildForm(new Ingresos_Producto());
+
+        }
+
+        private void btnAdm_Click_1(object sender, EventArgs e)
+        {
+            showSubMenu(panelSubMenuADM);
 
         }
 
