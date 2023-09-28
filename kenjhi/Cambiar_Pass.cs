@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
 using MySql.Data.MySqlClient;
+using System.Security.Cryptography; //para el encriptado
 using System.Media;
 
 namespace kenjhi
@@ -251,40 +252,88 @@ namespace kenjhi
 
         private void btnGuardarNuevaContraseña_Click(object sender, EventArgs e)
         {
-            string usuario = txtCambiarUsuario.Text;
-            string nuevaContraseña = txtNuevaContraseña.Text;
+            //string usuario = txtCambiarUsuario.Text;
+            //string nuevaContraseña = txtNuevaContraseña.Text;
 
-            // Realiza la actualización de la contraseña en la base de datos
-            if(txtNuevaContraseña.Text == txtNuevaContraseña2.Text)
+            //// Realiza la actualización de la contraseña en la base de datos
+            //if (txtNuevaContraseña.Text == txtNuevaContraseña2.Text)
+            //{
+
+            //    string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";
+            //    using (MySqlConnection connection = new MySqlConnection(connectionString))
+            //    {
+            //        connection.Open();
+            //        string query = "UPDATE usuarios SET Contraseña = @NuevaContraseña WHERE NombreUsuario = @Usuario";
+            //        using (MySqlCommand cmd = new MySqlCommand(query, connection))
+            //        {
+            //            cmd.Parameters.AddWithValue("@NuevaContraseña", nuevaContraseña);
+            //            cmd.Parameters.AddWithValue("@Usuario", usuario);
+
+            //            int rowsAffected = cmd.ExecuteNonQuery();
+            //            if (rowsAffected > 0)
+            //            {
+            //                SystemSounds.Asterisk.Play();
+            //                MessageBox.Show("Contraseña actualizada. Inicia sesión nuevamente.", "Contraseña Actualizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            //                this.Close();
+            //            }
+            //            else
+            //            {
+            //                SystemSounds.Exclamation.Play();
+            //                MessageBox.Show("No se pudo actualizar la contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //            }
+            //        }
+
+            //    }
+
+
+            //}
+            if (txtNuevaContraseña.Text == txtNuevaContraseña2.Text)
             {
-
                 string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";
-                using (MySqlConnection connection = new MySqlConnection(connectionString))
-                {
-                    connection.Open();
-                    string query = "UPDATE usuarios SET Contraseña = SHA(@NuevaContraseña) WHERE NombreUsuario = @Usuario";
-                    using (MySqlCommand cmd = new MySqlCommand(query, connection))
-                    {
-                        cmd.Parameters.AddWithValue("@NuevaContraseña", nuevaContraseña);
-                        cmd.Parameters.AddWithValue("@Usuario", usuario);
 
-                        int rowsAffected = cmd.ExecuteNonQuery();
-                        if (rowsAffected > 0)
-                        {
-                            SystemSounds.Asterisk.Play();
-                            MessageBox.Show("Contraseña actualizada. Inicia sesión nuevamente.", "Contraseña Actualizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.Close();
-                        }
-                        else
-                        {
-                            SystemSounds.Exclamation.Play();
-                            MessageBox.Show("No se pudo actualizar la contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        }
+                try
+                {
+
+                    string usuario = txtCambiarUsuario.Text;
+                    string nuevaContraseña = txtNuevaContraseña.Text;
+
+                    using (SHA256 sha256 = SHA256.Create())
+                    {
+                        byte[] bytes = Encoding.UTF8.GetBytes(nuevaContraseña);
+                        byte[] hash = sha256.ComputeHash(bytes);
+                        nuevaContraseña = BitConverter.ToString(hash).Replace("-", "").ToLower();
                     }
 
+                    using (MySqlConnection connection = new MySqlConnection(connectionString))
+                    {
+                        connection.Open();
+
+                        string consulta = "UPDATE usuarios SET Contraseña = @NuevaContraseña WHERE NombreUsuario = @Usuario";
+
+                        using (MySqlCommand cmd = new MySqlCommand(consulta, connection))
+                        {
+                            cmd.Parameters.AddWithValue("@NuevaContraseña", nuevaContraseña);
+                            cmd.Parameters.AddWithValue("@Usuario", usuario);
+
+                            int filasAfectadas = cmd.ExecuteNonQuery();
+
+                            if (filasAfectadas > 0)
+                            {
+                                MessageBox.Show("Contraseña actualizada con éxito, reinicie la sesión.");
+                                Application.Exit();
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se pudo actualizar la contraseña. Verifica el usuario.");
+                            }
+                        }
+                    }
                 }
-                
-                
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+
             }
         }
 
