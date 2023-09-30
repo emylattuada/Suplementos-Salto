@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace kenjhi
 {
-    public partial class prueba : Form
+    public partial class Menu_Empleado : Form
     {
-        public prueba()
+        public Menu_Empleado()
         {
             InitializeComponent();
         }

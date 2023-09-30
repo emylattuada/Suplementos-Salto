@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Enviar_Opinion));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtSugerencia = new System.Windows.Forms.TextBox();
@@ -39,7 +40,6 @@
             this.txtNombreSugerencia = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.btnEnviarSugerencia = new kenjhi.RJButton();
-            this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -57,6 +57,18 @@
             this.panel2.Size = new System.Drawing.Size(291, 25);
             this.panel2.TabIndex = 3;
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Enabled = false;
+            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(6, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(115, 16);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "Enviar sugerencia";
             // 
             // pictureBox3
             // 
@@ -90,7 +102,7 @@
             this.txtSugerencia.Multiline = true;
             this.txtSugerencia.Name = "txtSugerencia";
             this.txtSugerencia.Size = new System.Drawing.Size(239, 164);
-            this.txtSugerencia.TabIndex = 10;
+            this.txtSugerencia.TabIndex = 11;
             this.txtSugerencia.Click += new System.EventHandler(this.txtSugerencia_Click);
             this.txtSugerencia.TextChanged += new System.EventHandler(this.txtSugerencia_TextChanged);
             // 
@@ -139,7 +151,7 @@
             this.txtNombreSugerencia.Multiline = true;
             this.txtNombreSugerencia.Name = "txtNombreSugerencia";
             this.txtNombreSugerencia.Size = new System.Drawing.Size(239, 20);
-            this.txtNombreSugerencia.TabIndex = 14;
+            this.txtNombreSugerencia.TabIndex = 10;
             // 
             // textBox2
             // 
@@ -166,23 +178,11 @@
             this.btnEnviarSugerencia.Location = new System.Drawing.Point(24, 331);
             this.btnEnviarSugerencia.Name = "btnEnviarSugerencia";
             this.btnEnviarSugerencia.Size = new System.Drawing.Size(239, 44);
-            this.btnEnviarSugerencia.TabIndex = 11;
+            this.btnEnviarSugerencia.TabIndex = 14;
             this.btnEnviarSugerencia.Text = "Enviar";
             this.btnEnviarSugerencia.TextColor = System.Drawing.Color.Black;
             this.btnEnviarSugerencia.UseVisualStyleBackColor = false;
             this.btnEnviarSugerencia.Click += new System.EventHandler(this.btnEnviarSugerencia_Click);
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Enabled = false;
-            this.label4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(6, 4);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 16);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Enviar sugerencia";
             // 
             // Enviar_Opinion
             // 

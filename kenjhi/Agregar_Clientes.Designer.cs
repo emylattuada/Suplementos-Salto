@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar_Clientes));
             this.txtDirCliente = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
@@ -234,7 +235,7 @@
             this.btnVolver.Location = new System.Drawing.Point(12, 9);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(72, 26);
-            this.btnVolver.TabIndex = 52;
+            this.btnVolver.TabIndex = 60;
             this.btnVolver.Text = "Volver";
             this.btnVolver.TextColor = System.Drawing.Color.Black;
             this.btnVolver.UseVisualStyleBackColor = false;
@@ -254,7 +255,7 @@
             this.btnAgregarCliente.Location = new System.Drawing.Point(110, 420);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(450, 44);
-            this.btnAgregarCliente.TabIndex = 55;
+            this.btnAgregarCliente.TabIndex = 52;
             this.btnAgregarCliente.Text = "Agregar";
             this.btnAgregarCliente.TextColor = System.Drawing.Color.Black;
             this.btnAgregarCliente.UseVisualStyleBackColor = false;
@@ -282,7 +283,7 @@
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(450, 20);
-            this.txtEmail.TabIndex = 60;
+            this.txtEmail.TabIndex = 55;
             // 
             // label9
             // 
@@ -292,9 +293,9 @@
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.label9.Location = new System.Drawing.Point(110, 330);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(41, 16);
+            this.label9.Size = new System.Drawing.Size(117, 16);
             this.label9.TabIndex = 62;
-            this.label9.Text = "Email";
+            this.label9.Text = "Correo electrónico";
             // 
             // textBox4
             // 
@@ -334,6 +335,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Agregar_Clientes";
             this.Text = "Suplementos Salto";
             this.ResumeLayout(false);

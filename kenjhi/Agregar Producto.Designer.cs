@@ -205,7 +205,7 @@
             this.comboCategoriaProducto.Location = new System.Drawing.Point(126, 220);
             this.comboCategoriaProducto.Name = "comboCategoriaProducto";
             this.comboCategoriaProducto.Size = new System.Drawing.Size(343, 24);
-            this.comboCategoriaProducto.TabIndex = 69;
+            this.comboCategoriaProducto.TabIndex = 81;
             // 
             // lblAgregarProducto
             // 
@@ -272,7 +272,7 @@
             0});
             this.numericUpDownCantidad.Name = "numericUpDownCantidad";
             this.numericUpDownCantidad.Size = new System.Drawing.Size(450, 22);
-            this.numericUpDownCantidad.TabIndex = 81;
+            this.numericUpDownCantidad.TabIndex = 84;
             // 
             // linkCrearCategoria
             // 
@@ -307,7 +307,7 @@
             0});
             this.numericUpDownPrecio.Name = "numericUpDownPrecio";
             this.numericUpDownPrecio.Size = new System.Drawing.Size(450, 22);
-            this.numericUpDownPrecio.TabIndex = 84;
+            this.numericUpDownPrecio.TabIndex = 69;
             // 
             // timerCategoria2
             // 

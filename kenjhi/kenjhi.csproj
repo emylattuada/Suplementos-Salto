@@ -100,11 +100,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Adm Empleados.cs">
+    <Compile Include="Agregar_Empleado.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Adm Empleados.Designer.cs">
-      <DependentUpon>Adm Empleados.cs</DependentUpon>
+    <Compile Include="Agregar_Empleado.Designer.cs">
+      <DependentUpon>Agregar_Empleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Agregar Categoria.cs">
       <SubType>Form</SubType>
@@ -196,8 +196,8 @@
     <Compile Include="Ver_Clientes.Designer.cs">
       <DependentUpon>Ver_Clientes.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Adm Empleados.resx">
-      <DependentUpon>Adm Empleados.cs</DependentUpon>
+    <EmbeddedResource Include="Agregar_Empleado.resx">
+      <DependentUpon>Agregar_Empleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Agregar Categoria.resx">
       <DependentUpon>Agregar Categoria.cs</DependentUpon>
@@ -230,6 +230,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prueba.resx">
+      <DependentUpon>prueba.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ver Productos.resx">
       <DependentUpon>Ver Productos.cs</DependentUpon>

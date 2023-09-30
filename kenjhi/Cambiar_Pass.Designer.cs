@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cambiar_Pass));
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,7 +57,6 @@
             this.txtNuevaContraseña2 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -77,6 +77,18 @@
             this.panel2.TabIndex = 3;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Enabled = false;
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(6, 4);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(128, 16);
+            this.label8.TabIndex = 78;
+            this.label8.Text = "Cambiar contraseña";
             // 
             // pictureBox3
             // 
@@ -346,7 +358,7 @@
             this.btnGuardarNuevaContraseña.Location = new System.Drawing.Point(26, 424);
             this.btnGuardarNuevaContraseña.Name = "btnGuardarNuevaContraseña";
             this.btnGuardarNuevaContraseña.Size = new System.Drawing.Size(239, 44);
-            this.btnGuardarNuevaContraseña.TabIndex = 72;
+            this.btnGuardarNuevaContraseña.TabIndex = 77;
             this.btnGuardarNuevaContraseña.Text = "Guardar";
             this.btnGuardarNuevaContraseña.TextColor = System.Drawing.Color.Black;
             this.btnGuardarNuevaContraseña.UseVisualStyleBackColor = false;
@@ -387,7 +399,7 @@
             this.txtNuevaContraseña2.Multiline = true;
             this.txtNuevaContraseña2.Name = "txtNuevaContraseña2";
             this.txtNuevaContraseña2.Size = new System.Drawing.Size(239, 20);
-            this.txtNuevaContraseña2.TabIndex = 77;
+            this.txtNuevaContraseña2.TabIndex = 72;
             // 
             // label6
             // 
@@ -411,18 +423,6 @@
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(239, 1);
             this.textBox5.TabIndex = 75;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Enabled = false;
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(6, 4);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(128, 16);
-            this.label8.TabIndex = 78;
-            this.label8.Text = "Cambiar contraseña";
             // 
             // Cambiar_Pass
             // 

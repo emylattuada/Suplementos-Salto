@@ -58,57 +58,67 @@ namespace kenjhi
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            //string usuario = txtUsuario.Text;
-            //string contrasena = txtContrasena.Text;
-            //string rol = "";
+            //string nombreUsuario = txtUsuario.Text;
+            //string contraseñaIngresada = txtContrasena.Text;
+            //string contraseñaEncriptada = EncriptarContraseña(contraseñaIngresada);
+            //string cadenaConexion = "Server=localhost;Database=suple;Uid=jhin;Pwd=jhin444_2023;";
+            //MySqlConnection conexion = new MySqlConnection(cadenaConexion);
 
-            //string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";
-
-            //using (MySqlConnection connection = new MySqlConnection(connectionString))
+            //try
             //{
-            //    try
+            //    conexion.Open();
+
+            //    string consulta = "SELECT Rol FROM usuarios WHERE NombreUsuario = @NombreUsuario AND Contraseña = @Contraseña";
+            //    MySqlCommand comando = new MySqlCommand(consulta, conexion);
+            //    comando.Parameters.AddWithValue("@NombreUsuario", nombreUsuario);
+            //    comando.Parameters.AddWithValue("@Contraseña", contraseñaEncriptada);
+
+            //    using (MySqlDataReader reader = comando.ExecuteReader())
             //    {
-            //        connection.Open();
-
-            //        // Consulta para verificar el usuario y obtener el rol
-            //        string query = "SELECT Rol FROM usuarios WHERE NombreUsuario = @Usuario AND Contraseña = @Contrasena";
-            //        MySqlCommand cmd = new MySqlCommand(query, connection);
-            //        cmd.Parameters.AddWithValue("@Usuario", usuario);
-            //        cmd.Parameters.AddWithValue("@Contrasena", contrasena);
-
-            //        MySqlDataReader reader = cmd.ExecuteReader();
 
             //        if (reader.Read())
             //        {
-            //            rol = reader["Rol"].ToString();
+            //            string rol = reader["Rol"].ToString();
 
             //            if (rol == "admin")
             //            {
-            //                // Abre el Form1
-            //                frmPrincipal formAdmin= new frmPrincipal();
+            //                frmPrincipal formAdmin = new frmPrincipal();
             //                formAdmin.Show();
             //                this.Hide();
 
-            //            }
-            //            else if (rol == "empleado")
-            //            {
-            //                // Abre el Form2
-            //                prueba formEmpleado = new prueba();
-            //                formEmpleado.Show();
-            //                this.Hide();
 
             //            }
+            //            else
+            //            {
+            //                lbl1.Visible = true;
+            //                System.Media.SystemSounds.Exclamation.Play();
+            //            }
+            //            if (rol == "empleado")
+            //            {
+            //                Menu_Empleado formEmpleado = new Menu_Empleado();
+            //                formEmpleado.Show();
+            //                this.Hide();
+            //                lbl1.Visible = true;
+            //                System.Media.SystemSounds.Exclamation.Play();
+
+            //            }
+            //            else
+            //            {
+            //                lbl1.Visible = true;
+            //                System.Media.SystemSounds.Exclamation.Play();
+            //            }
+
             //        }
-            //        else
-            //        {
-            //            //MessageBox.Show("Credenciales incorrectas");
-            //            lbl1.Visible = true;
-            //        }
+
             //    }
-            //    catch (Exception ex)
-            //    {
-            //        MessageBox.Show("Error de conexión: " + ex.Message);
-            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Error al conectarse a la base de datos: " + ex.Message);
+            //}
+            //finally
+            //{
+            //    conexion.Close();
             //}
             string nombreUsuario = txtUsuario.Text;
             string contraseñaIngresada = txtContrasena.Text;
@@ -120,32 +130,39 @@ namespace kenjhi
             {
                 conexion.Open();
 
-                string consulta = "SELECT Contraseña FROM usuarios WHERE NombreUsuario = @NombreUsuario";
+                string consulta = "SELECT Rol FROM usuarios WHERE NombreUsuario = @NombreUsuario AND Contraseña = @Contraseña";
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
                 comando.Parameters.AddWithValue("@NombreUsuario", nombreUsuario);
+                comando.Parameters.AddWithValue("@Contraseña", contraseñaEncriptada);
 
                 using (MySqlDataReader reader = comando.ExecuteReader())
                 {
                     if (reader.Read())
                     {
-                        string contraseñaBD = reader["Contraseña"].ToString();
+                        string rol = reader["Rol"].ToString();
 
-                        // Compara las contraseñas encriptadas
-                        if (contraseñaEncriptada == contraseñaBD)
+                        if (rol == "admin")
                         {
                             frmPrincipal formAdmin = new frmPrincipal();
                             formAdmin.Show();
                             this.Hide();
                         }
+                        else if (rol == "empleado")
+                        {
+                            Menu_Empleado formEmpleado = new Menu_Empleado();
+                            formEmpleado.Show();
+                            this.Hide();
+                        }
                         else
                         {
-                            //MessageBox.Show("Contraseña incorrecta");
                             lbl1.Visible = true;
+                            System.Media.SystemSounds.Exclamation.Play();
                         }
                     }
                     else
                     {
-                        MessageBox.Show("Nombre de usuario no encontrado");
+                        lbl1.Visible = true;
+                        System.Media.SystemSounds.Exclamation.Play();
                     }
                 }
             }
@@ -157,6 +174,7 @@ namespace kenjhi
             {
                 conexion.Close();
             }
+
         }
 
         private string EncriptarContraseña(string contraseña)
@@ -181,9 +199,7 @@ namespace kenjhi
 
         private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter)) 
-            {
-
+            if (e.KeyChar == Convert.ToChar(Keys.Enter)){
                 string nombreUsuario = txtUsuario.Text;
                 string contraseñaIngresada = txtContrasena.Text;
                 string contraseñaEncriptada = EncriptarContraseña(contraseñaIngresada);
@@ -194,32 +210,39 @@ namespace kenjhi
                 {
                     conexion.Open();
 
-                    string consulta = "SELECT Contraseña FROM usuarios WHERE NombreUsuario = @NombreUsuario";
+                    string consulta = "SELECT Rol FROM usuarios WHERE NombreUsuario = @NombreUsuario AND Contraseña = @Contraseña";
                     MySqlCommand comando = new MySqlCommand(consulta, conexion);
                     comando.Parameters.AddWithValue("@NombreUsuario", nombreUsuario);
+                    comando.Parameters.AddWithValue("@Contraseña", contraseñaEncriptada);
 
                     using (MySqlDataReader reader = comando.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                            string contraseñaBD = reader["Contraseña"].ToString();
+                            string rol = reader["Rol"].ToString();
 
-                            // Compara las contraseñas encriptadas
-                            if (contraseñaEncriptada == contraseñaBD)
+                            if (rol == "admin")
                             {
                                 frmPrincipal formAdmin = new frmPrincipal();
                                 formAdmin.Show();
                                 this.Hide();
                             }
+                            else if (rol == "empleado")
+                            {
+                                Menu_Empleado formEmpleado = new Menu_Empleado();
+                                formEmpleado.Show();
+                                this.Hide();
+                            }
                             else
                             {
-                                //MessageBox.Show("Contraseña incorrecta");
                                 lbl1.Visible = true;
+                                System.Media.SystemSounds.Exclamation.Play();
                             }
                         }
                         else
                         {
-                            MessageBox.Show("Nombre de usuario no encontrado");
+                            lbl1.Visible = true;
+                            System.Media.SystemSounds.Exclamation.Play();
                         }
                     }
                 }
