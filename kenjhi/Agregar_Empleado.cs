@@ -39,7 +39,7 @@ namespace kenjhi
             {
                 MessageBox.Show("El correo electrónico no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }
+            }//video tutorial
 
             Random rand = new Random();
             int codigo = rand.Next(100000, 999999);
