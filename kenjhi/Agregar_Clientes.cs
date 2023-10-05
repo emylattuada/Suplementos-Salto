@@ -8,6 +8,7 @@ using System.Linq;
 using System.Media;
 using System.Security.Cryptography;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -42,6 +43,12 @@ namespace kenjhi
             string telefono = txtNumeroCliente.Text;
             string direccion = txtDirCliente.Text;
             string email = txtEmail.Text;
+
+            if (!Regex.IsMatch(txtEmail.Text, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"))
+            {
+                MessageBox.Show("El correo electrónico no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }//mismo code de agregar emp, video tuto
 
             bool clienteExiste = VerificarExistenciaCliente(nombre, telefono);
 
@@ -85,7 +92,7 @@ namespace kenjhi
                     command.Parameters.AddWithValue("@Telefono", telefono);
                     command.Parameters.AddWithValue("@Direccion", direccion);
                     command.Parameters.AddWithValue("@Email", email);
-                    command.ExecuteNonQuery();// para verificar si la operación se realizó correctamente o para llevar a cabo un seguimiento de cuántos registros se modificaron.
+                    command.ExecuteNonQuery();
                 }
             }
         }

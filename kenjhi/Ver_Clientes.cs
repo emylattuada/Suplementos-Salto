@@ -18,6 +18,10 @@ namespace kenjhi
         public Ver_Clientes()
         {
             InitializeComponent();
+            txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
+            txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
+            dataGridClientes.RowTemplate.Height = 40;
+            dataGridClientes.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10); // Ajusta el espacio vertical entre las celdas de cada fila
 
 
             try
@@ -88,7 +92,43 @@ namespace kenjhi
                         column.ReadOnly = true;
                     }
                     btnModificar.Visible = true;
+                    try
+                    {
+                        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"); ;
+                        conexion.Open();
 
+                        //string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente";
+                        string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente WHERE visible=1";
+
+
+                        MySqlCommand comandos = new MySqlCommand(consulta, conexion);
+                        MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
+
+                        System.Data.DataTable tablaClientes = new System.Data.DataTable();
+                        adaptador.Fill(tablaClientes);
+
+                        dataGridClientes.DataSource = tablaClientes;
+
+                        // Configurar las columnas
+                        dataGridClientes.Columns["ID_Cliente"].HeaderText = "ID";
+                        dataGridClientes.Columns["ID_Cliente"].Visible = false;
+                        dataGridClientes.Columns["Nombre"].HeaderText = "Cliente";
+                        dataGridClientes.Columns["Telefono"].HeaderText = "Numero de teléfono";
+                        dataGridClientes.Columns["Direccion"].HeaderText = "Dirección";
+                        dataGridClientes.Columns["Email"].HeaderText = "Correo electrónico";
+
+                        // Ajustar el ancho de las columnas
+                        dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        foreach (DataGridViewColumn column in dataGridClientes.Columns)
+                        {
+                            column.ReadOnly = true;
+                        }
+                        conexion.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString(), "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)
@@ -142,13 +182,51 @@ namespace kenjhi
 
                         // Ocultar la fila seleccionada en el DataGridView
                         dataGridClientes.SelectedRows[0].Visible = false;
+
                         //MessageBox.Show("Cliente eliminado.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        
                     }
                 }
                 catch /*(Exception ex)*/
                 {
                     MessageBox.Show("Cliente eliminado.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    try
+                    {
+                        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"); ;
+                        conexion.Open();
 
+                        //string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente";
+                        string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente WHERE visible=1";
+
+
+                        MySqlCommand comandos = new MySqlCommand(consulta, conexion);
+                        MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
+
+                        System.Data.DataTable tablaClientes = new System.Data.DataTable();
+                        adaptador.Fill(tablaClientes);
+
+                        dataGridClientes.DataSource = tablaClientes;
+
+                        // Configurar las columnas
+                        dataGridClientes.Columns["ID_Cliente"].HeaderText = "ID";
+                        dataGridClientes.Columns["ID_Cliente"].Visible = false;
+                        dataGridClientes.Columns["Nombre"].HeaderText = "Cliente";
+                        dataGridClientes.Columns["Telefono"].HeaderText = "Numero de teléfono";
+                        dataGridClientes.Columns["Direccion"].HeaderText = "Dirección";
+                        dataGridClientes.Columns["Email"].HeaderText = "Correo electrónico";
+
+                        // Ajustar el ancho de las columnas
+                        dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                        foreach (DataGridViewColumn column in dataGridClientes.Columns)
+                        {
+                            column.ReadOnly = true;
+                        }
+                        conexion.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString(), "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     //MessageBox.Show(ex.ToString(), "Error al eliminar cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -212,7 +290,7 @@ namespace kenjhi
                     dataGridClientes.Columns["Email"].HeaderText = "Correo electrónico";
 
                     // Ajustar el ancho de las columnas
-                    //dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     foreach (DataGridViewColumn column in dataGridClientes.Columns)
                     {
                         column.ReadOnly = true;
@@ -223,7 +301,8 @@ namespace kenjhi
                     if (lblSinResultado2.Visible = true)
                     {
                         lblSinResultado2.Visible = false;
-                    }
+                    } //probar
+                    
 
                     conexion.Close();
                 }
@@ -255,6 +334,7 @@ namespace kenjhi
                             // Si no hay resultados, muestra el Label
                             lblSinResultado.Visible = true;
                             lblSinResultado2.Visible = true;
+
                         }
                         else
                         {
@@ -266,6 +346,12 @@ namespace kenjhi
                 }
 
             }
+        }
+
+        private void txtBusquedaDGV_MouseClick(object sender, MouseEventArgs e)
+        {   
+
+            if (txtBusquedaDGV.Text == "Ingresa un nombre para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
         }
     }
 }

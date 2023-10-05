@@ -169,7 +169,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(0, 90);
+            this.button4.Location = new System.Drawing.Point(0, 104);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(167, 30);
@@ -186,7 +186,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(0, 60);
+            this.button3.Location = new System.Drawing.Point(0, 74);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(167, 30);
@@ -206,7 +206,7 @@
             this.button1.Location = new System.Drawing.Point(0, 30);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(167, 30);
+            this.button1.Size = new System.Drawing.Size(167, 44);
             this.button1.TabIndex = 4;
             this.button1.Text = "Ver todos los Empleados";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -242,7 +242,7 @@
             this.btnAdm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAdm.Location = new System.Drawing.Point(0, 450);
             this.btnAdm.Name = "btnAdm";
-            this.btnAdm.Padding = new System.Windows.Forms.Padding(0, 0, 44, 0);
+            this.btnAdm.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
             this.btnAdm.Size = new System.Drawing.Size(167, 30);
             this.btnAdm.TabIndex = 10;
             this.btnAdm.Text = "Administrador";

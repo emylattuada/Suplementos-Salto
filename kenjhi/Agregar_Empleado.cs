@@ -25,9 +25,13 @@ namespace kenjhi
             if (string.IsNullOrWhiteSpace(txtNombreEmpleado.Text) || string.IsNullOrWhiteSpace(txtEmailEmpleado.Text) ||
              string.IsNullOrWhiteSpace(txtContraseñaEmpleado.Text) || string.IsNullOrWhiteSpace(txtContraseñaEmpleado2.Text))
             {
-                MessageBox.Show("Todos los campos son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+
+                //MessageBox.Show("Todos los campos son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                lbl2.Visible = true;
+                System.Media.SystemSounds.Exclamation.Play();   //lo mismo de arriba nada mas q lo representamos en el label y con sonido
                 return;
-            }
+            } else { lbl2.Visible = false; }
 
             if (txtContraseñaEmpleado.Text != txtContraseñaEmpleado2.Text)
             {
@@ -131,6 +135,11 @@ namespace kenjhi
             picPass.Visible = false;
             picNoVer.Visible = true;
 
+        }
+
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

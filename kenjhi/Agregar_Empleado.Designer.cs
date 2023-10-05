@@ -48,6 +48,7 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.picNoVer = new System.Windows.Forms.PictureBox();
             this.picPass = new System.Windows.Forms.PictureBox();
+            this.lbl2 = new System.Windows.Forms.Label();
             this.btnAgregarCliente = new kenjhi.RJButton();
             this.btnVolver = new kenjhi.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.picNoVer)).BeginInit();
@@ -283,6 +284,18 @@
             this.picPass.TabStop = false;
             this.picPass.Click += new System.EventHandler(this.picPass_Click);
             // 
+            // lbl2
+            // 
+            this.lbl2.AutoSize = true;
+            this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(94)))), ((int)(((byte)(95)))));
+            this.lbl2.Location = new System.Drawing.Point(263, 376);
+            this.lbl2.Name = "lbl2";
+            this.lbl2.Size = new System.Drawing.Size(152, 13);
+            this.lbl2.TabIndex = 76;
+            this.lbl2.Text = "Completa los datos obligatorios\r\n";
+            this.lbl2.Visible = false;
+            // 
             // btnAgregarCliente
             // 
             this.btnAgregarCliente.BackColor = System.Drawing.Color.Yellow;
@@ -321,6 +334,7 @@
             this.btnVolver.Text = "Volver";
             this.btnVolver.TextColor = System.Drawing.Color.Black;
             this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // Adm_Empleados
             // 
@@ -328,6 +342,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 505);
+            this.Controls.Add(this.lbl2);
             this.Controls.Add(this.picNoVer);
             this.Controls.Add(this.picPass);
             this.Controls.Add(this.btnAgregarCliente);
@@ -382,5 +397,6 @@
         private RJButton btnAgregarCliente;
         private System.Windows.Forms.PictureBox picNoVer;
         private System.Windows.Forms.PictureBox picPass;
+        private System.Windows.Forms.Label lbl2;
     }
 }
