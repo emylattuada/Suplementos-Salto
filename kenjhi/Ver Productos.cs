@@ -353,5 +353,23 @@ namespace kenjhi
             }
 
         }
+
+        private void dataGridProductos_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dataGridProductos.Columns[e.ColumnIndex].Name == "Cantidad" && e.Value != null)
+            {
+                int cantidad = Convert.ToInt32(e.Value);
+
+                // Cambia el color del texto según la cantidad
+                if (cantidad < 10)
+                {
+                    e.CellStyle.ForeColor = Color.Red;
+                }
+                else
+                {
+                    e.CellStyle.ForeColor = Color.Green;
+                }
+            }
+        }
     }
 }
