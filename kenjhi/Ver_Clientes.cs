@@ -49,7 +49,6 @@ namespace kenjhi
                 dataGridClientes.Columns["Direccion"].HeaderText = "Dirección";
                 dataGridClientes.Columns["Email"].HeaderText = "Correo electrónico";
 
-                // Ajustar el ancho de las columnas
                 dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 foreach (DataGridViewColumn column in dataGridClientes.Columns)
                 {
@@ -117,7 +116,6 @@ namespace kenjhi
                         dataGridClientes.Columns["Direccion"].HeaderText = "Dirección";
                         dataGridClientes.Columns["Email"].HeaderText = "Correo electrónico";
 
-                        // Ajustar el ancho de las columnas
                         dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         foreach (DataGridViewColumn column in dataGridClientes.Columns)
                         {
@@ -146,9 +144,8 @@ namespace kenjhi
         private void dataGridClientes_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             //lblSinGuardar.Visible = true;
-            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) // Asegúrate de que se haya cambiado una celda válida
+            if (e.RowIndex >= 0 && e.ColumnIndex >= 0) 
             {
-                // Verifica si se ha cambiado el valor en una celda
                 if (dataGridClientes.IsCurrentCellDirty)
                 {
                     // Mostrar un mensaje al usuario.
