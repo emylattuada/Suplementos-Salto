@@ -137,7 +137,7 @@ namespace kenjhi
 
         private void dataGridClientes_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            btnEliminarCliente.Visible = true;
+            //btnEliminarCliente.Visible = true;
 
         }
 
@@ -204,7 +204,6 @@ namespace kenjhi
 
                         dataGridClientes.DataSource = tablaClientes;
 
-                        // Configurar las columnas
                         dataGridClientes.Columns["ID_Cliente"].HeaderText = "ID";
                         dataGridClientes.Columns["ID_Cliente"].Visible = false;
                         dataGridClientes.Columns["Nombre"].HeaderText = "Cliente";
@@ -212,12 +211,12 @@ namespace kenjhi
                         dataGridClientes.Columns["Direccion"].HeaderText = "Dirección";
                         dataGridClientes.Columns["Email"].HeaderText = "Correo electrónico";
 
-                        // Ajustar el ancho de las columnas
                         dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         foreach (DataGridViewColumn column in dataGridClientes.Columns)
                         {
                             column.ReadOnly = true;
                         }
+                        btnEliminarCliente.Visible = false;
                         conexion.Close();
                     }
                     catch (Exception ex)
@@ -349,6 +348,11 @@ namespace kenjhi
         {   
 
             if (txtBusquedaDGV.Text == "Ingresa un nombre para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
+        }
+
+        private void dataGridClientes_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            btnEliminarCliente.Visible = true;
         }
     }
 }

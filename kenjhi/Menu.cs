@@ -156,7 +156,7 @@ namespace kenjhi
 
         private void btnNuevoPedido_Click(object sender, EventArgs e)
         {
-            openChildForm(new Nuevo_Pedido());
+            openChildForm(new Nueva_Venta()); 
         }
 
         private void SeccionAdmin_Click(object sender, EventArgs e)

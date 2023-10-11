@@ -156,11 +156,11 @@
     <Compile Include="Menu.Designer.cs">
       <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Nuevo_Pedido.cs">
+    <Compile Include="Nueva_Venta.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Nuevo_Pedido.Designer.cs">
-      <DependentUpon>Nuevo_Pedido.cs</DependentUpon>
+    <Compile Include="Nueva_Venta.Designer.cs">
+      <DependentUpon>Nueva_Venta.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -223,8 +223,8 @@
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Nuevo_Pedido.resx">
-      <DependentUpon>Nuevo_Pedido.cs</DependentUpon>
+    <EmbeddedResource Include="Nueva_Venta.resx">
+      <DependentUpon>Nueva_Venta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

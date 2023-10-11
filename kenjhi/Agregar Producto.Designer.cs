@@ -444,7 +444,7 @@
         private System.Windows.Forms.LinkLabel linkCrearCategoria;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.NumericUpDown numericUpDownPrecio;
-        private System.Windows.Forms.Timer timerCategoria;
+        //private System.Windows.Forms.Timer timerCategoria;
         private System.Windows.Forms.PictureBox picActualizarCategoria;
         private System.Windows.Forms.Label labelActualizacionCate;
     }

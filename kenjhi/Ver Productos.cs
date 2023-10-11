@@ -63,11 +63,9 @@ namespace kenjhi
 
             try
             {
-                // Establece la conexión a la base de datos
                 MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
                 conexion.Open();
 
-                // Consulta para obtener los productos y su categoría
                 string consulta = "SELECT p.ID_Producto, p.Precio, p.Cantidad, p.Nombre, c.Nombre AS Categoria " +
                                   "FROM producto p " +
                                   "INNER JOIN categoria c ON p.ID_Categoria = c.ID_Categoria " +
@@ -83,7 +81,7 @@ namespace kenjhi
 
                 dataGridProductos.Columns["ID_Producto"].HeaderText = "ID";
                 dataGridProductos.Columns["ID_Producto"].Visible = false;
-                dataGridProductos.Columns["Precio"].HeaderText = "Precio";
+                dataGridProductos.Columns["Precio"].HeaderText = "Precio (UYU)";
                 dataGridProductos.Columns["Cantidad"].HeaderText = "Cantidad";
                 dataGridProductos.Columns["Nombre"].HeaderText = "Nombre del Producto";
                 dataGridProductos.Columns["Categoria"].HeaderText = "Categoría";
@@ -167,7 +165,7 @@ namespace kenjhi
 
                 dataGridProductos.Columns["ID_Producto"].HeaderText = "ID";
                 dataGridProductos.Columns["ID_Producto"].Visible = false;
-                dataGridProductos.Columns["Precio"].HeaderText = "Precio";
+                dataGridProductos.Columns["Precio"].HeaderText = "Precio (UYU)";
                 dataGridProductos.Columns["Cantidad"].HeaderText = "Cantidad";
                 dataGridProductos.Columns["Nombre"].HeaderText = "Nombre del Producto";
                 dataGridProductos.Columns["Categoria"].HeaderText = "Categoría";
@@ -251,42 +249,18 @@ namespace kenjhi
                         dataGridProductos.SelectedRows[0].Visible = false;
 
                         //MessageBox.Show("Producto ocultado.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                     }
                 }
                 catch /*(Exception ex)*/
                 {
                     MessageBox.Show("Producto eliminado", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-            }
-        }
-
-        private void dataGridProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            //btnCancelarModificacion.Visible = true;
-        }
-
-        private void dataGridProductos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (txtBusquedaDGV.Text == "Ingresa un nombre para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
-
-        }
-
-        private void dataGridProductos_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            
-        }
-
-        private void txtBusquedaDGV_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (txtBusquedaDGV.Text.Length == 0)
-            {
                 try
                 {
-                    // Establece la conexión a la base de datos
                     MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
                     conexion.Open();
 
-                    // Consulta para obtener los productos y su categoría
                     string consulta = "SELECT p.ID_Producto, p.Precio, p.Cantidad, p.Nombre, c.Nombre AS Categoria " +
                                       "FROM producto p " +
                                       "INNER JOIN categoria c ON p.ID_Categoria = c.ID_Categoria " +
@@ -302,7 +276,67 @@ namespace kenjhi
 
                     dataGridProductos.Columns["ID_Producto"].HeaderText = "ID";
                     dataGridProductos.Columns["ID_Producto"].Visible = false;
-                    dataGridProductos.Columns["Precio"].HeaderText = "Precio";
+                    dataGridProductos.Columns["Precio"].HeaderText = "Precio (UYU)";
+                    dataGridProductos.Columns["Cantidad"].HeaderText = "Cantidad";
+                    dataGridProductos.Columns["Nombre"].HeaderText = "Nombre del Producto";
+                    dataGridProductos.Columns["Categoria"].HeaderText = "Categoría";
+
+                    dataGridProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                    dataGridProductos.Columns["Categoria"].ReadOnly = true;
+
+                    conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString(), "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                btnEliminarProducto.Visible = false;
+            }
+        }
+
+        private void dataGridProductos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            //btnCancelarModificacion.Visible = true;
+        }
+
+        private void dataGridProductos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            //if (txtBusquedaDGV.Text == "Ingresa un nombre para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
+            btnEliminarProducto.Visible = true;
+
+        }
+
+        private void dataGridProductos_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+        }
+
+        private void txtBusquedaDGV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtBusquedaDGV.Text.Length == 0)
+            {
+                try
+                {
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
+                    conexion.Open();
+
+                    string consulta = "SELECT p.ID_Producto, p.Precio, p.Cantidad, p.Nombre, c.Nombre AS Categoria " +
+                                      "FROM producto p " +
+                                      "INNER JOIN categoria c ON p.ID_Categoria = c.ID_Categoria " +
+                                      "WHERE p.visible = 1";
+
+                    MySqlCommand comandos = new MySqlCommand(consulta, conexion);
+                    MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
+
+                    DataTable tablaProductos = new DataTable();
+                    adaptador.Fill(tablaProductos);
+
+                    dataGridProductos.DataSource = tablaProductos;
+
+                    dataGridProductos.Columns["ID_Producto"].HeaderText = "ID";
+                    dataGridProductos.Columns["ID_Producto"].Visible = false;
+                    dataGridProductos.Columns["Precio"].HeaderText = "Precio (UYU)";
                     dataGridProductos.Columns["Cantidad"].HeaderText = "Cantidad";
                     dataGridProductos.Columns["Nombre"].HeaderText = "Nombre del Producto";
                     dataGridProductos.Columns["Categoria"].HeaderText = "Categoría";
@@ -360,7 +394,7 @@ namespace kenjhi
             {
                 int cantidad = Convert.ToInt32(e.Value);
 
-                // Cambia el color del texto según la cantidad
+                // Cambia el color del texto viendo la cantidad
                 if (cantidad < 10)
                 {
                     e.CellStyle.ForeColor = Color.Red;
@@ -369,7 +403,13 @@ namespace kenjhi
                 {
                     e.CellStyle.ForeColor = Color.Green;
                 }
-            }
+            }//tutorial
+        }
+
+        private void dataGridProductos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEliminarProducto.Visible = true;
+
         }
     }
 }

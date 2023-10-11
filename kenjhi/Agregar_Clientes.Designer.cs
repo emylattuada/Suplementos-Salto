@@ -49,6 +49,7 @@
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtDirCliente
@@ -57,7 +58,7 @@
             this.txtDirCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtDirCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDirCliente.ForeColor = System.Drawing.Color.White;
-            this.txtDirCliente.Location = new System.Drawing.Point(110, 267);
+            this.txtDirCliente.Location = new System.Drawing.Point(110, 286);
             this.txtDirCliente.Multiline = true;
             this.txtDirCliente.Name = "txtDirCliente";
             this.txtDirCliente.Size = new System.Drawing.Size(450, 20);
@@ -69,7 +70,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(107, 245);
+            this.label4.Location = new System.Drawing.Point(107, 264);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(64, 16);
             this.label4.TabIndex = 50;
@@ -81,7 +82,7 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Enabled = false;
             this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(110, 292);
+            this.textBox5.Location = new System.Drawing.Point(110, 311);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(450, 1);
@@ -93,7 +94,7 @@
             this.txtNumeroCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNumeroCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNumeroCliente.ForeColor = System.Drawing.Color.White;
-            this.txtNumeroCliente.Location = new System.Drawing.Point(110, 182);
+            this.txtNumeroCliente.Location = new System.Drawing.Point(110, 201);
             this.txtNumeroCliente.Multiline = true;
             this.txtNumeroCliente.Name = "txtNumeroCliente";
             this.txtNumeroCliente.Size = new System.Drawing.Size(450, 20);
@@ -105,7 +106,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label3.Location = new System.Drawing.Point(107, 160);
+            this.label3.Location = new System.Drawing.Point(107, 179);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(125, 16);
             this.label3.TabIndex = 46;
@@ -117,7 +118,7 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Enabled = false;
             this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(110, 207);
+            this.textBox3.Location = new System.Drawing.Point(110, 226);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(450, 1);
@@ -129,7 +130,7 @@
             this.txtNombreCliente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreCliente.ForeColor = System.Drawing.Color.White;
-            this.txtNombreCliente.Location = new System.Drawing.Point(110, 99);
+            this.txtNombreCliente.Location = new System.Drawing.Point(110, 118);
             this.txtNombreCliente.Multiline = true;
             this.txtNombreCliente.Name = "txtNombreCliente";
             this.txtNombreCliente.Size = new System.Drawing.Size(450, 20);
@@ -141,7 +142,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(107, 77);
+            this.label2.Location = new System.Drawing.Point(107, 96);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 43;
@@ -153,7 +154,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Enabled = false;
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(110, 124);
+            this.textBox1.Location = new System.Drawing.Point(110, 143);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(450, 1);
@@ -165,7 +166,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(107, -8);
+            this.label1.Location = new System.Drawing.Point(107, 11);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.label1.Size = new System.Drawing.Size(456, 61);
@@ -179,7 +180,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(490, 80);
+            this.label5.Location = new System.Drawing.Point(490, 99);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 16);
             this.label5.TabIndex = 56;
@@ -191,7 +192,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(490, 163);
+            this.label6.Location = new System.Drawing.Point(490, 182);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 16);
             this.label6.TabIndex = 57;
@@ -203,7 +204,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.DimGray;
-            this.label7.Location = new System.Drawing.Point(499, 245);
+            this.label7.Location = new System.Drawing.Point(499, 264);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(61, 16);
             this.label7.TabIndex = 58;
@@ -214,7 +215,7 @@
             this.lbl2.AutoSize = true;
             this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(94)))), ((int)(((byte)(95)))));
-            this.lbl2.Location = new System.Drawing.Point(260, 395);
+            this.lbl2.Location = new System.Drawing.Point(260, 414);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(152, 13);
             this.lbl2.TabIndex = 59;
@@ -252,7 +253,7 @@
             this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCliente.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregarCliente.Location = new System.Drawing.Point(110, 420);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(110, 439);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(450, 44);
             this.btnAgregarCliente.TabIndex = 52;
@@ -267,7 +268,7 @@
             this.label8.BackColor = System.Drawing.Color.Transparent;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(502, 330);
+            this.label8.Location = new System.Drawing.Point(502, 349);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(61, 16);
             this.label8.TabIndex = 63;
@@ -279,7 +280,7 @@
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.ForeColor = System.Drawing.Color.White;
-            this.txtEmail.Location = new System.Drawing.Point(113, 352);
+            this.txtEmail.Location = new System.Drawing.Point(113, 371);
             this.txtEmail.Multiline = true;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(450, 20);
@@ -291,7 +292,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label9.Location = new System.Drawing.Point(110, 330);
+            this.label9.Location = new System.Drawing.Point(110, 349);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(117, 16);
             this.label9.TabIndex = 62;
@@ -303,11 +304,22 @@
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Enabled = false;
             this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(113, 377);
+            this.textBox4.Location = new System.Drawing.Point(113, 396);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(450, 1);
             this.textBox4.TabIndex = 61;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Black;
+            this.label10.ForeColor = System.Drawing.Color.DimGray;
+            this.label10.Location = new System.Drawing.Point(107, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(203, 13);
+            this.label10.TabIndex = 64;
+            this.label10.Text = "Menú principal > Cliente > Agregar cliente";
             // 
             // Agregar_Clientes
             // 
@@ -315,6 +327,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 505);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label9);
@@ -364,5 +377,6 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label10;
     }
 }
