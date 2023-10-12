@@ -172,7 +172,6 @@ namespace kenjhi
             }
             finally
             {
-                conexion.Close();
             }
 
         }
@@ -252,7 +251,6 @@ namespace kenjhi
                 }
                 finally
                 {
-                    conexion.Close();
                 }
 
             }
