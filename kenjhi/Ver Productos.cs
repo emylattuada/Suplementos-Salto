@@ -138,6 +138,8 @@ namespace kenjhi
                     btnGuardarCambios.Visible = false;
                     btnEliminarProducto.Visible = false;
                     btnCancelarModificacion.Visible = false;
+                    txtBusquedaDGV.Clear();
+
                     foreach (DataGridViewColumn column in dataGridProductos.Columns)
                     {
                         column.ReadOnly = true;
@@ -172,8 +174,9 @@ namespace kenjhi
 
                 dataGridProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridProductos.Columns["Categoria"].ReadOnly = true;
+                        txtBusquedaDGV.Clear();
 
-                conexion.Close();
+                        conexion.Close();
             }
             catch (Exception ex)
             {
@@ -249,12 +252,13 @@ namespace kenjhi
                         dataGridProductos.SelectedRows[0].Visible = false;
 
                         //MessageBox.Show("Producto ocultado.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+                        txtBusquedaDGV.Clear();
                     }
                 }
                 catch /*(Exception ex)*/
                 {
                     MessageBox.Show("Producto eliminado", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtBusquedaDGV.Clear();
                 }
                 try
                 {

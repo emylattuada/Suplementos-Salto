@@ -207,9 +207,15 @@ namespace kenjhi
 
         private void btnADM_AgregarEmpleado_Click(object sender, EventArgs e)
         {
-            openChildForm(new Adm_Empleados());
+            openChildForm(new Agregar_Empleado());
             hideSubMenu();
 
+        }
+
+        private void btnADM_VerEmpleados_Click(object sender, EventArgs e)
+        {
+            openChildForm(new Ver_Empleados());
+            hideSubMenu();
         }
 
         private void openChildForm(Form childform)

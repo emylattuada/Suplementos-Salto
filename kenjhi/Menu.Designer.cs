@@ -38,7 +38,7 @@
             this.panelSubMenuADM = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnADM_VerEmpleados = new System.Windows.Forms.Button();
             this.btnADM_AgregarEmpleado = new System.Windows.Forms.Button();
             this.btnAdm = new System.Windows.Forms.Button();
             this.btnVersion = new System.Windows.Forms.Button();
@@ -153,7 +153,7 @@
             this.panelSubMenuADM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panelSubMenuADM.Controls.Add(this.button4);
             this.panelSubMenuADM.Controls.Add(this.button3);
-            this.panelSubMenuADM.Controls.Add(this.button1);
+            this.panelSubMenuADM.Controls.Add(this.btnADM_VerEmpleados);
             this.panelSubMenuADM.Controls.Add(this.btnADM_AgregarEmpleado);
             this.panelSubMenuADM.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelSubMenuADM.Location = new System.Drawing.Point(0, 480);
@@ -195,22 +195,23 @@
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnADM_VerEmpleados
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(0, 30);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(167, 44);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Ver todos los Empleados";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnADM_VerEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnADM_VerEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnADM_VerEmpleados.FlatAppearance.BorderSize = 0;
+            this.btnADM_VerEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnADM_VerEmpleados.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnADM_VerEmpleados.ForeColor = System.Drawing.Color.Black;
+            this.btnADM_VerEmpleados.Location = new System.Drawing.Point(0, 30);
+            this.btnADM_VerEmpleados.Name = "btnADM_VerEmpleados";
+            this.btnADM_VerEmpleados.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnADM_VerEmpleados.Size = new System.Drawing.Size(167, 44);
+            this.btnADM_VerEmpleados.TabIndex = 4;
+            this.btnADM_VerEmpleados.Text = "Ver todos los Empleados";
+            this.btnADM_VerEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnADM_VerEmpleados.UseVisualStyleBackColor = false;
+            this.btnADM_VerEmpleados.Click += new System.EventHandler(this.btnADM_VerEmpleados_Click);
             // 
             // btnADM_AgregarEmpleado
             // 
@@ -674,7 +675,7 @@
         private System.Windows.Forms.Button btnIngresoProductos;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panelSubMenuADM;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnADM_VerEmpleados;
         private System.Windows.Forms.Button btnADM_AgregarEmpleado;
         private System.Windows.Forms.Button btnAdm;
         private System.Windows.Forms.Button button3;

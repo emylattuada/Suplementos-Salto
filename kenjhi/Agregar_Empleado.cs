@@ -13,9 +13,9 @@ using MySql.Data.MySqlClient;
 
 namespace kenjhi
 {
-    public partial class Adm_Empleados : Form
+    public partial class Agregar_Empleado : Form
     {
-        public Adm_Empleados()
+        public Agregar_Empleado()
         {
             InitializeComponent();
         }
@@ -65,7 +65,7 @@ namespace kenjhi
 
                 command.Parameters.AddWithValue("@NombreUsuario", txtNombreEmpleado.Text);
                 command.Parameters.AddWithValue("@Contraseña", contraseñaEncriptada);
-                command.Parameters.AddWithValue("@Rol", "empleado");
+                command.Parameters.AddWithValue("@Rol", "Empleado");
                 command.Parameters.AddWithValue("@Codigo", codigoVerificacion);
                 command.Parameters.AddWithValue("@Email", txtEmailEmpleado.Text);
 

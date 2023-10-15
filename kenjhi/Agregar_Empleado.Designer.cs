@@ -1,6 +1,6 @@
 ﻿namespace kenjhi
 {
-    partial class Adm_Empleados
+    partial class Agregar_Empleado
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Adm_Empleados));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar_Empleado));
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNombreEmpleado = new System.Windows.Forms.TextBox();
@@ -336,7 +336,7 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // Adm_Empleados
+            // Agregar_Empleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -365,7 +365,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVolver);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Adm_Empleados";
+            this.Name = "Agregar_Empleado";
             this.Text = "Suplementos Salto";
             ((System.ComponentModel.ISupportInitialize)(this.picNoVer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPass)).EndInit();
