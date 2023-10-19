@@ -25,6 +25,9 @@ namespace kenjhi
             dataGridEmpleados.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10); // Ajusta el espacio vertical entre las celdas de cada fila
             dataGridEmpleados.ReadOnly=true;
 
+
+
+
             try
             {
                 MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
@@ -43,6 +46,8 @@ namespace kenjhi
                 dataGridEmpleados.Columns["ID_Usuario"].Visible = false;
                 dataGridEmpleados.Columns["NombreUsuario"].HeaderText = "Nombre de Usuario";
                 dataGridEmpleados.Columns["Rol"].HeaderText = "Rol";
+                dataGridEmpleados.Columns["Rol"].ReadOnly = true;
+
                 dataGridEmpleados.Columns["email"].HeaderText = "Correo electrónico";
 
                 dataGridEmpleados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -136,6 +141,8 @@ namespace kenjhi
             {
                 dataGridEmpleados.ReadOnly = false;
             }
+            dataGridEmpleados.Columns["Rol"].ReadOnly = true;
+
             //btnGuardarCambios.Visible=true;
             btnModificar.Visible = false;
             btnCancelarModificacion.Visible = true;

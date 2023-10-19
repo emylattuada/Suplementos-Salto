@@ -23,7 +23,7 @@ namespace kenjhi
 
         }
 
-        private void customizeDesign()
+        private void customizeDesign()//menu del 
         {
 
             panelClientesSubmenu.Visible= false;
