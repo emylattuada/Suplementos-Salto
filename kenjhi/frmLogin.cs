@@ -58,68 +58,6 @@ namespace kenjhi
         private void btnLogin_Click(object sender, EventArgs e)
         {
 
-            //string nombreUsuario = txtUsuario.Text;
-            //string contraseñaIngresada = txtContrasena.Text;
-            //string contraseñaEncriptada = EncriptarContraseña(contraseñaIngresada);
-            //string cadenaConexion = "Server=localhost;Database=suple;Uid=jhin;Pwd=jhin444_2023;";
-            //MySqlConnection conexion = new MySqlConnection(cadenaConexion);
-
-            //try
-            //{
-            //    conexion.Open();
-
-            //    string consulta = "SELECT Rol FROM usuarios WHERE NombreUsuario = @NombreUsuario AND Contraseña = @Contraseña";
-            //    MySqlCommand comando = new MySqlCommand(consulta, conexion);
-            //    comando.Parameters.AddWithValue("@NombreUsuario", nombreUsuario);
-            //    comando.Parameters.AddWithValue("@Contraseña", contraseñaEncriptada);
-
-            //    using (MySqlDataReader reader = comando.ExecuteReader())
-            //    {
-
-            //        if (reader.Read())
-            //        {
-            //            string rol = reader["Rol"].ToString();
-
-            //            if (rol == "admin")
-            //            {
-            //                frmPrincipal formAdmin = new frmPrincipal();
-            //                formAdmin.Show();
-            //                this.Hide();
-
-
-            //            }
-            //            else
-            //            {
-            //                lbl1.Visible = true;
-            //                System.Media.SystemSounds.Exclamation.Play();
-            //            }
-            //            if (rol == "empleado")
-            //            {
-            //                Menu_Empleado formEmpleado = new Menu_Empleado();
-            //                formEmpleado.Show();
-            //                this.Hide();
-            //                lbl1.Visible = true;
-            //                System.Media.SystemSounds.Exclamation.Play();
-
-            //            }
-            //            else
-            //            {
-            //                lbl1.Visible = true;
-            //                System.Media.SystemSounds.Exclamation.Play();
-            //            }
-
-            //        }
-
-            //    }
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Error al conectarse a la base de datos: " + ex.Message);
-            //}
-            //finally
-            //{
-            //    conexion.Close();
-            //}
             string nombreUsuario = txtUsuario.Text;
             string contraseñaIngresada = txtContrasena.Text;
             string contraseñaEncriptada = EncriptarContraseña(contraseñaIngresada);
@@ -141,28 +79,28 @@ namespace kenjhi
                     {
                         string rol = reader["Rol"].ToString();
 
-                        if (rol == "admin")
+                        if (rol == "Admin")
                         {
-                            frmPrincipal formAdmin = new frmPrincipal();
+                            frmMenu_Admin formAdmin = new frmMenu_Admin();
                             formAdmin.Show();
                             this.Hide();
                         }
-                        else if (rol == "empleado")
+                        else if (rol == "Empleado")
                         {
-                            Menu_Empleado formEmpleado = new Menu_Empleado();
+                            frmMenu_Empleado formEmpleado = new frmMenu_Empleado();
                             formEmpleado.Show();
                             this.Hide();
                         }
                         else
                         {
                             lbl1.Visible = true;
-                            System.Media.SystemSounds.Exclamation.Play();
+                            //System.Media.SystemSounds.Exclamation.Play();
                         }
                     }
                     else
                     {
                         lbl1.Visible = true;
-                        System.Media.SystemSounds.Exclamation.Play();
+                        //System.Media.SystemSounds.Exclamation.Play();
                     }
                 }
             }
@@ -173,6 +111,7 @@ namespace kenjhi
             finally
             {
             }
+
 
         }
 
@@ -220,28 +159,28 @@ namespace kenjhi
                         {
                             string rol = reader["Rol"].ToString();
 
-                            if (rol == "admin")
+                            if (rol == "Admin")
                             {
-                                frmPrincipal formAdmin = new frmPrincipal();
+                                frmMenu_Admin formAdmin = new frmMenu_Admin();
                                 formAdmin.Show();
                                 this.Hide();
                             }
-                            else if (rol == "empleado")
+                            else if (rol == "Empleado")
                             {
-                                Menu_Empleado formEmpleado = new Menu_Empleado();
+                                frmMenu_Empleado formEmpleado = new frmMenu_Empleado();
                                 formEmpleado.Show();
                                 this.Hide();
                             }
                             else
                             {
                                 lbl1.Visible = true;
-                                System.Media.SystemSounds.Exclamation.Play();
+                                //System.Media.SystemSounds.Exclamation.Play();
                             }
                         }
                         else
                         {
                             lbl1.Visible = true;
-                            System.Media.SystemSounds.Exclamation.Play();
+                            //System.Media.SystemSounds.Exclamation.Play();
                         }
                     }
                 }
@@ -268,7 +207,7 @@ namespace kenjhi
 
         private void linkCambiarPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Cambiar_Pass formCambiarContrasenia = new Cambiar_Pass();
+            frmCambiarPass formCambiarContrasenia = new frmCambiarPass();
             formCambiarContrasenia.Show();
         }
 

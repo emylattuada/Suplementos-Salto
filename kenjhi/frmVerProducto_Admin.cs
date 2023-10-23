@@ -23,44 +23,6 @@ namespace kenjhi
             dataGridProductos.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10);
 
 
-
-            //try
-            //{
-            //    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"); ;
-            //    conexion.Open();
-
-            //    //string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente";
-            //    string consulta = "SELECT p.ID_Producto, p.Nombre, p.Precio, p.Cantidad, c.Nombre AS Categoria FROM producto p INNER JOIN categoria c ON p.ID_Categoria = c.ID_Categoria WHERE p.Visible = 1";
-
-
-            //    MySqlCommand comandos = new MySqlCommand(consulta, conexion);
-            //    MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
-
-            //    System.Data.DataTable tablaProductos = new System.Data.DataTable();
-            //    adaptador.Fill(tablaProductos);
-
-            //    dataGridProductos.DataSource = tablaProductos;
-
-            //    // Configurar las columnas
-            //    dataGridProductos.Columns["ID_Producto"].HeaderText = "ID";
-            //    dataGridProductos.Columns["ID_Producto"].Visible = false;
-            //    dataGridProductos.Columns["Nombre"].HeaderText = "Nombre";
-            //    dataGridProductos.Columns["Cantidad"].HeaderText = "Cantidad";
-            //    dataGridProductos.Columns["Categoria"].HeaderText = "Categoría";
-            //    dataGridProductos.Columns["Precio"].HeaderText = "Precio";
-            //    // Ajustar el ancho de las columnas
-            //    dataGridProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            //    foreach (DataGridViewColumn column in dataGridProductos.Columns)
-            //    {
-            //        column.ReadOnly = true;
-            //    }
-            //    conexion.Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.ToString(), "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //}
-
             try
             {
                 MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
@@ -85,6 +47,8 @@ namespace kenjhi
                 dataGridProductos.Columns["Cantidad"].HeaderText = "Cantidad";
                 dataGridProductos.Columns["Nombre"].HeaderText = "Nombre del Producto";
                 dataGridProductos.Columns["Categoria"].HeaderText = "Categoría";
+                dataGridProductos.Columns["Cantidad"].ReadOnly = true;
+
 
                 dataGridProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
@@ -113,7 +77,10 @@ namespace kenjhi
             if (dataGridProductos.ReadOnly = true)
             {
                 dataGridProductos.ReadOnly = false;
+
             }
+            dataGridProductos.Columns["Cantidad"].ReadOnly = true;
+            dataGridProductos.Columns["Categoria"].ReadOnly = true;
             //btnGuardarCambios.Visible=true;
             btnModificar.Visible = false;
             btnCancelarModificacion.Visible = true;
@@ -174,6 +141,8 @@ namespace kenjhi
 
                 dataGridProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 dataGridProductos.Columns["Categoria"].ReadOnly = true;
+                        dataGridProductos.Columns["Cantidad"].ReadOnly = true;
+
                         txtBusquedaDGV.Clear();
 
                         conexion.Close();
@@ -285,9 +254,12 @@ namespace kenjhi
                     dataGridProductos.Columns["Nombre"].HeaderText = "Nombre del Producto";
                     dataGridProductos.Columns["Categoria"].HeaderText = "Categoría";
 
+
                     dataGridProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
                     dataGridProductos.Columns["Categoria"].ReadOnly = true;
+                    dataGridProductos.Columns["Cantidad"].ReadOnly = true;
+
 
                     conexion.Close();
                 }
@@ -348,6 +320,8 @@ namespace kenjhi
                     dataGridProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
                     dataGridProductos.Columns["Categoria"].ReadOnly = true;
+                    dataGridProductos.Columns["Cantidad"].ReadOnly = true;
+
                     lblSinResultado.Visible = false;
                     lblSinResultado2.Visible = false;
 

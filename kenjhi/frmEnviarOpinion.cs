@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace kenjhi
 {
-    public partial class Enviar_Opinion : Form
+    public partial class frmEnviarOpinion : Form
     {
-        public Enviar_Opinion()
+        public frmEnviarOpinion()
         {
             InitializeComponent();
             //string nombre = txtNombreSugerencia.Text;

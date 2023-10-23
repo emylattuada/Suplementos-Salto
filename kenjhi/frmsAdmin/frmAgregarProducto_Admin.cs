@@ -235,7 +235,6 @@ namespace kenjhi
             }
         }
 
-        private string rutaImagen;
         private void linkProductoImagen_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             //using (OpenFileDialog openFileDialog = new OpenFileDialog())

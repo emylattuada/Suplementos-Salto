@@ -1,6 +1,6 @@
 ﻿namespace kenjhi
 {
-    partial class Agregar_Empleado
+    partial class frmAgregarEmpleado_Admin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar_Empleado));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarEmpleado_Admin));
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtNombreEmpleado = new System.Windows.Forms.TextBox();

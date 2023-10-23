@@ -12,10 +12,10 @@ using MySqlX.XDevAPI.Relational;
 
 namespace kenjhi
 {
-    public partial class Ver_Clientes : Form
+    public partial class frmVerClientes_Admin : Form
     {
 
-        public Ver_Clientes()
+        public frmVerClientes_Admin()
         {
             InitializeComponent();
             txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";

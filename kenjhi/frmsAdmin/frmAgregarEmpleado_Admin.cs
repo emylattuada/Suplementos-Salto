@@ -13,9 +13,9 @@ using MySql.Data.MySqlClient;
 
 namespace kenjhi
 {
-    public partial class Agregar_Empleado : Form
+    public partial class frmAgregarEmpleado_Admin : Form
     {
-        public Agregar_Empleado()
+        public frmAgregarEmpleado_Admin()
         {
             InitializeComponent();
         }

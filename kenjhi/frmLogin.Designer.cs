@@ -133,10 +133,9 @@
             this.txtContrasena.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContrasena.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContrasena.ForeColor = System.Drawing.Color.White;
-            this.txtContrasena.Location = new System.Drawing.Point(26, 263);
-            this.txtContrasena.Multiline = true;
+            this.txtContrasena.Location = new System.Drawing.Point(26, 267);
             this.txtContrasena.Name = "txtContrasena";
-            this.txtContrasena.Size = new System.Drawing.Size(202, 20);
+            this.txtContrasena.Size = new System.Drawing.Size(202, 15);
             this.txtContrasena.TabIndex = 9;
             this.txtContrasena.Click += new System.EventHandler(this.txtContrasena_Click);
             this.txtContrasena.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasena_KeyPress);
@@ -191,7 +190,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(23, 242);
+            this.label2.Location = new System.Drawing.Point(23, 248);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(76, 16);
             this.label2.TabIndex = 6;

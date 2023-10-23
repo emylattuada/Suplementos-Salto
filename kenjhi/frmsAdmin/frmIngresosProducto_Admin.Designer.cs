@@ -1,6 +1,6 @@
 ﻿namespace kenjhi
 {
-    partial class Ingresos_Producto
+    partial class frmIngresosProducto_Admin
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ingresos_Producto));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresosProducto_Admin));
             this.btnVolver = new kenjhi.RJButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();

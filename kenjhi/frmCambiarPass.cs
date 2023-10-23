@@ -15,9 +15,9 @@ using System.Media;
 
 namespace kenjhi
 {
-    public partial class Cambiar_Pass : Form
+    public partial class frmCambiarPass : Form
     {
-        public Cambiar_Pass()
+        public frmCambiarPass()
         {
             InitializeComponent();
 
@@ -127,7 +127,7 @@ namespace kenjhi
             //{
             //    MessageBox.Show($"Error al enviar el correo: {ex.Message}");
             //}
-        }
+        }//comentado porque lo hicimos automatico
 
         private void enviarCorreo(string emisor, string contrasenia, string receptor, string mensaje)
         {

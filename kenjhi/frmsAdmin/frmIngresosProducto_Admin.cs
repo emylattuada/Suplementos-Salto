@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace kenjhi
 {
-    public partial class Ingresos_Producto : Form
+    public partial class frmIngresosProducto_Admin : Form
     {
-        public Ingresos_Producto()
+        public frmIngresosProducto_Admin()
         {
             InitializeComponent();
             string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";

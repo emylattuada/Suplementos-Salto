@@ -25,7 +25,7 @@ namespace kenjhi
 
         private void btnOpinion_Click(object sender, EventArgs e)
         {
-            Enviar_Opinion opinion = new Enviar_Opinion();
+            frmEnviarOpinion opinion = new frmEnviarOpinion();
             opinion.Show();
             
         }

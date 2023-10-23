@@ -12,11 +12,11 @@ using MySql.Data.MySqlClient;
 
 namespace kenjhi
 {
-    public partial class Ver_Empleados : Form
+    public partial class frmVerEmpleados_Admin : Form
     {
       
 
-        public Ver_Empleados()
+        public frmVerEmpleados_Admin()
         {
             InitializeComponent();
             txtBusquedaDGV.Text = "Ingresa un nombre de usuario para realizar la búsqueda";

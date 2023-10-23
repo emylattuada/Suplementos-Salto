@@ -1,6 +1,6 @@
 ﻿namespace kenjhi
 {
-    partial class Ver_Clientes
+    partial class frmVerClientes_Empleado
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Ver_Clientes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVerClientes_Empleado));
             this.dataGridClientes = new System.Windows.Forms.DataGridView();
             this.txtBusquedaDGV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();

@@ -48,7 +48,6 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.numericUpDownCantidad = new System.Windows.Forms.NumericUpDown();
             this.linkCrearCategoria = new System.Windows.Forms.LinkLabel();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.numericUpDownPrecio = new System.Windows.Forms.NumericUpDown();
             this.timerCategoria2 = new System.Windows.Forms.Timer(this.components);
             this.picActualizarCategoria = new System.Windows.Forms.PictureBox();
@@ -289,10 +288,6 @@
             this.linkCrearCategoria.Text = "Crear categoría";
             this.linkCrearCategoria.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCrearCategoria_LinkClicked);
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
             // numericUpDownPrecio
             // 
             this.numericUpDownPrecio.BackColor = System.Drawing.Color.Black;
@@ -442,7 +437,6 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.NumericUpDown numericUpDownCantidad;
         private System.Windows.Forms.LinkLabel linkCrearCategoria;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.NumericUpDown numericUpDownPrecio;
         //private System.Windows.Forms.Timer timerCategoria;
         private System.Windows.Forms.PictureBox picActualizarCategoria;

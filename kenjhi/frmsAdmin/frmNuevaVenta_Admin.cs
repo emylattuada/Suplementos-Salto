@@ -12,12 +12,12 @@ using MySqlX.XDevAPI;
 
 namespace kenjhi
 {
-    public partial class Nueva_Venta : Form
+    public partial class frmNuevaVenta_Admin : Form
     {
         Dictionary<int, int> preciosProductos = new Dictionary<int, int>();
 
 
-        public Nueva_Venta()
+        public frmNuevaVenta_Admin()
         {
 
             InitializeComponent();
@@ -153,6 +153,8 @@ namespace kenjhi
 
         private void btnAgregarAlCarrito_Click(object sender, EventArgs e)
         {
+
+
             //// Verificar si se ha seleccionado un producto
             //if (comboListaProductos.SelectedItem == null)
             //{
@@ -173,7 +175,7 @@ namespace kenjhi
             //}
 
             //// Realizar una consulta para obtener el precio del producto desde la base de datos
-            //decimal precioTotal = 0;
+            //decimal precioUnitario = 0;
 
             //using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
             //{
@@ -187,8 +189,7 @@ namespace kenjhi
             //    {
             //        if (reader.Read())
             //        {
-            //            decimal precioProducto = reader.GetDecimal("Precio");
-            //            precioTotal = precioProducto * cantidad;
+            //            precioUnitario = reader.GetDecimal("Precio");
             //        }
             //        else
             //        {
@@ -198,66 +199,54 @@ namespace kenjhi
             //    }
             //}
 
+            //// Calcular el precio total para esta fila
+            //decimal precioTotal = precioUnitario * cantidad;
+
             //// Agregar el producto al carrito en el DataGridView
-            //dataGridCarrito.Rows.Add(new object[] { productoSeleccionado, precioTotal, cantidad, precioTotal });
+            //dataGridCarrito.Rows.Add(new object[] { productoSeleccionado, precioUnitario, cantidad, precioTotal });
 
             //// Limpiar el ComboBox de productos y reiniciar la cantidad
             //comboListaProductos.SelectedIndex = -1;
             //numericCantidadVenta.Value = 1;
 
+            //// Calcular el precio total de la venta
+            //decimal precioTotalVenta = 0;
+            //foreach (DataGridViewRow fila in dataGridCarrito.Rows)
+            //{
+            //    precioTotalVenta += Convert.ToDecimal(fila.Cells["Precio Total"].Value);
+            //} //comentado para probar otro
 
 
-            // Verificar si se ha seleccionado un producto
             if (comboListaProductos.SelectedItem == null)
             {
                 MessageBox.Show("Por favor, elija un producto.", "Campo Obligatorio", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Obtener el producto seleccionado
             Producto productoSeleccionado = (Producto)comboListaProductos.SelectedItem;
+            int cantidadDeseada = (int)numericCantidadVenta.Value;
 
-            // Obtener la cantidad del producto del NumericUpDown
-            int cantidad = (int)numericCantidadVenta.Value;
-
-            if (cantidad == 0)
+            if (cantidadDeseada == 0)
             {
                 MessageBox.Show("La cantidad mínima de venta es 1.", "Cantidad Inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            //lo represente aca como stock pero en la bd es cantidad, no se confundan
+            int stockDisponible = ObtenerStockDisponible(productoSeleccionado.ID);
 
-            // Realizar una consulta para obtener el precio del producto desde la base de datos
-            decimal precioUnitario = 0;
-
-            using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+            if (cantidadDeseada > stockDisponible)
             {
-                connection.Open();
-
-                string consultaPrecioProducto = "SELECT Precio FROM producto WHERE ID_Producto = @idProducto";
-                MySqlCommand cmdPrecioProducto = new MySqlCommand(consultaPrecioProducto, connection);
-                cmdPrecioProducto.Parameters.AddWithValue("@idProducto", productoSeleccionado.ID);
-
-                using (MySqlDataReader reader = cmdPrecioProducto.ExecuteReader())
-                {
-                    if (reader.Read())
-                    {
-                        precioUnitario = reader.GetDecimal("Precio");
-                    }
-                    else
-                    {
-                        MessageBox.Show("El producto seleccionado no tiene un precio válido en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
-                }
+                MessageBox.Show($"No hay suficiente stock disponible para '{productoSeleccionado.Nombre}' (Stock actual: {stockDisponible}).", "Stock Insuficiente", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
-            // Calcular el precio total para esta fila
-            decimal precioTotal = precioUnitario * cantidad;
+            // Actualizar el stock en la base de datos
+            ActualizarStockProducto(productoSeleccionado.ID, cantidadDeseada);
 
-            // Agregar el producto al carrito en el DataGridView
-            dataGridCarrito.Rows.Add(new object[] { productoSeleccionado, precioUnitario, cantidad, precioTotal });
+            decimal precioUnitario = preciosProductos[productoSeleccionado.ID];
+            decimal precioTotal = precioUnitario * cantidadDeseada;
 
-            // Limpiar el ComboBox de productos y reiniciar la cantidad
+            dataGridCarrito.Rows.Add(new object[] { productoSeleccionado, precioUnitario, cantidadDeseada, precioTotal });
             comboListaProductos.SelectedIndex = -1;
             numericCantidadVenta.Value = 1;
 
@@ -266,6 +255,43 @@ namespace kenjhi
             foreach (DataGridViewRow fila in dataGridCarrito.Rows)
             {
                 precioTotalVenta += Convert.ToDecimal(fila.Cells["Precio Total"].Value);
+            }
+        }
+
+        private int ObtenerStockDisponible(int productoID)
+        {
+            using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+            {
+                connection.Open();
+
+                string consultaStockProducto = "SELECT Cantidad FROM producto WHERE ID_Producto = @idProducto";
+                MySqlCommand cmdStockProducto = new MySqlCommand(consultaStockProducto, connection);
+                cmdStockProducto.Parameters.AddWithValue("@idProducto", productoID);
+
+                using (MySqlDataReader reader = cmdStockProducto.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        return reader.GetInt32("Cantidad");
+                    }
+                }
+            }
+
+            return 0; // Valor predeterminado si no se encuentra el stock
+        }
+
+        private void ActualizarStockProducto(int productoID, int cantidadVendida)
+        {
+            using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+            {
+                connection.Open();
+
+                string actualizarStock = "UPDATE producto SET Cantidad = Cantidad - @cantidadVendida WHERE ID_Producto = @productoID";
+                MySqlCommand cmdActualizarStock = new MySqlCommand(actualizarStock, connection);
+                cmdActualizarStock.Parameters.AddWithValue("@cantidadVendida", cantidadVendida);
+                cmdActualizarStock.Parameters.AddWithValue("@productoID", productoID);
+
+                cmdActualizarStock.ExecuteNonQuery();
             }
 
         }
@@ -325,24 +351,20 @@ namespace kenjhi
     }
    
 
-                    // Verificar si se ha seleccionado un tipo de pago (contado o cuotas)
                     if (!radioContado.Checked && !radioCuotas.Checked)
                     {
                         MessageBox.Show("Por favor, seleccione un tipo de pago (Contado o Cuotas).", "Campo Obligatorio", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         return;
                     }
 
-                // Verificar si se ha seleccionado una fecha
                 if (dataFechaVenta.Value == DateTime.MinValue)
                 {
                     MessageBox.Show("Por favor, seleccione una fecha de venta.", "Campo Obligatorio", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                //carga id del cliente seleccionado
                 int idCliente = ((Cliente)comboListaClientes.SelectedItem).ID;
 
-                //obtiene el tipo de pago (contado o cuotas)
                 string tipoPago = radioContado.Checked ? "Contado" : "Cuotas";
                 int cuotas = radioContado.Checked ? 0 : (int)numericCuotasVenta.Value;
 
@@ -367,10 +389,8 @@ namespace kenjhi
 
                 cmdVenta.ExecuteNonQuery();
 
-                //Obtener el ID de la venta recién insertada
                 int idVenta = (int)cmdVenta.LastInsertedId;
 
-                // datos a la tabla de pagos si es una venta de contado
                 if (tipoPago == "Contado")
                 {
                     string insertarPago = "INSERT INTO pagos (Fecha_Pagos, Monto, ID_Venta) " +
@@ -384,7 +404,6 @@ namespace kenjhi
                     cmdPago.ExecuteNonQuery();
                 }
 
-                // Paso 7: Subir datos a la tabla de asignado para cada producto en el carrito
                 foreach (DataGridViewRow fila in dataGridCarrito.Rows)
                 {
                     int idProducto = ((Producto)fila.Cells["Producto"].Value).ID;

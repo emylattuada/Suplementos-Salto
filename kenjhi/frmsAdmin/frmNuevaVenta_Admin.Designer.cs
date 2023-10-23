@@ -1,6 +1,6 @@
 ﻿namespace kenjhi
 {
-    partial class Nueva_Venta
+    partial class frmNuevaVenta_Admin
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Nueva_Venta));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmNuevaVenta_Admin));
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.comboListaProductos = new System.Windows.Forms.ComboBox();
@@ -88,12 +88,12 @@
             // 
             this.label1.AutoSize = true;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.label1.Location = new System.Drawing.Point(107, 11);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
-            this.label1.Size = new System.Drawing.Size(466, 61);
+            this.label1.Size = new System.Drawing.Size(470, 62);
             this.label1.TabIndex = 66;
             this.label1.Text = "Completa los datos de la nueva venta\r\n";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -579,7 +579,7 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // Nueva_Venta
+            // frmNuevaVenta_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -620,7 +620,7 @@
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Nueva_Venta";
+            this.Name = "frmNuevaVenta_Admin";
             this.Text = "Suplementos Salto";
             this.Load += new System.EventHandler(this.Nueva_Venta_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericCantidadVenta)).EndInit();
