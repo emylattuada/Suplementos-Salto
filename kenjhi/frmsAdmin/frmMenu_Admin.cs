@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using kenjhi.frmsAdmin;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.Devices;
 using MySql.Data.MySqlClient;
@@ -195,7 +196,7 @@ namespace kenjhi
 
         private void btnVersion_Click(object sender, EventArgs e)
         {
-            openChildForm(new Version());
+            openChildForm(new frmVersion());
         }
 
         private void btnIngresoProductos_Click(object sender, EventArgs e)
@@ -221,6 +222,18 @@ namespace kenjhi
         private void btnADM_VerEmpleados_Click(object sender, EventArgs e)
         {
             openChildForm(new frmVerEmpleados_Admin());
+            hideSubMenu();
+        }
+
+        private void btnVerPedidos_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmVerVentas_Admin());
+            hideSubMenu();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmAgregarCategoria_Admin());
             hideSubMenu();
         }
 

@@ -201,7 +201,7 @@
             this.btnVerPedidos.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnVerPedidos.Size = new System.Drawing.Size(167, 30);
             this.btnVerPedidos.TabIndex = 5;
-            this.btnVerPedidos.Text = "Ver todos las ventas";
+            this.btnVerPedidos.Text = "Ver ventas";
             this.btnVerPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVerPedidos.UseVisualStyleBackColor = false;
             // 
@@ -285,7 +285,7 @@
             this.btnModificarMenu.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnModificarMenu.Size = new System.Drawing.Size(167, 30);
             this.btnModificarMenu.TabIndex = 4;
-            this.btnModificarMenu.Text = "Ver todos los productos\r\n";
+            this.btnModificarMenu.Text = "Ver productos\r\n";
             this.btnModificarMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificarMenu.UseVisualStyleBackColor = false;
             this.btnModificarMenu.Click += new System.EventHandler(this.btnModificarMenu_Click);
@@ -351,7 +351,7 @@
             this.btnModificarCliente.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnModificarCliente.Size = new System.Drawing.Size(167, 30);
             this.btnModificarCliente.TabIndex = 4;
-            this.btnModificarCliente.Text = "Ver todos los clientes";
+            this.btnModificarCliente.Text = "Ver clientes";
             this.btnModificarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificarCliente.UseVisualStyleBackColor = false;
             this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);

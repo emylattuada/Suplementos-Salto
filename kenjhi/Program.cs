@@ -1,4 +1,5 @@
-﻿using System;
+﻿using kenjhi.frmsAdmin;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace kenjhi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new formLogin());
+            Application.Run(new frmMenu_Admin());
         }
     }
 }

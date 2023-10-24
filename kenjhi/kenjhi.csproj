@@ -100,17 +100,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmsAdmin\frmAgregarCategoria_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsAdmin\frmAgregarCategoria_Admin.Designer.cs">
+      <DependentUpon>frmAgregarCategoria_Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmsAdmin\frmAgregarEmpleado_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmsAdmin\frmAgregarEmpleado_Admin.Designer.cs">
       <DependentUpon>frmAgregarEmpleado_Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Agregar Categoria.cs">
+    <Compile Include="frmAgregarCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Agregar Categoria.Designer.cs">
-      <DependentUpon>Agregar Categoria.cs</DependentUpon>
+    <Compile Include="frmAgregarCategoria.Designer.cs">
+      <DependentUpon>frmAgregarCategoria.cs</DependentUpon>
     </Compile>
     <Compile Include="frmsAdmin\frmAgregarProducto_Admin.cs">
       <SubType>Form</SubType>
@@ -150,6 +156,12 @@
     </Compile>
     <Compile Include="frmsAdmin\frmNuevaVenta_Admin.Designer.cs">
       <DependentUpon>frmNuevaVenta_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsAdmin\frmVerVentas_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsAdmin\frmVerVentas_Admin.Designer.cs">
+      <DependentUpon>frmVerVentas_Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="frmsEmpleado\frmAgregarCliente_Empleado.cs">
       <SubType>Form</SubType>
@@ -192,17 +204,17 @@
     <Compile Include="RJButton.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="frmVerProducto_Admin.cs">
+    <Compile Include="frmsAdmin\frmVerProducto_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmVerProducto_Admin.Designer.cs">
+    <Compile Include="frmsAdmin\frmVerProducto_Admin.Designer.cs">
       <DependentUpon>frmVerProducto_Admin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Version.cs">
+    <Compile Include="frmVersion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Version.Designer.cs">
-      <DependentUpon>Version.cs</DependentUpon>
+    <Compile Include="frmVersion.Designer.cs">
+      <DependentUpon>frmVersion.cs</DependentUpon>
     </Compile>
     <Compile Include="frmsAdmin\frmVerClientes_Admin.cs">
       <SubType>Form</SubType>
@@ -216,11 +228,14 @@
     <Compile Include="frmsAdmin\frmVerEmpleados_Admin.Designer.cs">
       <DependentUpon>frmVerEmpleados_Admin.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="frmsAdmin\frmAgregarCategoria_Admin.resx">
+      <DependentUpon>frmAgregarCategoria_Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmsAdmin\frmAgregarEmpleado_Admin.resx">
       <DependentUpon>frmAgregarEmpleado_Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Agregar Categoria.resx">
-      <DependentUpon>Agregar Categoria.cs</DependentUpon>
+    <EmbeddedResource Include="frmAgregarCategoria.resx">
+      <DependentUpon>frmAgregarCategoria.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmsAdmin\frmAgregarProducto_Admin.resx">
       <DependentUpon>frmAgregarProducto_Admin.cs</DependentUpon>
@@ -239,6 +254,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmsAdmin\frmNuevaVenta_Admin.resx">
       <DependentUpon>frmNuevaVenta_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsAdmin\frmVerVentas_Admin.resx">
+      <DependentUpon>frmVerVentas_Admin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmsEmpleado\frmAgregarCliente_Empleado.resx">
       <DependentUpon>frmAgregarCliente_Empleado.cs</DependentUpon>
@@ -260,11 +278,11 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmVerProducto_Admin.resx">
+    <EmbeddedResource Include="frmsAdmin\frmVerProducto_Admin.resx">
       <DependentUpon>frmVerProducto_Admin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Version.resx">
-      <DependentUpon>Version.cs</DependentUpon>
+    <EmbeddedResource Include="frmVersion.resx">
+      <DependentUpon>frmVersion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmsAdmin\frmVerClientes_Admin.resx">
       <DependentUpon>frmVerClientes_Admin.cs</DependentUpon>
@@ -322,6 +340,8 @@
   <ItemGroup>
     <None Include="Resources\busqueda.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Resources\Sin-título-1 %281%29.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

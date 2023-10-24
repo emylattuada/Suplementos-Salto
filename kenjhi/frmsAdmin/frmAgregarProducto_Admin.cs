@@ -86,7 +86,7 @@ namespace kenjhi
 
         private void linkCrearCategoria_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Agregar_Categoria formAgregarCategoria = new Agregar_Categoria();
+            frmAgregarCategoria formAgregarCategoria = new frmAgregarCategoria();
             formAgregarCategoria.Show();
         }
 

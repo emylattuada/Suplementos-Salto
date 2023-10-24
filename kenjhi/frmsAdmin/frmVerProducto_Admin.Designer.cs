@@ -40,10 +40,11 @@
             this.lblSinResultado2 = new System.Windows.Forms.Label();
             this.lblSinResultado = new System.Windows.Forms.Label();
             this.btnModificar = new kenjhi.RJButton();
-            this.btnEliminarProducto = new kenjhi.RJButton();
+            this.btnEliminarV = new kenjhi.RJButton();
             this.btnGuardarCambios = new kenjhi.RJButton();
             this.btnVolver = new kenjhi.RJButton();
             this.btnCancelarModificacion = new kenjhi.RJButton();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProductos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +84,7 @@
             this.dataGridProductos.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridProductos.EnableHeadersVisualStyles = false;
             this.dataGridProductos.GridColor = System.Drawing.Color.Yellow;
-            this.dataGridProductos.Location = new System.Drawing.Point(110, 73);
+            this.dataGridProductos.Location = new System.Drawing.Point(110, 88);
             this.dataGridProductos.Name = "dataGridProductos";
             this.dataGridProductos.ReadOnly = true;
             this.dataGridProductos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -103,7 +104,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridProductos.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridProductos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridProductos.Size = new System.Drawing.Size(535, 420);
+            this.dataGridProductos.Size = new System.Drawing.Size(535, 405);
             this.dataGridProductos.TabIndex = 27;
             this.dataGridProductos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProductos_CellDoubleClick);
             this.dataGridProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridProductos_CellFormatting);
@@ -118,7 +119,7 @@
             this.txtBusquedaDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBusquedaDGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusquedaDGV.ForeColor = System.Drawing.Color.White;
-            this.txtBusquedaDGV.Location = new System.Drawing.Point(110, 32);
+            this.txtBusquedaDGV.Location = new System.Drawing.Point(110, 56);
             this.txtBusquedaDGV.Multiline = true;
             this.txtBusquedaDGV.Name = "txtBusquedaDGV";
             this.txtBusquedaDGV.Size = new System.Drawing.Size(535, 20);
@@ -132,7 +133,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(107, 10);
+            this.label1.Location = new System.Drawing.Point(107, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 16);
             this.label1.TabIndex = 33;
@@ -143,7 +144,7 @@
             this.textBox1.BackColor = System.Drawing.Color.Yellow;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(110, 57);
+            this.textBox1.Location = new System.Drawing.Point(110, 81);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(535, 1);
@@ -154,7 +155,7 @@
             this.lblSinResultado2.AutoSize = true;
             this.lblSinResultado2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSinResultado2.ForeColor = System.Drawing.Color.White;
-            this.lblSinResultado2.Location = new System.Drawing.Point(321, 261);
+            this.lblSinResultado2.Location = new System.Drawing.Point(321, 268);
             this.lblSinResultado2.Name = "lblSinResultado2";
             this.lblSinResultado2.Size = new System.Drawing.Size(123, 16);
             this.lblSinResultado2.TabIndex = 39;
@@ -167,7 +168,7 @@
             this.lblSinResultado.AutoSize = true;
             this.lblSinResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSinResultado.ForeColor = System.Drawing.Color.White;
-            this.lblSinResultado.Location = new System.Drawing.Point(150, 236);
+            this.lblSinResultado.Location = new System.Drawing.Point(150, 243);
             this.lblSinResultado.Name = "lblSinResultado";
             this.lblSinResultado.Size = new System.Drawing.Size(457, 25);
             this.lblSinResultado.TabIndex = 38;
@@ -194,26 +195,26 @@
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // btnEliminarProducto
+            // btnEliminarV
             // 
-            this.btnEliminarProducto.BackColor = System.Drawing.Color.Yellow;
-            this.btnEliminarProducto.BackgroundColor = System.Drawing.Color.Yellow;
-            this.btnEliminarProducto.BorderColor = System.Drawing.Color.Transparent;
-            this.btnEliminarProducto.BorderRadius = 10;
-            this.btnEliminarProducto.BorderSize = 0;
-            this.btnEliminarProducto.FlatAppearance.BorderSize = 0;
-            this.btnEliminarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarProducto.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminarProducto.Location = new System.Drawing.Point(12, 73);
-            this.btnEliminarProducto.Name = "btnEliminarProducto";
-            this.btnEliminarProducto.Size = new System.Drawing.Size(72, 26);
-            this.btnEliminarProducto.TabIndex = 36;
-            this.btnEliminarProducto.Text = "Eliminar";
-            this.btnEliminarProducto.TextColor = System.Drawing.Color.Black;
-            this.btnEliminarProducto.UseVisualStyleBackColor = false;
-            this.btnEliminarProducto.Visible = false;
-            this.btnEliminarProducto.Click += new System.EventHandler(this.btnEliminarProducto_Click);
+            this.btnEliminarV.BackColor = System.Drawing.Color.Yellow;
+            this.btnEliminarV.BackgroundColor = System.Drawing.Color.Yellow;
+            this.btnEliminarV.BorderColor = System.Drawing.Color.Transparent;
+            this.btnEliminarV.BorderRadius = 10;
+            this.btnEliminarV.BorderSize = 0;
+            this.btnEliminarV.FlatAppearance.BorderSize = 0;
+            this.btnEliminarV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarV.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminarV.Location = new System.Drawing.Point(12, 73);
+            this.btnEliminarV.Name = "btnEliminarV";
+            this.btnEliminarV.Size = new System.Drawing.Size(72, 26);
+            this.btnEliminarV.TabIndex = 36;
+            this.btnEliminarV.Text = "Eliminar";
+            this.btnEliminarV.TextColor = System.Drawing.Color.Black;
+            this.btnEliminarV.UseVisualStyleBackColor = false;
+            this.btnEliminarV.Visible = false;
+            this.btnEliminarV.Click += new System.EventHandler(this.btnEliminarProducto_Click);
             // 
             // btnGuardarCambios
             // 
@@ -277,16 +278,28 @@
             this.btnCancelarModificacion.Visible = false;
             this.btnCancelarModificacion.Click += new System.EventHandler(this.btnCancelarModificacion_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Black;
+            this.label10.ForeColor = System.Drawing.Color.DimGray;
+            this.label10.Location = new System.Drawing.Point(107, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(184, 13);
+            this.label10.TabIndex = 67;
+            this.label10.Text = "Menú principal > Ventas > Ver ventas";
+            // 
             // Ver_Productos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 505);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.lblSinResultado2);
             this.Controls.Add(this.lblSinResultado);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnEliminarProducto);
+            this.Controls.Add(this.btnEliminarV);
             this.Controls.Add(this.btnGuardarCambios);
             this.Controls.Add(this.txtBusquedaDGV);
             this.Controls.Add(this.label1);
@@ -311,10 +324,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private RJButton btnModificar;
-        private RJButton btnEliminarProducto;
+        private RJButton btnEliminarV;
         private RJButton btnGuardarCambios;
         private System.Windows.Forms.Label lblSinResultado2;
         private System.Windows.Forms.Label lblSinResultado;
         private RJButton btnCancelarModificacion;
+        private System.Windows.Forms.Label label10;
     }
 }

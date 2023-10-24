@@ -43,7 +43,7 @@ namespace kenjhi
                 connection.Open();
 
                 //consulta y sacamos el id del producto
-                string query = "SELECT ID_Producto, Nombre FROM producto";
+                string query = "SELECT ID_Producto, Nombre FROM producto WHERE visible=1";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {

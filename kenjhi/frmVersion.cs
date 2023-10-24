@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace kenjhi
 {
-    public partial class Version : Form
+    public partial class frmVersion : Form
     {
-        public Version()
+        public frmVersion()
         {
             InitializeComponent();
         }

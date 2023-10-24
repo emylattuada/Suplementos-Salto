@@ -190,7 +190,7 @@ namespace kenjhi
 
         private void btnVersion_Click(object sender, EventArgs e)
         {
-            openChildForm(new Version());
+            openChildForm(new frmVersion());
         }
 
         private void btnIngresoProductos_Click(object sender, EventArgs e)

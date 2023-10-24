@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic.Devices;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -9,31 +8,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
-namespace kenjhi
-{
-    public partial class Agregar_Categoria : Form
-    {
 
+
+namespace kenjhi.frmsAdmin
+{
+    public partial class frmAgregarCategoria_Admin : Form
+
+    {
         private MySqlConnection conexion;
         private string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";
+        public frmAgregarCategoria_Admin()
 
-        public Agregar_Categoria()
         {
+
             InitializeComponent();
             conexion = new MySqlConnection(connectionString);
 
-        }
-        private int ClickX = 0, ClickY = 0;
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
 
         }
 
@@ -69,12 +59,15 @@ namespace kenjhi
                 conexion.Close();
 
                 MessageBox.Show("Categoría agregada exitosamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LimpiarCampos();
+                txtNombreCategoria.Clear();
+                txtDescripcionCategoria.Clear();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error al agregar la categoría", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
 
         }
 
@@ -101,24 +94,7 @@ namespace kenjhi
             }
         }
 
-        private void LimpiarCampos()
-        {
-            txtNombreCategoria.Clear();
-            txtDescripcionCategoria.Clear();
-        }
 
-        private void panel2_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (e.Button != MouseButtons.Left)
-            {
-                ClickX = e.X;
-                ClickY = e.Y;
-            }
-            else
-            {
-                this.Left = this.Left + (e.X - ClickX);
-                this.Top = this.Top + (e.Y - ClickY);
-            }
-        }
+
     }
 }
