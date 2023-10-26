@@ -147,7 +147,7 @@
             this.btnVersion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVersion.ForeColor = System.Drawing.Color.Black;
-            this.btnVersion.Image = global::kenjhi.Properties.Resources.informacion__1_;
+            //this.btnVersion.Image = global::kenjhi.Properties.Resources.informacion__1_;
             this.btnVersion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVersion.Location = new System.Drawing.Point(0, 450);
             this.btnVersion.Name = "btnVersion";
@@ -166,7 +166,7 @@
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.Black;
-            this.btnCerrarSesion.Image = global::kenjhi.Properties.Resources.ingresar__1_;
+            //this.btnCerrarSesion.Image = global::kenjhi.Properties.Resources.ingresar__1_;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCerrarSesion.Location = new System.Drawing.Point(0, 490);
             this.btnCerrarSesion.Name = "btnCerrarSesion";

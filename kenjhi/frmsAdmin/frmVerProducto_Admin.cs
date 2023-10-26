@@ -103,7 +103,7 @@ namespace kenjhi
 
                     MessageBox.Show("Datos de productos actualizados.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     btnGuardarCambios.Visible = false;
-                    btnEliminarV.Visible = false;
+                    btnEliminarProducto.Visible = false;
                     btnCancelarModificacion.Visible = false;
                     txtBusquedaDGV.Clear();
 
@@ -170,7 +170,7 @@ namespace kenjhi
             btnGuardarCambios.Visible = false;
             btnModificar.Visible = true;
             dataGridProductos.ReadOnly = true;
-            btnEliminarV.Visible = false;
+            btnEliminarProducto.Visible = false;
         }
 
         private void dataGridProductos_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -197,7 +197,7 @@ namespace kenjhi
         private void dataGridProductos_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             //btnCancelarModificacion.Visible = true; //probando otra cosa comente estob
-            btnEliminarV.Visible = true;
+            btnEliminarProducto.Visible = true;
         }
 
         private void btnEliminarProducto_Click(object sender, EventArgs e)
@@ -267,7 +267,7 @@ namespace kenjhi
                 {
                     MessageBox.Show(ex.ToString(), "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                btnEliminarV.Visible = false;
+                btnEliminarProducto.Visible = false;
             }
         }
 
@@ -279,7 +279,7 @@ namespace kenjhi
         private void dataGridProductos_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             //if (txtBusquedaDGV.Text == "Ingresa un nombre para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
-            btnEliminarV.Visible = true;
+            btnEliminarProducto.Visible = true;
 
         }
 
@@ -386,7 +386,7 @@ namespace kenjhi
 
         private void dataGridProductos_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            btnEliminarV.Visible = true;
+            btnEliminarProducto.Visible = true;
 
         }
     }

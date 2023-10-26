@@ -33,10 +33,7 @@ namespace kenjhi
             panelSubMenuADM.Visible= false;
         }
 
-        public void HabilitarBotonAdmin(bool habilitar)//func multiusuario
-        {
-            btnAdm.Enabled = habilitar;
-        }
+        
 
 
         private void hideSubMenu()
@@ -163,7 +160,9 @@ namespace kenjhi
 
         private void btnNuevoPedido_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmNuevaVenta_Admin()); 
+            openChildForm(new frmNuevaVenta_Admin());
+            hideSubMenu();
+
         }
 
         private void SeccionAdmin_Click(object sender, EventArgs e)
@@ -202,6 +201,8 @@ namespace kenjhi
         private void btnIngresoProductos_Click(object sender, EventArgs e)
         {
             openChildForm(new frmIngresosProducto_Admin());
+            hideSubMenu();
+
 
         }
 
@@ -234,6 +235,18 @@ namespace kenjhi
         private void button1_Click(object sender, EventArgs e)
         {
             openChildForm(new frmAgregarCategoria_Admin());
+            hideSubMenu();
+        }
+
+        private void btnVerCategorias_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmVerCategorias_Admin());
+            hideSubMenu();
+        }
+
+        private void btnRecuperarDatos_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmRecuperarDatos_Admin());
             hideSubMenu();
         }
 

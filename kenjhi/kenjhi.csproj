@@ -157,6 +157,18 @@
     <Compile Include="frmsAdmin\frmNuevaVenta_Admin.Designer.cs">
       <DependentUpon>frmNuevaVenta_Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmsAdmin\frmRecuperarDatos_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsAdmin\frmRecuperarDatos_Admin.Designer.cs">
+      <DependentUpon>frmRecuperarDatos_Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsAdmin\frmVerCategorias_Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsAdmin\frmVerCategorias_Admin.Designer.cs">
+      <DependentUpon>frmVerCategorias_Admin.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmsAdmin\frmVerVentas_Admin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -255,6 +267,12 @@
     <EmbeddedResource Include="frmsAdmin\frmNuevaVenta_Admin.resx">
       <DependentUpon>frmNuevaVenta_Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmsAdmin\frmRecuperarDatos_Admin.resx">
+      <DependentUpon>frmRecuperarDatos_Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsAdmin\frmVerCategorias_Admin.resx">
+      <DependentUpon>frmVerCategorias_Admin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmsAdmin\frmVerVentas_Admin.resx">
       <DependentUpon>frmVerVentas_Admin.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,9 +347,6 @@
     <None Include="Resources\adm.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\informacion %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\logo-infinity-amarillo.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -341,6 +356,11 @@
     <None Include="Resources\busqueda.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\version.png" />
+    <None Include="Resources\circulo-de-usuario %281%29.png" />
+    <None Include="Resources\informacion %281%29.png" />
+    <None Include="Resources\administrador.png" />
+    <None Include="Resources\cerrar sesion.png" />
     <Content Include="Resources\Sin-título-1 %281%29.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

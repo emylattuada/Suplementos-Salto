@@ -43,13 +43,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.lbl2 = new System.Windows.Forms.Label();
-            this.btnVolver = new kenjhi.RJButton();
-            this.btnAgregarCliente = new kenjhi.RJButton();
             this.label8 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.btnVolver = new kenjhi.RJButton();
+            this.btnAgregarCliente = new kenjhi.RJButton();
             this.SuspendLayout();
             // 
             // txtDirCliente
@@ -222,46 +222,6 @@
             this.lbl2.Text = "Completa los datos obligatorios\r\n";
             this.lbl2.Visible = false;
             // 
-            // btnVolver
-            // 
-            this.btnVolver.BackColor = System.Drawing.Color.Yellow;
-            this.btnVolver.BackgroundColor = System.Drawing.Color.Yellow;
-            this.btnVolver.BorderColor = System.Drawing.Color.Transparent;
-            this.btnVolver.BorderRadius = 10;
-            this.btnVolver.BorderSize = 0;
-            this.btnVolver.FlatAppearance.BorderSize = 0;
-            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.ForeColor = System.Drawing.Color.Black;
-            this.btnVolver.Location = new System.Drawing.Point(12, 9);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(72, 26);
-            this.btnVolver.TabIndex = 60;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.TextColor = System.Drawing.Color.Black;
-            this.btnVolver.UseVisualStyleBackColor = false;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
-            // btnAgregarCliente
-            // 
-            this.btnAgregarCliente.BackColor = System.Drawing.Color.Yellow;
-            this.btnAgregarCliente.BackgroundColor = System.Drawing.Color.Yellow;
-            this.btnAgregarCliente.BorderColor = System.Drawing.Color.Transparent;
-            this.btnAgregarCliente.BorderRadius = 10;
-            this.btnAgregarCliente.BorderSize = 0;
-            this.btnAgregarCliente.FlatAppearance.BorderSize = 0;
-            this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarCliente.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregarCliente.Location = new System.Drawing.Point(110, 439);
-            this.btnAgregarCliente.Name = "btnAgregarCliente";
-            this.btnAgregarCliente.Size = new System.Drawing.Size(450, 44);
-            this.btnAgregarCliente.TabIndex = 52;
-            this.btnAgregarCliente.Text = "Agregar";
-            this.btnAgregarCliente.TextColor = System.Drawing.Color.Black;
-            this.btnAgregarCliente.UseVisualStyleBackColor = false;
-            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -317,11 +277,51 @@
             this.label10.ForeColor = System.Drawing.Color.DimGray;
             this.label10.Location = new System.Drawing.Point(107, 16);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(203, 13);
+            this.label10.Size = new System.Drawing.Size(10, 13);
             this.label10.TabIndex = 64;
-            this.label10.Text = "Menú principal > Cliente > Agregar cliente";
+            this.label10.Text = "-";
             // 
-            // Agregar_Clientes
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.Yellow;
+            this.btnVolver.BackgroundColor = System.Drawing.Color.Yellow;
+            this.btnVolver.BorderColor = System.Drawing.Color.Transparent;
+            this.btnVolver.BorderRadius = 10;
+            this.btnVolver.BorderSize = 0;
+            this.btnVolver.FlatAppearance.BorderSize = 0;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.Color.Black;
+            this.btnVolver.Location = new System.Drawing.Point(12, 9);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(72, 26);
+            this.btnVolver.TabIndex = 60;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.TextColor = System.Drawing.Color.Black;
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // btnAgregarCliente
+            // 
+            this.btnAgregarCliente.BackColor = System.Drawing.Color.Yellow;
+            this.btnAgregarCliente.BackgroundColor = System.Drawing.Color.Yellow;
+            this.btnAgregarCliente.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAgregarCliente.BorderRadius = 10;
+            this.btnAgregarCliente.BorderSize = 0;
+            this.btnAgregarCliente.FlatAppearance.BorderSize = 0;
+            this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCliente.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregarCliente.Location = new System.Drawing.Point(110, 439);
+            this.btnAgregarCliente.Name = "btnAgregarCliente";
+            this.btnAgregarCliente.Size = new System.Drawing.Size(450, 44);
+            this.btnAgregarCliente.TabIndex = 52;
+            this.btnAgregarCliente.Text = "Agregar";
+            this.btnAgregarCliente.TextColor = System.Drawing.Color.Black;
+            this.btnAgregarCliente.UseVisualStyleBackColor = false;
+            this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
+            // 
+            // frmAgregarCliente_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -349,7 +349,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Agregar_Clientes";
+            this.Name = "frmAgregarCliente_Admin";
             this.Text = "Suplementos Salto";
             this.ResumeLayout(false);
             this.PerformLayout();

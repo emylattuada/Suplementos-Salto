@@ -34,14 +34,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelSubMenuADM = new System.Windows.Forms.Panel();
+            this.btnRecuperarDatos = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnADM_VerEmpleados = new System.Windows.Forms.Button();
             this.btnADM_AgregarEmpleado = new System.Windows.Forms.Button();
             this.panelPedidosSubmenu = new System.Windows.Forms.Panel();
+            this.btnDevoluciones = new System.Windows.Forms.Button();
             this.btnVerPedidos = new System.Windows.Forms.Button();
             this.btnNuevoPedido = new System.Windows.Forms.Button();
             this.panelMenuSubmenu = new System.Windows.Forms.Panel();
+            this.btnVerCategorias = new System.Windows.Forms.Button();
+            this.btnAgregarCategoria = new System.Windows.Forms.Button();
             this.btnIngresoProductos = new System.Windows.Forms.Button();
             this.btnModificarMenu = new System.Windows.Forms.Button();
             this.btnAgregarPlato = new System.Windows.Forms.Button();
@@ -56,8 +60,6 @@
             this.labelUsuario = new System.Windows.Forms.Label();
             this.lblUsuario = new System.Windows.Forms.Label();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.btnAdm = new System.Windows.Forms.Button();
             this.btnVersion = new System.Windows.Forms.Button();
@@ -131,15 +133,34 @@
             // panelSubMenuADM
             // 
             this.panelSubMenuADM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panelSubMenuADM.Controls.Add(this.btnRecuperarDatos);
             this.panelSubMenuADM.Controls.Add(this.button4);
             this.panelSubMenuADM.Controls.Add(this.button3);
             this.panelSubMenuADM.Controls.Add(this.btnADM_VerEmpleados);
             this.panelSubMenuADM.Controls.Add(this.btnADM_AgregarEmpleado);
             this.panelSubMenuADM.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuADM.Location = new System.Drawing.Point(0, 533);
+            this.panelSubMenuADM.Location = new System.Drawing.Point(0, 561);
             this.panelSubMenuADM.Name = "panelSubMenuADM";
-            this.panelSubMenuADM.Size = new System.Drawing.Size(167, 134);
+            this.panelSubMenuADM.Size = new System.Drawing.Size(167, 163);
             this.panelSubMenuADM.TabIndex = 11;
+            // 
+            // btnRecuperarDatos
+            // 
+            this.btnRecuperarDatos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnRecuperarDatos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRecuperarDatos.FlatAppearance.BorderSize = 0;
+            this.btnRecuperarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecuperarDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecuperarDatos.ForeColor = System.Drawing.Color.Black;
+            this.btnRecuperarDatos.Location = new System.Drawing.Point(0, 120);
+            this.btnRecuperarDatos.Name = "btnRecuperarDatos";
+            this.btnRecuperarDatos.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnRecuperarDatos.Size = new System.Drawing.Size(167, 30);
+            this.btnRecuperarDatos.TabIndex = 7;
+            this.btnRecuperarDatos.Text = "Recuperar datos";
+            this.btnRecuperarDatos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRecuperarDatos.UseVisualStyleBackColor = false;
+            this.btnRecuperarDatos.Click += new System.EventHandler(this.btnRecuperarDatos_Click);
             // 
             // button4
             // 
@@ -149,7 +170,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(0, 104);
+            this.button4.Location = new System.Drawing.Point(0, 90);
             this.button4.Name = "button4";
             this.button4.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.button4.Size = new System.Drawing.Size(167, 30);
@@ -166,7 +187,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(0, 74);
+            this.button3.Location = new System.Drawing.Point(0, 60);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(167, 30);
@@ -186,7 +207,7 @@
             this.btnADM_VerEmpleados.Location = new System.Drawing.Point(0, 30);
             this.btnADM_VerEmpleados.Name = "btnADM_VerEmpleados";
             this.btnADM_VerEmpleados.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.btnADM_VerEmpleados.Size = new System.Drawing.Size(167, 44);
+            this.btnADM_VerEmpleados.Size = new System.Drawing.Size(167, 30);
             this.btnADM_VerEmpleados.TabIndex = 4;
             this.btnADM_VerEmpleados.Text = "Ver empleados";
             this.btnADM_VerEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -214,13 +235,31 @@
             // panelPedidosSubmenu
             // 
             this.panelPedidosSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.panelPedidosSubmenu.Controls.Add(this.btnDevoluciones);
             this.panelPedidosSubmenu.Controls.Add(this.btnVerPedidos);
             this.panelPedidosSubmenu.Controls.Add(this.btnNuevoPedido);
             this.panelPedidosSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelPedidosSubmenu.Location = new System.Drawing.Point(0, 428);
             this.panelPedidosSubmenu.Name = "panelPedidosSubmenu";
-            this.panelPedidosSubmenu.Size = new System.Drawing.Size(167, 75);
+            this.panelPedidosSubmenu.Size = new System.Drawing.Size(167, 103);
             this.panelPedidosSubmenu.TabIndex = 6;
+            // 
+            // btnDevoluciones
+            // 
+            this.btnDevoluciones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnDevoluciones.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDevoluciones.FlatAppearance.BorderSize = 0;
+            this.btnDevoluciones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDevoluciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDevoluciones.ForeColor = System.Drawing.Color.Black;
+            this.btnDevoluciones.Location = new System.Drawing.Point(0, 60);
+            this.btnDevoluciones.Name = "btnDevoluciones";
+            this.btnDevoluciones.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnDevoluciones.Size = new System.Drawing.Size(167, 30);
+            this.btnDevoluciones.TabIndex = 6;
+            this.btnDevoluciones.Text = "Devoluciones";
+            this.btnDevoluciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDevoluciones.UseVisualStyleBackColor = false;
             // 
             // btnVerPedidos
             // 
@@ -261,8 +300,8 @@
             // panelMenuSubmenu
             // 
             this.panelMenuSubmenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.panelMenuSubmenu.Controls.Add(this.button2);
-            this.panelMenuSubmenu.Controls.Add(this.button1);
+            this.panelMenuSubmenu.Controls.Add(this.btnVerCategorias);
+            this.panelMenuSubmenu.Controls.Add(this.btnAgregarCategoria);
             this.panelMenuSubmenu.Controls.Add(this.btnIngresoProductos);
             this.panelMenuSubmenu.Controls.Add(this.btnModificarMenu);
             this.panelMenuSubmenu.Controls.Add(this.btnAgregarPlato);
@@ -271,6 +310,42 @@
             this.panelMenuSubmenu.Name = "panelMenuSubmenu";
             this.panelMenuSubmenu.Size = new System.Drawing.Size(167, 163);
             this.panelMenuSubmenu.TabIndex = 4;
+            // 
+            // btnVerCategorias
+            // 
+            this.btnVerCategorias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnVerCategorias.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVerCategorias.FlatAppearance.BorderSize = 0;
+            this.btnVerCategorias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerCategorias.ForeColor = System.Drawing.Color.Black;
+            this.btnVerCategorias.Location = new System.Drawing.Point(0, 120);
+            this.btnVerCategorias.Name = "btnVerCategorias";
+            this.btnVerCategorias.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnVerCategorias.Size = new System.Drawing.Size(167, 30);
+            this.btnVerCategorias.TabIndex = 7;
+            this.btnVerCategorias.Text = "Ver categorías";
+            this.btnVerCategorias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVerCategorias.UseVisualStyleBackColor = false;
+            this.btnVerCategorias.Click += new System.EventHandler(this.btnVerCategorias_Click);
+            // 
+            // btnAgregarCategoria
+            // 
+            this.btnAgregarCategoria.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnAgregarCategoria.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAgregarCategoria.FlatAppearance.BorderSize = 0;
+            this.btnAgregarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarCategoria.ForeColor = System.Drawing.Color.Black;
+            this.btnAgregarCategoria.Location = new System.Drawing.Point(0, 90);
+            this.btnAgregarCategoria.Name = "btnAgregarCategoria";
+            this.btnAgregarCategoria.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
+            this.btnAgregarCategoria.Size = new System.Drawing.Size(167, 30);
+            this.btnAgregarCategoria.TabIndex = 6;
+            this.btnAgregarCategoria.Text = "Agregar categoría";
+            this.btnAgregarCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnAgregarCategoria.UseVisualStyleBackColor = false;
+            this.btnAgregarCategoria.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnIngresoProductos
             // 
@@ -457,41 +532,6 @@
             this.horafecha.Enabled = true;
             this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(0, 90);
-            this.button1.Name = "button1";
-            this.button1.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button1.Size = new System.Drawing.Size(167, 30);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Agregar categoría";
-            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(0, 120);
-            this.button2.Name = "button2";
-            this.button2.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button2.Size = new System.Drawing.Size(167, 30);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Ver categorías";
-            this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.UseVisualStyleBackColor = false;
-            // 
             // pictureBox5
             // 
             this.pictureBox5.BackColor = System.Drawing.Color.Black;
@@ -512,9 +552,9 @@
             this.btnAdm.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAdm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdm.ForeColor = System.Drawing.Color.Black;
-            this.btnAdm.Image = global::kenjhi.Properties.Resources.adm;
+            this.btnAdm.Image = global::kenjhi.Properties.Resources.administrador;
             this.btnAdm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdm.Location = new System.Drawing.Point(0, 503);
+            this.btnAdm.Location = new System.Drawing.Point(0, 531);
             this.btnAdm.Name = "btnAdm";
             this.btnAdm.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
             this.btnAdm.Size = new System.Drawing.Size(167, 30);
@@ -531,9 +571,9 @@
             this.btnVersion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVersion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVersion.ForeColor = System.Drawing.Color.Black;
-            this.btnVersion.Image = global::kenjhi.Properties.Resources.informacion__1_;
+            this.btnVersion.Image = global::kenjhi.Properties.Resources.version;
             this.btnVersion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVersion.Location = new System.Drawing.Point(0, 667);
+            this.btnVersion.Location = new System.Drawing.Point(0, 724);
             this.btnVersion.Name = "btnVersion";
             this.btnVersion.Padding = new System.Windows.Forms.Padding(0, 0, 80, 0);
             this.btnVersion.Size = new System.Drawing.Size(167, 40);
@@ -550,9 +590,9 @@
             this.btnCerrarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCerrarSesion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.Black;
-            this.btnCerrarSesion.Image = global::kenjhi.Properties.Resources.ingresar__1_;
+            this.btnCerrarSesion.Image = global::kenjhi.Properties.Resources.cerrar_sesion;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 707);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 764);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
             this.btnCerrarSesion.Size = new System.Drawing.Size(167, 40);
@@ -720,7 +760,9 @@
         private System.Windows.Forms.Button btnAdm;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnVerCategorias;
+        private System.Windows.Forms.Button btnAgregarCategoria;
+        private System.Windows.Forms.Button btnRecuperarDatos;
+        private System.Windows.Forms.Button btnDevoluciones;
     }
 }

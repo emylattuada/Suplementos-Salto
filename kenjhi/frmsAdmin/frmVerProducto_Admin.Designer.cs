@@ -40,7 +40,7 @@
             this.lblSinResultado2 = new System.Windows.Forms.Label();
             this.lblSinResultado = new System.Windows.Forms.Label();
             this.btnModificar = new kenjhi.RJButton();
-            this.btnEliminarV = new kenjhi.RJButton();
+            this.btnEliminarProducto = new kenjhi.RJButton();
             this.btnGuardarCambios = new kenjhi.RJButton();
             this.btnVolver = new kenjhi.RJButton();
             this.btnCancelarModificacion = new kenjhi.RJButton();
@@ -195,26 +195,26 @@
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
             // 
-            // btnEliminarV
+            // btnEliminarProducto
             // 
-            this.btnEliminarV.BackColor = System.Drawing.Color.Yellow;
-            this.btnEliminarV.BackgroundColor = System.Drawing.Color.Yellow;
-            this.btnEliminarV.BorderColor = System.Drawing.Color.Transparent;
-            this.btnEliminarV.BorderRadius = 10;
-            this.btnEliminarV.BorderSize = 0;
-            this.btnEliminarV.FlatAppearance.BorderSize = 0;
-            this.btnEliminarV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarV.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminarV.Location = new System.Drawing.Point(12, 73);
-            this.btnEliminarV.Name = "btnEliminarV";
-            this.btnEliminarV.Size = new System.Drawing.Size(72, 26);
-            this.btnEliminarV.TabIndex = 36;
-            this.btnEliminarV.Text = "Eliminar";
-            this.btnEliminarV.TextColor = System.Drawing.Color.Black;
-            this.btnEliminarV.UseVisualStyleBackColor = false;
-            this.btnEliminarV.Visible = false;
-            this.btnEliminarV.Click += new System.EventHandler(this.btnEliminarProducto_Click);
+            this.btnEliminarProducto.BackColor = System.Drawing.Color.Yellow;
+            this.btnEliminarProducto.BackgroundColor = System.Drawing.Color.Yellow;
+            this.btnEliminarProducto.BorderColor = System.Drawing.Color.Transparent;
+            this.btnEliminarProducto.BorderRadius = 10;
+            this.btnEliminarProducto.BorderSize = 0;
+            this.btnEliminarProducto.FlatAppearance.BorderSize = 0;
+            this.btnEliminarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarProducto.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminarProducto.Location = new System.Drawing.Point(12, 73);
+            this.btnEliminarProducto.Name = "btnEliminarProducto";
+            this.btnEliminarProducto.Size = new System.Drawing.Size(72, 26);
+            this.btnEliminarProducto.TabIndex = 36;
+            this.btnEliminarProducto.Text = "Eliminar";
+            this.btnEliminarProducto.TextColor = System.Drawing.Color.Black;
+            this.btnEliminarProducto.UseVisualStyleBackColor = false;
+            this.btnEliminarProducto.Visible = false;
+            this.btnEliminarProducto.Click += new System.EventHandler(this.btnEliminarProducto_Click);
             // 
             // btnGuardarCambios
             // 
@@ -285,9 +285,9 @@
             this.label10.ForeColor = System.Drawing.Color.DimGray;
             this.label10.Location = new System.Drawing.Point(107, 16);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(184, 13);
+            this.label10.Size = new System.Drawing.Size(214, 13);
             this.label10.TabIndex = 67;
-            this.label10.Text = "Menú principal > Ventas > Ver ventas";
+            this.label10.Text = "Menú principal > Productos > Ver productos\r\n";
             // 
             // Ver_Productos
             // 
@@ -299,7 +299,7 @@
             this.Controls.Add(this.lblSinResultado2);
             this.Controls.Add(this.lblSinResultado);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.btnEliminarV);
+            this.Controls.Add(this.btnEliminarProducto);
             this.Controls.Add(this.btnGuardarCambios);
             this.Controls.Add(this.txtBusquedaDGV);
             this.Controls.Add(this.label1);
@@ -324,7 +324,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private RJButton btnModificar;
-        private RJButton btnEliminarV;
+        private RJButton btnEliminarProducto;
         private RJButton btnGuardarCambios;
         private System.Windows.Forms.Label lblSinResultado2;
         private System.Windows.Forms.Label lblSinResultado;

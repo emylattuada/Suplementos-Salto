@@ -73,9 +73,29 @@ namespace kenjhi.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap administrador {
+            get {
+                object obj = ResourceManager.GetObject("administrador", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap busqueda {
             get {
                 object obj = ResourceManager.GetObject("busqueda", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cerrar_sesion {
+            get {
+                object obj = ResourceManager.GetObject("cerrar sesion", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -96,6 +116,26 @@ namespace kenjhi.Properties {
         internal static System.Drawing.Bitmap circulo_amarillo_panel {
             get {
                 object obj = ResourceManager.GetObject("circulo-amarillo-panel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circulo_de_usuario__1_ {
+            get {
+                object obj = ResourceManager.GetObject("circulo-de-usuario (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap circulo_de_usuario__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("circulo-de-usuario (1)1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,16 +183,6 @@ namespace kenjhi.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ingresar__1_ {
-            get {
-                object obj = ResourceManager.GetObject("ingresar (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap logo_infinity_amarillo {
             get {
                 object obj = ResourceManager.GetObject("logo-infinity-amarillo", resourceCulture);
@@ -176,6 +206,16 @@ namespace kenjhi.Properties {
         internal static System.Drawing.Bitmap ojos_cruzados__1_ {
             get {
                 object obj = ResourceManager.GetObject("ojos-cruzados (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap version {
+            get {
+                object obj = ResourceManager.GetObject("version", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
