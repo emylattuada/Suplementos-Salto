@@ -18,6 +18,9 @@ namespace kenjhi.frmsAdmin
         {
             
             InitializeComponent();
+            dataGridRecuperarDatos.RowTemplate.Height = 40;
+            dataGridRecuperarDatos.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10); 
+
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -40,11 +43,13 @@ namespace kenjhi.frmsAdmin
         private void CargarDatosClientes()
         {
 
+
             try
             {
                 MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"); ;
                 conexion.Open();
 
+                //string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente";
                 string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente WHERE visible=0";
 
 
@@ -56,6 +61,7 @@ namespace kenjhi.frmsAdmin
 
                 dataGridRecuperarDatos.DataSource = tablaClientes;
 
+                // Configurar las columnas
                 dataGridRecuperarDatos.Columns["ID_Cliente"].HeaderText = "ID";
                 dataGridRecuperarDatos.Columns["ID_Cliente"].Visible = false;
                 dataGridRecuperarDatos.Columns["Nombre"].HeaderText = "Cliente";
@@ -64,13 +70,33 @@ namespace kenjhi.frmsAdmin
                 dataGridRecuperarDatos.Columns["Email"].HeaderText = "Correo electrónico";
 
                 dataGridRecuperarDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dataGridRecuperarDatos.ReadOnly = true;
+                foreach (DataGridViewColumn column in dataGridRecuperarDatos.Columns)
+                {
+                    column.ReadOnly = true;
+                }
                 conexion.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void pictureBoxClientes_Click(object sender, EventArgs e)
+        {
+            pictureBoxProductos.Visible = false;
+            labelProductos.Visible = false;
+            pictureBoxClientes.Visible = false;
+            labelClientes.Visible = false;
+            pictureBoxCategorias.Visible = false;
+            labelCategorias.Visible = false;
+            pictureBoxEmpleados.Visible = false;
+            labelEmpleados.Visible = false;
+
+            dataGridRecuperarDatos.Visible = true;
+            CargarDatosClientes();
+            labelPrincipal.Text = "Visualizando Clientes eliminados";
+
         }
     }
 }
