@@ -250,8 +250,8 @@ namespace kenjhi
             }
             //btnGuardarCambios.Visible=true;
             btnModificar.Visible = false;
-            if (btnModificar.Visible = false) { btnCancelarModificacion.Visible = true; }
-            if (btnCancelarModificacion.Visible = true) { btnModificar.Visible = false; }
+            if (btnModificar.Visible == false) { btnCancelarModificacion.Visible = true; }
+            if (btnCancelarModificacion.Visible == true) { btnModificar.Visible = false; }
         }
 
        
@@ -291,10 +291,10 @@ namespace kenjhi
                     {
                         column.ReadOnly = true;
                     }
-                    if (lblSinResultado.Visible=true) {
+                    if (lblSinResultado.Visible == true) {
                         lblSinResultado.Visible = false;
                     }
-                    if (lblSinResultado2.Visible = true)
+                    if (lblSinResultado2.Visible == true)
                     {
                         lblSinResultado2.Visible = false;
                     } //probar
