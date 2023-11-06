@@ -61,7 +61,7 @@ namespace kenjhi
             string nombreUsuario = txtUsuario.Text;
             string contraseñaIngresada = txtContrasena.Text;
             string contraseñaEncriptada = EncriptarContraseña(contraseñaIngresada);
-            string cadenaConexion = "Server=localhost;Database=suple;Uid=jhin;Pwd=jhin444_2023;";
+            string cadenaConexion = "Server=localhost;Database=suple;Uid=suple_admin;Pwd=supleadmin2023!_saltocentro;";
             MySqlConnection conexion = new MySqlConnection(cadenaConexion);
 
             try
@@ -94,13 +94,11 @@ namespace kenjhi
                         else
                         {
                             lbl1.Visible = true;
-                            //System.Media.SystemSounds.Exclamation.Play();
                         }
                     }
                     else
                     {
                         lbl1.Visible = true;
-                        //System.Media.SystemSounds.Exclamation.Play();
                     }
                 }
             }
@@ -129,11 +127,7 @@ namespace kenjhi
             }
         }
 
-        public static class Utilidad
-        {
-            public static string NombreUsuarioActual { get; set; }
-        }//sin utilidad aun
-
+        
 
         private void txtContrasena_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -141,7 +135,7 @@ namespace kenjhi
                 string nombreUsuario = txtUsuario.Text;
                 string contraseñaIngresada = txtContrasena.Text;
                 string contraseñaEncriptada = EncriptarContraseña(contraseñaIngresada);
-                string cadenaConexion = "Server=localhost;Database=suple;Uid=jhin;Pwd=jhin444_2023;";
+                string cadenaConexion = "Server=localhost;Database=suple;Uid=suple_admin;Pwd=supleadmin2023!_saltocentro;";
                 MySqlConnection conexion = new MySqlConnection(cadenaConexion);
 
                 try
@@ -174,13 +168,11 @@ namespace kenjhi
                             else
                             {
                                 lbl1.Visible = true;
-                                //System.Media.SystemSounds.Exclamation.Play();
                             }
                         }
                         else
                         {
                             lbl1.Visible = true;
-                            //System.Media.SystemSounds.Exclamation.Play();
                         }
                     }
                 }
@@ -200,10 +192,7 @@ namespace kenjhi
 
         }
 
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void linkCambiarPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -215,14 +204,9 @@ namespace kenjhi
         {
             if (txtContrasena.PasswordChar == '*')
             {
-                // Cambia el carácter de contraseña a texto normal
-                txtContrasena.PasswordChar = '\0'; // '\0' representa el carácter nulo
+                txtContrasena.PasswordChar = '\0'; 
             }
-            //else
-            //{
-            //    // Cambia el carácter de contraseña de vuelta a '*'
-            //    txtContrasena.PasswordChar = '*';
-            //}
+           
             picPass.Visible=false;
             picNoVer.Visible = true;
         }
@@ -232,7 +216,7 @@ namespace kenjhi
             if (txtContrasena.PasswordChar == '\0')
             {
                
-                txtContrasena.PasswordChar = '*';  //cambia de nuevo a vista previa de password
+                txtContrasena.PasswordChar = '*'; 
             }
             picNoVer.Visible = false;
             picPass.Visible = true;

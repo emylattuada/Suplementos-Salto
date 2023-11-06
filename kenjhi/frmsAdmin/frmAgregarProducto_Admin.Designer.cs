@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Agregar_Producto));
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -49,7 +48,6 @@
             this.numericUpDownCantidad = new System.Windows.Forms.NumericUpDown();
             this.linkCrearCategoria = new System.Windows.Forms.LinkLabel();
             this.numericUpDownPrecio = new System.Windows.Forms.NumericUpDown();
-            this.timerCategoria2 = new System.Windows.Forms.Timer(this.components);
             this.picActualizarCategoria = new System.Windows.Forms.PictureBox();
             this.labelActualizacionCate = new System.Windows.Forms.Label();
             this.btnAgregarProducto = new kenjhi.RJButton();
@@ -303,10 +301,6 @@
             this.numericUpDownPrecio.Name = "numericUpDownPrecio";
             this.numericUpDownPrecio.Size = new System.Drawing.Size(450, 22);
             this.numericUpDownPrecio.TabIndex = 69;
-            // 
-            // timerCategoria2
-            // 
-            this.timerCategoria2.Tick += new System.EventHandler(this.timerCategoria_Tick);
             // 
             // picActualizarCategoria
             // 

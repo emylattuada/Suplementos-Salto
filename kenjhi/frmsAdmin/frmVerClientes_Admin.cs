@@ -21,15 +21,14 @@ namespace kenjhi
             txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
             txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
             dataGridClientes.RowTemplate.Height = 40;
-            dataGridClientes.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10); // Ajusta el espacio vertical entre las celdas de cada fila
+            dataGridClientes.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10);
 
 
             try
             {
-                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"); ;
+                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"); ;
                 conexion.Open();
 
-                //string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente";
                 string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente WHERE visible=1";
 
 
@@ -41,7 +40,6 @@ namespace kenjhi
 
                 dataGridClientes.DataSource = tablaClientes;
 
-                // Configurar las columnas
                 dataGridClientes.Columns["ID_Cliente"].HeaderText = "ID";
                 dataGridClientes.Columns["ID_Cliente"].Visible = false;
                 dataGridClientes.Columns["Nombre"].HeaderText = "Cliente";
@@ -73,7 +71,7 @@ namespace kenjhi
         {
             try
             {
-                using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+                using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
                 {
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT ID_Cliente, Nombre, Email, Telefono, Direccion FROM Cliente", connection))
                     {
@@ -82,7 +80,6 @@ namespace kenjhi
                     }
 
                     MessageBox.Show("Datos actualizados.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    //lblSinGuardar.Visible = false;
                     btnGuardarCambios.Visible = false;
                     btnEliminarCliente.Visible = false;
                     btnCancelarModificacion.Visible = false;
@@ -93,10 +90,9 @@ namespace kenjhi
                     btnModificar.Visible = true;
                     try
                     {
-                        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"); ;
+                        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"); ;
                         conexion.Open();
 
-                        //string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente";
                         string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente WHERE visible=1";
 
 
@@ -108,7 +104,6 @@ namespace kenjhi
 
                         dataGridClientes.DataSource = tablaClientes;
 
-                        // Configurar las columnas
                         dataGridClientes.Columns["ID_Cliente"].HeaderText = "ID";
                         dataGridClientes.Columns["ID_Cliente"].Visible = false;
                         dataGridClientes.Columns["Nombre"].HeaderText = "Cliente";
@@ -137,23 +132,17 @@ namespace kenjhi
 
         private void dataGridClientes_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            //btnEliminarCliente.Visible = true;
 
         }
 
         private void dataGridClientes_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            //lblSinGuardar.Visible = true;
             if (e.RowIndex >= 0 && e.ColumnIndex >= 0) 
             {
                 if (dataGridClientes.IsCurrentCellDirty)
                 {
-                    // Mostrar un mensaje al usuario.
-                    //MessageBox.Show("Has cambiado el valor en una celda."); //esto es para probar que funcione nada mas
-                    // no tocar, funciona
                     btnGuardarCambios.Visible = true;
                      
-                    
                 }
             }
 
@@ -167,7 +156,7 @@ namespace kenjhi
 
                 try
                 {
-                    using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+                    using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
                     {
                         conexion.Open();
 
@@ -177,22 +166,19 @@ namespace kenjhi
 
                         conexion.Close();
 
-                        // Ocultar la fila seleccionada en el DataGridView
                         dataGridClientes.SelectedRows[0].Visible = false;
 
-                        //MessageBox.Show("Cliente eliminado.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         
                     }
                 }
-                catch /*(Exception ex)*/
+                catch 
                 {
                     MessageBox.Show("Cliente eliminado.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     try
                     {
-                        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"); ;
+                        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"); ;
                         conexion.Open();
 
-                        //string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente";
                         string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente WHERE visible=1";
 
 
@@ -223,7 +209,6 @@ namespace kenjhi
                     {
                         MessageBox.Show(ex.ToString(), "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    //MessageBox.Show(ex.ToString(), "Error al eliminar cliente", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
@@ -248,7 +233,6 @@ namespace kenjhi
             {
                 column.ReadOnly = false;
             }
-            //btnGuardarCambios.Visible=true;
             btnModificar.Visible = false;
             if (btnModificar.Visible == false) { btnCancelarModificacion.Visible = true; }
             if (btnCancelarModificacion.Visible == true) { btnModificar.Visible = false; }
@@ -262,10 +246,9 @@ namespace kenjhi
             {
                 try
                 {
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"); ;
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"); ;
                     conexion.Open();
 
-                    //string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente";
                     string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente WHERE visible=1";
 
 
@@ -277,7 +260,6 @@ namespace kenjhi
 
                     dataGridClientes.DataSource = tablaClientes;
 
-                    // Configurar las columnas
                     dataGridClientes.Columns["ID_Cliente"].HeaderText = "ID";
                     dataGridClientes.Columns["ID_Cliente"].Visible = false;
                     dataGridClientes.Columns["Nombre"].HeaderText = "Cliente";
@@ -285,7 +267,6 @@ namespace kenjhi
                     dataGridClientes.Columns["Direccion"].HeaderText = "Dirección";
                     dataGridClientes.Columns["Email"].HeaderText = "Correo electrónico";
 
-                    // Ajustar el ancho de las columnas
                     dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     foreach (DataGridViewColumn column in dataGridClientes.Columns)
                     {
@@ -297,7 +278,7 @@ namespace kenjhi
                     if (lblSinResultado2.Visible == true)
                     {
                         lblSinResultado2.Visible = false;
-                    } //probar
+                    } 
                     
 
                     conexion.Close();
@@ -313,7 +294,7 @@ namespace kenjhi
             if (txtBusquedaDGV.Text.Length > 0)
             {
                 string textoBusqueda = txtBusquedaDGV.Text;
-                using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+                using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
                 {
                     conexion.Open();
                     string consulta = "SELECT * FROM cliente WHERE Visible = 1 AND Nombre LIKE @textoBusqueda";
@@ -327,14 +308,12 @@ namespace kenjhi
                         dataGridClientes.Columns["Visible"].Visible = false;
                         if (dataTable.Rows.Count == 0)
                         {
-                            // Si no hay resultados, muestra el Label
                             lblSinResultado.Visible = true;
                             lblSinResultado2.Visible = true;
 
                         }
                         else
                         {
-                            // Si hay resultados, oculta el Label
                             lblSinResultado.Visible = false;
                             lblSinResultado2.Visible = false;
                         }

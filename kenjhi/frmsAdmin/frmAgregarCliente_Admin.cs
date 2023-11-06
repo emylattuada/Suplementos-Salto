@@ -18,7 +18,7 @@ namespace kenjhi
     public partial class frmAgregarCliente_Admin : Form
 
     {
-        private string connectionString = "Server = localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"; 
+        private string connectionString = "Server = localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"; 
 
         public frmAgregarCliente_Admin()
         {
@@ -48,7 +48,7 @@ namespace kenjhi
             {
                 MessageBox.Show("El correo electrónico no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }//mismo code de agregar emp, video tuto
+            }
 
             bool clienteExiste = VerificarExistenciaCliente(nombre, telefono);
 
@@ -111,11 +111,6 @@ namespace kenjhi
             this.Close();
         }
     }
-
-       
-
-
-
 
     }
     

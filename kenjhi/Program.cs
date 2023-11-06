@@ -17,7 +17,7 @@ namespace kenjhi
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMenu_Admin());
+            Application.Run(new frmRecuperarDatos_Admin());
         }
     }
 }

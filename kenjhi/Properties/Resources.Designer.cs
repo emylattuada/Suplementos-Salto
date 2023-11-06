@@ -143,6 +143,16 @@ namespace kenjhi.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap empleados {
+            get {
+                object obj = ResourceManager.GetObject("empleados", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap expediente {
             get {
                 object obj = ResourceManager.GetObject("expediente", resourceCulture);
@@ -206,6 +216,16 @@ namespace kenjhi.Properties {
         internal static System.Drawing.Bitmap ojos_cruzados__1_ {
             get {
                 object obj = ResourceManager.GetObject("ojos-cruzados (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap productos {
+            get {
+                object obj = ResourceManager.GetObject("productos", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

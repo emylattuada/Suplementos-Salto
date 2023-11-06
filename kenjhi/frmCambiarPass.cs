@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Mail;
 using MySql.Data.MySqlClient;
-using System.Security.Cryptography; //para el encriptado
+using System.Security.Cryptography; 
 using System.Media;
 
 namespace kenjhi
@@ -32,7 +32,7 @@ namespace kenjhi
             txtNuevaContraseña2.PasswordChar = '*';
 
 
-            string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";
+            string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
@@ -47,14 +47,10 @@ namespace kenjhi
                     if (count > 0)
                     {
                         MessageBox.Show("Usuario y correo válidos.");
-                        //txtCambiarCodigo.Enabled = true;
-                        //btnEnviarCodigo.Enabled = true; este btn lo eliminamos
-                        //txtCambiarCodigo.Visible= true;
-                        string correoOrigen = "info3emt@edusalto.uy"; // Correo de origen
-                        string contraseniaOrigen = "info3emt21"; // Contraseña del correo de origen
-                        string correoDestino = txtCambiarEmail.Text; // Correo de destino
-                        string codigo = GenerarCodigoVerificacion(); // Genera el código de verificación
-
+                        string correoOrigen = "info3emt@edusalto.uy"; 
+                        string contraseniaOrigen = "info3emt21"; 
+                        string correoDestino = txtCambiarEmail.Text; 
+                        string codigo = GenerarCodigoVerificacion(); 
                         string mensaje = $"Tu código de verificación es: {codigo}";
 
                         try
@@ -62,11 +58,9 @@ namespace kenjhi
                             enviarCorreo(correoOrigen, contraseniaOrigen, correoDestino, mensaje);
                             MessageBox.Show("Mensaje enviado al correo. Ingresa el código.");
 
-                            // Actualizar el código en la base de datos
                             string usuario2 = txtCambiarUsuario.Text;
                             ActualizarCodigoEnBaseDeDatos(usuario2, codigo);
-                            //btnEnviarCodigo.Visible=false;
-                            //btnVerificarCodigo.Visible = true;
+                          
                             btnVerificarCodigo.Enabled = true;
                             txtCambiarCodigo.Enabled = true;
                             txtNuevaContraseña2.Enabled = true;
@@ -85,49 +79,7 @@ namespace kenjhi
             }
         }
 
-        private void btnEnviarCodigo_Click(object sender, EventArgs e)
-        {
-            //string correoOrigen = "info3emt@edusalto.uy"; // Correo de origen
-            //string contraseniaOrigen = "info3emt21"; // Contraseña del correo de origen
-            //string correoDestino = txtCambiarEmail.Text; // Correo de destino
-            //string codigo = GenerarCodigoVerificacion(); // Genera el code de verificar
-
-            //string mensaje = $"Tu código de verificación es: {codigo}";
-
-            //try
-            //{
-            //    enviarCorreo(correoOrigen, contraseniaOrigen, correoDestino, mensaje);
-            //    MessageBox.Show("Mensaje enviado al correo. Ingresa el código de 6 dígitos.");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show($"Error al enviar el correo: {ex.Message}");
-            //}
-
-            //string correoOrigen = "info3emt@edusalto.uy"; // Correo de origen
-            //string contraseniaOrigen = "info3emt21"; // Contraseña del correo de origen
-            //string correoDestino = txtCambiarEmail.Text; // Correo de destino
-            //string codigo = GenerarCodigoVerificacion(); // Genera el código de verificación
-
-            //string mensaje = $"Tu código de verificación es: {codigo}";
-
-            //try
-            //{
-            //    enviarCorreo(correoOrigen, contraseniaOrigen, correoDestino, mensaje);
-            //    MessageBox.Show("Mensaje enviado al correo. Ingresa el código.");
-
-            //    // Actualizar el código en la base de datos
-            //    string usuario = txtCambiarUsuario.Text;
-            //    ActualizarCodigoEnBaseDeDatos(usuario, codigo);
-            //    //btnEnviarCodigo.Visible=false;
-            //    btnVerificarCodigo.Visible=true;   
-            //    txtCambiarCodigo.Enabled=true;
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show($"Error al enviar el correo: {ex.Message}");
-            //}
-        }//comentado porque lo hicimos automatico
+       
 
         private void enviarCorreo(string emisor, string contrasenia, string receptor, string mensaje)
         {
@@ -142,7 +94,7 @@ namespace kenjhi
 
             correo.To.Add(receptor);
 
-            correo.Subject = "Código de verificación"; // Asunto del correo
+            correo.Subject = "Código de verificación"; 
             correo.SubjectEncoding = Encoding.UTF8;
 
             correo.Body = mensaje;
@@ -156,7 +108,7 @@ namespace kenjhi
 
         private void ActualizarCodigoEnBaseDeDatos(string usuario, string codigo)
         {
-            string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";
+            string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
@@ -168,11 +120,9 @@ namespace kenjhi
                     int rowsAffected = cmd.ExecuteNonQuery();
                     if (rowsAffected > 0)
                     {
-                        //MessageBox.Show("Código actualizado en la base de datos.");
                     }
                     else
                     {
-                        //MessageBox.Show("No se pudo actualizar el código en la base de datos.");
                     }
                 }
             }
@@ -180,7 +130,6 @@ namespace kenjhi
 
         private string GenerarCodigoVerificacion()
         {
-            // generamos un codigo aleatorio para reponerlo en la bd, proximamente agregado
             Random rand = new Random();
             int codigo = rand.Next(100000, 999999);
             return codigo.ToString();
@@ -190,7 +139,7 @@ namespace kenjhi
         {
             string correo = txtCambiarEmail.Text;
             string codigoIngresado = txtCambiarCodigo.Text;
-            string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";
+            string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
@@ -206,9 +155,7 @@ namespace kenjhi
 
                         if (codigoIngresado == codigoBaseDeDatos)
                         {
-                            //MessageBox.Show("El código es válido.");
                             MessageBox.Show("Código válido. Puede ingresar la nueva contraseña.", "Código Validado");
-                            //y habilitamos los ultimos txt y boton para poder subir esos datos a la bd y terminar el cambio de password
                             txtNuevaContraseña.Enabled = true;
                             btnGuardarNuevaContraseña.Enabled=true;
 
@@ -220,7 +167,6 @@ namespace kenjhi
                     }
                     else
                     {
-                        //MessageBox.Show("El correo no está registrado en la base de datos."); esto no lo vamos a usar, pero lo puse para poder darme cuenta si se cargaba o no sin ir al localhost
                     }
                 }
             }
@@ -252,44 +198,10 @@ namespace kenjhi
 
         private void btnGuardarNuevaContraseña_Click(object sender, EventArgs e)
         {
-            //string usuario = txtCambiarUsuario.Text;
-            //string nuevaContraseña = txtNuevaContraseña.Text;
-
-            //// Realiza la actualización de la contraseña en la base de datos
-            //if (txtNuevaContraseña.Text == txtNuevaContraseña2.Text)
-            //{
-
-            //    string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";
-            //    using (MySqlConnection connection = new MySqlConnection(connectionString))
-            //    {
-            //        connection.Open();
-            //        string query = "UPDATE usuarios SET Contraseña = @NuevaContraseña WHERE NombreUsuario = @Usuario";
-            //        using (MySqlCommand cmd = new MySqlCommand(query, connection))
-            //        {
-            //            cmd.Parameters.AddWithValue("@NuevaContraseña", nuevaContraseña);
-            //            cmd.Parameters.AddWithValue("@Usuario", usuario);
-
-            //            int rowsAffected = cmd.ExecuteNonQuery();
-            //            if (rowsAffected > 0)
-            //            {
-            //                SystemSounds.Asterisk.Play();
-            //                MessageBox.Show("Contraseña actualizada. Inicia sesión nuevamente.", "Contraseña Actualizada", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //                this.Close();
-            //            }
-            //            else
-            //            {
-            //                SystemSounds.Exclamation.Play();
-            //                MessageBox.Show("No se pudo actualizar la contraseña.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //            }
-            //        }
-
-            //    }
-
-
-            //}
+           
             if (txtNuevaContraseña.Text == txtNuevaContraseña2.Text)
             {
-                string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";
+                string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
 
                 try
                 {
@@ -320,7 +232,7 @@ namespace kenjhi
                             if (filasAfectadas > 0)
                             {
                                 MessageBox.Show("Contraseña actualizada con éxito, reinicie la sesión.");
-                                Application.Exit();
+                                this.Close();
                             }
                             else
                             {
@@ -348,7 +260,7 @@ namespace kenjhi
             if (txtNuevaContraseña2.PasswordChar == '*')
             {
 
-                txtNuevaContraseña2.PasswordChar = '\0'; //era mejor poner un yy pero asi tambien esta simple, lo dejamos asi
+                txtNuevaContraseña2.PasswordChar = '\0'; 
             }
 
             picPass.Visible = false;
@@ -360,12 +272,12 @@ namespace kenjhi
             if (txtNuevaContraseña.PasswordChar == '\0')
             {
 
-                txtNuevaContraseña.PasswordChar = '*';  //cambia de nuevo a vista previa de password
+                txtNuevaContraseña.PasswordChar = '*';  
             }
             if (txtNuevaContraseña2.PasswordChar == '\0')
             {
 
-                txtNuevaContraseña2.PasswordChar = '*';  //cambia de nuevo a vista previa de password
+                txtNuevaContraseña2.PasswordChar = '*';  
             }
             picNoVer.Visible = false;
             picPass.Visible = true;

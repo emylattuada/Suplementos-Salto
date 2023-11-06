@@ -361,6 +361,8 @@
     <None Include="Resources\informacion %281%29.png" />
     <None Include="Resources\administrador.png" />
     <None Include="Resources\cerrar sesion.png" />
+    <None Include="Resources\empleados.png" />
+    <None Include="Resources\productos.png" />
     <Content Include="Resources\Sin-título-1 %281%29.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

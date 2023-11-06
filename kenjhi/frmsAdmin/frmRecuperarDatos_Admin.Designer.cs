@@ -35,28 +35,29 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecuperarDatos_Admin));
             this.label10 = new System.Windows.Forms.Label();
             this.labelPrincipal = new System.Windows.Forms.Label();
-            this.btnVolver = new kenjhi.RJButton();
             this.lblDatos = new System.Windows.Forms.Label();
             this.dataGridRecuperarDatos = new System.Windows.Forms.DataGridView();
-            this.pictureBoxClientes = new System.Windows.Forms.PictureBox();
-            this.pictureBoxCategorias = new System.Windows.Forms.PictureBox();
-            this.pictureBoxProductos = new System.Windows.Forms.PictureBox();
             this.labelClientes = new System.Windows.Forms.Label();
             this.labelProductos = new System.Windows.Forms.Label();
             this.labelCategorias = new System.Windows.Forms.Label();
-            this.pictureBoxEmpleados = new System.Windows.Forms.PictureBox();
             this.labelEmpleados = new System.Windows.Forms.Label();
             this.txtBusquedaDGV = new System.Windows.Forms.TextBox();
             this.labelBuscar = new System.Windows.Forms.Label();
             this.txtLinea = new System.Windows.Forms.TextBox();
             this.lblSinResultado2 = new System.Windows.Forms.Label();
             this.lblSinResultado = new System.Windows.Forms.Label();
-            this.btnRecuperar = new kenjhi.RJButton();
+            this.pictureBoxEmpleados = new System.Windows.Forms.PictureBox();
+            this.pictureBoxProductos = new System.Windows.Forms.PictureBox();
+            this.pictureBoxCategorias = new System.Windows.Forms.PictureBox();
+            this.pictureBoxClientes = new System.Windows.Forms.PictureBox();
+            this.btnRecuperarProductos = new kenjhi.RJButton();
+            this.btnVolver = new kenjhi.RJButton();
+            this.btnRecuperarDatos = new kenjhi.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRecuperarDatos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClientes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCategorias)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmpleados)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCategorias)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -84,26 +85,6 @@
             this.labelPrincipal.TabIndex = 70;
             this.labelPrincipal.Text = "Selecciona el tipo de dato a recuperar";
             this.labelPrincipal.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btnVolver
-            // 
-            this.btnVolver.BackColor = System.Drawing.Color.Yellow;
-            this.btnVolver.BackgroundColor = System.Drawing.Color.Yellow;
-            this.btnVolver.BorderColor = System.Drawing.Color.Transparent;
-            this.btnVolver.BorderRadius = 10;
-            this.btnVolver.BorderSize = 0;
-            this.btnVolver.FlatAppearance.BorderSize = 0;
-            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.ForeColor = System.Drawing.Color.Black;
-            this.btnVolver.Location = new System.Drawing.Point(12, 9);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(72, 26);
-            this.btnVolver.TabIndex = 27;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.TextColor = System.Drawing.Color.Black;
-            this.btnVolver.UseVisualStyleBackColor = false;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // lblDatos
             // 
@@ -177,34 +158,6 @@
             this.dataGridRecuperarDatos.Visible = false;
             this.dataGridRecuperarDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridRecuperarDatos_CellClick);
             // 
-            // pictureBoxClientes
-            // 
-            this.pictureBoxClientes.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxClientes.Image")));
-            this.pictureBoxClientes.Location = new System.Drawing.Point(120, 139);
-            this.pictureBoxClientes.Name = "pictureBoxClientes";
-            this.pictureBoxClientes.Size = new System.Drawing.Size(130, 137);
-            this.pictureBoxClientes.TabIndex = 79;
-            this.pictureBoxClientes.TabStop = false;
-            this.pictureBoxClientes.Click += new System.EventHandler(this.pictureBoxClientes_Click);
-            // 
-            // pictureBoxCategorias
-            // 
-            this.pictureBoxCategorias.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCategorias.Image")));
-            this.pictureBoxCategorias.Location = new System.Drawing.Point(440, 139);
-            this.pictureBoxCategorias.Name = "pictureBoxCategorias";
-            this.pictureBoxCategorias.Size = new System.Drawing.Size(130, 137);
-            this.pictureBoxCategorias.TabIndex = 80;
-            this.pictureBoxCategorias.TabStop = false;
-            // 
-            // pictureBoxProductos
-            // 
-            this.pictureBoxProductos.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxProductos.Image")));
-            this.pictureBoxProductos.Location = new System.Drawing.Point(278, 139);
-            this.pictureBoxProductos.Name = "pictureBoxProductos";
-            this.pictureBoxProductos.Size = new System.Drawing.Size(130, 137);
-            this.pictureBoxProductos.TabIndex = 81;
-            this.pictureBoxProductos.TabStop = false;
-            // 
             // labelClientes
             // 
             this.labelClientes.AutoSize = true;
@@ -237,15 +190,6 @@
             this.labelCategorias.Size = new System.Drawing.Size(99, 24);
             this.labelCategorias.TabIndex = 84;
             this.labelCategorias.Text = "Categorías";
-            // 
-            // pictureBoxEmpleados
-            // 
-            this.pictureBoxEmpleados.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxEmpleados.Image")));
-            this.pictureBoxEmpleados.Location = new System.Drawing.Point(278, 322);
-            this.pictureBoxEmpleados.Name = "pictureBoxEmpleados";
-            this.pictureBoxEmpleados.Size = new System.Drawing.Size(130, 137);
-            this.pictureBoxEmpleados.TabIndex = 85;
-            this.pictureBoxEmpleados.TabStop = false;
             // 
             // labelEmpleados
             // 
@@ -323,26 +267,105 @@
             this.lblSinResultado.Text = "El nombre ingresado no pertenece al sistema";
             this.lblSinResultado.Visible = false;
             // 
-            // btnRecuperar
+            // pictureBoxEmpleados
             // 
-            this.btnRecuperar.BackColor = System.Drawing.Color.Yellow;
-            this.btnRecuperar.BackgroundColor = System.Drawing.Color.Yellow;
-            this.btnRecuperar.BorderColor = System.Drawing.Color.Transparent;
-            this.btnRecuperar.BorderRadius = 10;
-            this.btnRecuperar.BorderSize = 0;
-            this.btnRecuperar.FlatAppearance.BorderSize = 0;
-            this.btnRecuperar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecuperar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecuperar.ForeColor = System.Drawing.Color.Black;
-            this.btnRecuperar.Location = new System.Drawing.Point(12, 41);
-            this.btnRecuperar.Name = "btnRecuperar";
-            this.btnRecuperar.Size = new System.Drawing.Size(72, 26);
-            this.btnRecuperar.TabIndex = 92;
-            this.btnRecuperar.Text = "Recuperar";
-            this.btnRecuperar.TextColor = System.Drawing.Color.Black;
-            this.btnRecuperar.UseVisualStyleBackColor = false;
-            this.btnRecuperar.Visible = false;
-            this.btnRecuperar.Click += new System.EventHandler(this.btnRecuperar_Click);
+            this.pictureBoxEmpleados.Image = global::kenjhi.Properties.Resources.empleados;
+            this.pictureBoxEmpleados.Location = new System.Drawing.Point(278, 322);
+            this.pictureBoxEmpleados.Name = "pictureBoxEmpleados";
+            this.pictureBoxEmpleados.Size = new System.Drawing.Size(130, 137);
+            this.pictureBoxEmpleados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxEmpleados.TabIndex = 85;
+            this.pictureBoxEmpleados.TabStop = false;
+            // 
+            // pictureBoxProductos
+            // 
+            this.pictureBoxProductos.Image = global::kenjhi.Properties.Resources.productos;
+            this.pictureBoxProductos.Location = new System.Drawing.Point(278, 139);
+            this.pictureBoxProductos.Name = "pictureBoxProductos";
+            this.pictureBoxProductos.Size = new System.Drawing.Size(130, 137);
+            this.pictureBoxProductos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxProductos.TabIndex = 81;
+            this.pictureBoxProductos.TabStop = false;
+            this.pictureBoxProductos.Click += new System.EventHandler(this.pictureBoxProductos_Click);
+            // 
+            // pictureBoxCategorias
+            // 
+            this.pictureBoxCategorias.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCategorias.Image")));
+            this.pictureBoxCategorias.Location = new System.Drawing.Point(440, 139);
+            this.pictureBoxCategorias.Name = "pictureBoxCategorias";
+            this.pictureBoxCategorias.Size = new System.Drawing.Size(130, 137);
+            this.pictureBoxCategorias.TabIndex = 80;
+            this.pictureBoxCategorias.TabStop = false;
+            // 
+            // pictureBoxClientes
+            // 
+            this.pictureBoxClientes.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxClientes.Image")));
+            this.pictureBoxClientes.Location = new System.Drawing.Point(120, 139);
+            this.pictureBoxClientes.Name = "pictureBoxClientes";
+            this.pictureBoxClientes.Size = new System.Drawing.Size(130, 137);
+            this.pictureBoxClientes.TabIndex = 79;
+            this.pictureBoxClientes.TabStop = false;
+            this.pictureBoxClientes.Click += new System.EventHandler(this.pictureBoxClientes_Click);
+            // 
+            // btnRecuperarProductos
+            // 
+            this.btnRecuperarProductos.BackColor = System.Drawing.Color.Yellow;
+            this.btnRecuperarProductos.BackgroundColor = System.Drawing.Color.Yellow;
+            this.btnRecuperarProductos.BorderColor = System.Drawing.Color.Transparent;
+            this.btnRecuperarProductos.BorderRadius = 10;
+            this.btnRecuperarProductos.BorderSize = 0;
+            this.btnRecuperarProductos.FlatAppearance.BorderSize = 0;
+            this.btnRecuperarProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecuperarProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecuperarProductos.ForeColor = System.Drawing.Color.Black;
+            this.btnRecuperarProductos.Location = new System.Drawing.Point(12, 46);
+            this.btnRecuperarProductos.Name = "btnRecuperarProductos";
+            this.btnRecuperarProductos.Size = new System.Drawing.Size(72, 26);
+            this.btnRecuperarProductos.TabIndex = 93;
+            this.btnRecuperarProductos.Text = "/";
+            this.btnRecuperarProductos.TextColor = System.Drawing.Color.Black;
+            this.btnRecuperarProductos.UseVisualStyleBackColor = false;
+            this.btnRecuperarProductos.Visible = false;
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.Yellow;
+            this.btnVolver.BackgroundColor = System.Drawing.Color.Yellow;
+            this.btnVolver.BorderColor = System.Drawing.Color.Transparent;
+            this.btnVolver.BorderRadius = 10;
+            this.btnVolver.BorderSize = 0;
+            this.btnVolver.FlatAppearance.BorderSize = 0;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.Color.Black;
+            this.btnVolver.Location = new System.Drawing.Point(12, 9);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(72, 26);
+            this.btnVolver.TabIndex = 27;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.TextColor = System.Drawing.Color.Black;
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // btnRecuperarDatos
+            // 
+            this.btnRecuperarDatos.BackColor = System.Drawing.Color.Yellow;
+            this.btnRecuperarDatos.BackgroundColor = System.Drawing.Color.Yellow;
+            this.btnRecuperarDatos.BorderColor = System.Drawing.Color.Transparent;
+            this.btnRecuperarDatos.BorderRadius = 10;
+            this.btnRecuperarDatos.BorderSize = 0;
+            this.btnRecuperarDatos.FlatAppearance.BorderSize = 0;
+            this.btnRecuperarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecuperarDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecuperarDatos.ForeColor = System.Drawing.Color.Black;
+            this.btnRecuperarDatos.Location = new System.Drawing.Point(12, 46);
+            this.btnRecuperarDatos.Name = "btnRecuperarDatos";
+            this.btnRecuperarDatos.Size = new System.Drawing.Size(72, 26);
+            this.btnRecuperarDatos.TabIndex = 92;
+            this.btnRecuperarDatos.Text = "Recuperar";
+            this.btnRecuperarDatos.TextColor = System.Drawing.Color.Black;
+            this.btnRecuperarDatos.UseVisualStyleBackColor = false;
+            this.btnRecuperarDatos.Click += new System.EventHandler(this.btnRecuperarDato_Click);
             // 
             // frmRecuperarDatos_Admin
             // 
@@ -350,7 +373,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 505);
-            this.Controls.Add(this.btnRecuperar);
+            this.Controls.Add(this.btnRecuperarDatos);
             this.Controls.Add(this.lblSinResultado2);
             this.Controls.Add(this.lblSinResultado);
             this.Controls.Add(this.txtBusquedaDGV);
@@ -374,10 +397,10 @@
             this.Text = "Suplementos Salto";
             this.Load += new System.EventHandler(this.frmRecuperarDatos_Admin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRecuperarDatos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClientes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCategorias)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmpleados)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCategorias)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,6 +426,7 @@
         private System.Windows.Forms.TextBox txtLinea;
         private System.Windows.Forms.Label lblSinResultado2;
         private System.Windows.Forms.Label lblSinResultado;
-        private RJButton btnRecuperar;
+        private RJButton btnRecuperarProductos;
+        private RJButton btnRecuperarDatos;
     }
 }
