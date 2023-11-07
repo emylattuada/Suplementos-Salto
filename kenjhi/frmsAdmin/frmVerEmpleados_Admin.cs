@@ -168,7 +168,7 @@ namespace kenjhi
         {
             if (dataGridEmpleados.SelectedRows.Count > 0)
             {
-                int idUsuario = Convert.ToInt32(dataGridEmpleados.SelectedRows[0].Cells["ID_Usuario"].Value);
+                int idEmpleado = Convert.ToInt32(dataGridEmpleados.SelectedRows[0].Cells["ID_Usuario"].Value);
 
                 try
                 {
@@ -176,7 +176,7 @@ namespace kenjhi
                     {
                         conexion.Open();
 
-                        string consultaActualizar = $"UPDATE usuarios SET Visible=0 WHERE ID_Usuario={idUsuario}";
+                        string consultaActualizar = $"UPDATE usuarios SET visible=0 WHERE ID_Usuario={idEmpleado}";
                         MySqlCommand comandoActualizar = new MySqlCommand(consultaActualizar, conexion);
                         comandoActualizar.ExecuteNonQuery();
 
@@ -184,14 +184,43 @@ namespace kenjhi
 
                         dataGridEmpleados.SelectedRows[0].Visible = false;
 
-                        MessageBox.Show("Usuario eliminado.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         txtBusquedaDGV.Clear();
-
                     }
+                }
+                catch
+                {
+                    MessageBox.Show("Empleado eliminado", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtBusquedaDGV.Clear();
+                }
+                try
+                {
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
+                    conexion.Open();
+
+                    string consulta = "SELECT ID_Usuario, NombreUsuario, Rol, email FROM usuarios WHERE Visible = 1";
+
+                    MySqlCommand comandos = new MySqlCommand(consulta, conexion);
+                    MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
+
+                    DataTable tablaUsuarios = new DataTable();
+                    adaptador.Fill(tablaUsuarios);
+
+                    dataGridEmpleados.DataSource = tablaUsuarios;
+
+                    dataGridEmpleados.Columns["ID_Usuario"].Visible = false;
+                    dataGridEmpleados.Columns["NombreUsuario"].HeaderText = "Nombre de Usuario";
+                    dataGridEmpleados.Columns["Rol"].HeaderText = "Rol";
+                    dataGridEmpleados.Columns["Rol"].ReadOnly = true;
+
+                    dataGridEmpleados.Columns["email"].HeaderText = "Correo electrónico";
+
+                    dataGridEmpleados.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                    conexion.Close();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.Message, "Error al eliminar el usuario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show(ex.ToString(), "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 

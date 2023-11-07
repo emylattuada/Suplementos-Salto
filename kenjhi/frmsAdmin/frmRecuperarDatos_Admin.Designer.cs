@@ -276,6 +276,7 @@
             this.pictureBoxEmpleados.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxEmpleados.TabIndex = 85;
             this.pictureBoxEmpleados.TabStop = false;
+            this.pictureBoxEmpleados.Click += new System.EventHandler(this.pictureBoxEmpleados_Click);
             // 
             // pictureBoxProductos
             // 
@@ -365,6 +366,7 @@
             this.btnRecuperarDatos.Text = "Recuperar";
             this.btnRecuperarDatos.TextColor = System.Drawing.Color.Black;
             this.btnRecuperarDatos.UseVisualStyleBackColor = false;
+            this.btnRecuperarDatos.Visible = false;
             this.btnRecuperarDatos.Click += new System.EventHandler(this.btnRecuperarDato_Click);
             // 
             // frmRecuperarDatos_Admin
