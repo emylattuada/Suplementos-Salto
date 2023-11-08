@@ -119,6 +119,11 @@ namespace kenjhi
                 MessageBox.Show("Por favor, selecciona un producto de la lista.");
             }
         }
+
+        private void picturePasos_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Pasos para agregar un nuevo producto\n1) Ubicarse en 'Menú principal'\n2) Clic en el listado llamado 'Productos'\n3) Dentro del listado, clic en 'Agregar producto'\n4) Completar los datos del nuevo producto");
+
+        }
     }
 }
-//funciono, no toquen nada porque se rompe todo, no tocar la clase comboboxitem

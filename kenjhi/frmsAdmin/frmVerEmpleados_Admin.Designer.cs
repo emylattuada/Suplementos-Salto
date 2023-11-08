@@ -44,6 +44,7 @@
             this.btnCancelarModificacion = new kenjhi.RJButton();
             this.btnGuardarCambios = new kenjhi.RJButton();
             this.btnVolver = new kenjhi.RJButton();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmpleados)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +84,7 @@
             this.dataGridEmpleados.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridEmpleados.EnableHeadersVisualStyles = false;
             this.dataGridEmpleados.GridColor = System.Drawing.Color.Yellow;
-            this.dataGridEmpleados.Location = new System.Drawing.Point(110, 73);
+            this.dataGridEmpleados.Location = new System.Drawing.Point(110, 88);
             this.dataGridEmpleados.Name = "dataGridEmpleados";
             this.dataGridEmpleados.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -113,7 +114,7 @@
             this.txtBusquedaDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBusquedaDGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusquedaDGV.ForeColor = System.Drawing.Color.White;
-            this.txtBusquedaDGV.Location = new System.Drawing.Point(110, 32);
+            this.txtBusquedaDGV.Location = new System.Drawing.Point(110, 56);
             this.txtBusquedaDGV.Multiline = true;
             this.txtBusquedaDGV.Name = "txtBusquedaDGV";
             this.txtBusquedaDGV.Size = new System.Drawing.Size(535, 20);
@@ -127,7 +128,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(107, 10);
+            this.label1.Location = new System.Drawing.Point(107, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 16);
             this.label1.TabIndex = 33;
@@ -138,7 +139,7 @@
             this.textBox1.BackColor = System.Drawing.Color.Yellow;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(110, 57);
+            this.textBox1.Location = new System.Drawing.Point(110, 81);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(535, 1);
@@ -149,7 +150,7 @@
             this.lblSinResultado2.AutoSize = true;
             this.lblSinResultado2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSinResultado2.ForeColor = System.Drawing.Color.White;
-            this.lblSinResultado2.Location = new System.Drawing.Point(321, 261);
+            this.lblSinResultado2.Location = new System.Drawing.Point(321, 268);
             this.lblSinResultado2.Name = "lblSinResultado2";
             this.lblSinResultado2.Size = new System.Drawing.Size(123, 16);
             this.lblSinResultado2.TabIndex = 41;
@@ -162,11 +163,11 @@
             this.lblSinResultado.AutoSize = true;
             this.lblSinResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSinResultado.ForeColor = System.Drawing.Color.White;
-            this.lblSinResultado.Location = new System.Drawing.Point(162, 236);
+            this.lblSinResultado.Location = new System.Drawing.Point(150, 243);
             this.lblSinResultado.Name = "lblSinResultado";
-            this.lblSinResultado.Size = new System.Drawing.Size(444, 25);
+            this.lblSinResultado.Size = new System.Drawing.Size(467, 25);
             this.lblSinResultado.TabIndex = 40;
-            this.lblSinResultado.Text = "El usuario ingresado no pertenece al sistema";
+            this.lblSinResultado.Text = "El empleado ingresado no pertenece al sistema";
             this.lblSinResultado.Visible = false;
             // 
             // btnEliminarEmpleado
@@ -272,12 +273,24 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // Ver_Empleados
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Black;
+            this.label10.ForeColor = System.Drawing.Color.DimGray;
+            this.label10.Location = new System.Drawing.Point(107, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(233, 13);
+            this.label10.TabIndex = 68;
+            this.label10.Text = "Menú principal > Administrador > Ver empleados\r\n";
+            // 
+            // frmVerEmpleados_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 505);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.lblSinResultado2);
             this.Controls.Add(this.lblSinResultado);
             this.Controls.Add(this.btnEliminarEmpleado);
@@ -290,7 +303,7 @@
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnVolver);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Ver_Empleados";
+            this.Name = "frmVerEmpleados_Admin";
             this.Text = "Suplementos Salto";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridEmpleados)).EndInit();
             this.ResumeLayout(false);
@@ -311,5 +324,6 @@
         private RJButton btnEliminarEmpleado;
         private System.Windows.Forms.Label lblSinResultado2;
         private System.Windows.Forms.Label lblSinResultado;
+        private System.Windows.Forms.Label label10;
     }
 }

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmIngresosProducto_Admin));
-            this.btnVolver = new kenjhi.RJButton();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -44,29 +43,12 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.picturePasos = new System.Windows.Forms.PictureBox();
             this.btnCrearIngreso = new kenjhi.RJButton();
+            this.btnVolver = new kenjhi.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.numericCantidadIngreso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePasos)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnVolver
-            // 
-            this.btnVolver.BackColor = System.Drawing.Color.Yellow;
-            this.btnVolver.BackgroundColor = System.Drawing.Color.Yellow;
-            this.btnVolver.BorderColor = System.Drawing.Color.Transparent;
-            this.btnVolver.BorderRadius = 10;
-            this.btnVolver.BorderSize = 0;
-            this.btnVolver.FlatAppearance.BorderSize = 0;
-            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.ForeColor = System.Drawing.Color.Black;
-            this.btnVolver.Location = new System.Drawing.Point(12, 9);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(72, 26);
-            this.btnVolver.TabIndex = 24;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.TextColor = System.Drawing.Color.Black;
-            this.btnVolver.UseVisualStyleBackColor = false;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // label1
             // 
@@ -244,6 +226,17 @@
             this.label6.TabIndex = 91;
             this.label6.Text = "Obligatorio";
             // 
+            // picturePasos
+            // 
+            this.picturePasos.Image = ((System.Drawing.Image)(resources.GetObject("picturePasos.Image")));
+            this.picturePasos.Location = new System.Drawing.Point(312, 148);
+            this.picturePasos.Name = "picturePasos";
+            this.picturePasos.Size = new System.Drawing.Size(19, 15);
+            this.picturePasos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picturePasos.TabIndex = 93;
+            this.picturePasos.TabStop = false;
+            this.picturePasos.Click += new System.EventHandler(this.picturePasos_Click);
+            // 
             // btnCrearIngreso
             // 
             this.btnCrearIngreso.BackColor = System.Drawing.Color.Yellow;
@@ -264,12 +257,33 @@
             this.btnCrearIngreso.UseVisualStyleBackColor = false;
             this.btnCrearIngreso.Click += new System.EventHandler(this.btnCrearIngreso_Click);
             // 
-            // Ingresos_Producto
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.Yellow;
+            this.btnVolver.BackgroundColor = System.Drawing.Color.Yellow;
+            this.btnVolver.BorderColor = System.Drawing.Color.Transparent;
+            this.btnVolver.BorderRadius = 10;
+            this.btnVolver.BorderSize = 0;
+            this.btnVolver.FlatAppearance.BorderSize = 0;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.Color.Black;
+            this.btnVolver.Location = new System.Drawing.Point(12, 9);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(72, 26);
+            this.btnVolver.TabIndex = 24;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.TextColor = System.Drawing.Color.Black;
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // frmIngresosProducto_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 505);
+            this.Controls.Add(this.picturePasos);
             this.Controls.Add(this.btnCrearIngreso);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -287,9 +301,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVolver);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Ingresos_Producto";
+            this.Name = "frmIngresosProducto_Admin";
             this.Text = "Suplementos Salto";
             ((System.ComponentModel.ISupportInitialize)(this.numericCantidadIngreso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePasos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -313,5 +328,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private RJButton btnCrearIngreso;
+        private System.Windows.Forms.PictureBox picturePasos;
     }
 }

@@ -250,6 +250,13 @@ namespace kenjhi
             hideSubMenu();
         }
 
+        private void btnADM_Estadisticas_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmEstadisticas_Admin());
+            hideSubMenu();
+
+        }
+
         private void openChildForm(Form childform)
         {
             if(activeForm != null)

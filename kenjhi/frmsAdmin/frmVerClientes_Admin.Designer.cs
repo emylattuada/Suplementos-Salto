@@ -44,6 +44,7 @@
             this.btnVolver = new kenjhi.RJButton();
             this.lblSinResultado = new System.Windows.Forms.Label();
             this.lblSinResultado2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -83,7 +84,7 @@
             this.dataGridClientes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridClientes.EnableHeadersVisualStyles = false;
             this.dataGridClientes.GridColor = System.Drawing.Color.Yellow;
-            this.dataGridClientes.Location = new System.Drawing.Point(110, 73);
+            this.dataGridClientes.Location = new System.Drawing.Point(110, 88);
             this.dataGridClientes.Name = "dataGridClientes";
             this.dataGridClientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -102,7 +103,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridClientes.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridClientes.Size = new System.Drawing.Size(535, 420);
+            this.dataGridClientes.Size = new System.Drawing.Size(535, 405);
             this.dataGridClientes.TabIndex = 0;
             this.dataGridClientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridClientes_CellMouseClick);
             this.dataGridClientes.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridClientes_CellMouseDoubleClick);
@@ -114,7 +115,7 @@
             this.txtBusquedaDGV.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtBusquedaDGV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBusquedaDGV.ForeColor = System.Drawing.Color.White;
-            this.txtBusquedaDGV.Location = new System.Drawing.Point(110, 32);
+            this.txtBusquedaDGV.Location = new System.Drawing.Point(110, 56);
             this.txtBusquedaDGV.Multiline = true;
             this.txtBusquedaDGV.Name = "txtBusquedaDGV";
             this.txtBusquedaDGV.Size = new System.Drawing.Size(535, 20);
@@ -128,7 +129,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(107, 10);
+            this.label1.Location = new System.Drawing.Point(107, 37);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 16);
             this.label1.TabIndex = 30;
@@ -139,7 +140,7 @@
             this.textBox1.BackColor = System.Drawing.Color.Yellow;
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(110, 57);
+            this.textBox1.Location = new System.Drawing.Point(110, 81);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(535, 1);
@@ -253,7 +254,7 @@
             this.lblSinResultado.AutoSize = true;
             this.lblSinResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSinResultado.ForeColor = System.Drawing.Color.White;
-            this.lblSinResultado.Location = new System.Drawing.Point(156, 236);
+            this.lblSinResultado.Location = new System.Drawing.Point(150, 243);
             this.lblSinResultado.Name = "lblSinResultado";
             this.lblSinResultado.Size = new System.Drawing.Size(445, 25);
             this.lblSinResultado.TabIndex = 33;
@@ -265,7 +266,7 @@
             this.lblSinResultado2.AutoSize = true;
             this.lblSinResultado2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblSinResultado2.ForeColor = System.Drawing.Color.White;
-            this.lblSinResultado2.Location = new System.Drawing.Point(321, 261);
+            this.lblSinResultado2.Location = new System.Drawing.Point(321, 268);
             this.lblSinResultado2.Name = "lblSinResultado2";
             this.lblSinResultado2.Size = new System.Drawing.Size(123, 16);
             this.lblSinResultado2.TabIndex = 34;
@@ -273,12 +274,25 @@
             this.lblSinResultado2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblSinResultado2.Visible = false;
             // 
-            // Ver_Clientes
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Black;
+            this.label10.ForeColor = System.Drawing.Color.DimGray;
+            this.label10.Location = new System.Drawing.Point(107, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(192, 13);
+            this.label10.TabIndex = 68;
+            this.label10.Text = "Menú principal > Clientes > Ver clientes\r\n";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
+            // frmVerClientes_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 505);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.lblSinResultado2);
             this.Controls.Add(this.lblSinResultado);
             this.Controls.Add(this.txtBusquedaDGV);
@@ -291,7 +305,7 @@
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.dataGridClientes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Ver_Clientes";
+            this.Name = "frmVerClientes_Admin";
             this.Text = "Suplementos Salto";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClientes)).EndInit();
             this.ResumeLayout(false);
@@ -312,5 +326,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblSinResultado;
         private System.Windows.Forms.Label lblSinResultado2;
+        private System.Windows.Forms.Label label10;
     }
 }
