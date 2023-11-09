@@ -299,15 +299,6 @@
         TkSuQmCC
 </value>
   </data>
-  <data name="btnMenu.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m
-        dHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAACPSURBVDhPY0ACPkB8AYj/APF/HBgkB1IDUosCjID4
-        PhBj04QNg9SC9MBBOxCDJH4B8W4gXgzEV6BiIPwPimF8EAbpAQNGIAZpAAk+BmJVIAaBJCD+DMRVQBwC
-        xSA2SAykFqQHpJe6BvwG4v1AvAKIr0HFQBibF2hjwGgYDFQYgABFSRkEKM5MIEBGdmZgAADLGafprfQV
-        EAAAAABJRU5ErkJggg==
-</value>
-  </data>
   <data name="btnClientes.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAABl0RVh0U29m

@@ -28,46 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstadisticas_Admin));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            this.btnVolver = new kenjhi.RJButton();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBoxClientes = new System.Windows.Forms.PictureBox();
             this.labelPrincipal = new System.Windows.Forms.Label();
             this.labelClientes = new System.Windows.Forms.Label();
             this.labelProductos = new System.Windows.Forms.Label();
             this.pictureBoxProductos = new System.Windows.Forms.PictureBox();
-            this.lblMasVendido7Dias = new System.Windows.Forms.Label();
             this.chartProductosMasVendidos = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.linkVerDetalles = new System.Windows.Forms.LinkLabel();
+            this.pictureDetalles = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnVolver = new kenjhi.RJButton();
+            this.lblFiltro = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartProductosMasVendidos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureDetalles)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btnVolver
-            // 
-            this.btnVolver.BackColor = System.Drawing.Color.Yellow;
-            this.btnVolver.BackgroundColor = System.Drawing.Color.Yellow;
-            this.btnVolver.BorderColor = System.Drawing.Color.Transparent;
-            this.btnVolver.BorderRadius = 10;
-            this.btnVolver.BorderSize = 0;
-            this.btnVolver.FlatAppearance.BorderSize = 0;
-            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.ForeColor = System.Drawing.Color.Black;
-            this.btnVolver.Location = new System.Drawing.Point(12, 9);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(72, 26);
-            this.btnVolver.TabIndex = 24;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.TextColor = System.Drawing.Color.Black;
-            this.btnVolver.UseVisualStyleBackColor = false;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // label10
             // 
@@ -137,46 +118,103 @@
             this.pictureBoxProductos.TabStop = false;
             this.pictureBoxProductos.Click += new System.EventHandler(this.pictureBoxProductos_Click);
             // 
-            // lblMasVendido7Dias
-            // 
-            this.lblMasVendido7Dias.AutoSize = true;
-            this.lblMasVendido7Dias.ForeColor = System.Drawing.Color.White;
-            this.lblMasVendido7Dias.Location = new System.Drawing.Point(37, 112);
-            this.lblMasVendido7Dias.Name = "lblMasVendido7Dias";
-            this.lblMasVendido7Dias.Size = new System.Drawing.Size(35, 13);
-            this.lblMasVendido7Dias.TabIndex = 86;
-            this.lblMasVendido7Dias.Text = "label1";
-            this.lblMasVendido7Dias.Visible = false;
-            // 
             // chartProductosMasVendidos
             // 
             this.chartProductosMasVendidos.BorderlineColor = System.Drawing.Color.Yellow;
             this.chartProductosMasVendidos.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartProductosMasVendidos.BorderlineWidth = 8;
-            chartArea4.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea4.Name = "ChartArea1";
-            this.chartProductosMasVendidos.ChartAreas.Add(chartArea4);
-            legend4.Name = "Legend1";
-            legend4.TitleSeparatorColor = System.Drawing.Color.Red;
-            this.chartProductosMasVendidos.Legends.Add(legend4);
+            chartArea3.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea3.Name = "ChartArea1";
+            this.chartProductosMasVendidos.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            legend3.TitleSeparatorColor = System.Drawing.Color.Red;
+            this.chartProductosMasVendidos.Legends.Add(legend3);
             this.chartProductosMasVendidos.Location = new System.Drawing.Point(12, 85);
             this.chartProductosMasVendidos.Name = "chartProductosMasVendidos";
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            this.chartProductosMasVendidos.Series.Add(series4);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartProductosMasVendidos.Series.Add(series3);
             this.chartProductosMasVendidos.Size = new System.Drawing.Size(649, 408);
             this.chartProductosMasVendidos.TabIndex = 87;
             this.chartProductosMasVendidos.Text = "chart1";
             this.chartProductosMasVendidos.Visible = false;
             // 
-            // timer1
+            // linkVerDetalles
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.linkVerDetalles.ActiveLinkColor = System.Drawing.Color.White;
+            this.linkVerDetalles.AutoSize = true;
+            this.linkVerDetalles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkVerDetalles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.linkVerDetalles.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.linkVerDetalles.Location = new System.Drawing.Point(582, 54);
+            this.linkVerDetalles.Name = "linkVerDetalles";
+            this.linkVerDetalles.Size = new System.Drawing.Size(79, 16);
+            this.linkVerDetalles.TabIndex = 88;
+            this.linkVerDetalles.TabStop = true;
+            this.linkVerDetalles.Text = "Ver detalles";
+            this.linkVerDetalles.Visible = false;
+            this.linkVerDetalles.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkVerDetalles_LinkClicked);
             // 
-            // timer2
+            // pictureDetalles
             // 
-            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            this.pictureDetalles.Image = ((System.Drawing.Image)(resources.GetObject("pictureDetalles.Image")));
+            this.pictureDetalles.Location = new System.Drawing.Point(563, 55);
+            this.pictureDetalles.Name = "pictureDetalles";
+            this.pictureDetalles.Size = new System.Drawing.Size(19, 15);
+            this.pictureDetalles.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureDetalles.TabIndex = 94;
+            this.pictureDetalles.TabStop = false;
+            this.pictureDetalles.Visible = false;
+            this.pictureDetalles.Click += new System.EventHandler(this.pictureDetalles_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.BackColor = System.Drawing.Color.Black;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.ForeColor = System.Drawing.Color.White;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.IntegralHeight = false;
+            this.comboBox1.ItemHeight = 13;
+            this.comboBox1.Location = new System.Drawing.Point(446, 53);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(98, 21);
+            this.comboBox1.TabIndex = 95;
+            this.comboBox1.Visible = false;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.Yellow;
+            this.btnVolver.BackgroundColor = System.Drawing.Color.Yellow;
+            this.btnVolver.BorderColor = System.Drawing.Color.Transparent;
+            this.btnVolver.BorderRadius = 10;
+            this.btnVolver.BorderSize = 0;
+            this.btnVolver.FlatAppearance.BorderSize = 0;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.Color.Black;
+            this.btnVolver.Location = new System.Drawing.Point(12, 9);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(72, 26);
+            this.btnVolver.TabIndex = 24;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.TextColor = System.Drawing.Color.Black;
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
+            // lblFiltro
+            // 
+            this.lblFiltro.AutoSize = true;
+            this.lblFiltro.BackColor = System.Drawing.Color.Black;
+            this.lblFiltro.ForeColor = System.Drawing.Color.White;
+            this.lblFiltro.Location = new System.Drawing.Point(405, 57);
+            this.lblFiltro.Name = "lblFiltro";
+            this.lblFiltro.Size = new System.Drawing.Size(29, 13);
+            this.lblFiltro.TabIndex = 96;
+            this.lblFiltro.Text = "Filtro";
+            this.lblFiltro.Visible = false;
             // 
             // frmEstadisticas_Admin
             // 
@@ -184,7 +222,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 505);
-            this.Controls.Add(this.lblMasVendido7Dias);
+            this.Controls.Add(this.lblFiltro);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.pictureDetalles);
+            this.Controls.Add(this.linkVerDetalles);
             this.Controls.Add(this.labelProductos);
             this.Controls.Add(this.pictureBoxProductos);
             this.Controls.Add(this.labelClientes);
@@ -200,6 +241,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartProductosMasVendidos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureDetalles)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,9 +256,10 @@
         private System.Windows.Forms.Label labelClientes;
         private System.Windows.Forms.Label labelProductos;
         private System.Windows.Forms.PictureBox pictureBoxProductos;
-        private System.Windows.Forms.Label lblMasVendido7Dias;
         private System.Windows.Forms.DataVisualization.Charting.Chart chartProductosMasVendidos;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.LinkLabel linkVerDetalles;
+        private System.Windows.Forms.PictureBox pictureDetalles;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblFiltro;
     }
 }

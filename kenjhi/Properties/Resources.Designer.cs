@@ -233,6 +233,16 @@ namespace kenjhi.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap proteina__1_ {
+            get {
+                object obj = ResourceManager.GetObject("proteina (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap version {
             get {
                 object obj = ResourceManager.GetObject("version", resourceCulture);

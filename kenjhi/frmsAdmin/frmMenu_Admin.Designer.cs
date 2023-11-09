@@ -70,6 +70,7 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
+            this.label1S = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -508,7 +509,7 @@
             this.btnMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMenu.ForeColor = System.Drawing.Color.Black;
-            this.btnMenu.Image = ((System.Drawing.Image)(resources.GetObject("btnMenu.Image")));
+            this.btnMenu.Image = global::kenjhi.Properties.Resources.proteina__1_;
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMenu.Location = new System.Drawing.Point(0, 205);
             this.btnMenu.Name = "btnMenu";
@@ -608,6 +609,7 @@
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelChildForm.Controls.Add(this.label1S);
             this.panelChildForm.Controls.Add(this.lblFecha);
             this.panelChildForm.Controls.Add(this.lblHora);
             this.panelChildForm.Controls.Add(this.labelUser);
@@ -691,6 +693,18 @@
             this.horafecha.Enabled = true;
             this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
             // 
+            // label1S
+            // 
+            this.label1S.AutoSize = true;
+            this.label1S.BackColor = System.Drawing.Color.Black;
+            this.label1S.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1S.ForeColor = System.Drawing.Color.Yellow;
+            this.label1S.Location = new System.Drawing.Point(372, 462);
+            this.label1S.Name = "label1S";
+            this.label1S.Size = new System.Drawing.Size(260, 20);
+            this.label1S.TabIndex = 6;
+            this.label1S.Text = "Sesión iniciada como Administrador";
+            // 
             // frmMenu_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -765,5 +779,6 @@
         private System.Windows.Forms.Button btnAgregarCategoria;
         private System.Windows.Forms.Button btnRecuperarDatos;
         private System.Windows.Forms.Button btnDevoluciones;
+        private System.Windows.Forms.Label label1S;
     }
 }
