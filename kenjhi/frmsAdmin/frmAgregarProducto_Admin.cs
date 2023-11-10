@@ -92,6 +92,7 @@ namespace kenjhi
             numericUpDownPrecio.Value = 0;
             numericUpDownCantidad.Value = 0;
             comboCategoriaProducto.Items.Clear();
+            lblAgregarProducto.Visible = false;
             CargarCategorias();
         }
         private int ObtenerCategoriaIDDesdeBaseDeDatos(string nombreCategoria)

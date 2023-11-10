@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstadisticas_Admin));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.label10 = new System.Windows.Forms.Label();
             this.pictureBoxClientes = new System.Windows.Forms.PictureBox();
             this.labelPrincipal = new System.Windows.Forms.Label();
@@ -60,6 +60,7 @@
             this.label10.Size = new System.Drawing.Size(221, 13);
             this.label10.TabIndex = 69;
             this.label10.Text = "Menú principal > Administrador > Estadísticas\r\n";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // pictureBoxClientes
             // 
@@ -123,18 +124,18 @@
             this.chartProductosMasVendidos.BorderlineColor = System.Drawing.Color.Yellow;
             this.chartProductosMasVendidos.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
             this.chartProductosMasVendidos.BorderlineWidth = 8;
-            chartArea3.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea3.Name = "ChartArea1";
-            this.chartProductosMasVendidos.ChartAreas.Add(chartArea3);
-            legend3.Name = "Legend1";
-            legend3.TitleSeparatorColor = System.Drawing.Color.Red;
-            this.chartProductosMasVendidos.Legends.Add(legend3);
+            chartArea5.BorderDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
+            chartArea5.Name = "ChartArea1";
+            this.chartProductosMasVendidos.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            legend5.TitleSeparatorColor = System.Drawing.Color.Red;
+            this.chartProductosMasVendidos.Legends.Add(legend5);
             this.chartProductosMasVendidos.Location = new System.Drawing.Point(12, 85);
             this.chartProductosMasVendidos.Name = "chartProductosMasVendidos";
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chartProductosMasVendidos.Series.Add(series3);
+            series5.ChartArea = "ChartArea1";
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chartProductosMasVendidos.Series.Add(series5);
             this.chartProductosMasVendidos.Size = new System.Drawing.Size(649, 408);
             this.chartProductosMasVendidos.TabIndex = 87;
             this.chartProductosMasVendidos.Text = "chart1";
@@ -208,7 +209,7 @@
             // 
             this.lblFiltro.AutoSize = true;
             this.lblFiltro.BackColor = System.Drawing.Color.Black;
-            this.lblFiltro.ForeColor = System.Drawing.Color.White;
+            this.lblFiltro.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.lblFiltro.Location = new System.Drawing.Point(405, 57);
             this.lblFiltro.Name = "lblFiltro";
             this.lblFiltro.Size = new System.Drawing.Size(29, 13);
