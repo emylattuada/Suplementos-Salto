@@ -24,6 +24,8 @@ namespace kenjhi.frmsAdmin
             txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
             txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
 
+
+
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -94,6 +96,9 @@ namespace kenjhi.frmsAdmin
             pictureBoxEmpleados.Visible = false;
             labelEmpleados.Visible = false;
             labelRuta.Text = "Menú principal > Administrador > Recuperar datos > Clientes";
+            txtBusquedaDGV.Text = "Ingresa un nombre de cliente para realizar la búsqueda";
+
+
 
             dataGridRecuperarDatos.Visible = true;
             CargarDatosClientes();
@@ -276,7 +281,12 @@ namespace kenjhi.frmsAdmin
 
         private void txtBusquedaDGV_MouseClick(object sender, MouseEventArgs e)
         {
-            if (txtBusquedaDGV.Text == "Ingresa un nombre para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
+            if (txtBusquedaDGV.Text== "Ingresa un nombre de cliente para realizar la búsqueda" && pos == 1) { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
+            if (txtBusquedaDGV.Text == "Ingresa un nombre de producto para realizar la búsqueda" && pos == 2) { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
+            if (txtBusquedaDGV.Text == "Ingresa un nombre de categoría para realizar la búsqueda" && pos == 5) { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
+            if (txtBusquedaDGV.Text == "Ingresa un nombre de empleado para realizar la búsqueda" && pos == 4) { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
+
+            //if (txtBusquedaDGV.Text == "Ingresa un nombre para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
             txtBusquedaDGV.ForeColor = System.Drawing.Color.White;
         }
 
@@ -393,6 +403,8 @@ namespace kenjhi.frmsAdmin
             pictureBoxProductos.Visible = false;
             labelProductos.Visible = false;
             labelRuta.Text = "Menú principal > Administrador > Recuperar datos > Productos";
+            txtBusquedaDGV.Text = "Ingresa un nombre de producto para realizar la búsqueda";
+
 
 
             dataGridRecuperarDatos.Visible = true;
@@ -636,6 +648,8 @@ namespace kenjhi.frmsAdmin
             pictureBoxCategorias.Visible = false;
             labelCategorias.Visible = false;
             labelRuta.Text = "Menú principal > Administrador > Recuperar datos > Empleados";
+            txtBusquedaDGV.Text = "Ingresa un nombre de empleado para realizar la búsqueda";
+
 
 
             dataGridRecuperarDatos.Visible = true;
@@ -662,6 +676,8 @@ namespace kenjhi.frmsAdmin
             pictureBoxEmpleados.Visible = false;
             labelEmpleados.Visible = false;
             labelRuta.Text = "Menú principal > Administrador > Recuperar datos > Categorías";
+            txtBusquedaDGV.Text = "Ingresa un nombre de categoría para realizar la búsqueda";
+
 
 
             dataGridRecuperarDatos.Visible = true;

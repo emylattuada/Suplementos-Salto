@@ -60,7 +60,7 @@ namespace kenjhi.frmsAdmin
             pictureBoxClientes.Visible = false;
             labelProductos.Visible= false;
             pictureBoxProductos.Visible = false;
-            labelPrincipal.Text = "Gráfico de clientes";
+            labelPrincipal.Text = "Gráfico de Clientes";
             chartProductosMasVendidos.Visible = true;
             labelPrincipal.Location = new System.Drawing.Point(6, 9);
             lblFiltro.Visible = true;
@@ -86,7 +86,7 @@ namespace kenjhi.frmsAdmin
             pictureBoxProductos.Visible = false;
             labelClientes.Visible = false;
             pictureBoxClientes.Visible = false;
-            labelPrincipal.Text = "Gráfico de productos";
+            labelPrincipal.Text = "Gráfico de Productos";
             chartProductosMasVendidos.Visible = true;
             labelPrincipal.Location = new System.Drawing.Point(6, 9);
             pictureDetalles.Visible = true;
