@@ -15,6 +15,7 @@ namespace kenjhi
     public partial class frmNuevaVenta_Admin : Form
     {
         Dictionary<int, int> preciosProductos = new Dictionary<int, int>();
+        private ToolTip toolTipAyuda;
 
 
         public frmNuevaVenta_Admin()
@@ -22,9 +23,7 @@ namespace kenjhi
 
             InitializeComponent();
 
-            //Dictionary<int, int> preciosProductos = new Dictionary<int, int>();
-
-            //numericCantidadVenta.Value = 1;
+           
 
         }
 
@@ -35,12 +34,11 @@ namespace kenjhi
 
         private void Nueva_Venta_Load(object sender, EventArgs e)
         {
-            //comboListaTipoPago.Items.Add("Contado");
-            //comboListaTipoPago.Items.Add("Cuotas");
-            // Conexión a la base de datos
+          
+            toolTipAyuda = new ToolTip();
 
 
-            using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+            using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
             {
                 connection.Open();
 
@@ -59,7 +57,7 @@ namespace kenjhi
                 }
             }
 
-            using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+            using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
             {
                 connection.Open();
 
@@ -80,7 +78,6 @@ namespace kenjhi
                         Nombre = nombreProducto
                     });
 
-                    // Agrega el precio del producto al diccionario
                     preciosProductos[idProducto] = precio;
                 }
 
@@ -98,7 +95,6 @@ namespace kenjhi
             dataGridCarrito.Columns["Precio Total"].ReadOnly = true;
 
 
-            numericDescuentoVenta.ValueChanged += new EventHandler(numericDescuentoVenta_ValueChanged);
 
 
 
@@ -111,35 +107,19 @@ namespace kenjhi
 
         private void comboListaProductos_Click(object sender, EventArgs e)
         {
-            //using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
-            //{
-            //    connection.Open();
-            //    string query = "SELECT Nombre FROM producto WHERE Visible = 1 AND Cantidad > 0";
-            //    MySqlCommand cmd = new MySqlCommand(query, connection);
-
-            //    using (MySqlDataReader reader = cmd.ExecuteReader())
-            //    {
-            //        comboListaProductos.Items.Clear();
-            //        while (reader.Read())
-            //        {
-            //            comboListaProductos.Items.Add(reader["Nombre"].ToString());
-            //        }
-            //    }
-            //}
+           
 
 
         }
 
         private void radioCuotas_Click(object sender, EventArgs e)
         {
-            //numericCuotasVenta.Enabled = true;
             
         }
 
         private void radioContado_Click(object sender, EventArgs e)
         {
-            //numericCuotasVenta.Value = 0;
-            //numericCuotasVenta.Enabled = false;
+           
         }
 
         private void numericCantidadVenta_ValueChanged(object sender, EventArgs e)
@@ -155,66 +135,7 @@ namespace kenjhi
         {
 
 
-            //// Verificar si se ha seleccionado un producto
-            //if (comboListaProductos.SelectedItem == null)
-            //{
-            //    MessageBox.Show("Por favor, elija un producto.", "Campo Obligatorio", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
-
-            //// Obtener el producto seleccionado
-            //Producto productoSeleccionado = (Producto)comboListaProductos.SelectedItem;
-
-            //// Obtener la cantidad del producto del NumericUpDown
-            //int cantidad = (int)numericCantidadVenta.Value;
-
-            //if (cantidad == 0)
-            //{
-            //    MessageBox.Show("La cantidad mínima de venta es 1.", "Cantidad Inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
-
-            //// Realizar una consulta para obtener el precio del producto desde la base de datos
-            //decimal precioUnitario = 0;
-
-            //using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
-            //{
-            //    connection.Open();
-
-            //    string consultaPrecioProducto = "SELECT Precio FROM producto WHERE ID_Producto = @idProducto";
-            //    MySqlCommand cmdPrecioProducto = new MySqlCommand(consultaPrecioProducto, connection);
-            //    cmdPrecioProducto.Parameters.AddWithValue("@idProducto", productoSeleccionado.ID);
-
-            //    using (MySqlDataReader reader = cmdPrecioProducto.ExecuteReader())
-            //    {
-            //        if (reader.Read())
-            //        {
-            //            precioUnitario = reader.GetDecimal("Precio");
-            //        }
-            //        else
-            //        {
-            //            MessageBox.Show("El producto seleccionado no tiene un precio válido en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //            return;
-            //        }
-            //    }
-            //}
-
-            //// Calcular el precio total para esta fila
-            //decimal precioTotal = precioUnitario * cantidad;
-
-            //// Agregar el producto al carrito en el DataGridView
-            //dataGridCarrito.Rows.Add(new object[] { productoSeleccionado, precioUnitario, cantidad, precioTotal });
-
-            //// Limpiar el ComboBox de productos y reiniciar la cantidad
-            //comboListaProductos.SelectedIndex = -1;
-            //numericCantidadVenta.Value = 1;
-
-            //// Calcular el precio total de la venta
-            //decimal precioTotalVenta = 0;
-            //foreach (DataGridViewRow fila in dataGridCarrito.Rows)
-            //{
-            //    precioTotalVenta += Convert.ToDecimal(fila.Cells["Precio Total"].Value);
-            //} //comentado para probar otro
+           
 
 
             if (comboListaProductos.SelectedItem == null)
@@ -231,7 +152,6 @@ namespace kenjhi
                 MessageBox.Show("La cantidad mínima de venta es 1.", "Cantidad Inválida", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            //lo represente aca como stock pero en la bd es cantidad, no se confundan
             int stockDisponible = ObtenerStockDisponible(productoSeleccionado.ID);
 
             if (cantidadDeseada > stockDisponible)
@@ -240,7 +160,6 @@ namespace kenjhi
                 return;
             }
 
-            // Actualizar el stock en la base de datos
             ActualizarStockProducto(productoSeleccionado.ID, cantidadDeseada);
 
             decimal precioUnitario = preciosProductos[productoSeleccionado.ID];
@@ -250,7 +169,6 @@ namespace kenjhi
             comboListaProductos.SelectedIndex = -1;
             numericCantidadVenta.Value = 1;
 
-            // Calcular el precio total de la venta
             decimal precioTotalVenta = 0;
             foreach (DataGridViewRow fila in dataGridCarrito.Rows)
             {
@@ -260,7 +178,7 @@ namespace kenjhi
 
         private int ObtenerStockDisponible(int productoID)
         {
-            using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+            using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
             {
                 connection.Open();
 
@@ -277,12 +195,12 @@ namespace kenjhi
                 }
             }
 
-            return 0; // Valor predeterminado si no se encuentra el stock
+            return 0; 
         }
 
         private void ActualizarStockProducto(int productoID, int cantidadVendida)
         {
-            using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+            using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
             {
                 connection.Open();
 
@@ -296,7 +214,8 @@ namespace kenjhi
 
         }
 
-        // Método para calcular el precio total del carrito
+        
+
         private double CalcularPrecioTotalCarrito()
         {
             double precioTotal = 0;
@@ -330,13 +249,17 @@ namespace kenjhi
 
         }
 
+
+
         private void btnNuevaVenta_Click(object sender, EventArgs e)
         {
-            using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+
+
+           
+
+            using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
             {
                 connection.Open();
-
-
 
                 if (comboListaClientes.SelectedItem == null)
                 {
@@ -345,17 +268,16 @@ namespace kenjhi
                 }
 
                 if (dataGridCarrito.Rows.Count == 0)
-    {
-        MessageBox.Show("Agregue al menos un producto al carrito antes de realizar la venta.", "Carrito Vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        return;
-    }
-   
+                {
+                    MessageBox.Show("Agregue al menos un producto al carrito antes de realizar la venta.", "Carrito Vacío", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
-                    if (!radioContado.Checked && !radioCuotas.Checked)
-                    {
-                        MessageBox.Show("Por favor, seleccione un tipo de pago (Contado o Cuotas).", "Campo Obligatorio", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        return;
-                    }
+                if (!radioContado.Checked && !radioCuotas.Checked)
+                {
+                    MessageBox.Show("Por favor, seleccione un tipo de pago (Contado o Cuotas).", "Campo Obligatorio", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
 
                 if (dataFechaVenta.Value == DateTime.MinValue)
                 {
@@ -368,14 +290,12 @@ namespace kenjhi
                 string tipoPago = radioContado.Checked ? "Contado" : "Cuotas";
                 int cuotas = radioContado.Checked ? 0 : (int)numericCuotasVenta.Value;
 
-                //calcula el precio total de la venta
                 decimal precioTotal = 0;
                 foreach (DataGridViewRow fila in dataGridCarrito.Rows)
                 {
                     precioTotal += Convert.ToDecimal(fila.Cells["Precio Total"].Value);
                 }
 
-                //insertar la venta en la tabla de ventas
                 string insertarVenta = "INSERT INTO venta (ID_Cliente, Tipo, Fecha_Venta, Cuotas, Total, Saldo) " +
                                        "VALUES (@idCliente, @tipoPago, @fechaVenta, @cuotas, @precioTotal, @saldo)";
 
@@ -422,11 +342,11 @@ namespace kenjhi
                     cmdAsignado.ExecuteNonQuery();
                 }
 
-              
-                MessageBox.Show("Venta registrada con éxito.");
+                MessageBox.Show("Venta registrada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 LimpiarFormulario();
-                labelPrecioTotal.Text = "Total a cobrar: ";
             }
+
         }
 
         private void LimpiarFormulario()
@@ -437,10 +357,8 @@ namespace kenjhi
             numericCuotasVenta.Value = 0;
             radioContado.Checked = false;
             radioCuotas.Checked = false;
-            numericDescuentoVenta.Value = 0;
             dataGridCarrito.Rows.Clear();
             dataFechaVenta.Value = DateTime.Now;
-            //este metodo deberiamos ponerlo en una clase a parte para poder hacer clear sin escribir todo el codigo
         }
 
         private void dataGridCarrito_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -448,64 +366,47 @@ namespace kenjhi
             btnBorrarFilaCarrito.Visible = true;
         }
 
-        private void numericDescuentoVenta_ValueChanged(object sender, EventArgs e)
+       
+
+
+        private void picturePasosCliente_MouseEnter(object sender, EventArgs e)
         {
-            AplicarDescuento((decimal)numericDescuentoVenta.Value);
+            toolTipAyuda.Show("Pasos para agregar un nuevo cliente", picturePasosCliente, 0, picturePasosCliente.Height);
 
         }
 
-        private void AplicarDescuento(decimal descuentoPorcentaje)
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
-            decimal precioTotal = CalcularPrecioTotalCarrito2(); // Calcular el precio total de los productos en el carrito
-            decimal descuento = (precioTotal * descuentoPorcentaje) / 100;
-            decimal precioConDescuento = precioTotal - descuento;
-
-            // Actualizar el campo de texto que muestra el precio total
-            labelPrecioTotal.Text = "Total a cobrar: " + precioConDescuento.ToString("C");
-
-            // Actualizar el saldo en la tabla de ventas
-            if (dataGridCarrito.Rows.Count > 0)
-            {
-                // El descuento se aplica al saldo si hay productos en el carrito
-                using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
-                {
-                    connection.Open();
-
-                    // Obtener el ID de la última venta insertada
-                    string obtenerIdVenta = "SELECT MAX(ID_Venta) FROM venta";
-                    MySqlCommand cmdIdVenta = new MySqlCommand(obtenerIdVenta, connection);
-                    int idVenta = Convert.ToInt32(cmdIdVenta.ExecuteScalar());
-
-                    // Actualizar el saldo en la tabla de ventas
-                    string actualizarSaldo = "UPDATE venta SET Saldo = @saldo WHERE ID_Venta = @idVenta";
-                    MySqlCommand cmdActualizarSaldo = new MySqlCommand(actualizarSaldo, connection);
-                    cmdActualizarSaldo.Parameters.AddWithValue("@saldo", precioConDescuento);
-                    cmdActualizarSaldo.Parameters.AddWithValue("@idVenta", idVenta);
-                    cmdActualizarSaldo.ExecuteNonQuery();
-                }
-            }
-            labelPrecioTotal.Text ="Total a cobrar: " +precioConDescuento.ToString("C");
-        }
-        private decimal CalcularPrecioTotalCarrito2()
-        {
-            decimal precioTotal = 0;
-
-            foreach (DataGridViewRow fila in dataGridCarrito.Rows)
-            {
-                decimal precioTotalFila = Convert.ToDecimal(fila.Cells["Precio Total"].Value);
-                precioTotal += precioTotalFila;
-            }
-
-            return precioTotal;
+            toolTipAyuda.Hide(picPasosProducto);
         }
 
-        private void numericDescuentoVenta_Validating(object sender, CancelEventArgs e)
+        private void picturePasosCliente_MouseLeave(object sender, EventArgs e)
         {
-            if (numericDescuentoVenta.Value > 100)
-            {
-                MessageBox.Show("El descuento no puede ser mayor que 100.", "Descuento Inválido", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                numericDescuentoVenta.Value = 100; 
-            }
+            toolTipAyuda.Hide(picturePasosCliente);
+
+        }
+
+        private void picturePasosCliente_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Pasos para agregar un nuevo cliente\n1) Ubicarse en 'Menú principal'\n2) Clic en el listado llamado 'Clientes'\n3) Dentro del listado, clic en 'Agregar cliente'\n4) Completar los datos del nuevo cliente");
+
+        }
+
+        private void picPasosProducto_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picPasosProducto_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Pasos para agregar un nuevo producto\n1) Ubicarse en 'Menú principal'\n2) Clic en el listado llamado 'Productos'\n3) Dentro del listado, clic en 'Agregar producto'\n4) Completar los datos del nuevo producto");
+
+        }
+
+        private void picPasosProducto_MouseEnter(object sender, EventArgs e)
+        {
+            toolTipAyuda.Show("Pasos para agregar un nuevo producto", picPasosProducto, 0, picPasosProducto.Height);
+
         }
     }
 }

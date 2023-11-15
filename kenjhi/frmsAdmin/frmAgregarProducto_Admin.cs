@@ -19,10 +19,12 @@ namespace kenjhi
         private string categoriaSeleccionada = "";
         private MySqlConnection conexion;
         private string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
+
         public Agregar_Producto()
         {
             InitializeComponent();
-            string query = "SELECT ID_Categoria, Nombre FROM Categoria";
+
+            string query = "SELECT ID_Categoria, Nombre FROM Categoria WHERE visible=1";
             CargarCategorias();
            
             conexion = new MySqlConnection(connectionString);
@@ -93,6 +95,7 @@ namespace kenjhi
             numericUpDownCantidad.Value = 0;
             comboCategoriaProducto.Items.Clear();
             lblAgregarProducto.Visible = false;
+            labelActualizacionCate.Visible = false;
             CargarCategorias();
         }
         private int ObtenerCategoriaIDDesdeBaseDeDatos(string nombreCategoria)
@@ -180,10 +183,9 @@ namespace kenjhi
                 }
 
                 comboCategoriaProducto.Items.Clear();
-                
 
                 string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
-                string query = "SELECT Nombre FROM Categoria";
+                string query = "SELECT Nombre FROM Categoria WHERE visible = 1";
 
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
@@ -197,14 +199,13 @@ namespace kenjhi
                         }
                     }
                 }
-
-                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString(), "Error al cargar las categorías", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
 
         private void picActualizarCategoria_Click(object sender, EventArgs e)
         {
@@ -215,5 +216,9 @@ namespace kenjhi
 
         }
 
+        private void label10_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

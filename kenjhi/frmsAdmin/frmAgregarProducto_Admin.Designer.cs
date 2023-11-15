@@ -52,6 +52,7 @@
             this.labelActualizacionCate = new System.Windows.Forms.Label();
             this.btnAgregarProducto = new kenjhi.RJButton();
             this.btnVolver = new kenjhi.RJButton();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownCantidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownPrecio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picActualizarCategoria)).BeginInit();
@@ -63,7 +64,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(107, -8);
+            this.label1.Location = new System.Drawing.Point(107, 10);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.label1.Size = new System.Drawing.Size(483, 92);
@@ -77,7 +78,7 @@
             this.label5.BackColor = System.Drawing.Color.Transparent;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(503, 68);
+            this.label5.Location = new System.Drawing.Point(503, 85);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(73, 16);
             this.label5.TabIndex = 60;
@@ -89,7 +90,7 @@
             this.txtNombreProducto.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreProducto.ForeColor = System.Drawing.Color.White;
-            this.txtNombreProducto.Location = new System.Drawing.Point(123, 87);
+            this.txtNombreProducto.Location = new System.Drawing.Point(123, 105);
             this.txtNombreProducto.Multiline = true;
             this.txtNombreProducto.Name = "txtNombreProducto";
             this.txtNombreProducto.Size = new System.Drawing.Size(450, 20);
@@ -101,7 +102,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(120, 65);
+            this.label2.Location = new System.Drawing.Point(120, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 58;
@@ -113,7 +114,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Enabled = false;
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(123, 112);
+            this.textBox1.Location = new System.Drawing.Point(123, 130);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(450, 1);
@@ -125,7 +126,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(506, 136);
+            this.label3.Location = new System.Drawing.Point(506, 153);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(73, 16);
             this.label3.TabIndex = 64;
@@ -137,7 +138,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(120, 133);
+            this.label4.Location = new System.Drawing.Point(120, 151);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 16);
             this.label4.TabIndex = 62;
@@ -149,7 +150,7 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Enabled = false;
             this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(126, 180);
+            this.textBox3.Location = new System.Drawing.Point(126, 198);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(450, 1);
@@ -161,7 +162,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(506, 203);
+            this.label6.Location = new System.Drawing.Point(506, 220);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 16);
             this.label6.TabIndex = 68;
@@ -173,7 +174,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label7.Location = new System.Drawing.Point(120, 200);
+            this.label7.Location = new System.Drawing.Point(120, 218);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(66, 16);
             this.label7.TabIndex = 66;
@@ -185,7 +186,7 @@
             this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox4.Enabled = false;
             this.textBox4.ForeColor = System.Drawing.Color.Black;
-            this.textBox4.Location = new System.Drawing.Point(126, 247);
+            this.textBox4.Location = new System.Drawing.Point(126, 265);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(343, 1);
@@ -199,7 +200,7 @@
             this.comboCategoriaProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboCategoriaProducto.ForeColor = System.Drawing.Color.White;
             this.comboCategoriaProducto.FormattingEnabled = true;
-            this.comboCategoriaProducto.Location = new System.Drawing.Point(126, 220);
+            this.comboCategoriaProducto.Location = new System.Drawing.Point(126, 238);
             this.comboCategoriaProducto.Name = "comboCategoriaProducto";
             this.comboCategoriaProducto.Size = new System.Drawing.Size(343, 24);
             this.comboCategoriaProducto.TabIndex = 81;
@@ -212,7 +213,7 @@
             this.lblAgregarProducto.AutoSize = true;
             this.lblAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgregarProducto.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(94)))), ((int)(((byte)(95)))));
-            this.lblAgregarProducto.Location = new System.Drawing.Point(273, 356);
+            this.lblAgregarProducto.Location = new System.Drawing.Point(273, 374);
             this.lblAgregarProducto.Name = "lblAgregarProducto";
             this.lblAgregarProducto.Size = new System.Drawing.Size(152, 13);
             this.lblAgregarProducto.TabIndex = 76;
@@ -225,7 +226,7 @@
             this.label10.BackColor = System.Drawing.Color.Transparent;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(506, 270);
+            this.label10.Location = new System.Drawing.Point(506, 287);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(73, 16);
             this.label10.TabIndex = 80;
@@ -237,7 +238,7 @@
             this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label11.Location = new System.Drawing.Point(120, 267);
+            this.label11.Location = new System.Drawing.Point(120, 285);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(61, 16);
             this.label11.TabIndex = 78;
@@ -249,7 +250,7 @@
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Enabled = false;
             this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(126, 314);
+            this.textBox7.Location = new System.Drawing.Point(126, 332);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(450, 1);
@@ -261,7 +262,7 @@
             this.numericUpDownCantidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericUpDownCantidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownCantidad.ForeColor = System.Drawing.Color.White;
-            this.numericUpDownCantidad.Location = new System.Drawing.Point(126, 289);
+            this.numericUpDownCantidad.Location = new System.Drawing.Point(126, 307);
             this.numericUpDownCantidad.Maximum = new decimal(new int[] {
             1000,
             0,
@@ -278,7 +279,7 @@
             this.linkCrearCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkCrearCategoria.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.linkCrearCategoria.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.linkCrearCategoria.Location = new System.Drawing.Point(479, 223);
+            this.linkCrearCategoria.Location = new System.Drawing.Point(479, 241);
             this.linkCrearCategoria.Name = "linkCrearCategoria";
             this.linkCrearCategoria.Size = new System.Drawing.Size(100, 16);
             this.linkCrearCategoria.TabIndex = 82;
@@ -292,7 +293,7 @@
             this.numericUpDownPrecio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.numericUpDownPrecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.numericUpDownPrecio.ForeColor = System.Drawing.Color.White;
-            this.numericUpDownPrecio.Location = new System.Drawing.Point(126, 155);
+            this.numericUpDownPrecio.Location = new System.Drawing.Point(126, 173);
             this.numericUpDownPrecio.Maximum = new decimal(new int[] {
             999999,
             0,
@@ -305,7 +306,7 @@
             // picActualizarCategoria
             // 
             this.picActualizarCategoria.Image = ((System.Drawing.Image)(resources.GetObject("picActualizarCategoria.Image")));
-            this.picActualizarCategoria.Location = new System.Drawing.Point(86, 223);
+            this.picActualizarCategoria.Location = new System.Drawing.Point(86, 241);
             this.picActualizarCategoria.Name = "picActualizarCategoria";
             this.picActualizarCategoria.Size = new System.Drawing.Size(34, 19);
             this.picActualizarCategoria.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -322,7 +323,7 @@
             this.labelActualizacionCate.AutoSize = true;
             this.labelActualizacionCate.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelActualizacionCate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.labelActualizacionCate.Location = new System.Drawing.Point(270, 356);
+            this.labelActualizacionCate.Location = new System.Drawing.Point(270, 374);
             this.labelActualizacionCate.Name = "labelActualizacionCate";
             this.labelActualizacionCate.Size = new System.Drawing.Size(168, 13);
             this.labelActualizacionCate.TabIndex = 86;
@@ -340,7 +341,7 @@
             this.btnAgregarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarProducto.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregarProducto.Location = new System.Drawing.Point(123, 383);
+            this.btnAgregarProducto.Location = new System.Drawing.Point(123, 401);
             this.btnAgregarProducto.Name = "btnAgregarProducto";
             this.btnAgregarProducto.Size = new System.Drawing.Size(450, 44);
             this.btnAgregarProducto.TabIndex = 75;
@@ -369,12 +370,24 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Black;
+            this.label8.ForeColor = System.Drawing.Color.DimGray;
+            this.label8.Location = new System.Drawing.Point(107, 16);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(230, 13);
+            this.label8.TabIndex = 87;
+            this.label8.Text = "Menú principal > Productos > Agregar producto";
+            // 
             // Agregar_Producto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 505);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.labelActualizacionCate);
             this.Controls.Add(this.picActualizarCategoria);
             this.Controls.Add(this.numericUpDownPrecio);
@@ -435,5 +448,6 @@
         //private System.Windows.Forms.Timer timerCategoria;
         private System.Windows.Forms.PictureBox picActualizarCategoria;
         private System.Windows.Forms.Label labelActualizacionCate;
+        private System.Windows.Forms.Label label8;
     }
 }

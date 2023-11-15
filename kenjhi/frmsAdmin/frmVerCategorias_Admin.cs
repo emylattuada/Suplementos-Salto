@@ -20,14 +20,21 @@ namespace kenjhi.frmsAdmin
             txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
             txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
             dataGridCategorias.RowTemplate.Height = 40;
-            dataGridCategorias.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10); // Ajusta el espacio vertical entre las celdas de cada fila
+            dataGridCategorias.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10); 
+
+            CargarDatosCate();
+
+        }
+
+        private void CargarDatosCate()
+        {
 
             try
             {
-                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
+                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
                 conexion.Open();
 
-                string consulta = "SELECT ID_Categoria, Nombre, Descripcion FROM categoria";
+                string consulta = "SELECT ID_Categoria, Nombre, Descripcion FROM categoria WHERE visible=1";
 
                 MySqlCommand comandos = new MySqlCommand(consulta, conexion);
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
@@ -37,7 +44,7 @@ namespace kenjhi.frmsAdmin
 
                 dataGridCategorias.DataSource = tablaCategorias;
 
-                dataGridCategorias.Columns["ID_Categoria"].Visible = false; // Oculta la columna ID
+                dataGridCategorias.Columns["ID_Categoria"].Visible = false; 
                 dataGridCategorias.Columns["Nombre"].HeaderText = "Nombre";
                 dataGridCategorias.Columns["Descripcion"].HeaderText = "Descripción";
 
@@ -54,7 +61,6 @@ namespace kenjhi.frmsAdmin
             {
                 MessageBox.Show(ex.ToString(), "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void btnVolver_Click(object sender, EventArgs e)
@@ -95,7 +101,7 @@ namespace kenjhi.frmsAdmin
         {
             try
             {
-                using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+                using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
                 {
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT ID_Categoria, Nombre, Descripcion FROM Categoria", connection))
                     {
@@ -107,38 +113,7 @@ namespace kenjhi.frmsAdmin
                     btnGuardarCambios.Visible = false;
                     btnCancelarModificacion.Visible = false;
                     btnModificar.Visible = true;
-                    try
-                    {
-                        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
-                        conexion.Open();
-
-                        string consulta = "SELECT ID_Categoria, Nombre, Descripcion FROM categoria";
-
-                        MySqlCommand comandos = new MySqlCommand(consulta, conexion);
-                        MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
-
-                        DataTable tablaCategorias = new DataTable();
-                        adaptador.Fill(tablaCategorias);
-
-                        dataGridCategorias.DataSource = tablaCategorias;
-
-                        dataGridCategorias.Columns["ID_Categoria"].Visible = false; // Oculta la columna ID
-                        dataGridCategorias.Columns["Nombre"].HeaderText = "Nombre";
-                        dataGridCategorias.Columns["Descripcion"].HeaderText = "Descripción";
-
-                        dataGridCategorias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-                        foreach (DataGridViewColumn column in dataGridCategorias.Columns)
-                        {
-                            column.ReadOnly = true;
-                        }
-
-                        conexion.Close();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.ToString(), "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
+                    CargarDatosCate();
                 }
             }
             catch (Exception ex)
@@ -146,6 +121,40 @@ namespace kenjhi.frmsAdmin
                 MessageBox.Show(ex.ToString(), "Error al guardar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
+        }
+
+        private void btnEliminarCategoria_Click(object sender, EventArgs e)
+        {
+            if (dataGridCategorias.SelectedRows.Count > 0)
+            {
+                int idCategoria = Convert.ToInt32(dataGridCategorias.SelectedRows[0].Cells["ID_Categoria"].Value);
+
+                try
+                {
+                    using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
+                    {
+                        conexion.Open();
+
+                        string actualizarCategoria = $"UPDATE categoria SET visible = 0 WHERE ID_Categoria = {idCategoria}";
+                        MySqlCommand comandoActualizarCategoria = new MySqlCommand(actualizarCategoria, conexion);
+                        comandoActualizarCategoria.ExecuteNonQuery();
+
+                        MessageBox.Show("Categoría eliminada.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        txtBusquedaDGV.Clear();
+                        CargarDatosCate();
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error al ocultar la categoría: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
+
+        private void dataGridCategorias_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnEliminarCategoria.Visible = true;
         }
     }
 }

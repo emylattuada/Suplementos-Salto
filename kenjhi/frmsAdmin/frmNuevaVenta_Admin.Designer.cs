@@ -54,15 +54,13 @@
             this.numericCuotasVenta = new System.Windows.Forms.NumericUpDown();
             this.dataGridCarrito = new System.Windows.Forms.DataGridView();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.numericDescuentoVenta = new System.Windows.Forms.NumericUpDown();
-            this.labelPrecioTotal = new System.Windows.Forms.Label();
             this.radioContado = new System.Windows.Forms.RadioButton();
             this.radioCuotas = new System.Windows.Forms.RadioButton();
             this.dataFechaVenta = new System.Windows.Forms.DateTimePicker();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.picturePasosCliente = new System.Windows.Forms.PictureBox();
+            this.picPasosProducto = new System.Windows.Forms.PictureBox();
             this.btnAgregarAlCarrito = new kenjhi.RJButton();
             this.btnBorrarFilaCarrito = new kenjhi.RJButton();
             this.btnNuevaVenta = new kenjhi.RJButton();
@@ -70,7 +68,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericCantidadVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCuotasVenta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCarrito)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericDescuentoVenta)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePasosCliente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPasosProducto)).BeginInit();
             this.SuspendLayout();
             // 
             // label10
@@ -373,7 +372,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridCarrito.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridCarrito.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridCarrito.Size = new System.Drawing.Size(346, 78);
+            this.dataGridCarrito.Size = new System.Drawing.Size(454, 78);
             this.dataGridCarrito.TabIndex = 104;
             this.dataGridCarrito.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCarrito_CellClick);
             // 
@@ -388,54 +387,6 @@
             this.label12.Size = new System.Drawing.Size(46, 16);
             this.label12.TabIndex = 105;
             this.label12.Text = "Carrito";
-            // 
-            // textBox7
-            // 
-            this.textBox7.BackColor = System.Drawing.Color.Yellow;
-            this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox7.Enabled = false;
-            this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(483, 418);
-            this.textBox7.Multiline = true;
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(90, 1);
-            this.textBox7.TabIndex = 109;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.BackColor = System.Drawing.Color.Transparent;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label13.Location = new System.Drawing.Point(480, 371);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(72, 16);
-            this.label13.TabIndex = 108;
-            this.label13.Text = "Descuento";
-            // 
-            // numericDescuentoVenta
-            // 
-            this.numericDescuentoVenta.BackColor = System.Drawing.Color.Black;
-            this.numericDescuentoVenta.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.numericDescuentoVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericDescuentoVenta.ForeColor = System.Drawing.Color.White;
-            this.numericDescuentoVenta.Location = new System.Drawing.Point(483, 390);
-            this.numericDescuentoVenta.Name = "numericDescuentoVenta";
-            this.numericDescuentoVenta.ReadOnly = true;
-            this.numericDescuentoVenta.Size = new System.Drawing.Size(90, 22);
-            this.numericDescuentoVenta.TabIndex = 107;
-            this.numericDescuentoVenta.ValueChanged += new System.EventHandler(this.numericDescuentoVenta_ValueChanged);
-            this.numericDescuentoVenta.Validating += new System.ComponentModel.CancelEventHandler(this.numericDescuentoVenta_Validating);
-            // 
-            // labelPrecioTotal
-            // 
-            this.labelPrecioTotal.AutoSize = true;
-            this.labelPrecioTotal.ForeColor = System.Drawing.Color.White;
-            this.labelPrecioTotal.Location = new System.Drawing.Point(407, 426);
-            this.labelPrecioTotal.Name = "labelPrecioTotal";
-            this.labelPrecioTotal.Size = new System.Drawing.Size(76, 13);
-            this.labelPrecioTotal.TabIndex = 110;
-            this.labelPrecioTotal.Text = "Total a cobrar:";
             // 
             // radioContado
             // 
@@ -495,8 +446,35 @@
             this.textBox4.Location = new System.Drawing.Point(119, 418);
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(346, 1);
+            this.textBox4.Size = new System.Drawing.Size(454, 1);
             this.textBox4.TabIndex = 116;
+            // 
+            // picturePasosCliente
+            // 
+            this.picturePasosCliente.Image = ((System.Drawing.Image)(resources.GetObject("picturePasosCliente.Image")));
+            this.picturePasosCliente.Location = new System.Drawing.Point(244, 91);
+            this.picturePasosCliente.Name = "picturePasosCliente";
+            this.picturePasosCliente.Size = new System.Drawing.Size(19, 15);
+            this.picturePasosCliente.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picturePasosCliente.TabIndex = 119;
+            this.picturePasosCliente.TabStop = false;
+            this.picturePasosCliente.Click += new System.EventHandler(this.picturePasosCliente_Click);
+            this.picturePasosCliente.MouseEnter += new System.EventHandler(this.picturePasosCliente_MouseEnter);
+            this.picturePasosCliente.MouseLeave += new System.EventHandler(this.picturePasosCliente_MouseLeave);
+            // 
+            // picPasosProducto
+            // 
+            this.picPasosProducto.Image = ((System.Drawing.Image)(resources.GetObject("picPasosProducto.Image")));
+            this.picPasosProducto.Location = new System.Drawing.Point(257, 148);
+            this.picPasosProducto.Name = "picPasosProducto";
+            this.picPasosProducto.Size = new System.Drawing.Size(19, 15);
+            this.picPasosProducto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picPasosProducto.TabIndex = 120;
+            this.picPasosProducto.TabStop = false;
+            this.picPasosProducto.Click += new System.EventHandler(this.picPasosProducto_Click);
+            this.picPasosProducto.MouseEnter += new System.EventHandler(this.picPasosProducto_MouseEnter);
+            this.picPasosProducto.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
+            this.picPasosProducto.MouseHover += new System.EventHandler(this.picPasosProducto_MouseHover);
             // 
             // btnAgregarAlCarrito
             // 
@@ -529,7 +507,7 @@
             this.btnBorrarFilaCarrito.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBorrarFilaCarrito.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBorrarFilaCarrito.ForeColor = System.Drawing.Color.Black;
-            this.btnBorrarFilaCarrito.Location = new System.Drawing.Point(479, 330);
+            this.btnBorrarFilaCarrito.Location = new System.Drawing.Point(579, 334);
             this.btnBorrarFilaCarrito.Name = "btnBorrarFilaCarrito";
             this.btnBorrarFilaCarrito.Size = new System.Drawing.Size(90, 23);
             this.btnBorrarFilaCarrito.TabIndex = 117;
@@ -550,11 +528,11 @@
             this.btnNuevaVenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNuevaVenta.ForeColor = System.Drawing.Color.Black;
-            this.btnNuevaVenta.Location = new System.Drawing.Point(119, 443);
+            this.btnNuevaVenta.Location = new System.Drawing.Point(119, 436);
             this.btnNuevaVenta.Name = "btnNuevaVenta";
             this.btnNuevaVenta.Size = new System.Drawing.Size(450, 44);
             this.btnNuevaVenta.TabIndex = 106;
-            this.btnNuevaVenta.Text = "Nueva venta";
+            this.btnNuevaVenta.Text = "Guardar";
             this.btnNuevaVenta.TextColor = System.Drawing.Color.Black;
             this.btnNuevaVenta.UseVisualStyleBackColor = false;
             this.btnNuevaVenta.Click += new System.EventHandler(this.btnNuevaVenta_Click);
@@ -585,11 +563,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 505);
+            this.Controls.Add(this.picPasosProducto);
+            this.Controls.Add(this.picturePasosCliente);
             this.Controls.Add(this.radioCuotas);
             this.Controls.Add(this.radioContado);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.numericDescuentoVenta);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.numericCuotasVenta);
@@ -601,7 +578,6 @@
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.dataFechaVenta);
-            this.Controls.Add(this.labelPrecioTotal);
             this.Controls.Add(this.btnNuevaVenta);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.dataGridCarrito);
@@ -626,7 +602,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericCantidadVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCuotasVenta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCarrito)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericDescuentoVenta)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePasosCliente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picPasosProducto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -657,10 +634,6 @@
         private System.Windows.Forms.DataGridView dataGridCarrito;
         private System.Windows.Forms.Label label12;
         private RJButton btnNuevaVenta;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.NumericUpDown numericDescuentoVenta;
-        private System.Windows.Forms.Label labelPrecioTotal;
         private System.Windows.Forms.RadioButton radioContado;
         private System.Windows.Forms.RadioButton radioCuotas;
         private System.Windows.Forms.DateTimePicker dataFechaVenta;
@@ -668,5 +641,7 @@
         private System.Windows.Forms.TextBox textBox4;
         private RJButton btnBorrarFilaCarrito;
         private RJButton btnAgregarAlCarrito;
+        private System.Windows.Forms.PictureBox picturePasosCliente;
+        private System.Windows.Forms.PictureBox picPasosProducto;
     }
 }

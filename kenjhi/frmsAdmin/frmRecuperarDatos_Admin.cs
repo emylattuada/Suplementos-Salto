@@ -49,7 +49,7 @@ namespace kenjhi.frmsAdmin
 
             try
             {
-                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"); ;
+                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"); ;
                 conexion.Open();
 
                 string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente WHERE visible=0";
@@ -93,6 +93,7 @@ namespace kenjhi.frmsAdmin
             labelCategorias.Visible = false;
             pictureBoxEmpleados.Visible = false;
             labelEmpleados.Visible = false;
+            labelRuta.Text = "Menú principal > Administrador > Recuperar datos > Clientes";
 
             dataGridRecuperarDatos.Visible = true;
             CargarDatosClientes();
@@ -111,7 +112,7 @@ namespace kenjhi.frmsAdmin
             {
                 try
                 {
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"); ;
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"); ;
                     conexion.Open();
 
                     string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente WHERE visible=0";
@@ -157,7 +158,7 @@ namespace kenjhi.frmsAdmin
             if (txtBusquedaDGV.Text.Length > 0)
             {
                 string textoBusqueda = txtBusquedaDGV.Text;
-                using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+                using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
                 {
                     conexion.Open();
                     string consulta = "SELECT * FROM cliente WHERE Visible = 0 AND Nombre LIKE @textoBusqueda";
@@ -198,7 +199,7 @@ namespace kenjhi.frmsAdmin
             {
                 try
                 {
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
                     conexion.Open();
 
                     string consulta = "SELECT p.ID_Producto, p.Precio, p.Cantidad, p.Nombre, c.Nombre AS Categoria " +
@@ -240,7 +241,7 @@ namespace kenjhi.frmsAdmin
             if (txtBusquedaDGV.Text.Length > 0)
             {
                 string textoBusqueda = txtBusquedaDGV.Text;
-                using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+                using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
                 {
                     conexion.Open();
                     string consulta = "SELECT p.ID_Producto, p.Nombre, p.Precio, p.Cantidad, c.Nombre AS Categoria FROM producto p " +
@@ -293,6 +294,10 @@ namespace kenjhi.frmsAdmin
             {
                 BusquedaEmpleado();
             }
+            if (pos == 5)
+            {
+                BusquedaCategoria();
+            }
         }
 
         private void dataGridRecuperarDatos_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -309,7 +314,7 @@ namespace kenjhi.frmsAdmin
 
                 try
                 {
-                    using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+                    using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
                     {
                         conexion.Open();
 
@@ -339,7 +344,7 @@ namespace kenjhi.frmsAdmin
         {
             try
             {
-                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
+                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
                 conexion.Open();
 
                 string consulta = "SELECT p.ID_Producto, p.Precio, p.Cantidad, p.Nombre, c.Nombre AS Categoria " +
@@ -387,6 +392,8 @@ namespace kenjhi.frmsAdmin
             labelEmpleados.Visible = false;
             pictureBoxProductos.Visible = false;
             labelProductos.Visible = false;
+            labelRuta.Text = "Menú principal > Administrador > Recuperar datos > Productos";
+
 
             dataGridRecuperarDatos.Visible = true;
             CargarDatosProductos();
@@ -408,7 +415,7 @@ namespace kenjhi.frmsAdmin
 
                 try
                 {
-                    using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+                    using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
                     {
                         conexion.Open();
 
@@ -457,6 +464,15 @@ namespace kenjhi.frmsAdmin
                 txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
                 txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
             }
+
+            if (pos == 5)
+            {
+                RecuperarCategoria();
+                txtBusquedaDGV.Clear();
+                txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
+                txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
+
+            }
         }
 
         private void CargarDatosEmpleado()
@@ -464,7 +480,7 @@ namespace kenjhi.frmsAdmin
 
             try
             {
-                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
+                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
                 conexion.Open();
 
                 string consulta = "SELECT ID_Usuario, NombreUsuario, Rol, email FROM usuarios WHERE Visible = 0";
@@ -501,7 +517,7 @@ namespace kenjhi.frmsAdmin
             {
                 try
                 {
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
                     conexion.Open();
 
                     string consulta = "SELECT ID_Usuario, NombreUsuario, Email, Rol FROM usuarios WHERE Visible = 0";
@@ -545,7 +561,7 @@ namespace kenjhi.frmsAdmin
             if (txtBusquedaDGV.Text.Length > 0)
             {
                 string textoBusqueda = txtBusquedaDGV.Text;
-                using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+                using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
                 {
                     conexion.Open();
                     string consulta = "SELECT ID_Usuario, NombreUsuario, Email, Rol FROM usuarios WHERE Visible = 0 AND NombreUsuario LIKE @textoBusqueda";
@@ -585,7 +601,7 @@ namespace kenjhi.frmsAdmin
 
                 try
                 {
-                    using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+                    using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
                     {
                         conexion.Open();
 
@@ -619,6 +635,8 @@ namespace kenjhi.frmsAdmin
             labelProductos.Visible =false;
             pictureBoxCategorias.Visible = false;
             labelCategorias.Visible = false;
+            labelRuta.Text = "Menú principal > Administrador > Recuperar datos > Empleados";
+
 
             dataGridRecuperarDatos.Visible = true;
             CargarDatosEmpleado();
@@ -629,6 +647,178 @@ namespace kenjhi.frmsAdmin
             txtBusquedaDGV.Visible = true;
 
             pos = 4;
+
+        }
+
+        private void pictureBoxCategorias_Click(object sender, EventArgs e)
+        {
+            pictureBoxClientes.Visible = false;
+            labelClientes.Visible = false;
+            labelEmpleados.Visible = false;
+            pictureBoxProductos.Visible=false;
+            labelProductos.Visible = false;
+            pictureBoxCategorias.Visible=false;
+            labelCategorias.Visible = false;
+            pictureBoxEmpleados.Visible = false;
+            labelEmpleados.Visible = false;
+            labelRuta.Text = "Menú principal > Administrador > Recuperar datos > Categorías";
+
+
+            dataGridRecuperarDatos.Visible = true;
+            CargarDatosCategorias();
+
+            labelPrincipal.Text = "Visualizando Categorias eliminadas";
+            labelBuscar.Visible = true;
+            txtLinea.Visible = true;
+            txtBusquedaDGV.Visible = true;
+
+            pos = 5;
+
+        }
+
+        private void CargarDatosCategorias()
+        {
+            try
+            {
+                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
+                conexion.Open();
+
+                string consulta = "SELECT ID_Categoria, Nombre, descripcion FROM categoria WHERE visible=0";
+
+                MySqlCommand comandos = new MySqlCommand(consulta, conexion);
+                MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
+
+                DataTable tablaCategorias = new DataTable();
+                adaptador.Fill(tablaCategorias);
+
+                dataGridRecuperarDatos.DataSource = tablaCategorias;
+
+                dataGridRecuperarDatos.Columns["ID_Categoria"].Visible = false;
+                dataGridRecuperarDatos.Columns["Nombre"].HeaderText = "Nombre";
+                dataGridRecuperarDatos.Columns["Descripcion"].HeaderText = "Descripción";
+
+                dataGridRecuperarDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                conexion.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+
+        private void RecuperarCategoria()
+        {
+            if (dataGridRecuperarDatos.SelectedRows.Count > 0)
+            {
+                int idCategoria = Convert.ToInt32(dataGridRecuperarDatos.SelectedRows[0].Cells["ID_Categoria"].Value);
+
+                try
+                {
+                    using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
+                    {
+                        conexion.Open();
+
+                        string consultaActualizar = $"UPDATE categoria SET visible=1 WHERE ID_Categoria={idCategoria}";
+                        MySqlCommand comandoActualizar = new MySqlCommand(consultaActualizar, conexion);
+                        comandoActualizar.ExecuteNonQuery();
+
+                        conexion.Close();
+
+                        dataGridRecuperarDatos.SelectedRows[0].Visible = false;
+
+                        txtBusquedaDGV.Clear();
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Categoría recuperada", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtBusquedaDGV.Clear();
+                }
+                CargarDatosCategorias();
+            }
+
+
+        }
+
+
+        private void BusquedaCategoria()
+        {
+
+            if (txtBusquedaDGV.Text.Length == 0)
+            {
+                try
+                {
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
+                    conexion.Open();
+
+                    string consulta = "SELECT ID_Categoria, Nombre, Descripcion FROM categoria WHERE visible=0";
+
+                    MySqlCommand comandos = new MySqlCommand(consulta, conexion);
+                    MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
+
+                    DataTable tablaCategorias = new DataTable();
+                    adaptador.Fill(tablaCategorias);
+
+                    dataGridRecuperarDatos.DataSource = tablaCategorias;
+
+                    dataGridRecuperarDatos.Columns["ID_Categoria"].Visible = false;
+                    dataGridRecuperarDatos.Columns["Nombre"].HeaderText = "Nombre";
+                    dataGridRecuperarDatos.Columns["Descripcion"].HeaderText = "Descripción";
+
+                    dataGridRecuperarDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                    foreach (DataGridViewColumn column in dataGridRecuperarDatos.Columns)
+                    {
+                        column.ReadOnly = true;
+                    }
+
+                    if (lblSinResultado.Visible)
+                    {
+                        lblSinResultado.Visible = false;
+                        lblSinResultado2.Visible = false;
+                    }
+
+                    conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString(), "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (txtBusquedaDGV.Text.Length > 0)
+            {
+                string textoBusqueda = txtBusquedaDGV.Text;
+                using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
+                {
+                    conexion.Open();
+                    string consulta = "SELECT ID_Categoria, Nombre, Descripcion FROM categoria WHERE visible=0 AND Nombre LIKE @textoBusqueda OR Descripcion LIKE @textoBusqueda";
+                    using (MySqlCommand cmd = new MySqlCommand(consulta, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@textoBusqueda", "%" + textoBusqueda + "%");
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        dataGridRecuperarDatos.DataSource = dataTable;
+                        dataGridRecuperarDatos.Columns["ID_Categoria"].Visible = false;
+                        if (dataTable.Rows.Count == 0)
+                        {
+                            lblSinResultado.Text = "La categoría ingresada no existe en el sistema";
+                            lblSinResultado.Visible = true;
+                            lblSinResultado2.Visible = true;
+                        }
+                        else
+                        {
+                            lblSinResultado.Visible = false;
+                            lblSinResultado2.Visible = false;
+                        }
+                    }
+                }
+            }
+
 
         }
     }

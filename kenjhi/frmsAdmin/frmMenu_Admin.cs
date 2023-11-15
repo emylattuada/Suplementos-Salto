@@ -24,7 +24,7 @@ namespace kenjhi
 
         }
 
-        private void customizeDesign()//menu del 
+        private void customizeDesign()
         {
 
             panelClientesSubmenu.Visible= false;
@@ -257,7 +257,12 @@ namespace kenjhi
 
         }
 
-        private void openChildForm(Form childform)
+        private void btnADM_Imprimir_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void openChildForm(Form childform)
         {
             if(activeForm != null)
             
@@ -272,6 +277,169 @@ namespace kenjhi
                 childform.Show();
 
             
+
+        }
+
+        private void btnAgregarCliente_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnAgregarCliente);
+        }
+
+        private void CambioColorEntrar(Button boton) {
+        
+        boton.BackColor = Color.Black;
+        boton.ForeColor = Color.Yellow;
+
+        }
+
+        private void btnAgregarCliente_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnAgregarCliente);
+
+        }
+
+        private void btnModificarCliente_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnModificarCliente);
+
+        }
+
+        private void btnModificarCliente_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnModificarCliente);
+
+        }
+
+        private void btnAgregarPlato_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnAgregarPlato);
+
+        }
+
+        private void btnAgregarPlato_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnAgregarPlato);
+
+        }
+
+        private void btnModificarMenu_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnModificarMenu);
+
+        }
+
+        private void btnModificarMenu_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnModificarMenu);
+
+        }
+
+        private void btnIngresoProductos_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnIngresoProductos);
+
+        }
+
+        private void btnIngresoProductos_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnIngresoProductos);
+
+        }
+
+        private void btnAgregarCategoria_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnAgregarCategoria);
+        }
+
+        private void btnAgregarCategoria_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnAgregarCategoria);
+        }
+
+        private void btnVerCategorias_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnVerCategorias);
+        }
+
+        private void btnVerCategorias_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnVerCategorias);
+        }
+
+        private void btnNuevoPedido_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnNuevoPedido);
+        }
+
+        private void btnNuevoPedido_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnNuevoPedido);
+        }
+
+        private void btnVerPedidos_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnVerPedidos);
+        }
+
+        private void btnVerPedidos_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnVerPedidos);
+        }
+
+        private void btnDevoluciones_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnDevoluciones);
+        }
+
+        private void btnDevoluciones_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnDevoluciones);
+        }
+
+        private void btnADM_AgregarEmpleado_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnADM_AgregarEmpleado);
+        }
+
+        private void btnADM_AgregarEmpleado_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnADM_AgregarEmpleado);
+        }
+
+        private void btnADM_VerEmpleados_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnADM_VerEmpleados);
+        }
+
+        private void btnADM_VerEmpleados_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnADM_VerEmpleados);
+        }
+
+        private void btnADM_Estadisticas_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnADM_Estadisticas);
+        }
+
+        private void btnADM_Estadisticas_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnADM_Estadisticas);
+        }
+
+        private void btnRecuperarDatos_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnRecuperarDatos);
+        }
+
+        private void btnRecuperarDatos_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnRecuperarDatos);
+        }
+
+        private void CambioColorSalir(Button boton)
+        {
+            boton.BackColor= Color.FromArgb(255, 255, 128);
+            boton.ForeColor = Color.Black;
 
         }
     }

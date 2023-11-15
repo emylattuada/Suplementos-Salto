@@ -1,24 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Media;
-using System.Security.Cryptography;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace kenjhi
 {
     public partial class frmAgregarCliente_Admin : Form
-
     {
-        private string connectionString = "Server = localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"; 
+        private string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
 
         public frmAgregarCliente_Admin()
         {
@@ -44,7 +34,7 @@ namespace kenjhi
             string direccion = txtDirCliente.Text;
             string email = txtEmail.Text;
 
-            if (!Regex.IsMatch(txtEmail.Text, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"))
+            if (!string.IsNullOrEmpty(email) && !Regex.IsMatch(email, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"))
             {
                 MessageBox.Show("El correo electrónico no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -54,12 +44,28 @@ namespace kenjhi
 
             if (clienteExiste)
             {
-                MessageBox.Show("Cliente ya existe en la base de datos.", "Cliente Existente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool clienteEliminado = VerificarClienteEliminado(nombre, telefono);
+
+                if (clienteEliminado)
+                {
+                    DialogResult result = MessageBox.Show("Cliente eliminado anteriormente. ¿Desea recuperarlo?", "Recuperar cliente", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                    if (result == DialogResult.Yes)
+                    {
+                        RecuperarCliente(nombre, telefono);
+                        MessageBox.Show("Cliente recuperado correctamente.", "Cliente recuperado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        LimpiarCampos();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Cliente ya existe en la base de datos.", "Cliente existente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {
                 AgregarCliente(nombre, telefono, direccion, email);
-                MessageBox.Show("Nuevo cliente ingresado correctamente.", "Nuevo Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Nuevo cliente ingresado correctamente.", "Nuevo cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimpiarCampos();
             }
         }
@@ -76,6 +82,37 @@ namespace kenjhi
                     command.Parameters.AddWithValue("@Telefono", telefono);
                     int count = Convert.ToInt32(command.ExecuteScalar());
                     return count > 0;
+                }
+            }
+        }
+
+        private bool VerificarClienteEliminado(string nombre, string telefono)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "SELECT COUNT(*) FROM Cliente WHERE Nombre = @Nombre AND Telefono = @Telefono AND Visible = 0";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Nombre", nombre);
+                    command.Parameters.AddWithValue("@Telefono", telefono);
+                    int count = Convert.ToInt32(command.ExecuteScalar());
+                    return count > 0;
+                }
+            }
+        }
+
+        private void RecuperarCliente(string nombre, string telefono)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+                string query = "UPDATE Cliente SET Visible = 1 WHERE Nombre = @Nombre AND Telefono = @Telefono";
+                using (MySqlCommand command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@Nombre", nombre);
+                    command.Parameters.AddWithValue("@Telefono", telefono);
+                    command.ExecuteNonQuery();
                 }
             }
         }
@@ -111,7 +148,4 @@ namespace kenjhi
             this.Close();
         }
     }
-
-    }
-    
-
+}

@@ -44,6 +44,7 @@
             this.btnModificar = new kenjhi.RJButton();
             this.btnVolver = new kenjhi.RJButton();
             this.btnCancelarModificacion = new kenjhi.RJButton();
+            this.btnEliminarCategoria = new kenjhi.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCategorias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,9 +55,9 @@
             this.label10.ForeColor = System.Drawing.Color.DimGray;
             this.label10.Location = new System.Drawing.Point(107, 16);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(213, 13);
+            this.label10.Size = new System.Drawing.Size(218, 13);
             this.label10.TabIndex = 65;
-            this.label10.Text = "Menú principal > Producto > Ver categorías\r\n";
+            this.label10.Text = "Menú principal > Productos > Ver categorías\r\n";
             // 
             // txtBusquedaDGV
             // 
@@ -151,6 +152,7 @@
             this.dataGridCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridCategorias.Size = new System.Drawing.Size(535, 405);
             this.dataGridCategorias.TabIndex = 76;
+            this.dataGridCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCategorias_CellClick);
             this.dataGridCategorias.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCategorias_CellValueChanged);
             // 
             // lblSinResultado2
@@ -260,12 +262,34 @@
             this.btnCancelarModificacion.Visible = false;
             this.btnCancelarModificacion.Click += new System.EventHandler(this.btnCancelarModificacion_Click);
             // 
+            // btnEliminarCategoria
+            // 
+            this.btnEliminarCategoria.BackColor = System.Drawing.Color.Yellow;
+            this.btnEliminarCategoria.BackgroundColor = System.Drawing.Color.Yellow;
+            this.btnEliminarCategoria.BorderColor = System.Drawing.Color.Transparent;
+            this.btnEliminarCategoria.BorderRadius = 10;
+            this.btnEliminarCategoria.BorderSize = 0;
+            this.btnEliminarCategoria.FlatAppearance.BorderSize = 0;
+            this.btnEliminarCategoria.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarCategoria.ForeColor = System.Drawing.Color.Black;
+            this.btnEliminarCategoria.Location = new System.Drawing.Point(12, 73);
+            this.btnEliminarCategoria.Name = "btnEliminarCategoria";
+            this.btnEliminarCategoria.Size = new System.Drawing.Size(72, 26);
+            this.btnEliminarCategoria.TabIndex = 82;
+            this.btnEliminarCategoria.Text = "Eliminar";
+            this.btnEliminarCategoria.TextColor = System.Drawing.Color.Black;
+            this.btnEliminarCategoria.UseVisualStyleBackColor = false;
+            this.btnEliminarCategoria.Visible = false;
+            this.btnEliminarCategoria.Click += new System.EventHandler(this.btnEliminarCategoria_Click);
+            // 
             // frmVerCategorias_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 505);
+            this.Controls.Add(this.btnEliminarCategoria);
             this.Controls.Add(this.btnGuardarCambios);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.lblSinResultado2);
@@ -299,5 +323,6 @@
         private RJButton btnModificar;
         private RJButton btnCancelarModificacion;
         private RJButton btnGuardarCambios;
+        private RJButton btnEliminarCategoria;
     }
 }

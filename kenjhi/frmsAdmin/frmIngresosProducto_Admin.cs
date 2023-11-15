@@ -16,28 +16,8 @@ namespace kenjhi
         public frmIngresosProducto_Admin()
         {
             InitializeComponent();
-            string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";
-            //using (MySqlConnection connection = new MySqlConnection(connectionString))
-            //{
-            //    connection.Open();
-            //    string query = "SELECT Nombre FROM producto";
-
-            //    using (MySqlCommand cmd = new MySqlCommand(query, connection))
-            //    {
-            //        using (MySqlDataReader reader = cmd.ExecuteReader())
-            //        {
-            //            // Limpia los elementos existentes en el ComboBox
-            //            comboListaProductos.Items.Clear();
-
-            //            // Agrega los nombres de productos al ComboBox
-            //            while (reader.Read())
-            //            {
-            //                string nombreProducto = reader["Nombre"].ToString();
-            //                comboListaProductos.Items.Add(nombreProducto);
-            //            }
-            //        }
-            //    }
-            //}
+            string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
+           
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
@@ -87,7 +67,7 @@ namespace kenjhi
                 DateTime fechaIngreso = dataAgregarIngreso.Value;
 
                //subida
-                string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";
+                string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
 
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
                 {
@@ -102,7 +82,6 @@ namespace kenjhi
                         cmd.ExecuteNonQuery();
                     }
 
-                    // Actualizar la cantidad en la tabla de producto
                     string updateProductoQuery = "UPDATE producto SET Cantidad = Cantidad + @Cantidad WHERE ID_Producto = @ID_Producto";
                     using (MySqlCommand cmd = new MySqlCommand(updateProductoQuery, connection))
                     {

@@ -33,7 +33,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecuperarDatos_Admin));
-            this.label10 = new System.Windows.Forms.Label();
+            this.labelRuta = new System.Windows.Forms.Label();
             this.labelPrincipal = new System.Windows.Forms.Label();
             this.lblDatos = new System.Windows.Forms.Label();
             this.dataGridRecuperarDatos = new System.Windows.Forms.DataGridView();
@@ -60,17 +60,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxClientes)).BeginInit();
             this.SuspendLayout();
             // 
-            // label10
+            // labelRuta
             // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Black;
-            this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(107, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(242, 26);
-            this.label10.TabIndex = 68;
-            this.label10.Text = "Menú principal > Administrador > Recuperar datos\r\n\r\n";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
+            this.labelRuta.AutoSize = true;
+            this.labelRuta.BackColor = System.Drawing.Color.Black;
+            this.labelRuta.ForeColor = System.Drawing.Color.DimGray;
+            this.labelRuta.Location = new System.Drawing.Point(107, 16);
+            this.labelRuta.Name = "labelRuta";
+            this.labelRuta.Size = new System.Drawing.Size(242, 26);
+            this.labelRuta.TabIndex = 68;
+            this.labelRuta.Text = "Menú principal > Administrador > Recuperar datos\r\n\r\n";
+            this.labelRuta.Click += new System.EventHandler(this.label10_Click);
             // 
             // labelPrincipal
             // 
@@ -297,6 +297,7 @@
             this.pictureBoxCategorias.Size = new System.Drawing.Size(130, 137);
             this.pictureBoxCategorias.TabIndex = 80;
             this.pictureBoxCategorias.TabStop = false;
+            this.pictureBoxCategorias.Click += new System.EventHandler(this.pictureBoxCategorias_Click);
             // 
             // pictureBoxClientes
             // 
@@ -391,7 +392,7 @@
             this.Controls.Add(this.pictureBoxClientes);
             this.Controls.Add(this.dataGridRecuperarDatos);
             this.Controls.Add(this.lblDatos);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.labelRuta);
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.labelPrincipal);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -411,7 +412,7 @@
         #endregion
 
         private RJButton btnVolver;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label labelRuta;
         private System.Windows.Forms.Label labelPrincipal;
         private System.Windows.Forms.Label lblDatos;
         private System.Windows.Forms.DataGridView dataGridRecuperarDatos;

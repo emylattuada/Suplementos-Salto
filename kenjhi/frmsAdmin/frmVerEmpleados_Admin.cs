@@ -22,7 +22,7 @@ namespace kenjhi
             txtBusquedaDGV.Text = "Ingresa un nombre de usuario para realizar la búsqueda";
             txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
             dataGridEmpleados.RowTemplate.Height = 40;
-            dataGridEmpleados.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10); // Ajusta el espacio vertical entre las celdas de cada fila
+            dataGridEmpleados.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10); 
             dataGridEmpleados.ReadOnly=true;
 
 
@@ -30,7 +30,7 @@ namespace kenjhi
 
             try
             {
-                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
+                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
                 conexion.Open();
 
                 string consulta = "SELECT ID_Usuario, NombreUsuario, Rol, email FROM usuarios WHERE Visible = 1";
@@ -320,6 +320,7 @@ namespace kenjhi
                         {
                             lblSinResultado.Visible = true;
                             lblSinResultado2.Visible = true;
+
                         }
                         else
                         {

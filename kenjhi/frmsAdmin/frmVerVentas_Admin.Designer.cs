@@ -34,14 +34,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVerVentas_Admin));
             this.label10 = new System.Windows.Forms.Label();
-            this.lblSinResultado2 = new System.Windows.Forms.Label();
-            this.lblSinResultado = new System.Windows.Forms.Label();
             this.dataGridVentas = new System.Windows.Forms.DataGridView();
             this.txtBusquedaDGV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnEliminarProducto = new kenjhi.RJButton();
             this.btnVolver = new kenjhi.RJButton();
+            this.labelresultado2 = new System.Windows.Forms.Label();
+            this.labelresultado1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,31 +54,6 @@
             this.label10.Size = new System.Drawing.Size(184, 13);
             this.label10.TabIndex = 66;
             this.label10.Text = "Menú principal > Ventas > Ver ventas";
-            // 
-            // lblSinResultado2
-            // 
-            this.lblSinResultado2.AutoSize = true;
-            this.lblSinResultado2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSinResultado2.ForeColor = System.Drawing.Color.White;
-            this.lblSinResultado2.Location = new System.Drawing.Point(321, 268);
-            this.lblSinResultado2.Name = "lblSinResultado2";
-            this.lblSinResultado2.Size = new System.Drawing.Size(123, 16);
-            this.lblSinResultado2.TabIndex = 69;
-            this.lblSinResultado2.Text = "Intente nuevamente";
-            this.lblSinResultado2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblSinResultado2.Visible = false;
-            // 
-            // lblSinResultado
-            // 
-            this.lblSinResultado.AutoSize = true;
-            this.lblSinResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSinResultado.ForeColor = System.Drawing.Color.White;
-            this.lblSinResultado.Location = new System.Drawing.Point(150, 243);
-            this.lblSinResultado.Name = "lblSinResultado";
-            this.lblSinResultado.Size = new System.Drawing.Size(457, 25);
-            this.lblSinResultado.TabIndex = 68;
-            this.lblSinResultado.Text = "El producto ingresado no pertenece al sistema";
-            this.lblSinResultado.Visible = false;
             // 
             // dataGridVentas
             // 
@@ -152,6 +126,8 @@
             this.txtBusquedaDGV.Name = "txtBusquedaDGV";
             this.txtBusquedaDGV.Size = new System.Drawing.Size(535, 20);
             this.txtBusquedaDGV.TabIndex = 72;
+            this.txtBusquedaDGV.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtBusquedaDGV_MouseClick);
+            this.txtBusquedaDGV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusquedaDGV_KeyPress);
             // 
             // label1
             // 
@@ -176,27 +152,6 @@
             this.textBox1.Size = new System.Drawing.Size(535, 1);
             this.textBox1.TabIndex = 70;
             // 
-            // btnEliminarProducto
-            // 
-            this.btnEliminarProducto.BackColor = System.Drawing.Color.Yellow;
-            this.btnEliminarProducto.BackgroundColor = System.Drawing.Color.Yellow;
-            this.btnEliminarProducto.BorderColor = System.Drawing.Color.Transparent;
-            this.btnEliminarProducto.BorderRadius = 10;
-            this.btnEliminarProducto.BorderSize = 0;
-            this.btnEliminarProducto.FlatAppearance.BorderSize = 0;
-            this.btnEliminarProducto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminarProducto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminarProducto.ForeColor = System.Drawing.Color.Black;
-            this.btnEliminarProducto.Location = new System.Drawing.Point(12, 41);
-            this.btnEliminarProducto.Name = "btnEliminarProducto";
-            this.btnEliminarProducto.Size = new System.Drawing.Size(72, 26);
-            this.btnEliminarProducto.TabIndex = 74;
-            this.btnEliminarProducto.Text = "Eliminar";
-            this.btnEliminarProducto.TextColor = System.Drawing.Color.Black;
-            this.btnEliminarProducto.UseVisualStyleBackColor = false;
-            this.btnEliminarProducto.Visible = false;
-            this.btnEliminarProducto.Click += new System.EventHandler(this.btnEliminarProducto_Click);
-            // 
             // btnVolver
             // 
             this.btnVolver.BackColor = System.Drawing.Color.Yellow;
@@ -217,18 +172,42 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
+            // labelresultado2
+            // 
+            this.labelresultado2.AutoSize = true;
+            this.labelresultado2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelresultado2.ForeColor = System.Drawing.Color.White;
+            this.labelresultado2.Location = new System.Drawing.Point(318, 257);
+            this.labelresultado2.Name = "labelresultado2";
+            this.labelresultado2.Size = new System.Drawing.Size(123, 16);
+            this.labelresultado2.TabIndex = 75;
+            this.labelresultado2.Text = "Intente nuevamente";
+            this.labelresultado2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelresultado2.Visible = false;
+            // 
+            // labelresultado1
+            // 
+            this.labelresultado1.AutoSize = true;
+            this.labelresultado1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelresultado1.ForeColor = System.Drawing.Color.White;
+            this.labelresultado1.Location = new System.Drawing.Point(166, 232);
+            this.labelresultado1.Name = "labelresultado1";
+            this.labelresultado1.Size = new System.Drawing.Size(414, 25);
+            this.labelresultado1.TabIndex = 74;
+            this.labelresultado1.Text = "El cliente ingresado no ha hecho compras\r\n";
+            this.labelresultado1.Visible = false;
+            // 
             // frmVerVentas_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 505);
-            this.Controls.Add(this.btnEliminarProducto);
+            this.Controls.Add(this.labelresultado2);
+            this.Controls.Add(this.labelresultado1);
             this.Controls.Add(this.txtBusquedaDGV);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.lblSinResultado2);
-            this.Controls.Add(this.lblSinResultado);
             this.Controls.Add(this.dataGridVentas);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnVolver);
@@ -245,12 +224,11 @@
 
         private RJButton btnVolver;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lblSinResultado2;
-        private System.Windows.Forms.Label lblSinResultado;
         private System.Windows.Forms.DataGridView dataGridVentas;
         private System.Windows.Forms.TextBox txtBusquedaDGV;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private RJButton btnEliminarProducto;
+        private System.Windows.Forms.Label labelresultado2;
+        private System.Windows.Forms.Label labelresultado1;
     }
 }

@@ -18,15 +18,14 @@ namespace kenjhi
         public frmEnviarOpinion()
         {
             InitializeComponent();
-            //string nombre = txtNombreSugerencia.Text;
-            //string sugerencia = txtSugerencia.Text;
+           
             txtSugerencia.Text="Ingresa aquí tu sugerencia para el equipo de desarrollo";
             txtSugerencia.ForeColor = System.Drawing.Color.DarkGray;
 
         }
         private int ClickX = 0, ClickY = 0;
         
-        private void pictureBox2_Click(object sender, EventArgs e) //los nombres de estos picturebox los dejamos default, no son de tanta relevancia
+        private void pictureBox2_Click(object sender, EventArgs e) 
         {
             this.Close();
         }
@@ -47,7 +46,7 @@ namespace kenjhi
 
         private void txtSugerencia_TextChanged(object sender, EventArgs e)
         {
-            //sin usar
+            
         }
 
         private void txtSugerencia_Click(object sender, EventArgs e)
@@ -63,7 +62,7 @@ namespace kenjhi
             string correoOrigen = "info3emt@edusalto.uy"; 
             string contraseniaOrigen = "info3emt21"; 
             string correoDestino = "infinity.codeuy@gmail.com";
-            string mensaje = $"Sugerencia para el equipo de desarrollo, enviada por: " + nombre  + "Sugerencia: " + sugerencia;
+            string mensaje = $"Sugerencia para el equipo de desarrollo, enviada por: " + nombre  + " Sugerencia: " + sugerencia;
             enviarCorreo(correoOrigen, contraseniaOrigen, correoDestino, mensaje);
             MessageBox.Show("¡Sugerencia enviada con éxito!");
 
@@ -88,7 +87,7 @@ namespace kenjhi
 
             correo.To.Add(receptor);
 
-            correo.Subject = "Nueva sugerencia - Aplicación Suplementos Salto"; // Asunto del correo
+            correo.Subject = "Nueva sugerencia - Aplicación Suplementos Salto"; 
             correo.SubjectEncoding = Encoding.UTF8;
 
             correo.Body = mensaje;
@@ -98,7 +97,7 @@ namespace kenjhi
             correo.From = new MailAddress(emisor);
 
             cliente.Send(correo);
-        } //codigo reciclado de cambiar pass form 
+        } 
 
     }
 }

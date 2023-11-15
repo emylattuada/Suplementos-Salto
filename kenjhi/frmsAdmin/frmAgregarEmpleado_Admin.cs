@@ -27,9 +27,8 @@ namespace kenjhi
             {
 
 
-                //MessageBox.Show("Todos los campos son obligatorios.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 lbl2.Visible = true;
-                System.Media.SystemSounds.Exclamation.Play();   //lo mismo de arriba nada mas q lo representamos en el label y con sonido
+                System.Media.SystemSounds.Exclamation.Play();   
                 return;
             } else { lbl2.Visible = false; }
 
@@ -43,13 +42,12 @@ namespace kenjhi
             {
                 MessageBox.Show("El correo electrónico no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }//video tutorial
+            }
 
             Random rand = new Random();
             int codigo = rand.Next(100000, 999999);
             string codigoVerificacion = codigo.ToString();
-            //utlizamos el mismo metodo que en el form de cambiar pass para generar el codigo
-            //tambien el metodo de encriptado
+           
 
             using (SHA256 sha256 = SHA256.Create())
             {
@@ -58,7 +56,7 @@ namespace kenjhi
                 string contraseñaEncriptada = BitConverter.ToString(hash).Replace("-", "").ToLower();
 
 
-                string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";
+                string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
                 MySqlConnection connection = new MySqlConnection(connectionString);
                 string insertQuery = "INSERT INTO usuarios (NombreUsuario, Contraseña, Rol, Codigo, Email) VALUES (@NombreUsuario, @Contraseña, @Rol, @Codigo, @Email)";
                 MySqlCommand command = new MySqlCommand(insertQuery, connection);
@@ -76,7 +74,6 @@ namespace kenjhi
                     if (rowsAffected > 0)
                     {
                         MessageBox.Show("Empleado agregado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        // Limpiar los campos después de la inserción si es necesario.
                         txtNombreEmpleado.Clear();
                         txtEmailEmpleado.Clear();
                         txtContraseñaEmpleado.Clear();
@@ -107,12 +104,12 @@ namespace kenjhi
             if (txtContraseñaEmpleado.PasswordChar == '\0')
             {
 
-                txtContraseñaEmpleado.PasswordChar = '*';  //cambia de nuevo a vista previa de password
+                txtContraseñaEmpleado.PasswordChar = '*';  
             }
             if (txtContraseñaEmpleado2.PasswordChar == '\0')
             {
 
-                txtContraseñaEmpleado2.PasswordChar = '*';  //cambia de nuevo a vista previa de password
+                txtContraseñaEmpleado2.PasswordChar = '*';  
             }
             picNoVer.Visible = false;
             picPass.Visible = true;

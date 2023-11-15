@@ -51,6 +51,7 @@
             this.lbl2 = new System.Windows.Forms.Label();
             this.btnAgregarCliente = new kenjhi.RJButton();
             this.btnVolver = new kenjhi.RJButton();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picNoVer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPass)).BeginInit();
             this.SuspendLayout();
@@ -61,7 +62,7 @@
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label1.Location = new System.Drawing.Point(92, -8);
+            this.label1.Location = new System.Drawing.Point(93, 8);
             this.label1.Name = "label1";
             this.label1.Padding = new System.Windows.Forms.Padding(0, 30, 0, 0);
             this.label1.Size = new System.Drawing.Size(495, 123);
@@ -87,7 +88,7 @@
             this.txtNombreEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtNombreEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreEmpleado.ForeColor = System.Drawing.Color.White;
-            this.txtNombreEmpleado.Location = new System.Drawing.Point(113, 104);
+            this.txtNombreEmpleado.Location = new System.Drawing.Point(113, 120);
             this.txtNombreEmpleado.Multiline = true;
             this.txtNombreEmpleado.Name = "txtNombreEmpleado";
             this.txtNombreEmpleado.Size = new System.Drawing.Size(450, 20);
@@ -99,7 +100,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label2.Location = new System.Drawing.Point(110, 82);
+            this.label2.Location = new System.Drawing.Point(110, 98);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 16);
             this.label2.TabIndex = 58;
@@ -111,7 +112,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Enabled = false;
             this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(113, 129);
+            this.textBox1.Location = new System.Drawing.Point(113, 145);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(450, 1);
@@ -135,7 +136,7 @@
             this.txtEmailEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmailEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmailEmpleado.ForeColor = System.Drawing.Color.White;
-            this.txtEmailEmpleado.Location = new System.Drawing.Point(113, 183);
+            this.txtEmailEmpleado.Location = new System.Drawing.Point(113, 199);
             this.txtEmailEmpleado.Multiline = true;
             this.txtEmailEmpleado.Name = "txtEmailEmpleado";
             this.txtEmailEmpleado.Size = new System.Drawing.Size(450, 20);
@@ -147,7 +148,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label4.Location = new System.Drawing.Point(110, 161);
+            this.label4.Location = new System.Drawing.Point(110, 177);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(117, 16);
             this.label4.TabIndex = 62;
@@ -159,7 +160,7 @@
             this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox3.Enabled = false;
             this.textBox3.ForeColor = System.Drawing.Color.Black;
-            this.textBox3.Location = new System.Drawing.Point(113, 208);
+            this.textBox3.Location = new System.Drawing.Point(113, 224);
             this.textBox3.Multiline = true;
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(450, 1);
@@ -171,7 +172,7 @@
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(490, 242);
+            this.label6.Location = new System.Drawing.Point(490, 258);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(73, 16);
             this.label6.TabIndex = 68;
@@ -183,7 +184,7 @@
             this.txtContraseñaEmpleado.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseñaEmpleado.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseñaEmpleado.ForeColor = System.Drawing.Color.White;
-            this.txtContraseñaEmpleado.Location = new System.Drawing.Point(110, 261);
+            this.txtContraseñaEmpleado.Location = new System.Drawing.Point(110, 277);
             this.txtContraseñaEmpleado.Multiline = true;
             this.txtContraseñaEmpleado.Name = "txtContraseñaEmpleado";
             this.txtContraseñaEmpleado.Size = new System.Drawing.Size(411, 20);
@@ -195,7 +196,7 @@
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label7.Location = new System.Drawing.Point(107, 239);
+            this.label7.Location = new System.Drawing.Point(107, 255);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(76, 16);
             this.label7.TabIndex = 66;
@@ -207,7 +208,7 @@
             this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox5.Enabled = false;
             this.textBox5.ForeColor = System.Drawing.Color.Black;
-            this.textBox5.Location = new System.Drawing.Point(110, 286);
+            this.textBox5.Location = new System.Drawing.Point(110, 302);
             this.textBox5.Multiline = true;
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(450, 1);
@@ -231,7 +232,7 @@
             this.txtContraseñaEmpleado2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtContraseñaEmpleado2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtContraseñaEmpleado2.ForeColor = System.Drawing.Color.White;
-            this.txtContraseñaEmpleado2.Location = new System.Drawing.Point(113, 334);
+            this.txtContraseñaEmpleado2.Location = new System.Drawing.Point(113, 350);
             this.txtContraseñaEmpleado2.Multiline = true;
             this.txtContraseñaEmpleado2.Name = "txtContraseñaEmpleado2";
             this.txtContraseñaEmpleado2.Size = new System.Drawing.Size(450, 20);
@@ -243,7 +244,7 @@
             this.label9.BackColor = System.Drawing.Color.Transparent;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.label9.Location = new System.Drawing.Point(110, 312);
+            this.label9.Location = new System.Drawing.Point(110, 328);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(134, 16);
             this.label9.TabIndex = 70;
@@ -255,7 +256,7 @@
             this.textBox7.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox7.Enabled = false;
             this.textBox7.ForeColor = System.Drawing.Color.Black;
-            this.textBox7.Location = new System.Drawing.Point(113, 359);
+            this.textBox7.Location = new System.Drawing.Point(113, 375);
             this.textBox7.Multiline = true;
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(450, 1);
@@ -264,24 +265,24 @@
             // picNoVer
             // 
             this.picNoVer.Image = global::kenjhi.Properties.Resources.ojos_cruzados__1_;
-            this.picNoVer.Location = new System.Drawing.Point(527, 260);
+            this.picNoVer.Location = new System.Drawing.Point(527, 276);
             this.picNoVer.Name = "picNoVer";
             this.picNoVer.Size = new System.Drawing.Size(33, 22);
             this.picNoVer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picNoVer.TabIndex = 75;
             this.picNoVer.TabStop = false;
-            this.picNoVer.Visible = false;
             this.picNoVer.Click += new System.EventHandler(this.picNoVer_Click);
             // 
             // picPass
             // 
             this.picPass.Image = ((System.Drawing.Image)(resources.GetObject("picPass.Image")));
-            this.picPass.Location = new System.Drawing.Point(527, 260);
+            this.picPass.Location = new System.Drawing.Point(527, 276);
             this.picPass.Name = "picPass";
             this.picPass.Size = new System.Drawing.Size(33, 22);
             this.picPass.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picPass.TabIndex = 74;
             this.picPass.TabStop = false;
+            this.picPass.Visible = false;
             this.picPass.Click += new System.EventHandler(this.picPass_Click);
             // 
             // lbl2
@@ -289,7 +290,7 @@
             this.lbl2.AutoSize = true;
             this.lbl2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(94)))), ((int)(((byte)(95)))));
-            this.lbl2.Location = new System.Drawing.Point(263, 376);
+            this.lbl2.Location = new System.Drawing.Point(263, 392);
             this.lbl2.Name = "lbl2";
             this.lbl2.Size = new System.Drawing.Size(152, 13);
             this.lbl2.TabIndex = 76;
@@ -307,7 +308,7 @@
             this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCliente.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregarCliente.Location = new System.Drawing.Point(113, 401);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(113, 417);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(450, 44);
             this.btnAgregarCliente.TabIndex = 73;
@@ -336,12 +337,24 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // Agregar_Empleado
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Black;
+            this.label10.ForeColor = System.Drawing.Color.DimGray;
+            this.label10.Location = new System.Drawing.Point(107, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(248, 13);
+            this.label10.TabIndex = 95;
+            this.label10.Text = "Menú principal > Productos > Ingresos de producto";
+            // 
+            // frmAgregarEmpleado_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 505);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.lbl2);
             this.Controls.Add(this.picNoVer);
             this.Controls.Add(this.picPass);
@@ -365,7 +378,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVolver);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Agregar_Empleado";
+            this.Name = "frmAgregarEmpleado_Admin";
             this.Text = "Suplementos Salto";
             ((System.ComponentModel.ISupportInitialize)(this.picNoVer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPass)).EndInit();
@@ -398,5 +411,6 @@
         private System.Windows.Forms.PictureBox picNoVer;
         private System.Windows.Forms.PictureBox picPass;
         private System.Windows.Forms.Label lbl2;
+        private System.Windows.Forms.Label label10;
     }
 }

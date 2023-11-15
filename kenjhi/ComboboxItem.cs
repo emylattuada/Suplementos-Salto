@@ -8,7 +8,7 @@ namespace kenjhi
 {
     internal class ComboboxItem
     {
-        //esta clase la usaremos para sacar el id exacto del item que elegimos en el form de hacer un nuevo ingreso
+       
         public string Text { get; set; }
         public int Value { get; set; }
 

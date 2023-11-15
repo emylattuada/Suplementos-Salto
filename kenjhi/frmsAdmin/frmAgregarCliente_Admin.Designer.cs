@@ -313,7 +313,7 @@
             this.btnAgregarCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarCliente.ForeColor = System.Drawing.Color.Black;
-            this.btnAgregarCliente.Location = new System.Drawing.Point(110, 439);
+            this.btnAgregarCliente.Location = new System.Drawing.Point(113, 439);
             this.btnAgregarCliente.Name = "btnAgregarCliente";
             this.btnAgregarCliente.Size = new System.Drawing.Size(450, 44);
             this.btnAgregarCliente.TabIndex = 52;

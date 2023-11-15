@@ -16,7 +16,7 @@ namespace kenjhi.frmsAdmin
 
     {
         private MySqlConnection conexion;
-        private string connectionString = "Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;";
+        private string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
         public frmAgregarCategoria_Admin()
 
         {
@@ -34,15 +34,15 @@ namespace kenjhi.frmsAdmin
 
             if (string.IsNullOrEmpty(nombreCategoria))
             {
-                lblCate.Visible = true; // Mostrar el label de error
-                System.Media.SystemSounds.Exclamation.Play(); // Reproducir el sonido de error
-                return; // Salir del evento sin realizar la subida
+                lblCate.Visible = true; 
+                System.Media.SystemSounds.Exclamation.Play(); 
+                return; 
             }
 
             if (CategoriaExiste(nombreCategoria))
             {
                 MessageBox.Show("La categoría ya existe", "Categoría existente", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return; // Salir del evento sin realizar la subida
+                return; 
             }
 
             try

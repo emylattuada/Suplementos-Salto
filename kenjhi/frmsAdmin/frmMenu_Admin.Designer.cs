@@ -38,7 +38,6 @@
             this.panelSubMenuADM = new System.Windows.Forms.Panel();
             this.btnRecuperarDatos = new System.Windows.Forms.Button();
             this.btnADM_Estadisticas = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.btnADM_VerEmpleados = new System.Windows.Forms.Button();
             this.btnADM_AgregarEmpleado = new System.Windows.Forms.Button();
             this.btnAdm = new System.Windows.Forms.Button();
@@ -63,6 +62,7 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.label1S = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
             this.labelUser = new System.Windows.Forms.Label();
@@ -70,7 +70,6 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
-            this.label1S = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -158,13 +157,12 @@
             this.panelSubMenuADM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.panelSubMenuADM.Controls.Add(this.btnRecuperarDatos);
             this.panelSubMenuADM.Controls.Add(this.btnADM_Estadisticas);
-            this.panelSubMenuADM.Controls.Add(this.button3);
             this.panelSubMenuADM.Controls.Add(this.btnADM_VerEmpleados);
             this.panelSubMenuADM.Controls.Add(this.btnADM_AgregarEmpleado);
             this.panelSubMenuADM.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelSubMenuADM.Location = new System.Drawing.Point(0, 561);
+            this.panelSubMenuADM.Location = new System.Drawing.Point(0, 552);
             this.panelSubMenuADM.Name = "panelSubMenuADM";
-            this.panelSubMenuADM.Size = new System.Drawing.Size(167, 163);
+            this.panelSubMenuADM.Size = new System.Drawing.Size(167, 120);
             this.panelSubMenuADM.TabIndex = 11;
             // 
             // btnRecuperarDatos
@@ -175,7 +173,7 @@
             this.btnRecuperarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRecuperarDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRecuperarDatos.ForeColor = System.Drawing.Color.Black;
-            this.btnRecuperarDatos.Location = new System.Drawing.Point(0, 120);
+            this.btnRecuperarDatos.Location = new System.Drawing.Point(0, 90);
             this.btnRecuperarDatos.Name = "btnRecuperarDatos";
             this.btnRecuperarDatos.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnRecuperarDatos.Size = new System.Drawing.Size(167, 30);
@@ -184,6 +182,8 @@
             this.btnRecuperarDatos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnRecuperarDatos.UseVisualStyleBackColor = false;
             this.btnRecuperarDatos.Click += new System.EventHandler(this.btnRecuperarDatos_Click);
+            this.btnRecuperarDatos.MouseEnter += new System.EventHandler(this.btnRecuperarDatos_MouseEnter);
+            this.btnRecuperarDatos.MouseLeave += new System.EventHandler(this.btnRecuperarDatos_MouseLeave);
             // 
             // btnADM_Estadisticas
             // 
@@ -193,7 +193,7 @@
             this.btnADM_Estadisticas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnADM_Estadisticas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnADM_Estadisticas.ForeColor = System.Drawing.Color.Black;
-            this.btnADM_Estadisticas.Location = new System.Drawing.Point(0, 90);
+            this.btnADM_Estadisticas.Location = new System.Drawing.Point(0, 60);
             this.btnADM_Estadisticas.Name = "btnADM_Estadisticas";
             this.btnADM_Estadisticas.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
             this.btnADM_Estadisticas.Size = new System.Drawing.Size(167, 30);
@@ -202,23 +202,8 @@
             this.btnADM_Estadisticas.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnADM_Estadisticas.UseVisualStyleBackColor = false;
             this.btnADM_Estadisticas.Click += new System.EventHandler(this.btnADM_Estadisticas_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
-            this.button3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(0, 60);
-            this.button3.Name = "button3";
-            this.button3.Padding = new System.Windows.Forms.Padding(25, 0, 0, 0);
-            this.button3.Size = new System.Drawing.Size(167, 30);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Imprimir";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.UseVisualStyleBackColor = false;
+            this.btnADM_Estadisticas.MouseEnter += new System.EventHandler(this.btnADM_Estadisticas_MouseEnter);
+            this.btnADM_Estadisticas.MouseLeave += new System.EventHandler(this.btnADM_Estadisticas_MouseLeave);
             // 
             // btnADM_VerEmpleados
             // 
@@ -237,6 +222,8 @@
             this.btnADM_VerEmpleados.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnADM_VerEmpleados.UseVisualStyleBackColor = false;
             this.btnADM_VerEmpleados.Click += new System.EventHandler(this.btnADM_VerEmpleados_Click);
+            this.btnADM_VerEmpleados.MouseEnter += new System.EventHandler(this.btnADM_VerEmpleados_MouseEnter);
+            this.btnADM_VerEmpleados.MouseLeave += new System.EventHandler(this.btnADM_VerEmpleados_MouseLeave);
             // 
             // btnADM_AgregarEmpleado
             // 
@@ -255,6 +242,8 @@
             this.btnADM_AgregarEmpleado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnADM_AgregarEmpleado.UseVisualStyleBackColor = false;
             this.btnADM_AgregarEmpleado.Click += new System.EventHandler(this.btnADM_AgregarEmpleado_Click);
+            this.btnADM_AgregarEmpleado.MouseEnter += new System.EventHandler(this.btnADM_AgregarEmpleado_MouseEnter);
+            this.btnADM_AgregarEmpleado.MouseLeave += new System.EventHandler(this.btnADM_AgregarEmpleado_MouseLeave);
             // 
             // btnAdm
             // 
@@ -266,10 +255,10 @@
             this.btnAdm.ForeColor = System.Drawing.Color.Black;
             this.btnAdm.Image = global::kenjhi.Properties.Resources.administrador;
             this.btnAdm.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnAdm.Location = new System.Drawing.Point(0, 531);
+            this.btnAdm.Location = new System.Drawing.Point(0, 514);
             this.btnAdm.Name = "btnAdm";
             this.btnAdm.Padding = new System.Windows.Forms.Padding(0, 0, 30, 0);
-            this.btnAdm.Size = new System.Drawing.Size(167, 30);
+            this.btnAdm.Size = new System.Drawing.Size(167, 38);
             this.btnAdm.TabIndex = 10;
             this.btnAdm.Text = "Administrador";
             this.btnAdm.UseVisualStyleBackColor = false;
@@ -285,10 +274,10 @@
             this.btnVersion.ForeColor = System.Drawing.Color.Black;
             this.btnVersion.Image = global::kenjhi.Properties.Resources.version;
             this.btnVersion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVersion.Location = new System.Drawing.Point(0, 724);
+            this.btnVersion.Location = new System.Drawing.Point(0, 672);
             this.btnVersion.Name = "btnVersion";
             this.btnVersion.Padding = new System.Windows.Forms.Padding(0, 0, 80, 0);
-            this.btnVersion.Size = new System.Drawing.Size(167, 40);
+            this.btnVersion.Size = new System.Drawing.Size(167, 38);
             this.btnVersion.TabIndex = 9;
             this.btnVersion.Text = "Versión";
             this.btnVersion.UseVisualStyleBackColor = false;
@@ -304,10 +293,10 @@
             this.btnCerrarSesion.ForeColor = System.Drawing.Color.Black;
             this.btnCerrarSesion.Image = global::kenjhi.Properties.Resources.cerrar_sesion;
             this.btnCerrarSesion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 764);
+            this.btnCerrarSesion.Location = new System.Drawing.Point(0, 710);
             this.btnCerrarSesion.Name = "btnCerrarSesion";
             this.btnCerrarSesion.Padding = new System.Windows.Forms.Padding(0, 0, 50, 0);
-            this.btnCerrarSesion.Size = new System.Drawing.Size(167, 40);
+            this.btnCerrarSesion.Size = new System.Drawing.Size(167, 38);
             this.btnCerrarSesion.TabIndex = 7;
             this.btnCerrarSesion.Text = "Cerrar sesión";
             this.btnCerrarSesion.UseVisualStyleBackColor = false;
@@ -320,9 +309,9 @@
             this.panelPedidosSubmenu.Controls.Add(this.btnVerPedidos);
             this.panelPedidosSubmenu.Controls.Add(this.btnNuevoPedido);
             this.panelPedidosSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPedidosSubmenu.Location = new System.Drawing.Point(0, 428);
+            this.panelPedidosSubmenu.Location = new System.Drawing.Point(0, 424);
             this.panelPedidosSubmenu.Name = "panelPedidosSubmenu";
-            this.panelPedidosSubmenu.Size = new System.Drawing.Size(167, 103);
+            this.panelPedidosSubmenu.Size = new System.Drawing.Size(167, 90);
             this.panelPedidosSubmenu.TabIndex = 6;
             // 
             // btnDevoluciones
@@ -341,6 +330,8 @@
             this.btnDevoluciones.Text = "Devoluciones";
             this.btnDevoluciones.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDevoluciones.UseVisualStyleBackColor = false;
+            this.btnDevoluciones.MouseEnter += new System.EventHandler(this.btnDevoluciones_MouseEnter);
+            this.btnDevoluciones.MouseLeave += new System.EventHandler(this.btnDevoluciones_MouseLeave);
             // 
             // btnVerPedidos
             // 
@@ -359,6 +350,8 @@
             this.btnVerPedidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVerPedidos.UseVisualStyleBackColor = false;
             this.btnVerPedidos.Click += new System.EventHandler(this.btnVerPedidos_Click);
+            this.btnVerPedidos.MouseEnter += new System.EventHandler(this.btnVerPedidos_MouseEnter);
+            this.btnVerPedidos.MouseLeave += new System.EventHandler(this.btnVerPedidos_MouseLeave);
             // 
             // btnNuevoPedido
             // 
@@ -377,6 +370,8 @@
             this.btnNuevoPedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnNuevoPedido.UseVisualStyleBackColor = false;
             this.btnNuevoPedido.Click += new System.EventHandler(this.btnNuevoPedido_Click);
+            this.btnNuevoPedido.MouseEnter += new System.EventHandler(this.btnNuevoPedido_MouseEnter);
+            this.btnNuevoPedido.MouseLeave += new System.EventHandler(this.btnNuevoPedido_MouseLeave);
             // 
             // btnPedidos
             // 
@@ -388,10 +383,10 @@
             this.btnPedidos.ForeColor = System.Drawing.Color.Black;
             this.btnPedidos.Image = ((System.Drawing.Image)(resources.GetObject("btnPedidos.Image")));
             this.btnPedidos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPedidos.Location = new System.Drawing.Point(0, 398);
+            this.btnPedidos.Location = new System.Drawing.Point(0, 386);
             this.btnPedidos.Name = "btnPedidos";
             this.btnPedidos.Padding = new System.Windows.Forms.Padding(0, 0, 72, 0);
-            this.btnPedidos.Size = new System.Drawing.Size(167, 30);
+            this.btnPedidos.Size = new System.Drawing.Size(167, 38);
             this.btnPedidos.TabIndex = 5;
             this.btnPedidos.Text = "Ventas";
             this.btnPedidos.UseVisualStyleBackColor = false;
@@ -406,9 +401,9 @@
             this.panelMenuSubmenu.Controls.Add(this.btnModificarMenu);
             this.panelMenuSubmenu.Controls.Add(this.btnAgregarPlato);
             this.panelMenuSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelMenuSubmenu.Location = new System.Drawing.Point(0, 235);
+            this.panelMenuSubmenu.Location = new System.Drawing.Point(0, 236);
             this.panelMenuSubmenu.Name = "panelMenuSubmenu";
-            this.panelMenuSubmenu.Size = new System.Drawing.Size(167, 163);
+            this.panelMenuSubmenu.Size = new System.Drawing.Size(167, 150);
             this.panelMenuSubmenu.TabIndex = 4;
             // 
             // btnVerCategorias
@@ -428,6 +423,8 @@
             this.btnVerCategorias.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVerCategorias.UseVisualStyleBackColor = false;
             this.btnVerCategorias.Click += new System.EventHandler(this.btnVerCategorias_Click);
+            this.btnVerCategorias.MouseEnter += new System.EventHandler(this.btnVerCategorias_MouseEnter);
+            this.btnVerCategorias.MouseLeave += new System.EventHandler(this.btnVerCategorias_MouseLeave);
             // 
             // btnAgregarCategoria
             // 
@@ -446,6 +443,8 @@
             this.btnAgregarCategoria.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarCategoria.UseVisualStyleBackColor = false;
             this.btnAgregarCategoria.Click += new System.EventHandler(this.button1_Click);
+            this.btnAgregarCategoria.MouseEnter += new System.EventHandler(this.btnAgregarCategoria_MouseEnter);
+            this.btnAgregarCategoria.MouseLeave += new System.EventHandler(this.btnAgregarCategoria_MouseLeave);
             // 
             // btnIngresoProductos
             // 
@@ -464,6 +463,8 @@
             this.btnIngresoProductos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnIngresoProductos.UseVisualStyleBackColor = false;
             this.btnIngresoProductos.Click += new System.EventHandler(this.btnIngresoProductos_Click);
+            this.btnIngresoProductos.MouseEnter += new System.EventHandler(this.btnIngresoProductos_MouseEnter);
+            this.btnIngresoProductos.MouseLeave += new System.EventHandler(this.btnIngresoProductos_MouseLeave);
             // 
             // btnModificarMenu
             // 
@@ -482,6 +483,8 @@
             this.btnModificarMenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificarMenu.UseVisualStyleBackColor = false;
             this.btnModificarMenu.Click += new System.EventHandler(this.btnModificarMenu_Click);
+            this.btnModificarMenu.MouseEnter += new System.EventHandler(this.btnModificarMenu_MouseEnter);
+            this.btnModificarMenu.MouseLeave += new System.EventHandler(this.btnModificarMenu_MouseLeave);
             // 
             // btnAgregarPlato
             // 
@@ -500,6 +503,8 @@
             this.btnAgregarPlato.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarPlato.UseVisualStyleBackColor = false;
             this.btnAgregarPlato.Click += new System.EventHandler(this.btnAgregarPlato_Click);
+            this.btnAgregarPlato.MouseEnter += new System.EventHandler(this.btnAgregarPlato_MouseEnter);
+            this.btnAgregarPlato.MouseLeave += new System.EventHandler(this.btnAgregarPlato_MouseLeave);
             // 
             // btnMenu
             // 
@@ -511,10 +516,10 @@
             this.btnMenu.ForeColor = System.Drawing.Color.Black;
             this.btnMenu.Image = global::kenjhi.Properties.Resources.proteina__1_;
             this.btnMenu.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMenu.Location = new System.Drawing.Point(0, 205);
+            this.btnMenu.Location = new System.Drawing.Point(0, 198);
             this.btnMenu.Name = "btnMenu";
             this.btnMenu.Padding = new System.Windows.Forms.Padding(0, 0, 55, 0);
-            this.btnMenu.Size = new System.Drawing.Size(167, 30);
+            this.btnMenu.Size = new System.Drawing.Size(167, 38);
             this.btnMenu.TabIndex = 3;
             this.btnMenu.Text = "Productos";
             this.btnMenu.UseVisualStyleBackColor = false;
@@ -526,9 +531,9 @@
             this.panelClientesSubmenu.Controls.Add(this.btnModificarCliente);
             this.panelClientesSubmenu.Controls.Add(this.btnAgregarCliente);
             this.panelClientesSubmenu.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelClientesSubmenu.Location = new System.Drawing.Point(0, 130);
+            this.panelClientesSubmenu.Location = new System.Drawing.Point(0, 138);
             this.panelClientesSubmenu.Name = "panelClientesSubmenu";
-            this.panelClientesSubmenu.Size = new System.Drawing.Size(167, 75);
+            this.panelClientesSubmenu.Size = new System.Drawing.Size(167, 60);
             this.panelClientesSubmenu.TabIndex = 2;
             // 
             // btnModificarCliente
@@ -548,6 +553,8 @@
             this.btnModificarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnModificarCliente.UseVisualStyleBackColor = false;
             this.btnModificarCliente.Click += new System.EventHandler(this.btnModificarCliente_Click);
+            this.btnModificarCliente.MouseEnter += new System.EventHandler(this.btnModificarCliente_MouseEnter);
+            this.btnModificarCliente.MouseLeave += new System.EventHandler(this.btnModificarCliente_MouseLeave);
             // 
             // btnAgregarCliente
             // 
@@ -566,6 +573,8 @@
             this.btnAgregarCliente.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAgregarCliente.UseVisualStyleBackColor = false;
             this.btnAgregarCliente.Click += new System.EventHandler(this.btnAgregarCliente_Click);
+            this.btnAgregarCliente.MouseEnter += new System.EventHandler(this.btnAgregarCliente_MouseEnter);
+            this.btnAgregarCliente.MouseLeave += new System.EventHandler(this.btnAgregarCliente_MouseLeave);
             // 
             // btnClientes
             // 
@@ -580,7 +589,7 @@
             this.btnClientes.Location = new System.Drawing.Point(0, 100);
             this.btnClientes.Name = "btnClientes";
             this.btnClientes.Padding = new System.Windows.Forms.Padding(0, 0, 70, 0);
-            this.btnClientes.Size = new System.Drawing.Size(167, 30);
+            this.btnClientes.Size = new System.Drawing.Size(167, 38);
             this.btnClientes.TabIndex = 1;
             this.btnClientes.Text = "Clientes";
             this.btnClientes.UseVisualStyleBackColor = false;
@@ -621,6 +630,18 @@
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(670, 505);
             this.panelChildForm.TabIndex = 4;
+            // 
+            // label1S
+            // 
+            this.label1S.AutoSize = true;
+            this.label1S.BackColor = System.Drawing.Color.Black;
+            this.label1S.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1S.ForeColor = System.Drawing.Color.Yellow;
+            this.label1S.Location = new System.Drawing.Point(372, 462);
+            this.label1S.Name = "label1S";
+            this.label1S.Size = new System.Drawing.Size(260, 20);
+            this.label1S.TabIndex = 6;
+            this.label1S.Text = "Sesión iniciada como Administrador";
             // 
             // lblFecha
             // 
@@ -693,18 +714,6 @@
             this.horafecha.Enabled = true;
             this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
             // 
-            // label1S
-            // 
-            this.label1S.AutoSize = true;
-            this.label1S.BackColor = System.Drawing.Color.Black;
-            this.label1S.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1S.ForeColor = System.Drawing.Color.Yellow;
-            this.label1S.Location = new System.Drawing.Point(372, 462);
-            this.label1S.Name = "label1S";
-            this.label1S.Size = new System.Drawing.Size(260, 20);
-            this.label1S.TabIndex = 6;
-            this.label1S.Text = "Sesión iniciada como Administrador";
-            // 
             // frmMenu_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -773,7 +782,6 @@
         private System.Windows.Forms.Button btnADM_VerEmpleados;
         private System.Windows.Forms.Button btnADM_AgregarEmpleado;
         private System.Windows.Forms.Button btnAdm;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnADM_Estadisticas;
         private System.Windows.Forms.Button btnVerCategorias;
         private System.Windows.Forms.Button btnAgregarCategoria;
