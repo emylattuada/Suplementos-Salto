@@ -156,5 +156,11 @@ namespace kenjhi.frmsAdmin
         {
             btnEliminarCategoria.Visible = true;
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

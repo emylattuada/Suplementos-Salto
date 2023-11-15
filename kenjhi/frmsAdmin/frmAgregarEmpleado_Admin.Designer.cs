@@ -49,9 +49,9 @@
             this.picNoVer = new System.Windows.Forms.PictureBox();
             this.picPass = new System.Windows.Forms.PictureBox();
             this.lbl2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnAgregarCliente = new kenjhi.RJButton();
             this.btnVolver = new kenjhi.RJButton();
-            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.picNoVer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picPass)).BeginInit();
             this.SuspendLayout();
@@ -297,6 +297,18 @@
             this.lbl2.Text = "Completa los datos obligatorios\r\n";
             this.lbl2.Visible = false;
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Black;
+            this.label10.ForeColor = System.Drawing.Color.DimGray;
+            this.label10.Location = new System.Drawing.Point(107, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(234, 13);
+            this.label10.TabIndex = 95;
+            this.label10.Text = "Menú principal > Productos > Agregar empleado";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
+            // 
             // btnAgregarCliente
             // 
             this.btnAgregarCliente.BackColor = System.Drawing.Color.Yellow;
@@ -336,17 +348,6 @@
             this.btnVolver.TextColor = System.Drawing.Color.Black;
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Black;
-            this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(107, 16);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(248, 13);
-            this.label10.TabIndex = 95;
-            this.label10.Text = "Menú principal > Productos > Ingresos de producto";
             // 
             // frmAgregarEmpleado_Admin
             // 

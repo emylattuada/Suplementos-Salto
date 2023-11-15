@@ -94,7 +94,9 @@ namespace kenjhi.frmsAdmin
             }
         }
 
-
-
+        private void btnVolver_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

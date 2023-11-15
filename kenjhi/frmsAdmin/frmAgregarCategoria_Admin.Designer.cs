@@ -135,6 +135,7 @@
             this.btnVolver.Text = "Volver";
             this.btnVolver.TextColor = System.Drawing.Color.Black;
             this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
             // label3
             // 

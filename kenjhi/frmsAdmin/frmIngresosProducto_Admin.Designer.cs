@@ -174,6 +174,7 @@
             // 
             this.dataAgregarIngreso.CalendarForeColor = System.Drawing.Color.White;
             this.dataAgregarIngreso.CalendarMonthBackground = System.Drawing.Color.Black;
+            this.dataAgregarIngreso.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dataAgregarIngreso.Location = new System.Drawing.Point(120, 334);
             this.dataAgregarIngreso.Name = "dataAgregarIngreso";
             this.dataAgregarIngreso.Size = new System.Drawing.Size(450, 20);
@@ -288,6 +289,7 @@
             this.label8.Size = new System.Drawing.Size(248, 13);
             this.label8.TabIndex = 94;
             this.label8.Text = "Menú principal > Productos > Ingresos de producto";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // frmIngresosProducto_Admin
             // 

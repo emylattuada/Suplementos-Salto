@@ -380,6 +380,7 @@
             this.label8.Size = new System.Drawing.Size(230, 13);
             this.label8.TabIndex = 87;
             this.label8.Text = "Menú principal > Productos > Agregar producto";
+            this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // Agregar_Producto
             // 

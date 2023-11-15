@@ -58,6 +58,7 @@
             this.label10.Size = new System.Drawing.Size(218, 13);
             this.label10.TabIndex = 65;
             this.label10.Text = "Menú principal > Productos > Ver categorías\r\n";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // txtBusquedaDGV
             // 

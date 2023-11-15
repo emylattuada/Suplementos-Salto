@@ -234,13 +234,13 @@ namespace kenjhi
 
         private void button1_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmAgregarCategoria_Admin());
+            openChildForm(new frmVerIngresosProductos_Admin());
             hideSubMenu();
         }
 
         private void btnVerCategorias_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmVerCategorias_Admin());
+            openChildForm(new frmAgregarCategoria_Admin());
             hideSubMenu();
         }
 
@@ -358,12 +358,12 @@ namespace kenjhi
 
         private void btnVerCategorias_MouseEnter(object sender, EventArgs e)
         {
-            CambioColorEntrar(btnVerCategorias);
+            CambioColorEntrar(btnAgregarCategorias);
         }
 
         private void btnVerCategorias_MouseLeave(object sender, EventArgs e)
         {
-            CambioColorSalir(btnVerCategorias);
+            CambioColorSalir(btnAgregarCategorias);
         }
 
         private void btnNuevoPedido_MouseEnter(object sender, EventArgs e)
@@ -434,6 +434,22 @@ namespace kenjhi
         private void btnRecuperarDatos_MouseLeave(object sender, EventArgs e)
         {
             CambioColorSalir(btnRecuperarDatos);
+        }
+
+        private void btnVerCategorias_Click_1(object sender, EventArgs e)
+        {
+            openChildForm(new frmVerCategorias_Admin());
+            hideSubMenu();
+        }
+
+        private void btnVerCategorias_MouseEnter_1(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnVerCategorias);
+        }
+
+        private void btnVerCategorias_MouseLeave_1(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnVerCategorias);
         }
 
         private void CambioColorSalir(Button boton)

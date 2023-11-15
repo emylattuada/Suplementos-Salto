@@ -13,26 +13,28 @@ namespace kenjhi
 {
     public partial class frmIngresosProducto_Admin : Form
     {
+
+
         public frmIngresosProducto_Admin()
         {
             InitializeComponent();
+            dataAgregarIngreso.Format = DateTimePickerFormat.Custom;
+            dataAgregarIngreso.CustomFormat = "dd/MM/yyyy";
+
             string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
            
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
 
-                //consulta y sacamos el id del producto
                 string query = "SELECT ID_Producto, Nombre FROM producto WHERE visible=1";
 
                 using (MySqlCommand cmd = new MySqlCommand(query, connection))
                 {
                     using (MySqlDataReader reader = cmd.ExecuteReader())
                     {
-                        // Limpia los elementos existentes en el ComboBox
                         comboListaProductos.Items.Clear();
 
-                        // Agrega los nombres de productos al ComboBox junto con sus IDs
                         while (reader.Read())
                         {
                             int idProducto = Convert.ToInt32(reader["ID_Producto"]);
@@ -58,15 +60,15 @@ namespace kenjhi
         {
             if (comboListaProductos.SelectedItem != null)
             {
-                ComboboxItem selectedItem = (ComboboxItem)comboListaProductos.SelectedItem; // Obtener el producto seleccionado y su ID
+                ComboboxItem selectedItem = (ComboboxItem)comboListaProductos.SelectedItem; 
                 int idProducto = selectedItem.Value;
                 string nombreProducto = selectedItem.Text;
 
-                int cantidadIngreso = (int)numericCantidadIngreso.Value; // Obtener la cantidad del Numeric y la fecha del DateTime
+                int cantidadIngreso = (int)numericCantidadIngreso.Value; 
 
                 DateTime fechaIngreso = dataAgregarIngreso.Value;
 
-               //subida
+               
                 string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
 
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
@@ -90,7 +92,17 @@ namespace kenjhi
                         cmd.ExecuteNonQuery();
                     }
 
-                    MessageBox.Show($"Se ingresaron {cantidadIngreso} unidades de {nombreProducto}.");
+
+                    MessageBox.Show($"Se ingresaron {cantidadIngreso} unidades de {nombreProducto}. ", "Nuevo ingreso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    comboListaProductos.Items.Clear();
+                    cargarcombobox();
+                    numericCantidadIngreso.Value = 0;
+
+
+
+
+
+
                 }
             }
             else
@@ -102,6 +114,40 @@ namespace kenjhi
         private void picturePasos_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Pasos para agregar un nuevo producto\n1) Ubicarse en 'Menú principal'\n2) Clic en el listado llamado 'Productos'\n3) Dentro del listado, clic en 'Agregar producto'\n4) Completar los datos del nuevo producto");
+
+        }
+
+        private void cargarcombobox()
+        {
+            string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
+
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string query = "SELECT ID_Producto, Nombre FROM producto WHERE visible=1";
+
+                using (MySqlCommand cmd = new MySqlCommand(query, connection))
+                {
+                    using (MySqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        comboListaProductos.Items.Clear();
+
+                        while (reader.Read())
+                        {
+                            int idProducto = Convert.ToInt32(reader["ID_Producto"]);
+                            string nombreProducto = reader["Nombre"].ToString();
+                            comboListaProductos.Items.Add(new ComboboxItem(nombreProducto, idProducto));
+                        }
+                    }
+                }
+            }
+
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            this.Close();
 
         }
     }

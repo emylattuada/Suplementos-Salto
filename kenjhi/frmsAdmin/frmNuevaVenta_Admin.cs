@@ -408,5 +408,11 @@ namespace kenjhi
             toolTipAyuda.Show("Pasos para agregar un nuevo producto", picPasosProducto, 0, picPasosProducto.Height);
 
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

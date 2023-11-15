@@ -204,5 +204,11 @@ namespace kenjhi.frmsAdmin
             if (txtBusquedaDGV.Text == "Ingresa un nombre para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
 
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+        }
     }
 }

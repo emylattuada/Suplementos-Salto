@@ -283,6 +283,7 @@
             this.label10.Size = new System.Drawing.Size(233, 13);
             this.label10.TabIndex = 68;
             this.label10.Text = "Menú principal > Administrador > Ver empleados\r\n";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // frmVerEmpleados_Admin
             // 
