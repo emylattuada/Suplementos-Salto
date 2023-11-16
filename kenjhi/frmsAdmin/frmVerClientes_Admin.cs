@@ -80,6 +80,7 @@ namespace kenjhi
                     }
 
                     MessageBox.Show("Datos actualizados.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtBusquedaDGV.Clear();
                     btnGuardarCambios.Visible = false;
                     btnEliminarCliente.Visible = false;
                     btnCancelarModificacion.Visible = false;
@@ -174,6 +175,7 @@ namespace kenjhi
                 catch 
                 {
                     MessageBox.Show("Cliente eliminado.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtBusquedaDGV.Clear();
                     try
                     {
                         MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"); ;

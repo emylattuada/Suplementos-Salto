@@ -34,11 +34,11 @@ namespace kenjhi
                 MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
                 conexion.Open();
 
-                string consulta = "SELECT p.ID_Producto, p.Precio, p.Cantidad, p.Nombre, c.ID_Categoria, " +
-                                  "CASE WHEN c.visible = 0 THEN 'Sin Categoría' ELSE c.Nombre END AS Categoria " +
-                                  "FROM producto p " +
-                                  "INNER JOIN categoria c ON p.ID_Categoria = c.ID_Categoria " +
-                                  "WHERE p.visible = 1";
+                string consulta = "SELECT p.ID_Producto, p.Precio, p.Cantidad, p.Nombre, c.ID_Categoria, c.Nombre AS Categoria " +
+                   "FROM producto p " +
+                   "INNER JOIN categoria c ON p.ID_Categoria = c.ID_Categoria " +
+                   "WHERE p.visible = 1";
+
 
                 MySqlCommand comandos = new MySqlCommand(consulta, conexion);
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
@@ -123,7 +123,6 @@ namespace kenjhi
                                 else
                                 {
                                     MessageBox.Show($"La categoría '{nuevaCategoria}' no existe en la base de datos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                                    
                                     return;
                                 }
                             }
@@ -150,6 +149,44 @@ namespace kenjhi
                     }
 
                     btnModificar.Visible = true;
+                    try
+                    {
+                        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
+                        conexion.Open();
+
+                        string consulta = "SELECT p.ID_Producto, p.Precio, p.Cantidad, p.Nombre, c.ID_Categoria, c.Nombre AS Categoria " +
+                           "FROM producto p " +
+                           "INNER JOIN categoria c ON p.ID_Categoria = c.ID_Categoria " +
+                           "WHERE p.visible = 1";
+
+
+                        MySqlCommand comandos = new MySqlCommand(consulta, conexion);
+                        MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
+
+                        DataTable tablaProductos = new DataTable();
+                        adaptador.Fill(tablaProductos);
+
+                        dataGridProductos.DataSource = tablaProductos;
+
+                        dataGridProductos.Columns["ID_Producto"].HeaderText = "ID";
+                        dataGridProductos.Columns["ID_Producto"].Visible = false;
+                        dataGridProductos.Columns["Precio"].HeaderText = "Precio (UYU)";
+                        dataGridProductos.Columns["Cantidad"].HeaderText = "Cantidad";
+                        dataGridProductos.Columns["Nombre"].HeaderText = "Nombre del Producto";
+                        dataGridProductos.Columns["Categoria"].HeaderText = "Categoría";
+                        dataGridProductos.Columns["ID_Categoria"].Visible = false;
+                        dataGridProductos.Columns["Cantidad"].ReadOnly = true;
+
+                        dataGridProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                        dataGridProductos.Columns["Categoria"].ReadOnly = true;
+
+                        conexion.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString(), "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
             catch (Exception ex)
@@ -247,45 +284,46 @@ namespace kenjhi
                 {
                     MessageBox.Show("Producto eliminado", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtBusquedaDGV.Clear();
+                    try
+                    {
+                        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
+                        conexion.Open();
+
+                        string consulta = "SELECT p.ID_Producto, p.Precio, p.Cantidad, p.Nombre, c.ID_Categoria, c.Nombre AS Categoria " +
+                           "FROM producto p " +
+                           "INNER JOIN categoria c ON p.ID_Categoria = c.ID_Categoria " +
+                           "WHERE p.visible = 1";
+
+
+                        MySqlCommand comandos = new MySqlCommand(consulta, conexion);
+                        MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
+
+                        DataTable tablaProductos = new DataTable();
+                        adaptador.Fill(tablaProductos);
+
+                        dataGridProductos.DataSource = tablaProductos;
+
+                        dataGridProductos.Columns["ID_Producto"].HeaderText = "ID";
+                        dataGridProductos.Columns["ID_Producto"].Visible = false;
+                        dataGridProductos.Columns["Precio"].HeaderText = "Precio (UYU)";
+                        dataGridProductos.Columns["Cantidad"].HeaderText = "Cantidad";
+                        dataGridProductos.Columns["Nombre"].HeaderText = "Nombre del Producto";
+                        dataGridProductos.Columns["Categoria"].HeaderText = "Categoría";
+                        dataGridProductos.Columns["ID_Categoria"].Visible = false;
+                        dataGridProductos.Columns["Cantidad"].ReadOnly = true;
+
+                        dataGridProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                        dataGridProductos.Columns["Categoria"].ReadOnly = true;
+
+                        conexion.Close();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.ToString(), "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                try
-                {
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
-                    conexion.Open();
-
-                    string consulta = "SELECT p.ID_Producto, p.Precio, p.Cantidad, p.Nombre, c.Nombre AS Categoria " +
-                                      "FROM producto p " +
-                                      "INNER JOIN categoria c ON p.ID_Categoria = c.ID_Categoria " +
-                                      "WHERE p.visible = 1";
-
-                    MySqlCommand comandos = new MySqlCommand(consulta, conexion);
-                    MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
-
-                    DataTable tablaProductos = new DataTable();
-                    adaptador.Fill(tablaProductos);
-
-                    dataGridProductos.DataSource = tablaProductos;
-
-                    dataGridProductos.Columns["ID_Producto"].HeaderText = "ID";
-                    dataGridProductos.Columns["ID_Producto"].Visible = false;
-                    dataGridProductos.Columns["Precio"].HeaderText = "Precio (UYU)";
-                    dataGridProductos.Columns["Cantidad"].HeaderText = "Cantidad";
-                    dataGridProductos.Columns["Nombre"].HeaderText = "Nombre del Producto";
-                    dataGridProductos.Columns["Categoria"].HeaderText = "Categoría";
-
-
-                    dataGridProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-                    dataGridProductos.Columns["Categoria"].ReadOnly = true;
-                    dataGridProductos.Columns["Cantidad"].ReadOnly = true;
-
-
-                    conexion.Close();
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.ToString(), "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                
                 btnEliminarProducto.Visible = false;
             }
         }
@@ -350,13 +388,14 @@ namespace kenjhi
                 }
             }
 
+           
             if (txtBusquedaDGV.Text.Length > 0)
             {
                 string textoBusqueda = txtBusquedaDGV.Text;
                 using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
                 {
                     conexion.Open();
-                    string consulta = "SELECT p.ID_Producto, p.Nombre, p.Precio, p.Cantidad, c.Nombre AS Categoria FROM producto p " +
+                    string consulta = "SELECT p.ID_Producto, p.Precio, p.Cantidad, p.Nombre, c.ID_Categoria, c.Nombre AS Categoria FROM producto p " +
                                       "INNER JOIN categoria c ON p.ID_Categoria = c.ID_Categoria " +
                                       "WHERE p.visible = 1 AND p.Nombre LIKE @textoBusqueda";
                     using (MySqlCommand cmd = new MySqlCommand(consulta, conexion))
@@ -365,8 +404,31 @@ namespace kenjhi
                         MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
+
+                        if (!dataTable.Columns.Contains("ID_Categoria"))
+                        {
+                            dataTable.Columns.Add("ID_Categoria", typeof(int));
+                        }
+
+                        foreach (DataRow row in dataTable.Rows)
+                        {
+                            row["ID_Categoria"] = row["ID_Categoria"];
+                        }
+
                         dataGridProductos.DataSource = dataTable;
+
                         dataGridProductos.Columns["ID_Producto"].Visible = false;
+                        dataGridProductos.Columns["ID_Categoria"].Visible = false;
+                        dataGridProductos.Columns["Precio"].HeaderText = "Precio (UYU)";
+                        dataGridProductos.Columns["Cantidad"].HeaderText = "Cantidad";
+                        dataGridProductos.Columns["Nombre"].HeaderText = "Nombre del Producto";
+                        dataGridProductos.Columns["Categoria"].HeaderText = "Categoría";
+                        dataGridProductos.Columns["Cantidad"].ReadOnly = true;
+
+                        dataGridProductos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                        dataGridProductos.Columns["Categoria"].ReadOnly = true;
+
                         if (dataTable.Rows.Count == 0)
                         {
                             lblSinResultado.Visible = true;
@@ -380,6 +442,7 @@ namespace kenjhi
                     }
                 }
             }
+
 
         }
 

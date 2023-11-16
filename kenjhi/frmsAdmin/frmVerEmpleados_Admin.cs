@@ -33,7 +33,7 @@ namespace kenjhi
                 MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
                 conexion.Open();
 
-                string consulta = "SELECT ID_Usuario, NombreUsuario, Rol, email FROM usuarios WHERE Visible = 1";
+                string consulta = "SELECT ID_Usuario, NombreUsuario, Rol, email FROM usuarios WHERE Visible = 1 AND Rol = 'Empleado'";
 
                 MySqlCommand comandos = new MySqlCommand(consulta, conexion);
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
@@ -78,7 +78,7 @@ namespace kenjhi
         {
             try
             {
-                using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+                using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
                 {
                     connection.Open();
 
@@ -91,10 +91,10 @@ namespace kenjhi
                     MessageBox.Show("Datos de usuarios actualizados.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     try
                     {
-                        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
+                        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
                         conexion.Open();
 
-                        string consulta = "SELECT ID_Usuario, NombreUsuario, Rol, email FROM usuarios WHERE Visible = 1";
+                        string consulta = "SELECT ID_Usuario, NombreUsuario, Rol, email FROM usuarios WHERE Visible = 1 AND Rol = 'Empleado'";
 
                         MySqlCommand comandos = new MySqlCommand(consulta, conexion);
                         MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
@@ -143,11 +143,10 @@ namespace kenjhi
             }
             dataGridEmpleados.Columns["Rol"].ReadOnly = true;
 
-            //btnGuardarCambios.Visible=true;
+            
             btnModificar.Visible = false;
             btnCancelarModificacion.Visible = true;
-            //if (btnModificar.Visible = false) { btnCancelarModificacion.Visible = true; }
-            //if (btnCancelarModificacion.Visible = true) { btnModificar.Visible = false; }
+          
         }
 
         private void btnCancelarModificacion_Click(object sender, EventArgs e)
@@ -172,7 +171,7 @@ namespace kenjhi
 
                 try
                 {
-                    using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+                    using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
                     {
                         conexion.Open();
 
@@ -194,10 +193,10 @@ namespace kenjhi
                 }
                 try
                 {
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
                     conexion.Open();
 
-                    string consulta = "SELECT ID_Usuario, NombreUsuario, Rol, email FROM usuarios WHERE Visible = 1";
+                    string consulta = "SELECT ID_Usuario, NombreUsuario, Rol, email FROM usuarios WHERE Visible = 1 AND Rol = 'Empleado'";
 
                     MySqlCommand comandos = new MySqlCommand(consulta, conexion);
                     MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
@@ -259,10 +258,10 @@ namespace kenjhi
             {
                 try
                 {
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;");
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
                     conexion.Open();
 
-                    string consulta = "SELECT ID_Usuario, NombreUsuario, Email, Rol FROM usuarios WHERE Visible = 1";
+                    string consulta = "SELECT ID_Usuario, NombreUsuario, Rol, email FROM usuarios WHERE Visible = 1 AND Rol = 'Empleado'";
 
                     MySqlCommand comandos = new MySqlCommand(consulta, conexion);
                     MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
@@ -272,7 +271,6 @@ namespace kenjhi
 
                     dataGridEmpleados.DataSource = tablaUsuarios;
 
-                    // Configurar las columnas
                     dataGridEmpleados.Columns["ID_Usuario"].HeaderText = "ID";
                     dataGridEmpleados.Columns["ID_Usuario"].Visible = false;
                     dataGridEmpleados.Columns["NombreUsuario"].HeaderText = "Nombre de Usuario";
@@ -304,10 +302,10 @@ namespace kenjhi
             if (txtBusquedaDGV.Text.Length > 0)
             {
                 string textoBusqueda = txtBusquedaDGV.Text;
-                using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=jhin; Pwd=jhin444_2023;"))
+                using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
                 {
                     conexion.Open();
-                    string consulta = "SELECT ID_Usuario, NombreUsuario, Email, Rol FROM usuarios WHERE Visible = 1 AND NombreUsuario LIKE @textoBusqueda";
+                    string consulta = "SELECT ID_Usuario, NombreUsuario, Email, Rol FROM usuarios WHERE Rol = 'Empleado' AND Visible = 1 AND NombreUsuario LIKE @textoBusqueda";
                     using (MySqlCommand cmd = new MySqlCommand(consulta, conexion))
                     {
                         cmd.Parameters.AddWithValue("@textoBusqueda", "%" + textoBusqueda + "%");

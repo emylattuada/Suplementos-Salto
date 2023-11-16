@@ -509,7 +509,7 @@ namespace kenjhi.frmsAdmin
                 dataGridRecuperarDatos.Columns["Rol"].HeaderText = "Rol";
                 dataGridRecuperarDatos.Columns["Rol"].ReadOnly = true;
 
-                dataGridRecuperarDatos.Columns["email"].HeaderText = "Correo electrónico";
+                dataGridRecuperarDatos.Columns["email"].HeaderText = "Correo Electrónico";
 
                 dataGridRecuperarDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 

@@ -189,13 +189,13 @@
             this.btnDevolucion.BorderSize = 0;
             this.btnDevolucion.FlatAppearance.BorderSize = 0;
             this.btnDevolucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDevolucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDevolucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDevolucion.ForeColor = System.Drawing.Color.Black;
             this.btnDevolucion.Location = new System.Drawing.Point(12, 41);
             this.btnDevolucion.Name = "btnDevolucion";
             this.btnDevolucion.Size = new System.Drawing.Size(72, 26);
             this.btnDevolucion.TabIndex = 76;
-            this.btnDevolucion.Text = "Devolver";
+            this.btnDevolucion.Text = "Devolución";
             this.btnDevolucion.TextColor = System.Drawing.Color.Black;
             this.btnDevolucion.UseVisualStyleBackColor = false;
             this.btnDevolucion.Visible = false;
