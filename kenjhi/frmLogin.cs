@@ -87,7 +87,7 @@ namespace kenjhi
                         }
                         else if (rol == "Empleado")
                         {
-                            frmMenu_Empleado formEmpleado = new frmMenu_Empleado();
+                            frmMenu_Empleados formEmpleado = new frmMenu_Empleados();
                             formEmpleado.Show();
                             this.Hide();
                         }
@@ -161,7 +161,7 @@ namespace kenjhi
                             }
                             else if (rol == "Empleado")
                             {
-                                frmMenu_Empleado formEmpleado = new frmMenu_Empleado();
+                                frmMenu_Empleados formEmpleado = new frmMenu_Empleados();
                                 formEmpleado.Show();
                                 this.Hide();
                             }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using kenjhi.frmsAdmin;
 using Microsoft.VisualBasic;
 using Microsoft.VisualBasic.Devices;
 using MySql.Data.MySqlClient;
@@ -14,16 +15,16 @@ using static kenjhi.formLogin;
 
 namespace kenjhi
 {
-    public partial class frmMenu_Empleado : Form
+    public partial class frmMenu_Empleados : Form
     {
-        public frmMenu_Empleado()
+        public frmMenu_Empleados()
         {
             InitializeComponent();
             customizeDesign();
 
         }
 
-        private void customizeDesign()//menu del 
+        private void customizeDesign()
         {
 
             panelClientesSubmenu.Visible= false;
@@ -31,7 +32,7 @@ namespace kenjhi
             panelPedidosSubmenu.Visible= false;
         }
 
-       
+        
 
 
         private void hideSubMenu()
@@ -43,7 +44,7 @@ namespace kenjhi
                 panelMenuSubmenu.Visible = false;
             if(panelPedidosSubmenu.Visible ==true)
                 panelPedidosSubmenu.Visible=false;
-          
+           
         }
 
         private void showSubMenu(Panel subMenu)
@@ -157,7 +158,9 @@ namespace kenjhi
 
         private void btnNuevoPedido_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmNuevaVenta_Admin()); 
+            openChildForm(new frmNuevaVenta_Admin());
+            hideSubMenu();
+
         }
 
         private void SeccionAdmin_Click(object sender, EventArgs e)
@@ -196,25 +199,41 @@ namespace kenjhi
         private void btnIngresoProductos_Click(object sender, EventArgs e)
         {
             openChildForm(new frmIngresosProducto_Admin());
-
-        }
-
-        
-
-        private void btnADM_AgregarEmpleado_Click(object sender, EventArgs e)
-        {
-            openChildForm(new frmAgregarEmpleado_Admin());
             hideSubMenu();
 
+
         }
 
-        private void btnADM_VerEmpleados_Click(object sender, EventArgs e)
+       
+
+       
+
+        private void btnVerPedidos_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmVerEmpleados_Admin());
+            openChildForm(new frmVerVentas_Admin());
             hideSubMenu();
         }
 
-        private void openChildForm(Form childform)
+        private void button1_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmVerIngresosProductos_Admin());
+            hideSubMenu();
+        }
+
+        private void btnVerCategorias_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmAgregarCategoria_Admin());
+            hideSubMenu();
+        }
+
+       
+
+        private void btnADM_Imprimir_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        public void openChildForm(Form childform)
         {
             if(activeForm != null)
             
@@ -229,6 +248,157 @@ namespace kenjhi
                 childform.Show();
 
             
+
+        }
+
+        private void btnAgregarCliente_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnAgregarCliente);
+        }
+
+        private void CambioColorEntrar(Button boton) {
+        
+        boton.BackColor = Color.Black;
+        boton.ForeColor = Color.Yellow;
+
+        }
+
+        private void btnAgregarCliente_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnAgregarCliente);
+
+        }
+
+        private void btnModificarCliente_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnModificarCliente);
+
+        }
+
+        private void btnModificarCliente_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnModificarCliente);
+
+        }
+
+        private void btnAgregarPlato_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnAgregarPlato);
+
+        }
+
+        private void btnAgregarPlato_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnAgregarPlato);
+
+        }
+
+        private void btnModificarMenu_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnModificarMenu);
+
+        }
+
+        private void btnModificarMenu_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnModificarMenu);
+
+        }
+
+        private void btnIngresoProductos_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnIngresoProductos);
+
+        }
+
+        private void btnIngresoProductos_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnIngresoProductos);
+
+        }
+
+        private void btnAgregarCategoria_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnAgregarCategoria);
+        }
+
+        private void btnAgregarCategoria_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnAgregarCategoria);
+        }
+
+        private void btnVerCategorias_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnAgregarCategorias);
+        }
+
+        private void btnVerCategorias_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnAgregarCategorias);
+        }
+
+        private void btnNuevoPedido_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnNuevoPedido);
+        }
+
+        private void btnNuevoPedido_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnNuevoPedido);
+        }
+
+        private void btnVerPedidos_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnVerPedidos);
+        }
+
+        private void btnVerPedidos_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnVerPedidos);
+        }
+
+       
+
+       
+
+        private void btnVerCategorias_Click_1(object sender, EventArgs e)
+        {
+            openChildForm(new frmVerCategorias_Admin());
+            hideSubMenu();
+        }
+
+        private void btnVerCategorias_MouseEnter_1(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnVerCategorias);
+        }
+
+        private void btnVerCategorias_MouseLeave_1(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnVerCategorias);
+        }
+
+        private void btnDeudores_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmClientesDeudores_Admin());
+            hideSubMenu();
+        }
+
+        private void btnDeudores_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnDeudores);
+        }
+
+        private void btnDeudores_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnDeudores);
+        }
+
+        
+
+        private void CambioColorSalir(Button boton)
+        {
+            boton.BackColor= Color.FromArgb(255, 255, 128);
+            boton.ForeColor = Color.Black;
 
         }
     }

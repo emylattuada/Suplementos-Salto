@@ -22,15 +22,39 @@ namespace kenjhi
 
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
+            //if (string.IsNullOrWhiteSpace(txtNombreEmpleado.Text) || string.IsNullOrWhiteSpace(txtEmailEmpleado.Text) ||
+            // string.IsNullOrWhiteSpace(txtContraseñaEmpleado.Text) || string.IsNullOrWhiteSpace(txtContraseñaEmpleado2.Text))
+            //{
+
+
+            //    lbl2.Visible = true;
+            //    System.Media.SystemSounds.Exclamation.Play();   
+            //    return;
+            //} else { lbl2.Visible = false; }
+
+            //if (txtContraseñaEmpleado.Text != txtContraseñaEmpleado2.Text)
+            //{
+            //    MessageBox.Show("Las contraseñas no coinciden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
+
+            //if (!Regex.IsMatch(txtEmailEmpleado.Text, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"))
+            //{
+            //    MessageBox.Show("El correo electrónico no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    return;
+            //}
+
             if (string.IsNullOrWhiteSpace(txtNombreEmpleado.Text) || string.IsNullOrWhiteSpace(txtEmailEmpleado.Text) ||
-             string.IsNullOrWhiteSpace(txtContraseñaEmpleado.Text) || string.IsNullOrWhiteSpace(txtContraseñaEmpleado2.Text))
+       string.IsNullOrWhiteSpace(txtContraseñaEmpleado.Text) || string.IsNullOrWhiteSpace(txtContraseñaEmpleado2.Text))
             {
-
-
                 lbl2.Visible = true;
-                System.Media.SystemSounds.Exclamation.Play();   
+                System.Media.SystemSounds.Exclamation.Play();
                 return;
-            } else { lbl2.Visible = false; }
+            }
+            else
+            {
+                lbl2.Visible = false;
+            }
 
             if (txtContraseñaEmpleado.Text != txtContraseñaEmpleado2.Text)
             {
@@ -41,6 +65,13 @@ namespace kenjhi
             if (!Regex.IsMatch(txtEmailEmpleado.Text, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"))
             {
                 MessageBox.Show("El correo electrónico no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Verificar si el usuario ya existe
+            if (UsuarioExiste(txtNombreEmpleado.Text))
+            {
+                MessageBox.Show("Ya existe un usuario con este nombre. Por favor, elija otro nombre de usuario.", "Usuario Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -114,6 +145,22 @@ namespace kenjhi
             picNoVer.Visible = false;
             picPass.Visible = true;
 
+        }
+
+        private bool UsuarioExiste(string nombreUsuario)
+        {
+            string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
+            using (MySqlConnection connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                string consulta = "SELECT COUNT(*) FROM usuarios WHERE NombreUsuario = @NombreUsuario";
+                MySqlCommand cmd = new MySqlCommand(consulta, connection);
+                cmd.Parameters.AddWithValue("@NombreUsuario", nombreUsuario);
+
+                int count = Convert.ToInt32(cmd.ExecuteScalar());
+                return count > 0;
+            }
         }
 
         private void picPass_Click(object sender, EventArgs e)
