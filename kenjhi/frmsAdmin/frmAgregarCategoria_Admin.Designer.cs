@@ -54,6 +54,7 @@
             this.label10.Size = new System.Drawing.Size(234, 13);
             this.label10.TabIndex = 68;
             this.label10.Text = "Menú principal > Productos > Agregar categoría\r\n";
+            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label1
             // 

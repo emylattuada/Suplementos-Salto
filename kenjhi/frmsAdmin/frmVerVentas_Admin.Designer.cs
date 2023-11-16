@@ -38,9 +38,10 @@
             this.txtBusquedaDGV = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnVolver = new kenjhi.RJButton();
             this.labelresultado2 = new System.Windows.Forms.Label();
             this.labelresultado1 = new System.Windows.Forms.Label();
+            this.btnDevolucion = new kenjhi.RJButton();
+            this.btnVolver = new kenjhi.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridVentas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,6 +115,7 @@
             this.dataGridVentas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridVentas.Size = new System.Drawing.Size(535, 405);
             this.dataGridVentas.TabIndex = 67;
+            this.dataGridVentas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridVentas_CellClick);
             this.dataGridVentas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridVentas_CellContentClick);
             // 
             // txtBusquedaDGV
@@ -153,26 +155,6 @@
             this.textBox1.Size = new System.Drawing.Size(535, 1);
             this.textBox1.TabIndex = 70;
             // 
-            // btnVolver
-            // 
-            this.btnVolver.BackColor = System.Drawing.Color.Yellow;
-            this.btnVolver.BackgroundColor = System.Drawing.Color.Yellow;
-            this.btnVolver.BorderColor = System.Drawing.Color.Transparent;
-            this.btnVolver.BorderRadius = 10;
-            this.btnVolver.BorderSize = 0;
-            this.btnVolver.FlatAppearance.BorderSize = 0;
-            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVolver.ForeColor = System.Drawing.Color.Black;
-            this.btnVolver.Location = new System.Drawing.Point(12, 9);
-            this.btnVolver.Name = "btnVolver";
-            this.btnVolver.Size = new System.Drawing.Size(72, 26);
-            this.btnVolver.TabIndex = 28;
-            this.btnVolver.Text = "Volver";
-            this.btnVolver.TextColor = System.Drawing.Color.Black;
-            this.btnVolver.UseVisualStyleBackColor = false;
-            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
-            // 
             // labelresultado2
             // 
             this.labelresultado2.AutoSize = true;
@@ -198,12 +180,54 @@
             this.labelresultado1.Text = "El cliente ingresado no ha hecho compras\r\n";
             this.labelresultado1.Visible = false;
             // 
+            // btnDevolucion
+            // 
+            this.btnDevolucion.BackColor = System.Drawing.Color.Yellow;
+            this.btnDevolucion.BackgroundColor = System.Drawing.Color.Yellow;
+            this.btnDevolucion.BorderColor = System.Drawing.Color.Transparent;
+            this.btnDevolucion.BorderRadius = 10;
+            this.btnDevolucion.BorderSize = 0;
+            this.btnDevolucion.FlatAppearance.BorderSize = 0;
+            this.btnDevolucion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDevolucion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDevolucion.ForeColor = System.Drawing.Color.Black;
+            this.btnDevolucion.Location = new System.Drawing.Point(12, 41);
+            this.btnDevolucion.Name = "btnDevolucion";
+            this.btnDevolucion.Size = new System.Drawing.Size(72, 26);
+            this.btnDevolucion.TabIndex = 76;
+            this.btnDevolucion.Text = "Devolver";
+            this.btnDevolucion.TextColor = System.Drawing.Color.Black;
+            this.btnDevolucion.UseVisualStyleBackColor = false;
+            this.btnDevolucion.Visible = false;
+            this.btnDevolucion.Click += new System.EventHandler(this.btnDevolucion_Click);
+            // 
+            // btnVolver
+            // 
+            this.btnVolver.BackColor = System.Drawing.Color.Yellow;
+            this.btnVolver.BackgroundColor = System.Drawing.Color.Yellow;
+            this.btnVolver.BorderColor = System.Drawing.Color.Transparent;
+            this.btnVolver.BorderRadius = 10;
+            this.btnVolver.BorderSize = 0;
+            this.btnVolver.FlatAppearance.BorderSize = 0;
+            this.btnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVolver.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolver.ForeColor = System.Drawing.Color.Black;
+            this.btnVolver.Location = new System.Drawing.Point(12, 9);
+            this.btnVolver.Name = "btnVolver";
+            this.btnVolver.Size = new System.Drawing.Size(72, 26);
+            this.btnVolver.TabIndex = 28;
+            this.btnVolver.Text = "Volver";
+            this.btnVolver.TextColor = System.Drawing.Color.Black;
+            this.btnVolver.UseVisualStyleBackColor = false;
+            this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
+            // 
             // frmVerVentas_Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 505);
+            this.Controls.Add(this.btnDevolucion);
             this.Controls.Add(this.labelresultado2);
             this.Controls.Add(this.labelresultado1);
             this.Controls.Add(this.txtBusquedaDGV);
@@ -231,5 +255,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label labelresultado2;
         private System.Windows.Forms.Label labelresultado1;
+        private RJButton btnDevolucion;
     }
 }

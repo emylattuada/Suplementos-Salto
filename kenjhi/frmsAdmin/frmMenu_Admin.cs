@@ -386,15 +386,7 @@ namespace kenjhi
             CambioColorSalir(btnVerPedidos);
         }
 
-        private void btnDevoluciones_MouseEnter(object sender, EventArgs e)
-        {
-            CambioColorEntrar(btnDevoluciones);
-        }
-
-        private void btnDevoluciones_MouseLeave(object sender, EventArgs e)
-        {
-            CambioColorSalir(btnDevoluciones);
-        }
+       
 
         private void btnADM_AgregarEmpleado_MouseEnter(object sender, EventArgs e)
         {
@@ -457,6 +449,18 @@ namespace kenjhi
             openChildForm(new frmClientesDeudores_Admin());
             hideSubMenu();
         }
+
+        private void btnDeudores_MouseEnter(object sender, EventArgs e)
+        {
+            CambioColorEntrar(btnDeudores);
+        }
+
+        private void btnDeudores_MouseLeave(object sender, EventArgs e)
+        {
+            CambioColorSalir(btnDeudores);
+        }
+
+        
 
         private void CambioColorSalir(Button boton)
         {
