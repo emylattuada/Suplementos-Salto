@@ -22,27 +22,7 @@ namespace kenjhi
 
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
-            //if (string.IsNullOrWhiteSpace(txtNombreEmpleado.Text) || string.IsNullOrWhiteSpace(txtEmailEmpleado.Text) ||
-            // string.IsNullOrWhiteSpace(txtContraseñaEmpleado.Text) || string.IsNullOrWhiteSpace(txtContraseñaEmpleado2.Text))
-            //{
-
-
-            //    lbl2.Visible = true;
-            //    System.Media.SystemSounds.Exclamation.Play();   
-            //    return;
-            //} else { lbl2.Visible = false; }
-
-            //if (txtContraseñaEmpleado.Text != txtContraseñaEmpleado2.Text)
-            //{
-            //    MessageBox.Show("Las contraseñas no coinciden.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
-
-            //if (!Regex.IsMatch(txtEmailEmpleado.Text, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"))
-            //{
-            //    MessageBox.Show("El correo electrónico no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //    return;
-            //}
+           
 
             if (string.IsNullOrWhiteSpace(txtNombreEmpleado.Text) || string.IsNullOrWhiteSpace(txtEmailEmpleado.Text) ||
        string.IsNullOrWhiteSpace(txtContraseñaEmpleado.Text) || string.IsNullOrWhiteSpace(txtContraseñaEmpleado2.Text))
@@ -68,7 +48,6 @@ namespace kenjhi
                 return;
             }
 
-            // Verificar si el usuario ya existe
             if (UsuarioExiste(txtNombreEmpleado.Text))
             {
                 MessageBox.Show("Ya existe un usuario con este nombre. Por favor, elija otro nombre de usuario.", "Usuario Duplicado", MessageBoxButtons.OK, MessageBoxIcon.Error);

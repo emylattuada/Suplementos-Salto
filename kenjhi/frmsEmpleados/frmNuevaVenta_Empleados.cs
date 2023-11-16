@@ -206,7 +206,7 @@ namespace kenjhi
 
         private void ActualizarStockProducto(int productoID, int cantidadVendida)
         {
-            using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
+            using (MySqlConnection connection = new MySqlConnection("Server = localhost; Database=suple; Uid=suple_empleado; Pwd=supleempleado2023!;"))
             {
                 connection.Open();
 
@@ -265,7 +265,7 @@ namespace kenjhi
 
            
 
-            using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
+            using (MySqlConnection connection = new MySqlConnection("Server = localhost; Database=suple; Uid=suple_empleado; Pwd=supleempleado2023!;"))
             {
                 connection.Open();
 

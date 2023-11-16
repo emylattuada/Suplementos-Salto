@@ -184,7 +184,7 @@ namespace kenjhi
 
                 comboCategoriaProducto.Items.Clear();
 
-                string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
+                string connectionString = "Server = localhost; Database=suple; Uid=suple_empleado; Pwd=supleempleado2023!;";
                 string query = "SELECT Nombre FROM Categoria WHERE visible = 1";
 
                 using (MySqlConnection connection = new MySqlConnection(connectionString))
