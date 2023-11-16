@@ -18,12 +18,12 @@ namespace kenjhi
         private ToolTip toolTipAyuda;
 
 
+
         public frmNuevaVenta_Admin()
         {
 
             InitializeComponent();
 
-           
 
         }
 
@@ -85,6 +85,7 @@ namespace kenjhi
 
 
             dataGridCarrito.Columns.Add("Producto", "Producto");
+
             dataGridCarrito.Columns.Add("Precio", "Precio");
             dataGridCarrito.Columns.Add("Cantidad", "Cantidad");
             dataGridCarrito.Columns.Add("Precio Total", "Precio Total");
@@ -93,6 +94,8 @@ namespace kenjhi
             dataGridCarrito.Columns["Precio Total"].DefaultCellStyle.Format = "C";
 
             dataGridCarrito.Columns["Precio Total"].ReadOnly = true;
+            dataGridCarrito.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
 
 
 
@@ -135,9 +138,6 @@ namespace kenjhi
         {
 
 
-           
-
-
             if (comboListaProductos.SelectedItem == null)
             {
                 MessageBox.Show("Por favor, elija un producto.", "Campo Obligatorio", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -168,12 +168,18 @@ namespace kenjhi
             dataGridCarrito.Rows.Add(new object[] { productoSeleccionado, precioUnitario, cantidadDeseada, precioTotal });
             comboListaProductos.SelectedIndex = -1;
             numericCantidadVenta.Value = 1;
+            comboListaClientes.Enabled = false;
+            txtLineaAmarilla.Visible = false;
+
 
             decimal precioTotalVenta = 0;
             foreach (DataGridViewRow fila in dataGridCarrito.Rows)
             {
                 precioTotalVenta += Convert.ToDecimal(fila.Cells["Precio Total"].Value);
             }
+            int precioTotalVentaLabel = CalcularPrecioTotalCarrito();
+
+            lblTotalCobro.Text = "Total a cobrar \n " + precioTotalVenta.ToString() + " UYU";
         }
 
         private int ObtenerStockDisponible(int productoID)
@@ -214,16 +220,14 @@ namespace kenjhi
 
         }
 
-        
 
-        private double CalcularPrecioTotalCarrito()
+
+        private int CalcularPrecioTotalCarrito()
         {
-            double precioTotal = 0;
-            foreach (DataGridViewRow row in dataGridCarrito.Rows)
+            int precioTotal = 0;
+            foreach (DataGridViewRow fila in dataGridCarrito.Rows)
             {
-                int cantidad = Convert.ToInt32(row.Cells["Cantidad"].Value);
-                double precioUnitario = Convert.ToDouble(row.Cells["Precio"].Value);
-                precioTotal += cantidad * precioUnitario;
+                precioTotal += Convert.ToInt32(fila.Cells["Precio Total"].Value);
             }
             return precioTotal;
         }
@@ -234,6 +238,10 @@ namespace kenjhi
             {
                 dataGridCarrito.Rows.RemoveAt(dataGridCarrito.SelectedRows[0].Index);
                 btnBorrarFilaCarrito.Visible = false;
+
+                int precioTotalVenta = CalcularPrecioTotalCarrito();
+
+                lblTotalCobro.Text = "Total a cobrar\n " + precioTotalVenta.ToString() + " UYU";
             }
         }
 
@@ -345,6 +353,10 @@ namespace kenjhi
                 MessageBox.Show("Venta registrada con éxito.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 LimpiarFormulario();
+                comboListaClientes.Enabled = true;
+                txtLineaAmarilla.Visible = true;
+                lblTotalCobro.Text = "";
+
             }
 
         }
@@ -414,5 +426,7 @@ namespace kenjhi
             this.Close();
 
         }
+
+
     }
 }

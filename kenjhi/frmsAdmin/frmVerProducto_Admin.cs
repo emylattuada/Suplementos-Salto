@@ -142,6 +142,8 @@ namespace kenjhi
                     btnEliminarProducto.Visible = false;
                     btnCancelarModificacion.Visible = false;
                     txtBusquedaDGV.Clear();
+                    txtBusquedaDGV.ForeColor = Color.White;
+
 
                     foreach (DataGridViewColumn column in dataGridProductos.Columns)
                     {
@@ -284,6 +286,8 @@ namespace kenjhi
                 {
                     MessageBox.Show("Producto eliminado", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtBusquedaDGV.Clear();
+                    txtBusquedaDGV.ForeColor = Color.White;
+
                     try
                     {
                         MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");

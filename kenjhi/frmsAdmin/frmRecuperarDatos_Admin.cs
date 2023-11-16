@@ -21,7 +21,7 @@ namespace kenjhi.frmsAdmin
             InitializeComponent();
             dataGridRecuperarDatos.RowTemplate.Height = 40;
             dataGridRecuperarDatos.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10);
-            txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
+            txtBusquedaDGV.Text = "";
             txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
 
 
@@ -458,21 +458,21 @@ namespace kenjhi.frmsAdmin
             {
                 RecuperarCliente();
                 txtBusquedaDGV.Clear();
-                txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
+                txtBusquedaDGV.Text = "Ingresa un nombre de cliente para realizar la búsqueda";
                 txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
             }
             if (pos == 2)
             {
                 RecuperarProducto();
                 txtBusquedaDGV.Clear();
-                txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
+                txtBusquedaDGV.Text = "Ingresa un nombre de producto para realizar la búsqueda";
                 txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
             }
             if (pos == 4)
             {
                 RecuperarEmpleado();
                 txtBusquedaDGV.Clear();
-                txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
+                txtBusquedaDGV.Text = "Ingresa un nombre de empleado para realizar la búsqueda";
                 txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
             }
 
@@ -480,7 +480,7 @@ namespace kenjhi.frmsAdmin
             {
                 RecuperarCategoria();
                 txtBusquedaDGV.Clear();
-                txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
+                txtBusquedaDGV.Text = "Ingresa un nombre de categoría para realizar la búsqueda";
                 txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
 
             }

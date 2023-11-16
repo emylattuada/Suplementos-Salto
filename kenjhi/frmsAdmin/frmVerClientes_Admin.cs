@@ -81,6 +81,8 @@ namespace kenjhi
 
                     MessageBox.Show("Datos actualizados.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtBusquedaDGV.Clear();
+                    txtBusquedaDGV.ForeColor = Color.White;
+
                     btnGuardarCambios.Visible = false;
                     btnEliminarCliente.Visible = false;
                     btnCancelarModificacion.Visible = false;
@@ -176,6 +178,7 @@ namespace kenjhi
                 {
                     MessageBox.Show("Cliente eliminado.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtBusquedaDGV.Clear();
+                    txtBusquedaDGV.ForeColor = Color.White;
                     try
                     {
                         MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"); ;

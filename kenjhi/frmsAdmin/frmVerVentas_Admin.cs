@@ -133,7 +133,7 @@ namespace kenjhi.frmsAdmin
                         "INNER JOIN cliente c ON v.ID_Cliente = c.ID_Cliente " +
                         "INNER JOIN asignado a ON v.ID_Venta = a.ID_Venta " +
                         "INNER JOIN producto p ON a.ID_Producto = p.ID_Producto " +
-                        "WHERE c.Nombre LIKE @textoBusqueda AND v.devuelto = 1";  // Agregamos la condición del atributo "devuelto"
+                        "WHERE c.Nombre LIKE @textoBusqueda AND v.devuelto = 1";  
 
                     using (MySqlCommand cmd = new MySqlCommand(consulta, conexion))
                     {

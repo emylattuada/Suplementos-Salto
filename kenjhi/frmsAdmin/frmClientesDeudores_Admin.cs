@@ -129,6 +129,7 @@ namespace kenjhi
                         conexion.Close();
                         txtBusquedaDGV.Clear();
                         btnPagarCuotas.Visible = false;
+                        txtBusquedaDGV.ForeColor=System.Drawing.Color.White;    
                     }
                     catch (Exception ex)
                     {

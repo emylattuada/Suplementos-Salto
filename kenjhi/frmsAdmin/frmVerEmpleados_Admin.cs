@@ -89,6 +89,8 @@ namespace kenjhi
                     }
 
                     MessageBox.Show("Datos de usuarios actualizados.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtBusquedaDGV.ForeColor = Color.White;
+
                     try
                     {
                         MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
@@ -190,6 +192,8 @@ namespace kenjhi
                 {
                     MessageBox.Show("Empleado eliminado", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtBusquedaDGV.Clear();
+                    txtBusquedaDGV.ForeColor = Color.White;
+
                 }
                 try
                 {
