@@ -83,13 +83,13 @@ namespace kenjhi
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
             
-            openChildForm(new frmAgregarCliente_Admin());
+            openChildForm(new frmAgregarCliente_Empleados());
             hideSubMenu();
         }
 
         private void btnModificarCliente_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmVerClientes_Admin());
+            openChildForm(new frmVerClientes_Empleados());
             hideSubMenu();
 
         }
@@ -109,14 +109,14 @@ namespace kenjhi
 
         private void btnAgregarPlato_Click(object sender, EventArgs e)
         {
-            openChildForm(new Agregar_Producto());
+            openChildForm(new frmAgregarProducto_Empleados());
             hideSubMenu();
 
         }
 
         private void btnModificarMenu_Click(object sender, EventArgs e)
         {
-            openChildForm(new Ver_Productos());
+            openChildForm(new frmVerProducto_Empleados());
             hideSubMenu();
 
         }
@@ -158,7 +158,7 @@ namespace kenjhi
 
         private void btnNuevoPedido_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmNuevaVenta_Admin());
+            openChildForm(new frmNuevaVenta_Empleados());
             hideSubMenu();
 
         }
@@ -198,7 +198,7 @@ namespace kenjhi
 
         private void btnIngresoProductos_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmIngresosProducto_Admin());
+            openChildForm(new frmIngresosProducto_Empleados());
             hideSubMenu();
 
 
@@ -210,19 +210,19 @@ namespace kenjhi
 
         private void btnVerPedidos_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmVerVentas_Admin());
+            openChildForm(new frmVerVentas_Empleados());
             hideSubMenu();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmVerIngresosProductos_Admin());
+            openChildForm(new frmVerIngresosProductos_Empleados());
             hideSubMenu();
         }
 
         private void btnVerCategorias_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmAgregarCategoria_Admin());
+            openChildForm(new frmAgregarCategoria_Empleados());
             hideSubMenu();
         }
 
@@ -363,7 +363,7 @@ namespace kenjhi
 
         private void btnVerCategorias_Click_1(object sender, EventArgs e)
         {
-            openChildForm(new frmVerCategorias_Admin());
+            openChildForm(new frmVerCategorias_Empleados());
             hideSubMenu();
         }
 
@@ -379,7 +379,7 @@ namespace kenjhi
 
         private void btnDeudores_Click(object sender, EventArgs e)
         {
-            openChildForm(new frmClientesDeudores_Admin());
+            openChildForm(new frmClientesDeudores_Empleados());
             hideSubMenu();
         }
 

@@ -1,6 +1,6 @@
 ﻿namespace kenjhi
 {
-    partial class frmVerIngresosProductos_Admin
+    partial class frmVerIngresosProductos_Empleados
     {
         /// <summary>
         /// Required designer variable.
@@ -32,7 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVerIngresosProductos_Admin));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmVerIngresosProductos_Empleados));
             this.btnVolver = new kenjhi.RJButton();
             this.label10 = new System.Windows.Forms.Label();
             this.txtBusquedaDGV = new System.Windows.Forms.TextBox();
@@ -196,7 +196,7 @@
             this.lblSinResultado.Text = "El producto ingresado no ha recibido nuevos ingresos";
             this.lblSinResultado.Visible = false;
             // 
-            // frmVerIngresosProductos_Admin
+            // frmVerIngresosProductos_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -212,7 +212,7 @@
             this.Controls.Add(this.btnVolver);
             this.ForeColor = System.Drawing.Color.Coral;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmVerIngresosProductos_Admin";
+            this.Name = "frmVerIngresosProductos_Empleados";
             this.Text = "Suplementos Salto";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridIngresosProd)).EndInit();
             this.ResumeLayout(false);

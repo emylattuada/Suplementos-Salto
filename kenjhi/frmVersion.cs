@@ -29,5 +29,10 @@ namespace kenjhi
             opinion.Show();
             
         }
+
+        private void label10_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

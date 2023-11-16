@@ -206,11 +206,77 @@
     <Compile Include="frmsAdmin\frmVerIngresosProductos_Admin.Designer.cs">
       <DependentUpon>frmVerIngresosProductos_Admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmsEmpleados\frmAgregarCategoria_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmAgregarCategoria_Empleados.Designer.cs">
+      <DependentUpon>frmAgregarCategoria_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmAgregarCliente_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmAgregarCliente_Empleados.Designer.cs">
+      <DependentUpon>frmAgregarCliente_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmAgregarProducto_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmAgregarProducto_Empleados.Designer.cs">
+      <DependentUpon>frmAgregarProducto_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmClientesDeudores_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmClientesDeudores_Empleados.Designer.cs">
+      <DependentUpon>frmClientesDeudores_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmIngresosProducto_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmIngresosProducto_Empleados.Designer.cs">
+      <DependentUpon>frmIngresosProducto_Empleados.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmsEmpleados\frmMenu_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmsEmpleados\frmMenu_Empleados.Designer.cs">
       <DependentUpon>frmMenu_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmNuevaVenta_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmNuevaVenta_Empleados.Designer.cs">
+      <DependentUpon>frmNuevaVenta_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmVerCategorias_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmVerCategorias_Empleados.Designer.cs">
+      <DependentUpon>frmVerCategorias_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmVerClientes_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmVerClientes_Empleados.Designer.cs">
+      <DependentUpon>frmVerClientes_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmVerIngresosProductos_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmVerIngresosProductos_Empleados.Designer.cs">
+      <DependentUpon>frmVerIngresosProductos_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmVerProducto_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmVerProducto_Empleados.Designer.cs">
+      <DependentUpon>frmVerProducto_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmVerVentas_Empleados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsEmpleados\frmVerVentas_Empleados.Designer.cs">
+      <DependentUpon>frmVerVentas_Empleados.cs</DependentUpon>
     </Compile>
     <Compile Include="Producto.cs" />
     <Compile Include="Program.cs" />
@@ -298,8 +364,41 @@
     <EmbeddedResource Include="frmsAdmin\frmMenu_Admin.resx">
       <DependentUpon>frmMenu_Admin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmsEmpleados\frmAgregarCategoria_Empleados.resx">
+      <DependentUpon>frmAgregarCategoria_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsEmpleados\frmAgregarCliente_Empleados.resx">
+      <DependentUpon>frmAgregarCliente_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsEmpleados\frmAgregarProducto_Empleados.resx">
+      <DependentUpon>frmAgregarProducto_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsEmpleados\frmClientesDeudores_Empleados.resx">
+      <DependentUpon>frmClientesDeudores_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsEmpleados\frmIngresosProducto_Empleados.resx">
+      <DependentUpon>frmIngresosProducto_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmsEmpleados\frmMenu_Empleados.resx">
       <DependentUpon>frmMenu_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsEmpleados\frmNuevaVenta_Empleados.resx">
+      <DependentUpon>frmNuevaVenta_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsEmpleados\frmVerCategorias_Empleados.resx">
+      <DependentUpon>frmVerCategorias_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsEmpleados\frmVerClientes_Empleados.resx">
+      <DependentUpon>frmVerClientes_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsEmpleados\frmVerIngresosProductos_Empleados.resx">
+      <DependentUpon>frmVerIngresosProductos_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsEmpleados\frmVerProducto_Empleados.resx">
+      <DependentUpon>frmVerProducto_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsEmpleados\frmVerVentas_Empleados.resx">
+      <DependentUpon>frmVerVentas_Empleados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

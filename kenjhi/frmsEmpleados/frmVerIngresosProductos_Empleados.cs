@@ -11,9 +11,9 @@ using MySql.Data.MySqlClient;
 
 namespace kenjhi
 {
-    public partial class frmVerIngresosProductos_Admin : Form
+    public partial class frmVerIngresosProductos_Empleados : Form
     {
-        public frmVerIngresosProductos_Admin()
+        public frmVerIngresosProductos_Empleados()
         {
             InitializeComponent();
             txtBusquedaDGV.Text = "Ingresa un nombre de producto para realizar la búsqueda";
@@ -34,7 +34,7 @@ namespace kenjhi
 
             try
             {
-                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
+                MySqlConnection conexion = new MySqlConnection("Server = localhost; Database=suple; Uid=suple_empleado; Pwd=supleempleado2023!;");
                 conexion.Open();
 
                 string consulta = "SELECT i.ID_Ingreso, p.Nombre AS NombreProducto, i.Cantidad, i.Fecha_Ingreso " +
@@ -82,7 +82,7 @@ namespace kenjhi
                 lblSinResultado2.Visible = false;
                 try
                 {
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
+                    MySqlConnection conexion = new MySqlConnection("Server = localhost; Database=suple; Uid=suple_empleado; Pwd=supleempleado2023!;");
                     conexion.Open();
 
                     string consulta = "SELECT i.ID_Ingreso, p.Nombre AS NombreProducto, i.Cantidad, i.Fecha_Ingreso " +
@@ -117,7 +117,7 @@ namespace kenjhi
             if (txtBusquedaDGV.Text.Length > 0)
             {
                 string textoBusqueda = txtBusquedaDGV.Text;
-                using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
+                using (MySqlConnection conexion = new MySqlConnection("Server = localhost; Database=suple; Uid=suple_empleado; Pwd=supleempleado2023!;"))
                 {
                     conexion.Open();
                     string consulta = "SELECT i.ID_Ingreso, p.Nombre AS NombreProducto, i.Cantidad, i.Fecha_Ingreso " +

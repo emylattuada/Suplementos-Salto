@@ -13,14 +13,14 @@ using MySql.Data.MySqlClient;
 
 namespace kenjhi
 {
-    public partial class frmClientesDeudores_Admin : Form
+    public partial class frmClientesDeudores_Empleados : Form
     {
         private ToolTip toolTipAyuda;
-        private const string cadenaConexion = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
+        private const string cadenaConexion = "Server = localhost; Database=suple; Uid=suple_empleado; Pwd=supleempleado2023!;";
 
 
 
-        public frmClientesDeudores_Admin()
+        public frmClientesDeudores_Empleados()
         {
             InitializeComponent();
             CargarClientesCuotas();

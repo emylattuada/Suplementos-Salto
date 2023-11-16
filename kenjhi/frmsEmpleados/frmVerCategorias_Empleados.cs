@@ -12,9 +12,9 @@ using MySql.Data.MySqlClient;
 
 namespace kenjhi.frmsAdmin
 {
-    public partial class frmVerCategorias_Admin : Form
+    public partial class frmVerCategorias_Empleados : Form
     {
-        public frmVerCategorias_Admin()
+        public frmVerCategorias_Empleados()
         {
             InitializeComponent();
             txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
@@ -31,7 +31,7 @@ namespace kenjhi.frmsAdmin
 
             try
             {
-                MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
+                MySqlConnection conexion = new MySqlConnection("Server = localhost; Database=suple; Uid=suple_empleado; Pwd=supleempleado2023!;");
                 conexion.Open();
 
                 string consulta = "SELECT ID_Categoria, Nombre, Descripcion FROM categoria WHERE visible=1";
@@ -101,7 +101,7 @@ namespace kenjhi.frmsAdmin
         {
             try
             {
-                using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
+                using (MySqlConnection connection = new MySqlConnection("Server = localhost; Database=suple; Uid=suple_empleado; Pwd=supleempleado2023!;"))
                 {
                     using (MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT ID_Categoria, Nombre, Descripcion FROM Categoria", connection))
                     {
@@ -113,10 +113,10 @@ namespace kenjhi.frmsAdmin
                     btnGuardarCambios.Visible = false;
                     btnCancelarModificacion.Visible = false;
                     btnModificar.Visible = true;
+                    CargarDatosCate();
                     txtBusquedaDGV.Clear();
                     txtBusquedaDGV.ForeColor = Color.White;
 
-                    CargarDatosCate();
                 }
             }
             catch (Exception ex)
@@ -134,7 +134,7 @@ namespace kenjhi.frmsAdmin
 
                 try
                 {
-                    using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
+                    using (MySqlConnection conexion = new MySqlConnection("Server = localhost; Database=suple; Uid=suple_empleado; Pwd=supleempleado2023!;"))
                     {
                         conexion.Open();
 
@@ -179,7 +179,7 @@ namespace kenjhi.frmsAdmin
             {
                 try
                 {
-                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
+                    MySqlConnection conexion = new MySqlConnection("Server = localhost; Database=suple; Uid=suple_empleado; Pwd=supleempleado2023!;");
                     conexion.Open();
 
                     string consulta = "SELECT ID_Categoria, Nombre, Descripcion FROM categoria WHERE visible=1";
@@ -220,7 +220,7 @@ namespace kenjhi.frmsAdmin
             if (txtBusquedaDGV.Text.Length > 0)
             {
                 string textoBusqueda = txtBusquedaDGV.Text;
-                using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
+                using (MySqlConnection conexion = new MySqlConnection("Server = localhost; Database=suple; Uid=suple_empleado; Pwd=supleempleado2023!;"))
                 {
                     conexion.Open();
                     string consulta = "SELECT ID_Categoria, Nombre, Descripcion FROM categoria WHERE visible=1 AND Nombre LIKE @textoBusqueda OR Descripcion LIKE @textoBusqueda";
