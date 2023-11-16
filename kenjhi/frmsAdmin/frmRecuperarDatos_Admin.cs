@@ -286,7 +286,6 @@ namespace kenjhi.frmsAdmin
             if (txtBusquedaDGV.Text == "Ingresa un nombre de categoría para realizar la búsqueda" && pos == 5) { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
             if (txtBusquedaDGV.Text == "Ingresa un nombre de empleado para realizar la búsqueda" && pos == 4) { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
 
-            //if (txtBusquedaDGV.Text == "Ingresa un nombre para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
             txtBusquedaDGV.ForeColor = System.Drawing.Color.White;
         }
 

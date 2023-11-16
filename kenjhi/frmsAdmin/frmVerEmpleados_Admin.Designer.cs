@@ -103,7 +103,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridEmpleados.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridEmpleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridEmpleados.Size = new System.Drawing.Size(535, 420);
+            this.dataGridEmpleados.Size = new System.Drawing.Size(535, 405);
             this.dataGridEmpleados.TabIndex = 24;
             this.dataGridEmpleados.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridEmpleados_CellMouseClick);
             this.dataGridEmpleados.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridEmpleados_CellValueChanged);

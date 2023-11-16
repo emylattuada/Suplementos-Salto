@@ -452,6 +452,12 @@ namespace kenjhi
             CambioColorSalir(btnVerCategorias);
         }
 
+        private void btnDeudores_Click(object sender, EventArgs e)
+        {
+            openChildForm(new frmClientesDeudores_Admin());
+            hideSubMenu();
+        }
+
         private void CambioColorSalir(Button boton)
         {
             boton.BackColor= Color.FromArgb(255, 255, 128);

@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRecuperarDatos_Admin));
             this.labelRuta = new System.Windows.Forms.Label();
             this.labelPrincipal = new System.Windows.Forms.Label();
@@ -50,9 +50,9 @@
             this.pictureBoxProductos = new System.Windows.Forms.PictureBox();
             this.pictureBoxCategorias = new System.Windows.Forms.PictureBox();
             this.pictureBoxClientes = new System.Windows.Forms.PictureBox();
-            this.btnRecuperarProductos = new kenjhi.RJButton();
-            this.btnVolver = new kenjhi.RJButton();
             this.btnRecuperarDatos = new kenjhi.RJButton();
+            this.btnVolver = new kenjhi.RJButton();
+            this.btnRecuperarProductos = new kenjhi.RJButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridRecuperarDatos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxEmpleados)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProductos)).BeginInit();
@@ -113,45 +113,45 @@
             this.dataGridRecuperarDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridRecuperarDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dataGridRecuperarDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Transparent;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridRecuperarDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Transparent;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridRecuperarDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridRecuperarDatos.ColumnHeadersHeight = 35;
             this.dataGridRecuperarDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridRecuperarDatos.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridRecuperarDatos.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridRecuperarDatos.EnableHeadersVisualStyles = false;
             this.dataGridRecuperarDatos.GridColor = System.Drawing.Color.Yellow;
             this.dataGridRecuperarDatos.Location = new System.Drawing.Point(120, 136);
             this.dataGridRecuperarDatos.Name = "dataGridRecuperarDatos";
             this.dataGridRecuperarDatos.ReadOnly = true;
             this.dataGridRecuperarDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.DimGray;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridRecuperarDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.DimGray;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridRecuperarDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridRecuperarDatos.RowHeadersVisible = false;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Yellow;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.dataGridRecuperarDatos.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Yellow;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.dataGridRecuperarDatos.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridRecuperarDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridRecuperarDatos.Size = new System.Drawing.Size(450, 357);
             this.dataGridRecuperarDatos.TabIndex = 78;
@@ -185,7 +185,7 @@
             this.labelCategorias.AutoSize = true;
             this.labelCategorias.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelCategorias.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelCategorias.Location = new System.Drawing.Point(459, 113);
+            this.labelCategorias.Location = new System.Drawing.Point(453, 113);
             this.labelCategorias.Name = "labelCategorias";
             this.labelCategorias.Size = new System.Drawing.Size(99, 24);
             this.labelCategorias.TabIndex = 84;
@@ -309,25 +309,26 @@
             this.pictureBoxClientes.TabStop = false;
             this.pictureBoxClientes.Click += new System.EventHandler(this.pictureBoxClientes_Click);
             // 
-            // btnRecuperarProductos
+            // btnRecuperarDatos
             // 
-            this.btnRecuperarProductos.BackColor = System.Drawing.Color.Yellow;
-            this.btnRecuperarProductos.BackgroundColor = System.Drawing.Color.Yellow;
-            this.btnRecuperarProductos.BorderColor = System.Drawing.Color.Transparent;
-            this.btnRecuperarProductos.BorderRadius = 10;
-            this.btnRecuperarProductos.BorderSize = 0;
-            this.btnRecuperarProductos.FlatAppearance.BorderSize = 0;
-            this.btnRecuperarProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecuperarProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecuperarProductos.ForeColor = System.Drawing.Color.Black;
-            this.btnRecuperarProductos.Location = new System.Drawing.Point(12, 46);
-            this.btnRecuperarProductos.Name = "btnRecuperarProductos";
-            this.btnRecuperarProductos.Size = new System.Drawing.Size(72, 26);
-            this.btnRecuperarProductos.TabIndex = 93;
-            this.btnRecuperarProductos.Text = "/";
-            this.btnRecuperarProductos.TextColor = System.Drawing.Color.Black;
-            this.btnRecuperarProductos.UseVisualStyleBackColor = false;
-            this.btnRecuperarProductos.Visible = false;
+            this.btnRecuperarDatos.BackColor = System.Drawing.Color.Yellow;
+            this.btnRecuperarDatos.BackgroundColor = System.Drawing.Color.Yellow;
+            this.btnRecuperarDatos.BorderColor = System.Drawing.Color.Transparent;
+            this.btnRecuperarDatos.BorderRadius = 10;
+            this.btnRecuperarDatos.BorderSize = 0;
+            this.btnRecuperarDatos.FlatAppearance.BorderSize = 0;
+            this.btnRecuperarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecuperarDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecuperarDatos.ForeColor = System.Drawing.Color.Black;
+            this.btnRecuperarDatos.Location = new System.Drawing.Point(12, 46);
+            this.btnRecuperarDatos.Name = "btnRecuperarDatos";
+            this.btnRecuperarDatos.Size = new System.Drawing.Size(72, 26);
+            this.btnRecuperarDatos.TabIndex = 92;
+            this.btnRecuperarDatos.Text = "Recuperar";
+            this.btnRecuperarDatos.TextColor = System.Drawing.Color.Black;
+            this.btnRecuperarDatos.UseVisualStyleBackColor = false;
+            this.btnRecuperarDatos.Visible = false;
+            this.btnRecuperarDatos.Click += new System.EventHandler(this.btnRecuperarDato_Click);
             // 
             // btnVolver
             // 
@@ -349,26 +350,25 @@
             this.btnVolver.UseVisualStyleBackColor = false;
             this.btnVolver.Click += new System.EventHandler(this.btnVolver_Click);
             // 
-            // btnRecuperarDatos
+            // btnRecuperarProductos
             // 
-            this.btnRecuperarDatos.BackColor = System.Drawing.Color.Yellow;
-            this.btnRecuperarDatos.BackgroundColor = System.Drawing.Color.Yellow;
-            this.btnRecuperarDatos.BorderColor = System.Drawing.Color.Transparent;
-            this.btnRecuperarDatos.BorderRadius = 10;
-            this.btnRecuperarDatos.BorderSize = 0;
-            this.btnRecuperarDatos.FlatAppearance.BorderSize = 0;
-            this.btnRecuperarDatos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRecuperarDatos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRecuperarDatos.ForeColor = System.Drawing.Color.Black;
-            this.btnRecuperarDatos.Location = new System.Drawing.Point(12, 46);
-            this.btnRecuperarDatos.Name = "btnRecuperarDatos";
-            this.btnRecuperarDatos.Size = new System.Drawing.Size(72, 26);
-            this.btnRecuperarDatos.TabIndex = 92;
-            this.btnRecuperarDatos.Text = "Recuperar";
-            this.btnRecuperarDatos.TextColor = System.Drawing.Color.Black;
-            this.btnRecuperarDatos.UseVisualStyleBackColor = false;
-            this.btnRecuperarDatos.Visible = false;
-            this.btnRecuperarDatos.Click += new System.EventHandler(this.btnRecuperarDato_Click);
+            this.btnRecuperarProductos.BackColor = System.Drawing.Color.Yellow;
+            this.btnRecuperarProductos.BackgroundColor = System.Drawing.Color.Yellow;
+            this.btnRecuperarProductos.BorderColor = System.Drawing.Color.Transparent;
+            this.btnRecuperarProductos.BorderRadius = 10;
+            this.btnRecuperarProductos.BorderSize = 0;
+            this.btnRecuperarProductos.FlatAppearance.BorderSize = 0;
+            this.btnRecuperarProductos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRecuperarProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRecuperarProductos.ForeColor = System.Drawing.Color.Black;
+            this.btnRecuperarProductos.Location = new System.Drawing.Point(12, 46);
+            this.btnRecuperarProductos.Name = "btnRecuperarProductos";
+            this.btnRecuperarProductos.Size = new System.Drawing.Size(72, 26);
+            this.btnRecuperarProductos.TabIndex = 93;
+            this.btnRecuperarProductos.Text = "/";
+            this.btnRecuperarProductos.TextColor = System.Drawing.Color.Black;
+            this.btnRecuperarProductos.UseVisualStyleBackColor = false;
+            this.btnRecuperarProductos.Visible = false;
             // 
             // frmRecuperarDatos_Admin
             // 
