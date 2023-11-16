@@ -162,5 +162,85 @@ namespace kenjhi.frmsAdmin
             this.Close();
 
         }
+
+        private void txtBusquedaDGV_MouseClick(object sender, MouseEventArgs e)
+        {
+            if (txtBusquedaDGV.Text == "Ingresa un nombre para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
+
+        }
+
+        private void txtBusquedaDGV_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtBusquedaDGV.Text.Length == 0)
+            {
+                try
+                {
+                    MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
+                    conexion.Open();
+
+                    string consulta = "SELECT ID_Categoria, Nombre, Descripcion FROM categoria WHERE visible=1";
+
+                    MySqlCommand comandos = new MySqlCommand(consulta, conexion);
+                    MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
+
+                    DataTable tablaCategorias = new DataTable();
+                    adaptador.Fill(tablaCategorias);
+
+                    dataGridCategorias.DataSource = tablaCategorias;
+
+                    dataGridCategorias.Columns["ID_Categoria"].Visible = false;
+                    dataGridCategorias.Columns["Nombre"].HeaderText = "Nombre";
+                    dataGridCategorias.Columns["Descripcion"].HeaderText = "Descripción";
+
+                    dataGridCategorias.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                    foreach (DataGridViewColumn column in dataGridCategorias.Columns)
+                    {
+                        column.ReadOnly = true;
+                    }
+
+                    if (lblSinResultado3.Visible)
+                    {
+                        lblSinResultado3.Visible = false;
+                        lblSinResultado4.Visible = false;
+                    }
+
+                    conexion.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString(), "Error al cargar los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            if (txtBusquedaDGV.Text.Length > 0)
+            {
+                string textoBusqueda = txtBusquedaDGV.Text;
+                using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
+                {
+                    conexion.Open();
+                    string consulta = "SELECT ID_Categoria, Nombre, Descripcion FROM categoria WHERE visible=1 AND Nombre LIKE @textoBusqueda OR Descripcion LIKE @textoBusqueda";
+                    using (MySqlCommand cmd = new MySqlCommand(consulta, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@textoBusqueda", "%" + textoBusqueda + "%");
+                        MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+                        dataGridCategorias.DataSource = dataTable;
+                        dataGridCategorias.Columns["ID_Categoria"].Visible = false;
+                        if (dataTable.Rows.Count == 0)
+                        {
+                            lblSinResultado3.Visible = true;
+                            lblSinResultado4.Visible = true;
+                        }
+                        else
+                        {
+                            lblSinResultado3.Visible = false;
+                            lblSinResultado4.Visible = false;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

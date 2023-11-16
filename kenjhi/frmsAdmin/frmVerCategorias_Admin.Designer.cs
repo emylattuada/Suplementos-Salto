@@ -38,8 +38,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridCategorias = new System.Windows.Forms.DataGridView();
-            this.lblSinResultado2 = new System.Windows.Forms.Label();
-            this.lblSinResultado = new System.Windows.Forms.Label();
+            this.lblSinResultado4 = new System.Windows.Forms.Label();
+            this.lblSinResultado3 = new System.Windows.Forms.Label();
             this.btnGuardarCambios = new kenjhi.RJButton();
             this.btnModificar = new kenjhi.RJButton();
             this.btnVolver = new kenjhi.RJButton();
@@ -71,6 +71,8 @@
             this.txtBusquedaDGV.Name = "txtBusquedaDGV";
             this.txtBusquedaDGV.Size = new System.Drawing.Size(535, 20);
             this.txtBusquedaDGV.TabIndex = 75;
+            this.txtBusquedaDGV.MouseClick += new System.Windows.Forms.MouseEventHandler(this.txtBusquedaDGV_MouseClick);
+            this.txtBusquedaDGV.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtBusquedaDGV_KeyPress);
             // 
             // label1
             // 
@@ -156,30 +158,30 @@
             this.dataGridCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCategorias_CellClick);
             this.dataGridCategorias.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCategorias_CellValueChanged);
             // 
-            // lblSinResultado2
+            // lblSinResultado4
             // 
-            this.lblSinResultado2.AutoSize = true;
-            this.lblSinResultado2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSinResultado2.ForeColor = System.Drawing.Color.White;
-            this.lblSinResultado2.Location = new System.Drawing.Point(321, 268);
-            this.lblSinResultado2.Name = "lblSinResultado2";
-            this.lblSinResultado2.Size = new System.Drawing.Size(123, 16);
-            this.lblSinResultado2.TabIndex = 78;
-            this.lblSinResultado2.Text = "Intente nuevamente";
-            this.lblSinResultado2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblSinResultado2.Visible = false;
+            this.lblSinResultado4.AutoSize = true;
+            this.lblSinResultado4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSinResultado4.ForeColor = System.Drawing.Color.White;
+            this.lblSinResultado4.Location = new System.Drawing.Point(321, 268);
+            this.lblSinResultado4.Name = "lblSinResultado4";
+            this.lblSinResultado4.Size = new System.Drawing.Size(123, 16);
+            this.lblSinResultado4.TabIndex = 78;
+            this.lblSinResultado4.Text = "Intente nuevamente";
+            this.lblSinResultado4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblSinResultado4.Visible = false;
             // 
-            // lblSinResultado
+            // lblSinResultado3
             // 
-            this.lblSinResultado.AutoSize = true;
-            this.lblSinResultado.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSinResultado.ForeColor = System.Drawing.Color.White;
-            this.lblSinResultado.Location = new System.Drawing.Point(146, 243);
-            this.lblSinResultado.Name = "lblSinResultado";
-            this.lblSinResultado.Size = new System.Drawing.Size(467, 25);
-            this.lblSinResultado.TabIndex = 77;
-            this.lblSinResultado.Text = "La categoría ingresada no pertenece al sistema";
-            this.lblSinResultado.Visible = false;
+            this.lblSinResultado3.AutoSize = true;
+            this.lblSinResultado3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSinResultado3.ForeColor = System.Drawing.Color.White;
+            this.lblSinResultado3.Location = new System.Drawing.Point(146, 243);
+            this.lblSinResultado3.Name = "lblSinResultado3";
+            this.lblSinResultado3.Size = new System.Drawing.Size(467, 25);
+            this.lblSinResultado3.TabIndex = 77;
+            this.lblSinResultado3.Text = "La categoría ingresada no pertenece al sistema";
+            this.lblSinResultado3.Visible = false;
             // 
             // btnGuardarCambios
             // 
@@ -290,11 +292,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(673, 505);
+            this.Controls.Add(this.lblSinResultado4);
+            this.Controls.Add(this.lblSinResultado3);
             this.Controls.Add(this.btnEliminarCategoria);
             this.Controls.Add(this.btnGuardarCambios);
             this.Controls.Add(this.btnModificar);
-            this.Controls.Add(this.lblSinResultado2);
-            this.Controls.Add(this.lblSinResultado);
             this.Controls.Add(this.dataGridCategorias);
             this.Controls.Add(this.txtBusquedaDGV);
             this.Controls.Add(this.label1);
@@ -319,8 +321,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridView dataGridCategorias;
-        private System.Windows.Forms.Label lblSinResultado2;
-        private System.Windows.Forms.Label lblSinResultado;
+        private System.Windows.Forms.Label lblSinResultado4;
+        private System.Windows.Forms.Label lblSinResultado3;
         private RJButton btnModificar;
         private RJButton btnCancelarModificacion;
         private RJButton btnGuardarCambios;

@@ -190,6 +190,10 @@ namespace kenjhi
 
                 if (txtBusquedaDGV.Text.Length == 0)
                 {
+                    if (lblSinResultado.Visible == true && lblSinResultado2.Visible == true)
+                    {
+                        lblSinResultado.Visible = false; lblSinResultado2.Visible = false;
+                    }
                     
                     string consulta = "SELECT venta.ID_Venta, cliente.Nombre AS 'Nombre del Cliente', producto.Nombre AS 'Nombre del Producto', venta.Cuotas, venta.Saldo " +
                                       "FROM cliente " +
