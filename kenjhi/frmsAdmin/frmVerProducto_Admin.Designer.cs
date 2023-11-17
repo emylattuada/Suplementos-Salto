@@ -111,6 +111,7 @@
             this.dataGridProductos.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridProductos_CellFormatting);
             this.dataGridProductos.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridProductos_CellMouseClick);
             this.dataGridProductos.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridProductos_CellMouseDoubleClick);
+            this.dataGridProductos.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridProductos_CellValidating);
             this.dataGridProductos.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridProductos_CellValueChanged);
             this.dataGridProductos.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGridProductos_KeyPress);
             // 
