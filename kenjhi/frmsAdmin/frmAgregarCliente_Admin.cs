@@ -41,11 +41,11 @@ namespace kenjhi
                 return;
             }
 
-            bool clienteExiste = VerificarExistenciaCliente(nombre, telefono);
+            bool clienteExiste = VerificarExistenciaCliente(nombre, ci);
 
             if (clienteExiste)
             {
-                bool clienteEliminado = VerificarClienteEliminado(nombre, telefono);
+                bool clienteEliminado = VerificarClienteEliminado(nombre, ci);
 
                 if (clienteEliminado)
                 {
@@ -53,7 +53,7 @@ namespace kenjhi
 
                     if (result == DialogResult.Yes)
                     {
-                        RecuperarCliente(nombre, telefono);
+                        RecuperarCliente(nombre, ci);
                         MessageBox.Show("Cliente recuperado correctamente.", "Cliente recuperado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpiarCampos();
                     }
@@ -123,7 +123,7 @@ namespace kenjhi
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "INSERT INTO Cliente (Nombre, Telefono, Direccion, Email, CI) VALUES (@Nombre, @Telefono, @Direccion, @Email, CI)";
+                string query = "INSERT INTO Cliente (Nombre, Telefono, Direccion, Email, CI) VALUES (@Nombre, @Telefono, @Direccion, @Email, @CI)";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Nombre", nombre);
