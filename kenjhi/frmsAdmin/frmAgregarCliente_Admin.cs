@@ -31,7 +31,7 @@ namespace kenjhi
 
             string nombre = txtNombreCliente.Text;
             string telefono = txtNumeroCliente.Text;
-            string direccion = txtCICliente.Text;
+            string direccion = txtDirCliente.Text;
             string email = txtEmail.Text;
             string ci = txtCICliente.Text;
 
