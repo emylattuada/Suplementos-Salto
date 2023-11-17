@@ -22,7 +22,8 @@ namespace kenjhi
 
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNombreCliente.Text) || string.IsNullOrWhiteSpace(txtNumeroCliente.Text))
+            
+            if (string.IsNullOrWhiteSpace(txtNombreCliente.Text) || string.IsNullOrWhiteSpace(txtNumeroCliente.Text) || string.IsNullOrEmpty(txtCICliente.Text))
             {
                 lbl2.Visible = true;
                 System.Media.SystemSounds.Exclamation.Play();
@@ -33,6 +34,7 @@ namespace kenjhi
             string telefono = txtNumeroCliente.Text;
             string direccion = txtDirCliente.Text;
             string email = txtEmail.Text;
+            string ci = txtCICliente.Text;
 
             if (!string.IsNullOrEmpty(email) && !Regex.IsMatch(email, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"))
             {
@@ -40,11 +42,11 @@ namespace kenjhi
                 return;
             }
 
-            bool clienteExiste = VerificarExistenciaCliente(nombre, telefono);
+            bool clienteExiste = VerificarExistenciaCliente(nombre, ci);
 
             if (clienteExiste)
             {
-                bool clienteEliminado = VerificarClienteEliminado(nombre, telefono);
+                bool clienteEliminado = VerificarClienteEliminado(nombre, ci);
 
                 if (clienteEliminado)
                 {
@@ -52,83 +54,86 @@ namespace kenjhi
 
                     if (result == DialogResult.Yes)
                     {
-                        RecuperarCliente(nombre, telefono);
+                        RecuperarCliente(nombre, ci);
                         MessageBox.Show("Cliente recuperado correctamente.", "Cliente recuperado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         LimpiarCampos();
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Cliente ya existe en la base de datos.", "Cliente existente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cliente ya existente en el sistema.", "Cliente existente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
             {
-                AgregarCliente(nombre, telefono, direccion, email);
+                AgregarCliente(nombre, telefono, direccion, email, ci);
                 MessageBox.Show("Nuevo cliente ingresado correctamente.", "Nuevo cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimpiarCampos();
             }
         }
 
-        private bool VerificarExistenciaCliente(string nombre, string telefono)
+        private bool VerificarExistenciaCliente(string nombre, string ci)
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT COUNT(*) FROM Cliente WHERE Nombre = @Nombre AND Telefono = @Telefono";
+                string query = "SELECT COUNT(*) FROM Cliente WHERE Nombre = @Nombre AND CI = @CI";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Nombre", nombre);
-                    command.Parameters.AddWithValue("@Telefono", telefono);
+                    command.Parameters.AddWithValue("@CI", ci);
                     int count = Convert.ToInt32(command.ExecuteScalar());
                     return count > 0;
                 }
             }
         }
 
-        private bool VerificarClienteEliminado(string nombre, string telefono)
+        private bool VerificarClienteEliminado(string nombre, string ci)
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "SELECT COUNT(*) FROM Cliente WHERE Nombre = @Nombre AND Telefono = @Telefono AND Visible = 0";
+                string query = "SELECT COUNT(*) FROM Cliente WHERE Nombre = @Nombre AND CI = @CI AND Visible = 0";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Nombre", nombre);
-                    command.Parameters.AddWithValue("@Telefono", telefono);
+                    command.Parameters.AddWithValue("@CI", ci);
                     int count = Convert.ToInt32(command.ExecuteScalar());
                     return count > 0;
                 }
             }
         }
 
-        private void RecuperarCliente(string nombre, string telefono)
+        private void RecuperarCliente(string nombre, string ci)
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "UPDATE Cliente SET Visible = 1 WHERE Nombre = @Nombre AND Telefono = @Telefono";
+                string query = "UPDATE Cliente SET Visible = 1 WHERE Nombre = @Nombre AND CI = @CI";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Nombre", nombre);
-                    command.Parameters.AddWithValue("@Telefono", telefono);
+                    command.Parameters.AddWithValue("@CI", ci);
                     command.ExecuteNonQuery();
                 }
             }
         }
 
-        private void AgregarCliente(string nombre, string telefono, string direccion, string email)
+        private void AgregarCliente(string nombre, string telefono, string direccion, string email, string ci)
         {
             using (MySqlConnection connection = new MySqlConnection(connectionString))
             {
                 connection.Open();
-                string query = "INSERT INTO Cliente (Nombre, Telefono, Direccion, Email) VALUES (@Nombre, @Telefono, @Direccion, @Email)";
+                string query = "INSERT INTO Cliente (Nombre, Telefono, Direccion, Email, CI) VALUES (@Nombre, @Telefono, @Direccion, @Email, @CI)";
                 using (MySqlCommand command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@Nombre", nombre);
                     command.Parameters.AddWithValue("@Telefono", telefono);
                     command.Parameters.AddWithValue("@Direccion", direccion);
                     command.Parameters.AddWithValue("@Email", email);
+                    command.Parameters.AddWithValue("@CI", ci);
+
+
                     command.ExecuteNonQuery();
                 }
             }
@@ -138,9 +143,10 @@ namespace kenjhi
         {
             txtNombreCliente.Text = "";
             txtNumeroCliente.Text = "";
-            txtDirCliente.Text = "";
+            txtCICliente.Text = "";
             txtEmail.Text = "";
             lbl2.Visible = false;
+            txtDirCliente.Text = "";
         }
 
         private void label10_Click(object sender, EventArgs e)

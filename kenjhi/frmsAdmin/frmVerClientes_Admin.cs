@@ -29,7 +29,7 @@ namespace kenjhi
                 MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"); ;
                 conexion.Open();
 
-                string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente WHERE visible=1";
+                string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email, CI FROM Cliente WHERE visible=1";
 
 
                 MySqlCommand comandos = new MySqlCommand(consulta, conexion);
@@ -46,6 +46,8 @@ namespace kenjhi
                 dataGridClientes.Columns["Telefono"].HeaderText = "Numero de teléfono";
                 dataGridClientes.Columns["Direccion"].HeaderText = "Dirección";
                 dataGridClientes.Columns["Email"].HeaderText = "Correo electrónico";
+                dataGridClientes.Columns["CI"].HeaderText = "CI";
+
 
                 dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 foreach (DataGridViewColumn column in dataGridClientes.Columns)
@@ -73,7 +75,7 @@ namespace kenjhi
             {
                 using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
                 {
-                    using (MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT ID_Cliente, Nombre, Email, Telefono, Direccion FROM Cliente", connection))
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter("SELECT ID_Cliente, Nombre, Email, Telefono, Direccion, CI FROM Cliente", connection))
                     {
                         MySqlCommandBuilder commandBuilder = new MySqlCommandBuilder(adapter);
                         adapter.Update((DataTable)dataGridClientes.DataSource);
@@ -96,7 +98,7 @@ namespace kenjhi
                         MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"); ;
                         conexion.Open();
 
-                        string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente WHERE visible=1";
+                        string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email, CI FROM Cliente WHERE visible=1";
 
 
                         MySqlCommand comandos = new MySqlCommand(consulta, conexion);
@@ -113,6 +115,8 @@ namespace kenjhi
                         dataGridClientes.Columns["Telefono"].HeaderText = "Numero de teléfono";
                         dataGridClientes.Columns["Direccion"].HeaderText = "Dirección";
                         dataGridClientes.Columns["Email"].HeaderText = "Correo electrónico";
+                        dataGridClientes.Columns["CI"].HeaderText = "CI";
+
 
                         dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         foreach (DataGridViewColumn column in dataGridClientes.Columns)
@@ -184,7 +188,7 @@ namespace kenjhi
                         MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"); ;
                         conexion.Open();
 
-                        string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente WHERE visible=1";
+                        string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email, CI FROM Cliente WHERE visible=1";
 
 
                         MySqlCommand comandos = new MySqlCommand(consulta, conexion);
@@ -201,13 +205,14 @@ namespace kenjhi
                         dataGridClientes.Columns["Telefono"].HeaderText = "Numero de teléfono";
                         dataGridClientes.Columns["Direccion"].HeaderText = "Dirección";
                         dataGridClientes.Columns["Email"].HeaderText = "Correo electrónico";
+                        dataGridClientes.Columns["CI"].HeaderText = "CI";
+
 
                         dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                         foreach (DataGridViewColumn column in dataGridClientes.Columns)
                         {
                             column.ReadOnly = true;
                         }
-                        btnEliminarCliente.Visible = false;
                         conexion.Close();
                     }
                     catch (Exception ex)
@@ -254,7 +259,7 @@ namespace kenjhi
                     MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"); ;
                     conexion.Open();
 
-                    string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente WHERE visible=1";
+                    string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email, CI FROM Cliente WHERE visible=1";
 
 
                     MySqlCommand comandos = new MySqlCommand(consulta, conexion);
@@ -271,6 +276,8 @@ namespace kenjhi
                     dataGridClientes.Columns["Telefono"].HeaderText = "Numero de teléfono";
                     dataGridClientes.Columns["Direccion"].HeaderText = "Dirección";
                     dataGridClientes.Columns["Email"].HeaderText = "Correo electrónico";
+                    dataGridClientes.Columns["CI"].HeaderText = "CI";
+
 
                     dataGridClientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     foreach (DataGridViewColumn column in dataGridClientes.Columns)

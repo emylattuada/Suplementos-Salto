@@ -54,7 +54,7 @@ namespace kenjhi.frmsAdmin
                 MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"); ;
                 conexion.Open();
 
-                string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente WHERE visible=0";
+                string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email, CI FROM Cliente WHERE visible=0";
 
 
                 MySqlCommand comandos = new MySqlCommand(consulta, conexion);
@@ -71,6 +71,8 @@ namespace kenjhi.frmsAdmin
                 dataGridRecuperarDatos.Columns["Telefono"].HeaderText = "Numero de teléfono";
                 dataGridRecuperarDatos.Columns["Direccion"].HeaderText = "Dirección";
                 dataGridRecuperarDatos.Columns["Email"].HeaderText = "Correo electrónico";
+                dataGridRecuperarDatos.Columns["CI"].HeaderText = "CI";
+
 
                 dataGridRecuperarDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                 foreach (DataGridViewColumn column in dataGridRecuperarDatos.Columns)
@@ -120,7 +122,7 @@ namespace kenjhi.frmsAdmin
                     MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"); ;
                     conexion.Open();
 
-                    string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email FROM Cliente WHERE visible=0";
+                    string consulta = "SELECT ID_Cliente, Nombre, Telefono, Direccion, Email, CI FROM Cliente WHERE visible=0";
 
 
                     MySqlCommand comandos = new MySqlCommand(consulta, conexion);
@@ -137,6 +139,8 @@ namespace kenjhi.frmsAdmin
                     dataGridRecuperarDatos.Columns["Telefono"].HeaderText = "Numero de teléfono";
                     dataGridRecuperarDatos.Columns["Direccion"].HeaderText = "Dirección";
                     dataGridRecuperarDatos.Columns["Email"].HeaderText = "Correo electrónico";
+                    dataGridRecuperarDatos.Columns["CI"].HeaderText = "CI";
+
 
                     dataGridRecuperarDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 

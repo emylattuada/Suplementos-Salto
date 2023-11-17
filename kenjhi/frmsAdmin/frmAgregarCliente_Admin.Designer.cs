@@ -368,7 +368,7 @@
             this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox6.Enabled = false;
             this.textBox6.ForeColor = System.Drawing.Color.Black;
-            this.textBox6.Location = new System.Drawing.Point(113, 390);
+            this.textBox6.Location = new System.Drawing.Point(113, 391);
             this.textBox6.Multiline = true;
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(450, 1);

@@ -60,7 +60,7 @@ namespace kenjhi
                 }
                 else
                 {
-                    MessageBox.Show("Cliente ya existe en la base de datos.", "Cliente existente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Cliente ya existente en el sistema.", "Cliente existente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else
@@ -145,6 +145,7 @@ namespace kenjhi
             txtCICliente.Text = "";
             txtEmail.Text = "";
             lbl2.Visible = false;
+            txtDirCliente.Text = "";
         }
 
         private void label10_Click(object sender, EventArgs e)
