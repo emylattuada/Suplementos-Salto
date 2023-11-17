@@ -20,6 +20,8 @@ namespace kenjhi
             InitializeComponent();
             dataAgregarIngreso.Format = DateTimePickerFormat.Custom;
             dataAgregarIngreso.CustomFormat = "dd/MM/yyyy";
+            dataAgregarIngreso.MaxDate = DateTime.Today;
+
 
             string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
            

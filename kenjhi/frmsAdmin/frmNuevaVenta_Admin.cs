@@ -23,6 +23,7 @@ namespace kenjhi
         {
 
             InitializeComponent();
+            dataFechaVenta.MaxDate = DateTime.Today;
 
 
         }
@@ -370,7 +371,6 @@ namespace kenjhi
             radioContado.Checked = false;
             radioCuotas.Checked = false;
             dataGridCarrito.Rows.Clear();
-            dataFechaVenta.Value = DateTime.Now;
         }
 
         private void dataGridCarrito_CellClick(object sender, DataGridViewCellEventArgs e)
