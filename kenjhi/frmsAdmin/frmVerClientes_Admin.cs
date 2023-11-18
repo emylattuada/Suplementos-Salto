@@ -22,6 +22,8 @@ namespace kenjhi
             txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
             dataGridClientes.RowTemplate.Height = 40;
             dataGridClientes.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10);
+            //dataGridClientes.CellValidating += dataGridClientes_CellValidating;
+
 
 
             try
@@ -349,6 +351,25 @@ namespace kenjhi
         private void label10_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridClientes_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridClientes.Columns["CI"].Index)
+            {
+                string newValue = e.FormattedValue.ToString();
+
+                if (string.IsNullOrEmpty(newValue))
+                {
+                    MessageBox.Show("No se puede dejar vacío el campo CI.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                   
+                }
+                else if (newValue.Length > 8)
+                {
+                    MessageBox.Show("La CI no puede tener más de 8 dígitos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                   
+                }
+            }
         }
     }
 }

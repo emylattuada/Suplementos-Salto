@@ -226,7 +226,7 @@ namespace kenjhi.frmsAdmin
 
                         conexion.Close();
 
-                        MessageBox.Show("Devolución exitosa. Los productos han sido devueltos al stock.", "Devolución", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Devolución exitosa.", "Devolución", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         btnDevolucion.Visible = false;
                         txtBusquedaDGV.Clear();
                         CargaDatosDGV();

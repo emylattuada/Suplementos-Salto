@@ -107,6 +107,7 @@
             this.dataGridClientes.TabIndex = 0;
             this.dataGridClientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridClientes_CellMouseClick);
             this.dataGridClientes.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridClientes_CellMouseDoubleClick);
+            this.dataGridClientes.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridClientes_CellValidating);
             this.dataGridClientes.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridClientes_CellValueChanged);
             // 
             // txtBusquedaDGV
@@ -286,7 +287,7 @@
             this.label10.Text = "Menú principal > Clientes > Ver clientes\r\n";
             this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
-            // frmVerClientes_Admin
+            // frmVerClientes_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -305,7 +306,7 @@
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.dataGridClientes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmVerClientes_Admin";
+            this.Name = "frmVerClientes_Empleados";
             this.Text = "Suplementos Salto";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridClientes)).EndInit();
             this.ResumeLayout(false);

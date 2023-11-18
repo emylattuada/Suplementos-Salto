@@ -107,6 +107,7 @@
             this.dataGridClientes.TabIndex = 0;
             this.dataGridClientes.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridClientes_CellMouseClick);
             this.dataGridClientes.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridClientes_CellMouseDoubleClick);
+            this.dataGridClientes.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridClientes_CellValidating);
             this.dataGridClientes.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridClientes_CellValueChanged);
             // 
             // txtBusquedaDGV

@@ -39,11 +39,29 @@ namespace kenjhi
             toolTipAyuda = new ToolTip();
 
 
+            //using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
+            //{
+            //    connection.Open();
+
+            //    string consultaClientes = "SELECT ID_Cliente, Nombre, Telefono FROM cliente WHERE Visible = 1";
+
+            //    MySqlCommand cmdClientes = new MySqlCommand(consultaClientes, connection);
+            //    MySqlDataReader readerClientes = cmdClientes.ExecuteReader();
+
+            //    while (readerClientes.Read())
+            //    {
+            //        int idCliente = readerClientes.GetInt32("ID_Cliente");
+            //        string nombreCliente = readerClientes.GetString("Nombre");
+            //        string telefonoCliente = readerClientes.GetString("Telefono");
+
+            //        comboListaClientes.Items.Add(new Cliente(idCliente, nombreCliente, telefonoCliente));
+            //    }
+            //}
             using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
             {
                 connection.Open();
 
-                string consultaClientes = "SELECT ID_Cliente, Nombre, Telefono FROM cliente WHERE Visible = 1";
+                string consultaClientes = "SELECT ID_Cliente, Nombre, CI FROM cliente WHERE Visible = 1";
 
                 MySqlCommand cmdClientes = new MySqlCommand(consultaClientes, connection);
                 MySqlDataReader readerClientes = cmdClientes.ExecuteReader();
@@ -51,12 +69,13 @@ namespace kenjhi
                 while (readerClientes.Read())
                 {
                     int idCliente = readerClientes.GetInt32("ID_Cliente");
-                    string nombreCliente = readerClientes.GetString("Nombre");
-                    string telefonoCliente = readerClientes.GetString("Telefono");
+                    string nombreCliente = readerClientes.IsDBNull(readerClientes.GetOrdinal("Nombre")) ? null : readerClientes.GetString("Nombre");
+                    string ciCliente = readerClientes.IsDBNull(readerClientes.GetOrdinal("CI")) ? null : readerClientes.GetString("CI");
 
-                    comboListaClientes.Items.Add(new Cliente(idCliente, nombreCliente, telefonoCliente));
+                    comboListaClientes.Items.Add(new Cliente(idCliente, nombreCliente, ciCliente));
                 }
             }
+
 
             using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
             {
