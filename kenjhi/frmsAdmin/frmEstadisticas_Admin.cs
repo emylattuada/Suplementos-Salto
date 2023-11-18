@@ -699,7 +699,7 @@ namespace kenjhi.frmsAdmin
                                       "FROM asignado a " +
                                       "INNER JOIN venta v ON a.ID_Venta = v.ID_Venta " +
                                       "INNER JOIN producto p ON a.ID_Producto = p.ID_Producto " +
-                                      "WHERE v.Fecha_Venta BETWEEN DATE_SUB(NOW(), INTERVAL 7 DAY) AND NOW() " +
+                                      "WHERE v.Fecha_Venta BETWEEN DATE_SUB(NOW(), INTERVAL 30 DAY) AND NOW() " +
                                       "GROUP BY a.ID_Producto " +
                                       "ORDER BY TotalVendido DESC LIMIT 5";
 

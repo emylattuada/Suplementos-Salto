@@ -36,40 +36,7 @@ namespace kenjhi.frmsAdmin
         {
         }
 
-        private void btnEliminarProducto_Click(object sender, EventArgs e)
-        {
-            if (dataGridVentas.SelectedRows.Count > 0)
-            {
-                int rowIndex = dataGridVentas.SelectedRows[0].Index;
-                int idVenta = Convert.ToInt32(dataGridVentas.Rows[rowIndex].Cells["ID_Venta"].Value);
-
-                try
-                {
-                    using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
-                    {
-                        conexion.Open();
-
-                        string consultaActualizar = $"UPDATE venta SET visible = 0 WHERE ID_Venta = {idVenta}";
-                        MySqlCommand comandoActualizar = new MySqlCommand(consultaActualizar, conexion);
-                        comandoActualizar.ExecuteNonQuery();
-
-                        conexion.Close();
-
-                        dataGridVentas.Rows[rowIndex].Visible = false;
-
-                        MessageBox.Show("Venta ocultada.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al ocultar la venta: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                MessageBox.Show("Por favor, selecciona una fila para ocultar.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
+   
 
         private void txtBusquedaDGV_KeyPress(object sender, KeyPressEventArgs e)
         {
