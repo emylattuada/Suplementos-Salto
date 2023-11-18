@@ -145,7 +145,7 @@ namespace kenjhi.frmsAdmin
 
         private void btnDevolucion_Click(object sender, EventArgs e)
         {
-            
+                
 
             if (dataGridVentas.SelectedRows.Count > 0)
             {

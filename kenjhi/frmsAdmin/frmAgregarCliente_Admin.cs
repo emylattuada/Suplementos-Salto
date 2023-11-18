@@ -22,6 +22,13 @@ namespace kenjhi
 
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
+            if (txtCICliente.Text.Length > 8)
+            {
+                MessageBox.Show("La CI ingresada supera los 8 digitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            }
+
             if (string.IsNullOrWhiteSpace(txtNombreCliente.Text) || string.IsNullOrWhiteSpace(txtNumeroCliente.Text) || string.IsNullOrEmpty(txtCICliente.Text))
             {
                 lbl2.Visible = true;
