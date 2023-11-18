@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1:3306
--- Tiempo de generación: 16-11-2023 a las 23:35:21
+-- Tiempo de generación: 18-11-2023 a las 04:08:21
 -- Versión del servidor: 8.0.32
 -- Versión de PHP: 8.0.26
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `suple`
 --
+CREATE DATABASE IF NOT EXISTS `suple` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
+USE `suple`;
 
 -- --------------------------------------------------------
 
@@ -66,8 +68,9 @@ CREATE TABLE IF NOT EXISTS `cliente` (
   `Telefono` varchar(20) DEFAULT NULL,
   `Direccion` varchar(100) DEFAULT NULL,
   `Visible` decimal(2,1) DEFAULT '1.0',
+  `CI` varchar(8) DEFAULT NULL,
   PRIMARY KEY (`ID_Cliente`)
-) ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
 
@@ -136,7 +139,14 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `Visible` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`ID_Usuario`),
   UNIQUE KEY `NombreUsuario` (`NombreUsuario`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Volcado de datos para la tabla `usuarios`
+--
+
+INSERT INTO `usuarios` (`ID_Usuario`, `NombreUsuario`, `Contraseña`, `Rol`, `codigo`, `email`, `Visible`) VALUES
+(1, 'nicosuple', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 'Admin', '499147', '5dxuruguay@gmail.com', 1);
 
 -- --------------------------------------------------------
 
