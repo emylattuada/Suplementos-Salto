@@ -63,6 +63,19 @@
             this.panelLogo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelChildForm = new System.Windows.Forms.Panel();
+            this.panelCuenta = new System.Windows.Forms.Panel();
+            this.linkCorreo = new System.Windows.Forms.LinkLabel();
+            this.linkNombre = new System.Windows.Forms.LinkLabel();
+            this.linkCambiarPass = new System.Windows.Forms.LinkLabel();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.pictureCerrarSesion = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtNombreUsuario = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.picturePerfil = new System.Windows.Forms.PictureBox();
             this.label1S = new System.Windows.Forms.Label();
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblHora = new System.Windows.Forms.Label();
@@ -71,6 +84,9 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.horafecha = new System.Windows.Forms.Timer(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.cerrarSesiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnGuardar = new kenjhi.RJButton();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -82,7 +98,11 @@
             this.panelLogo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panelChildForm.SuspendLayout();
+            this.panelCuenta.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureCerrarSesion)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -644,6 +664,8 @@
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelChildForm.Controls.Add(this.panelCuenta);
+            this.panelChildForm.Controls.Add(this.picturePerfil);
             this.panelChildForm.Controls.Add(this.label1S);
             this.panelChildForm.Controls.Add(this.lblFecha);
             this.panelChildForm.Controls.Add(this.lblHora);
@@ -656,6 +678,182 @@
             this.panelChildForm.Name = "panelChildForm";
             this.panelChildForm.Size = new System.Drawing.Size(670, 505);
             this.panelChildForm.TabIndex = 4;
+            // 
+            // panelCuenta
+            // 
+            this.panelCuenta.BackColor = System.Drawing.Color.Yellow;
+            this.panelCuenta.Controls.Add(this.btnGuardar);
+            this.panelCuenta.Controls.Add(this.linkCorreo);
+            this.panelCuenta.Controls.Add(this.linkNombre);
+            this.panelCuenta.Controls.Add(this.linkCambiarPass);
+            this.panelCuenta.Controls.Add(this.txtEmail);
+            this.panelCuenta.Controls.Add(this.label3);
+            this.panelCuenta.Controls.Add(this.textBox3);
+            this.panelCuenta.Controls.Add(this.pictureCerrarSesion);
+            this.panelCuenta.Controls.Add(this.label1);
+            this.panelCuenta.Controls.Add(this.txtNombreUsuario);
+            this.panelCuenta.Controls.Add(this.label2);
+            this.panelCuenta.Controls.Add(this.textBox1);
+            this.panelCuenta.Location = new System.Drawing.Point(436, 53);
+            this.panelCuenta.Name = "panelCuenta";
+            this.panelCuenta.Size = new System.Drawing.Size(222, 256);
+            this.panelCuenta.TabIndex = 7;
+            this.panelCuenta.Visible = false;
+            this.panelCuenta.Paint += new System.Windows.Forms.PaintEventHandler(this.panelCuenta_Paint);
+            // 
+            // linkCorreo
+            // 
+            this.linkCorreo.ActiveLinkColor = System.Drawing.Color.White;
+            this.linkCorreo.AutoSize = true;
+            this.linkCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkCorreo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.linkCorreo.LinkColor = System.Drawing.Color.Black;
+            this.linkCorreo.Location = new System.Drawing.Point(146, 119);
+            this.linkCorreo.Name = "linkCorreo";
+            this.linkCorreo.Size = new System.Drawing.Size(58, 16);
+            this.linkCorreo.TabIndex = 56;
+            this.linkCorreo.TabStop = true;
+            this.linkCorreo.Text = "Cambiar";
+            this.linkCorreo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCorreo_LinkClicked);
+            // 
+            // linkNombre
+            // 
+            this.linkNombre.ActiveLinkColor = System.Drawing.Color.White;
+            this.linkNombre.AutoSize = true;
+            this.linkNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkNombre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.linkNombre.LinkColor = System.Drawing.Color.Black;
+            this.linkNombre.Location = new System.Drawing.Point(146, 56);
+            this.linkNombre.Name = "linkNombre";
+            this.linkNombre.Size = new System.Drawing.Size(58, 16);
+            this.linkNombre.TabIndex = 55;
+            this.linkNombre.TabStop = true;
+            this.linkNombre.Text = "Cambiar";
+            this.linkNombre.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkNombre_LinkClicked);
+            // 
+            // linkCambiarPass
+            // 
+            this.linkCambiarPass.ActiveLinkColor = System.Drawing.Color.White;
+            this.linkCambiarPass.AutoSize = true;
+            this.linkCambiarPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkCambiarPass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.linkCambiarPass.LinkColor = System.Drawing.Color.Black;
+            this.linkCambiarPass.Location = new System.Drawing.Point(46, 224);
+            this.linkCambiarPass.Name = "linkCambiarPass";
+            this.linkCambiarPass.Size = new System.Drawing.Size(128, 16);
+            this.linkCambiarPass.TabIndex = 54;
+            this.linkCambiarPass.TabStop = true;
+            this.linkCambiarPass.Text = "Cambiar contraseña";
+            this.linkCambiarPass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkCambiarPass_LinkClicked);
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.Color.Yellow;
+            this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtEmail.Enabled = false;
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.ForeColor = System.Drawing.Color.White;
+            this.txtEmail.Location = new System.Drawing.Point(16, 142);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(188, 20);
+            this.txtEmail.TabIndex = 52;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(13, 120);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(117, 16);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "Correo electronico";
+            // 
+            // textBox3
+            // 
+            this.textBox3.BackColor = System.Drawing.Color.Black;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox3.Enabled = false;
+            this.textBox3.ForeColor = System.Drawing.Color.Black;
+            this.textBox3.Location = new System.Drawing.Point(16, 167);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(188, 1);
+            this.textBox3.TabIndex = 50;
+            // 
+            // pictureCerrarSesion
+            // 
+            this.pictureCerrarSesion.Image = global::kenjhi.Properties.Resources._3_puntitos_adm;
+            this.pictureCerrarSesion.Location = new System.Drawing.Point(147, 14);
+            this.pictureCerrarSesion.Name = "pictureCerrarSesion";
+            this.pictureCerrarSesion.Size = new System.Drawing.Size(57, 28);
+            this.pictureCerrarSesion.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureCerrarSesion.TabIndex = 49;
+            this.pictureCerrarSesion.TabStop = false;
+            this.pictureCerrarSesion.Click += new System.EventHandler(this.pictureCerrarSesion_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(10, 11);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 31);
+            this.label1.TabIndex = 48;
+            this.label1.Text = "Cuenta";
+            // 
+            // txtNombreUsuario
+            // 
+            this.txtNombreUsuario.BackColor = System.Drawing.Color.Yellow;
+            this.txtNombreUsuario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtNombreUsuario.Enabled = false;
+            this.txtNombreUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreUsuario.ForeColor = System.Drawing.Color.White;
+            this.txtNombreUsuario.Location = new System.Drawing.Point(16, 76);
+            this.txtNombreUsuario.Multiline = true;
+            this.txtNombreUsuario.Name = "txtNombreUsuario";
+            this.txtNombreUsuario.Size = new System.Drawing.Size(188, 20);
+            this.txtNombreUsuario.TabIndex = 47;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(13, 54);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 16);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "Nombre";
+            // 
+            // textBox1
+            // 
+            this.textBox1.BackColor = System.Drawing.Color.Black;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Enabled = false;
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(16, 101);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(188, 1);
+            this.textBox1.TabIndex = 45;
+            // 
+            // picturePerfil
+            // 
+            this.picturePerfil.BackColor = System.Drawing.Color.Black;
+            this.picturePerfil.Image = global::kenjhi.Properties.Resources.perfil_menu_adm;
+            this.picturePerfil.Location = new System.Drawing.Point(616, 11);
+            this.picturePerfil.Name = "picturePerfil";
+            this.picturePerfil.Size = new System.Drawing.Size(42, 36);
+            this.picturePerfil.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picturePerfil.TabIndex = 5;
+            this.picturePerfil.TabStop = false;
+            this.picturePerfil.Click += new System.EventHandler(this.picturePerfil_Click);
             // 
             // label1S
             // 
@@ -734,11 +932,46 @@
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Paint += new System.Windows.Forms.PaintEventHandler(this.pictureBox5_Paint);
             // 
             // horafecha
             // 
             this.horafecha.Enabled = true;
             this.horafecha.Tick += new System.EventHandler(this.horafecha_Tick);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cerrarSesiónToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(143, 26);
+            // 
+            // cerrarSesiónToolStripMenuItem
+            // 
+            this.cerrarSesiónToolStripMenuItem.Name = "cerrarSesiónToolStripMenuItem";
+            this.cerrarSesiónToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
+            this.cerrarSesiónToolStripMenuItem.Text = "Cerrar sesión";
+            this.cerrarSesiónToolStripMenuItem.Click += new System.EventHandler(this.cerrarSesiónToolStripMenuItem_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.Black;
+            this.btnGuardar.BackgroundColor = System.Drawing.Color.Black;
+            this.btnGuardar.BorderColor = System.Drawing.Color.Transparent;
+            this.btnGuardar.BorderRadius = 10;
+            this.btnGuardar.BorderSize = 0;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.Yellow;
+            this.btnGuardar.Location = new System.Drawing.Point(16, 177);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(188, 44);
+            this.btnGuardar.TabIndex = 53;
+            this.btnGuardar.Text = "Agregar";
+            this.btnGuardar.TextColor = System.Drawing.Color.Yellow;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // frmMenu_Admin
             // 
@@ -767,7 +1000,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panelChildForm.ResumeLayout(false);
             this.panelChildForm.PerformLayout();
+            this.panelCuenta.ResumeLayout(false);
+            this.panelCuenta.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureCerrarSesion)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picturePerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -815,5 +1053,21 @@
         private System.Windows.Forms.Label label1S;
         private System.Windows.Forms.Button btnVerCategorias;
         private System.Windows.Forms.Button btnDeudores;
+        private System.Windows.Forms.PictureBox picturePerfil;
+        private System.Windows.Forms.Panel panelCuenta;
+        private System.Windows.Forms.PictureBox pictureCerrarSesion;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtNombreUsuario;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox textBox3;
+        private RJButton btnGuardar;
+        private System.Windows.Forms.LinkLabel linkCambiarPass;
+        private System.Windows.Forms.LinkLabel linkCorreo;
+        private System.Windows.Forms.LinkLabel linkNombre;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem cerrarSesiónToolStripMenuItem;
     }
 }

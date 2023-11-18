@@ -63,6 +63,16 @@ namespace kenjhi.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _3_puntitos_adm {
+            get {
+                object obj = ResourceManager.GetObject("3 puntitos adm", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap adm {
             get {
                 object obj = ResourceManager.GetObject("adm", resourceCulture);
@@ -226,6 +236,16 @@ namespace kenjhi.Properties {
         internal static System.Drawing.Bitmap ojos_cruzados__1_ {
             get {
                 object obj = ResourceManager.GetObject("ojos-cruzados (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap perfil_menu_adm {
+            get {
+                object obj = ResourceManager.GetObject("perfil menu adm", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

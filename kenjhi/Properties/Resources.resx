@@ -121,8 +121,11 @@
   <data name="empleados" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\empleados.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="adm" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\adm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="perfil menu adm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\perfil menu adm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="proteina (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\proteina (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo-infinity-amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo-infinity-amarillo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -133,11 +136,14 @@
   <data name="productos" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\productos.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ojo (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\ojo (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="version" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\version.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="cerrar sesion" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cerrar sesion.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="informacion (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\informacion (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="circulo-de-usuario (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\circulo-de-usuario (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,8 +154,8 @@
   <data name="chat-flecha-crecer" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\chat-flecha-crecer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="circulo-de-usuario (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\circulo-de-usuario (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="adm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\adm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="expediente" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\expediente.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,25 +163,25 @@
   <data name="ingresar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ingresar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="circulo-de-usuario (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\circulo-de-usuario (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="circulo-amarillo-panel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\circulo-amarillo-panel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="infinity-amarillo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\infinity-amarillo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="informacion (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\informacion (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="proteina (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\proteina (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="ojo (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ojo (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="administrador" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\administrador.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="version" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\version.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="imprimir" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\imprimir.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="3 puntitos adm" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3 puntitos adm.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

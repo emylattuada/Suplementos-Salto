@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using kenjhi.frmsAdmin;
@@ -17,11 +19,58 @@ namespace kenjhi
 {
     public partial class frmMenu_Admin : Form
     {
+        string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
+        private string originalNombreUsuario;
+        private string originalEmail;
         public frmMenu_Admin()
         {
             InitializeComponent();
             customizeDesign();
+            picturePerfil = new PictureBox();
+            picturePerfil.Size = new Size(100, 100); 
+            picturePerfil.SizeMode = PictureBoxSizeMode.Zoom; 
+            picturePerfil.Image = Properties.Resources.perfil_menu_adm; 
+            picturePerfil.Paint += pictureBox5_Paint;
+            ObtenerDatosAdmin();
 
+        }
+
+        
+
+        private void ObtenerDatosAdmin()
+        {
+            try
+            {
+                using (MySqlConnection conexion = new MySqlConnection(connectionString))
+                {
+                    conexion.Open();
+
+                    string consulta = "SELECT NombreUsuario, email FROM usuarios WHERE Rol = 'Admin' AND Visible = 1 LIMIT 1";
+
+                    using (MySqlCommand cmd = new MySqlCommand(consulta, conexion))
+                    {
+                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                originalNombreUsuario = reader["NombreUsuario"].ToString();
+                                originalEmail = reader["email"].ToString();
+
+                                txtNombreUsuario.Text = originalNombreUsuario;
+                                txtEmail.Text = originalEmail;
+                            }
+                            else
+                            {
+                                MessageBox.Show("No se encontraron datos para el rol de Admin", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error al obtener datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void customizeDesign()
@@ -460,7 +509,120 @@ namespace kenjhi
             CambioColorSalir(btnDeudores);
         }
 
-        
+        private void pictureBox5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void picturePerfil_Click(object sender, EventArgs e)
+        {
+            panelCuenta.Visible = !panelCuenta.Visible;
+
+        }
+
+        private void linkNombre_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            txtNombreUsuario.Enabled = true;
+            btnGuardar.Enabled = true;
+            txtNombreUsuario.ForeColor= Color.Black;
+        }
+
+        private void linkCorreo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            txtEmail.Enabled = true;
+            btnGuardar.Enabled = true;
+            txtEmail.ForeColor = Color.Black;
+
+
+        }
+
+        private void panelCuenta_Paint(object sender, PaintEventArgs e)
+        {
+            using (GraphicsPath path = new GraphicsPath())
+            {
+                int radio = 50; 
+                path.AddArc(0, 0, radio, radio, 180, 90);
+                path.AddArc(panelCuenta.Width - radio, 0, radio, radio, 270, 90);
+                path.AddArc(panelCuenta.Width - radio, panelCuenta.Height - radio, radio, radio, 0, 90);
+                path.AddArc(0, panelCuenta.Height - radio, radio, radio, 90, 90);
+                panelCuenta.Region = new Region(path);
+            }
+        }
+
+        private void pictureCerrarSesion_Click(object sender, EventArgs e)
+        {
+            contextMenuStrip1.Show(Cursor.Position);
+
+        }
+
+        private void cerrarSesiónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            formLogin login = new formLogin();
+            login.Show();
+            this.Hide();
+        }
+
+        private void linkCambiarPass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmCambiarPass formCambiarContrasenia = new frmCambiarPass();
+            formCambiarContrasenia.Show();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            string nuevoNombreUsuario = txtNombreUsuario.Text;
+            string nuevoEmail = txtEmail.Text;
+
+            if (!string.IsNullOrEmpty(nuevoEmail) && !Regex.IsMatch(nuevoEmail, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"))
+            {
+                MessageBox.Show("El correo electrónico no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (nuevoNombreUsuario == originalNombreUsuario && nuevoEmail == originalEmail)
+            {
+                MessageBox.Show("No has cambiado ningún dato. Realiza cambios antes de actualizar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            try
+            {
+                using (MySqlConnection conexion = new MySqlConnection(connectionString))
+                {
+                    conexion.Open();
+
+                    string consulta = "UPDATE usuarios SET NombreUsuario = @NombreUsuario, email = @Email WHERE Rol = 'Admin' AND Visible = 1";
+
+                    using (MySqlCommand cmd = new MySqlCommand(consulta, conexion))
+                    {
+                        cmd.Parameters.AddWithValue("@NombreUsuario", nuevoNombreUsuario);
+                        cmd.Parameters.AddWithValue("@Email", nuevoEmail);
+
+                        int filasAfectadas = cmd.ExecuteNonQuery();
+
+                        if (filasAfectadas > 0)
+                        {
+                            MessageBox.Show("Datos actualizados correctamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtNombreUsuario.Enabled = false;
+                            txtEmail.Enabled = false;
+
+                            originalNombreUsuario = nuevoNombreUsuario;
+                            originalEmail = nuevoEmail;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No se pudo actualizar los datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString(), "Error al actualizar datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
 
         private void CambioColorSalir(Button boton)
         {

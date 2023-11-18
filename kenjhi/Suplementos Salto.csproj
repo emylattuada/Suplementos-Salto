@@ -474,6 +474,8 @@
     <None Include="Resources\productos.png" />
     <None Include="Resources\proteina %281%29.png" />
     <None Include="Resources\imprimir.png" />
+    <None Include="Resources\perfil menu adm.png" />
+    <None Include="Resources\3 puntitos adm.png" />
     <Content Include="Resources\Sin-título-1 %281%29.ico" />
   </ItemGroup>
   <ItemGroup />
