@@ -36,6 +36,7 @@ namespace kenjhi
                    "LEFT JOIN categoria c ON p.ID_Categoria = c.ID_Categoria " +
                    "WHERE p.visible = 1";
 
+
                 MySqlCommand comandos = new MySqlCommand(consulta, conexion);
                 MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
 

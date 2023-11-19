@@ -40,6 +40,90 @@ namespace kenjhi.frmsAdmin
 
         private void txtBusquedaDGV_KeyPress(object sender, KeyPressEventArgs e)
         {
+            //if (txtBusquedaDGV.Text.Length == 0)
+            //{
+            //    labelresultado1.Visible = false;
+            //    labelresultado2.Visible = false;
+            //    try
+            //    {
+            //        MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
+            //        conexion.Open();
+
+            //        string consulta = "SELECT v.ID_Venta, c.ID_Cliente, c.Nombre AS NombreCliente, p.Nombre AS NombreProducto, v.Tipo, v.Saldo, v.Fecha_Venta, a.Cantidad AS CantidadComprada " +
+            //             "FROM venta v " +
+            //             "INNER JOIN cliente c ON v.ID_Cliente = c.ID_Cliente " +
+            //             "INNER JOIN asignado a ON v.ID_Venta = a.ID_Venta " +
+            //             "INNER JOIN producto p ON a.ID_Producto = p.ID_Producto " +
+            //             "WHERE v.devuelto = 1";
+
+
+            //        MySqlCommand comandos = new MySqlCommand(consulta, conexion);
+            //        MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
+
+            //        DataTable tablaVentas = new DataTable();
+            //        adaptador.Fill(tablaVentas);
+
+            //        dataGridVentas.DataSource = tablaVentas;
+
+            //        dataGridVentas.Columns["ID_Venta"].Visible = false;
+            //        dataGridVentas.Columns["ID_Cliente"].Visible = false;
+
+            //        dataGridVentas.Columns["NombreCliente"].HeaderText = "Nombre del Cliente";
+            //        dataGridVentas.Columns["NombreProducto"].HeaderText = "Nombre del Producto";
+            //        dataGridVentas.Columns["Tipo"].HeaderText = "Tipo";
+            //        dataGridVentas.Columns["Saldo"].HeaderText = "Saldo Pesos UYU";
+            //        dataGridVentas.Columns["Fecha_Venta"].HeaderText = "Fecha de Compra";
+            //        dataGridVentas.Columns["Fecha_Venta"].DefaultCellStyle.Format = "dd/MM/yyyy";
+
+            //        dataGridVentas.Columns["CantidadComprada"].HeaderText = "Cantidad Comprada";
+
+            //        dataGridVentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            //        conexion.Close();
+            //    }
+            //    catch (Exception ex)
+            //    {
+            //        MessageBox.Show(ex.ToString(), "Error al cargar los datos de ventas", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //    }
+            //}
+
+
+
+            //if (txtBusquedaDGV.Text.Length > 0)
+            //{
+            //    string textoBusqueda = txtBusquedaDGV.Text;
+            //    using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
+            //    {
+            //        conexion.Open();
+            //        string consulta = "SELECT v.ID_Venta, c.Nombre AS NombreCliente, p.Nombre AS NombreProducto, v.Tipo, v.Saldo, v.Fecha_Venta, a.Cantidad AS CantidadComprada " +
+            //            "FROM venta v " +
+            //            "INNER JOIN cliente c ON v.ID_Cliente = c.ID_Cliente " +
+            //            "INNER JOIN asignado a ON v.ID_Venta = a.ID_Venta " +
+            //            "INNER JOIN producto p ON a.ID_Producto = p.ID_Producto " +
+            //            "WHERE c.Nombre LIKE @textoBusqueda AND v.devuelto = 1";  
+
+            //        using (MySqlCommand cmd = new MySqlCommand(consulta, conexion))
+            //        {
+            //            cmd.Parameters.AddWithValue("@textoBusqueda", "%" + textoBusqueda + "%");
+            //            MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+            //            DataTable dataTable = new DataTable();
+            //            adapter.Fill(dataTable);
+            //            dataGridVentas.DataSource = dataTable;
+            //            dataGridVentas.Columns["ID_Venta"].Visible = false;
+            //            if (dataTable.Rows.Count == 0)
+            //            {
+
+            //                labelresultado1.Visible = true;
+            //                labelresultado2.Visible = true;
+            //            }
+            //            else
+            //            {
+            //                labelresultado1.Visible = false;
+            //                labelresultado2.Visible = false;
+            //            }
+            //        }
+            //    }
+            //}
             if (txtBusquedaDGV.Text.Length == 0)
             {
                 labelresultado1.Visible = false;
@@ -49,19 +133,21 @@ namespace kenjhi.frmsAdmin
                     MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
                     conexion.Open();
 
-                    string consulta = "SELECT v.ID_Venta, c.ID_Cliente, c.Nombre AS NombreCliente, p.Nombre AS NombreProducto, v.Tipo, v.Saldo, v.Fecha_Venta, a.Cantidad AS CantidadComprada " +
+                    string consulta = "SELECT v.ID_Venta, c.ID_Cliente, c.Nombre AS NombreCliente, p.Nombre AS NombreProducto, v.Tipo, v.Saldo, v.Fecha_Venta, a.Cantidad AS CantidadComprada, v.Total " +
                          "FROM venta v " +
                          "INNER JOIN cliente c ON v.ID_Cliente = c.ID_Cliente " +
                          "INNER JOIN asignado a ON v.ID_Venta = a.ID_Venta " +
                          "INNER JOIN producto p ON a.ID_Producto = p.ID_Producto " +
                          "WHERE v.devuelto = 1";
 
-
                     MySqlCommand comandos = new MySqlCommand(consulta, conexion);
                     MySqlDataAdapter adaptador = new MySqlDataAdapter(comandos);
 
                     DataTable tablaVentas = new DataTable();
                     adaptador.Fill(tablaVentas);
+
+                    
+                    
 
                     dataGridVentas.DataSource = tablaVentas;
 
@@ -71,11 +157,12 @@ namespace kenjhi.frmsAdmin
                     dataGridVentas.Columns["NombreCliente"].HeaderText = "Nombre del Cliente";
                     dataGridVentas.Columns["NombreProducto"].HeaderText = "Nombre del Producto";
                     dataGridVentas.Columns["Tipo"].HeaderText = "Tipo";
-                    dataGridVentas.Columns["Saldo"].HeaderText = "Saldo Pesos UYU";
+                    dataGridVentas.Columns["Saldo"].HeaderText = "Saldo (UYU)";
                     dataGridVentas.Columns["Fecha_Venta"].HeaderText = "Fecha de Compra";
                     dataGridVentas.Columns["Fecha_Venta"].DefaultCellStyle.Format = "dd/MM/yyyy";
 
                     dataGridVentas.Columns["CantidadComprada"].HeaderText = "Cantidad Comprada";
+                    dataGridVentas.Columns["Total"].HeaderText = "Total (UYU)";
 
                     dataGridVentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
@@ -87,20 +174,18 @@ namespace kenjhi.frmsAdmin
                 }
             }
 
-           
-
             if (txtBusquedaDGV.Text.Length > 0)
             {
                 string textoBusqueda = txtBusquedaDGV.Text;
                 using (MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
                 {
                     conexion.Open();
-                    string consulta = "SELECT v.ID_Venta, c.Nombre AS NombreCliente, p.Nombre AS NombreProducto, v.Tipo, v.Saldo, v.Fecha_Venta, a.Cantidad AS CantidadComprada " +
+                    string consulta = "SELECT v.ID_Venta, c.Nombre AS NombreCliente, p.Nombre AS NombreProducto, v.Tipo, v.Saldo, v.Fecha_Venta, a.Cantidad AS CantidadComprada, v.Total " +
                         "FROM venta v " +
                         "INNER JOIN cliente c ON v.ID_Cliente = c.ID_Cliente " +
                         "INNER JOIN asignado a ON v.ID_Venta = a.ID_Venta " +
                         "INNER JOIN producto p ON a.ID_Producto = p.ID_Producto " +
-                        "WHERE c.Nombre LIKE @textoBusqueda AND v.devuelto = 1";  
+                        "WHERE c.Nombre LIKE @textoBusqueda AND v.devuelto = 1";
 
                     using (MySqlCommand cmd = new MySqlCommand(consulta, conexion))
                     {
@@ -108,11 +193,13 @@ namespace kenjhi.frmsAdmin
                         MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
                         DataTable dataTable = new DataTable();
                         adapter.Fill(dataTable);
+
+                       
+
                         dataGridVentas.DataSource = dataTable;
                         dataGridVentas.Columns["ID_Venta"].Visible = false;
                         if (dataTable.Rows.Count == 0)
                         {
-
                             labelresultado1.Visible = true;
                             labelresultado2.Visible = true;
                         }
@@ -226,12 +313,19 @@ namespace kenjhi.frmsAdmin
                 MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;");
                 conexion.Open();
 
-                string consulta = "SELECT v.ID_Venta, c.ID_Cliente, c.Nombre AS NombreCliente, p.Nombre AS NombreProducto, v.Tipo, v.Saldo, v.Fecha_Venta, a.Cantidad AS CantidadComprada " +
-                     "FROM venta v " +
-                     "INNER JOIN cliente c ON v.ID_Cliente = c.ID_Cliente " +
-                     "INNER JOIN asignado a ON v.ID_Venta = a.ID_Venta " +
-                     "INNER JOIN producto p ON a.ID_Producto = p.ID_Producto " +
-                     "WHERE v.devuelto = 1";
+                //string consulta = "SELECT v.ID_Venta, c.ID_Cliente, c.Nombre AS NombreCliente, p.Nombre AS NombreProducto, v.Tipo, v.Saldo, v.Fecha_Venta, a.Cantidad AS CantidadComprada " +
+                //     "FROM venta v " +
+                //     "INNER JOIN cliente c ON v.ID_Cliente = c.ID_Cliente " +
+                //     "INNER JOIN asignado a ON v.ID_Venta = a.ID_Venta " +
+                //     "INNER JOIN producto p ON a.ID_Producto = p.ID_Producto " +
+                //     "WHERE v.devuelto = 1";
+
+                string consulta = "SELECT v.ID_Venta, c.ID_Cliente, c.Nombre AS NombreCliente, p.Nombre AS NombreProducto, v.Tipo, v.Saldo, v.Fecha_Venta, a.Cantidad AS CantidadComprada, v.Total " +
+                "FROM venta v " +
+                "INNER JOIN cliente c ON v.ID_Cliente = c.ID_Cliente " +
+                "INNER JOIN asignado a ON v.ID_Venta = a.ID_Venta " +
+                "INNER JOIN producto p ON a.ID_Producto = p.ID_Producto " +
+                "WHERE v.devuelto = 1";
 
 
                 MySqlCommand comandos = new MySqlCommand(consulta, conexion);
@@ -239,6 +333,8 @@ namespace kenjhi.frmsAdmin
 
                 DataTable tablaVentas = new DataTable();
                 adaptador.Fill(tablaVentas);
+                dataGridVentas.DataSource = tablaVentas;
+
 
                 dataGridVentas.DataSource = tablaVentas;
 
@@ -248,11 +344,12 @@ namespace kenjhi.frmsAdmin
                 dataGridVentas.Columns["NombreCliente"].HeaderText = "Nombre del Cliente";
                 dataGridVentas.Columns["NombreProducto"].HeaderText = "Nombre del Producto";
                 dataGridVentas.Columns["Tipo"].HeaderText = "Tipo";
-                dataGridVentas.Columns["Saldo"].HeaderText = "Saldo Pesos UYU";
+                dataGridVentas.Columns["Saldo"].HeaderText = "Saldo (UYU)";
                 dataGridVentas.Columns["Fecha_Venta"].HeaderText = "Fecha de Compra";
                 dataGridVentas.Columns["Fecha_Venta"].DefaultCellStyle.Format = "dd/MM/yyyy";
-
+                dataGridVentas.Columns["Total"].HeaderText = "Total (UYU)";
                 dataGridVentas.Columns["CantidadComprada"].HeaderText = "Cantidad Comprada";
+
 
                 dataGridVentas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
