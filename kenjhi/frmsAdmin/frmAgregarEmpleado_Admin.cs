@@ -23,9 +23,26 @@ namespace kenjhi
         private void btnAgregarCliente_Click(object sender, EventArgs e)
         {
            
+            if (txtNombreEmpleado.Text.Length > 45)
+            {
+                MessageBox.Show("El nombre de usuario contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            if (txtEmailEmpleado.Text.Length > 35)
+            {
+                MessageBox.Show("El correo eléctronico ingresado contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (txtContraseñaEmpleado.Text.Length > 40 )
+            {
+                MessageBox.Show("La contraseña ingresada contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
 
             if (string.IsNullOrWhiteSpace(txtNombreEmpleado.Text) || string.IsNullOrWhiteSpace(txtEmailEmpleado.Text) ||
-       string.IsNullOrWhiteSpace(txtContraseñaEmpleado.Text) || string.IsNullOrWhiteSpace(txtContraseñaEmpleado2.Text))
+              string.IsNullOrWhiteSpace(txtContraseñaEmpleado.Text) || string.IsNullOrWhiteSpace(txtContraseñaEmpleado2.Text))
             {
                 lbl2.Visible = true;
                 System.Media.SystemSounds.Exclamation.Play();

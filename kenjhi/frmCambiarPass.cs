@@ -199,6 +199,12 @@ namespace kenjhi
         private void btnGuardarNuevaContraseña_Click(object sender, EventArgs e)
         {
            
+            if (txtNuevaContraseña.Text.Length > 40)
+            {
+                MessageBox.Show("La contraseña ingresada contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             if (txtNuevaContraseña.Text == txtNuevaContraseña2.Text)
             {
                 string connectionString = "Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;";
