@@ -32,6 +32,19 @@ namespace kenjhi.frmsAdmin
             string nombreCategoria = txtNombreCategoria.Text.Trim();
             string descripcionCategoria = txtDescripcionCategoria.Text;
 
+            if (txtNombreCategoria.Text.Length > 25)
+            {
+                MessageBox.Show("El nombre de categoría contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (txtDescripcionCategoria.Text.Length > 25) {
+
+                MessageBox.Show("La descripción contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            
+
             if (string.IsNullOrEmpty(nombreCategoria))
             {
                 lblCate.Visible = true; 
