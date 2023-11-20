@@ -61,7 +61,15 @@ namespace kenjhi
 
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
-           
+
+            if (txtNombreProducto.Text.Length > 45)
+            {
+                MessageBox.Show("El nombre de producto contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+
             if (string.IsNullOrEmpty(txtNombreProducto.Text) ||
             comboCategoriaProducto.SelectedItem == null ||
             numericUpDownPrecio.Value <= 0 ||

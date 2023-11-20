@@ -572,5 +572,36 @@ namespace kenjhi
             this.Close();
 
         }
+
+        private void dataGridProductos_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (e.ColumnIndex == dataGridProductos.Columns["Precio"].Index)
+            {
+                string nuevoValorPrecio = e.FormattedValue.ToString();
+
+                if (!EsNumero(nuevoValorPrecio) || Convert.ToInt32(nuevoValorPrecio) <= 0)
+                {
+                    MessageBox.Show("El precio debe ser un valor entero mayor que cero.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                }
+            }
+
+            if (e.ColumnIndex == dataGridProductos.Columns["Nombre"].Index)
+            {
+                string nuevoValorNombre = e.FormattedValue.ToString();
+
+                if (nuevoValorNombre.Length > 45)
+                {
+                    MessageBox.Show("El nombre del producto contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        private bool EsNumero(string cadena)
+        {
+            int resultado;
+            return int.TryParse(cadena, out resultado);
+        }
     }
 }
