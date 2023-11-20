@@ -3,6 +3,7 @@ using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace kenjhi
 {
@@ -24,10 +25,47 @@ namespace kenjhi
         {
             if (txtCICliente.Text.Length > 8)
             {
-                MessageBox.Show("La CI ingresada supera los 8 digitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("La CI ingresada supera los 8 dígitos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+
+            
+            }
+
+
+
+            if(txtNombreCliente.Text.Length > 25)
+            {
+                MessageBox.Show("El nombre de cliente contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (txtNumeroCliente.Text.Length > 9)
+            {
+                MessageBox.Show("El número de teléfono ingresado supera los 9 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
 
             }
+
+            if (txtDirCliente.Text.Length > 50)
+            {
+                MessageBox.Show("La dirección ingresada contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (txtEmail.Text.Length > 50)
+            {
+                MessageBox.Show("El correo eléctronico ingresado contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!EsNumero(txtNumeroCliente.Text))
+            {
+                MessageBox.Show("El número de teléfono debe contener solo dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                return;
+            }
+
+            
 
             if (string.IsNullOrWhiteSpace(txtNombreCliente.Text) || string.IsNullOrWhiteSpace(txtNumeroCliente.Text) || string.IsNullOrEmpty(txtCICliente.Text))
             {
@@ -76,6 +114,11 @@ namespace kenjhi
                 MessageBox.Show("Nuevo cliente ingresado correctamente.", "Nuevo cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LimpiarCampos();
             }
+        }
+
+        private bool EsNumero(string cadena)
+        {
+            return cadena.All(char.IsDigit);
         }
 
         private bool VerificarExistenciaCliente(string nombre, string ci)

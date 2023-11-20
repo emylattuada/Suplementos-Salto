@@ -286,12 +286,12 @@
             this.label8.ForeColor = System.Drawing.Color.DimGray;
             this.label8.Location = new System.Drawing.Point(107, 16);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(248, 13);
+            this.label8.Size = new System.Drawing.Size(253, 13);
             this.label8.TabIndex = 94;
-            this.label8.Text = "Menú principal > Productos > Ingresos de producto";
+            this.label8.Text = "Menú principal > Productos > Ingresos de productos";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
-            // frmIngresosProducto_Admin
+            // frmIngresosProducto_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -316,7 +316,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnVolver);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmIngresosProducto_Admin";
+            this.Name = "frmIngresosProducto_Empleados";
             this.Text = "Suplementos Salto";
             ((System.ComponentModel.ISupportInitialize)(this.numericCantidadIngreso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picturePasos)).EndInit();

@@ -76,7 +76,7 @@
             // pictureBoxClientes
             // 
             this.pictureBoxClientes.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxClientes.Image")));
-            this.pictureBoxClientes.Location = new System.Drawing.Point(160, 154);
+            this.pictureBoxClientes.Location = new System.Drawing.Point(152, 154);
             this.pictureBoxClientes.Name = "pictureBoxClientes";
             this.pictureBoxClientes.Size = new System.Drawing.Size(130, 137);
             this.pictureBoxClientes.TabIndex = 80;
@@ -102,7 +102,7 @@
             this.labelClientes.AutoSize = true;
             this.labelClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelClientes.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelClientes.Location = new System.Drawing.Point(189, 127);
+            this.labelClientes.Location = new System.Drawing.Point(181, 127);
             this.labelClientes.Name = "labelClientes";
             this.labelClientes.Size = new System.Drawing.Size(77, 24);
             this.labelClientes.TabIndex = 83;
@@ -113,7 +113,7 @@
             this.labelProductos.AutoSize = true;
             this.labelProductos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelProductos.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.labelProductos.Location = new System.Drawing.Point(434, 127);
+            this.labelProductos.Location = new System.Drawing.Point(426, 127);
             this.labelProductos.Name = "labelProductos";
             this.labelProductos.Size = new System.Drawing.Size(95, 24);
             this.labelProductos.TabIndex = 85;
@@ -122,7 +122,7 @@
             // pictureBoxProductos
             // 
             this.pictureBoxProductos.Image = global::kenjhi.Properties.Resources.productos;
-            this.pictureBoxProductos.Location = new System.Drawing.Point(414, 154);
+            this.pictureBoxProductos.Location = new System.Drawing.Point(406, 154);
             this.pictureBoxProductos.Name = "pictureBoxProductos";
             this.pictureBoxProductos.Size = new System.Drawing.Size(130, 137);
             this.pictureBoxProductos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

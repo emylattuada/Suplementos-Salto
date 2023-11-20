@@ -268,7 +268,7 @@ namespace kenjhi
         private void radioContado_CheckedChanged(object sender, EventArgs e)
         {
             numericCuotasVenta.Enabled = false;
-            numericCuotasVenta.Value = 0;
+            numericCuotasVenta.Value = 1;
         }
 
         private void radioCuotas_CheckedChanged(object sender, EventArgs e)
@@ -386,7 +386,7 @@ namespace kenjhi
             comboListaClientes.SelectedIndex = -1;
             comboListaProductos.SelectedIndex = -1;
             numericCantidadVenta.Value = 1;
-            numericCuotasVenta.Value = 0;
+            numericCuotasVenta.Value = 1;
             radioContado.Checked = false;
             radioCuotas.Checked = false;
             dataGridCarrito.Rows.Clear();
