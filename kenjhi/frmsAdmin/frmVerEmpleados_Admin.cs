@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -343,6 +344,42 @@ namespace kenjhi
         {
             this.Close();
 
+        }
+
+        private void dataGridEmpleados_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+                if (e.ColumnIndex == dataGridEmpleados.Columns["NombreUsuario"].Index)
+                {
+                    string nuevoValorNombreUsuario = e.FormattedValue.ToString();
+
+                    if (nuevoValorNombreUsuario.Length > 45)
+                    {
+                        MessageBox.Show("El nombre de usuario ingresado contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        e.Cancel = true;
+                    }
+                }
+                else if (e.ColumnIndex == dataGridEmpleados.Columns["email"].Index)
+                {
+                    string nuevoValorEmail = e.FormattedValue.ToString();
+
+                    if (nuevoValorEmail.Length > 35)
+                    {
+                        MessageBox.Show("El correo eléctronico ingresado contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        e.Cancel = true;
+                    }
+                    else if (!string.IsNullOrEmpty(nuevoValorEmail) && !EsCorreoElectronicoValido(nuevoValorEmail))
+                    {
+                        MessageBox.Show("El correo electrónico no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        e.Cancel = true;
+                    }
+                }
+            }
+        }
+        private bool EsCorreoElectronicoValido(string correo)
+        {
+            return Regex.IsMatch(correo, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$");
         }
     }
 }

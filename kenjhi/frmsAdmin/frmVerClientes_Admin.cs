@@ -429,6 +429,11 @@ namespace kenjhi
                     MessageBox.Show("El correo electrónico ingresado contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     e.Cancel = true;
                 }
+                else if (!string.IsNullOrEmpty(nuevoValorEmail) && !EsCorreoElectronicoValido(nuevoValorEmail))
+                {
+                    MessageBox.Show("El correo electrónico no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                }
             }
 
 

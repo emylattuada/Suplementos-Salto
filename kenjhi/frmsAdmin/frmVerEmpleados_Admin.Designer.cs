@@ -106,6 +106,7 @@
             this.dataGridEmpleados.Size = new System.Drawing.Size(535, 405);
             this.dataGridEmpleados.TabIndex = 24;
             this.dataGridEmpleados.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridEmpleados_CellMouseClick);
+            this.dataGridEmpleados.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridEmpleados_CellValidating);
             this.dataGridEmpleados.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridEmpleados_CellValueChanged);
             // 
             // txtBusquedaDGV
