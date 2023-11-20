@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
@@ -372,6 +373,76 @@ namespace kenjhi
 
                 }
             }
+
+            if (e.ColumnIndex == dataGridClientes.Columns["Telefono"].Index)
+            {
+                string nuevoValor = e.FormattedValue.ToString();
+
+
+                if (!EsNumero(nuevoValor))
+                {
+
+                    MessageBox.Show("El número de teléfono debe contener solo dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                }
+
+
+                if (nuevoValor.Length > 9)
+                {
+
+                    MessageBox.Show("El número de teléfono no puede tener más de 9 dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                }
+            }
+
+            if (e.ColumnIndex == dataGridClientes.Columns["Nombre"].Index)
+            {
+                string nuevoValorNombre = e.FormattedValue.ToString();
+
+                if (nuevoValorNombre.Length > 25)
+                {
+                    MessageBox.Show("El nombre de cliente contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                }
+            }
+
+            if (e.ColumnIndex == dataGridClientes.Columns["Direccion"].Index)
+            {
+                string nuevoValorDireccion = e.FormattedValue.ToString();
+
+                if (nuevoValorDireccion.Length > 50)
+                {
+                    MessageBox.Show("La dirección del cliente no puede tener más de 50 caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                }
+            }
+
+            if (e.ColumnIndex == dataGridClientes.Columns["Email"].Index)
+            {
+                string nuevoValorEmail = e.FormattedValue.ToString();
+
+                if (!string.IsNullOrEmpty(nuevoValorEmail) && !EsCorreoElectronicoValido(nuevoValorEmail))
+                {
+                    MessageBox.Show("El correo electrónico no es válido.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                }
+
+                if (nuevoValorEmail.Length > 50)
+                {
+                    MessageBox.Show("El correo electrónico ingresado contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                }
+            }
+        }
+
+        private bool EsNumero(string cadena)
+        {
+            return cadena.All(char.IsDigit);
+        }
+
+        private bool EsCorreoElectronicoValido(string correo)
+        {
+            return Regex.IsMatch(correo, @"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$");
         }
     }
 }

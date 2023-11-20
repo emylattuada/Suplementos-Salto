@@ -68,7 +68,7 @@ namespace kenjhi
             {
                 conexion.Open();
 
-                string consulta = "SELECT Rol FROM usuarios WHERE NombreUsuario = @NombreUsuario AND Contraseña = @Contraseña";
+                string consulta = "SELECT Rol FROM usuarios WHERE NombreUsuario = @NombreUsuario AND Contraseña = @Contraseña AND Visible = 1";
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
                 comando.Parameters.AddWithValue("@NombreUsuario", nombreUsuario);
                 comando.Parameters.AddWithValue("@Contraseña", contraseñaEncriptada);
@@ -108,8 +108,8 @@ namespace kenjhi
             }
             finally
             {
+                conexion.Close();
             }
-
 
         }
 
