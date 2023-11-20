@@ -246,5 +246,29 @@ namespace kenjhi.frmsAdmin
                 }
             }
         }
+
+        private void dataGridCategorias_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridCategorias.Columns["Nombre"].Index)
+            {
+                string nuevoValorNombre = e.FormattedValue.ToString();
+
+                if (nuevoValorNombre.Length > 25)
+                {
+                    MessageBox.Show("El nombre de categoría contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                }
+            }
+            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridCategorias.Columns["Descripcion"].Index)
+            {
+                string nuevoValorNombre = e.FormattedValue.ToString();
+
+                if (nuevoValorNombre.Length > 25)
+                {
+                    MessageBox.Show("La descripción contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                }
+            }
+        }
     }
 }

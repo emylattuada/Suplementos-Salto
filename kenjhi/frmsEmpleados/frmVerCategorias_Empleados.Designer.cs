@@ -156,6 +156,7 @@
             this.dataGridCategorias.Size = new System.Drawing.Size(535, 405);
             this.dataGridCategorias.TabIndex = 76;
             this.dataGridCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCategorias_CellClick);
+            this.dataGridCategorias.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridCategorias_CellValidating);
             this.dataGridCategorias.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCategorias_CellValueChanged);
             // 
             // lblSinResultado4
@@ -286,7 +287,7 @@
             this.btnEliminarCategoria.Visible = false;
             this.btnEliminarCategoria.Click += new System.EventHandler(this.btnEliminarCategoria_Click);
             // 
-            // frmVerCategorias_Admin
+            // frmVerCategorias_Empleados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -305,7 +306,7 @@
             this.Controls.Add(this.btnVolver);
             this.Controls.Add(this.btnCancelarModificacion);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frmVerCategorias_Admin";
+            this.Name = "frmVerCategorias_Empleados";
             this.Text = "Suplementos Salto";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridCategorias)).EndInit();
             this.ResumeLayout(false);

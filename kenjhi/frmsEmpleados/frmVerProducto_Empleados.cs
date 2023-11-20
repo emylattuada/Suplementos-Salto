@@ -447,6 +447,9 @@ namespace kenjhi
                 }
             }
 
+
+
+
         }
         private bool CategoriaExisteEnBD(string nuevaCategoria)
         {

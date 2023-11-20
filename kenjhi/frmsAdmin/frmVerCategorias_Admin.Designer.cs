@@ -156,6 +156,7 @@
             this.dataGridCategorias.Size = new System.Drawing.Size(535, 405);
             this.dataGridCategorias.TabIndex = 76;
             this.dataGridCategorias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCategorias_CellClick);
+            this.dataGridCategorias.CellValidating += new System.Windows.Forms.DataGridViewCellValidatingEventHandler(this.dataGridCategorias_CellValidating);
             this.dataGridCategorias.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridCategorias_CellValueChanged);
             // 
             // lblSinResultado4

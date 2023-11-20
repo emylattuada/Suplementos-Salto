@@ -17,11 +17,12 @@ namespace kenjhi.frmsAdmin
         public frmVerCategorias_Empleados()
         {
             InitializeComponent();
+
             txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
             txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
             dataGridCategorias.RowTemplate.Height = 40;
-            dataGridCategorias.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10); 
-
+            dataGridCategorias.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10);
+           
             CargarDatosCate();
 
         }
@@ -44,7 +45,7 @@ namespace kenjhi.frmsAdmin
 
                 dataGridCategorias.DataSource = tablaCategorias;
 
-                dataGridCategorias.Columns["ID_Categoria"].Visible = false; 
+                dataGridCategorias.Columns["ID_Categoria"].Visible = false;
                 dataGridCategorias.Columns["Nombre"].HeaderText = "Nombre";
                 dataGridCategorias.Columns["Descripcion"].HeaderText = "Descripción";
 
@@ -99,6 +100,8 @@ namespace kenjhi.frmsAdmin
 
         private void btnGuardarCambios_Click(object sender, EventArgs e)
         {
+
+
             try
             {
                 using (MySqlConnection connection = new MySqlConnection("Server = localhost; Database=suple; Uid=suple_empleado; Pwd=supleempleado2023!;"))
@@ -243,6 +246,30 @@ namespace kenjhi.frmsAdmin
                             lblSinResultado4.Visible = false;
                         }
                     }
+                }
+            }
+        }
+
+        private void dataGridCategorias_CellValidating(object sender, DataGridViewCellValidatingEventArgs e)
+        {
+            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridCategorias.Columns["Nombre"].Index)
+            {
+                string nuevoValorNombre = e.FormattedValue.ToString();
+
+                if (nuevoValorNombre.Length > 25)
+                {
+                    MessageBox.Show("El nombre de categoría contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                }
+            }
+            if (e.RowIndex >= 0 && e.ColumnIndex == dataGridCategorias.Columns["Descripcion"].Index)
+            {
+                string nuevoValorNombre = e.FormattedValue.ToString();
+
+                if (nuevoValorNombre.Length > 25)
+                {
+                    MessageBox.Show("La descripción contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
                 }
             }
         }
