@@ -39,24 +39,7 @@ namespace kenjhi
             toolTipAyuda = new ToolTip();
 
 
-            //using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
-            //{
-            //    connection.Open();
-
-            //    string consultaClientes = "SELECT ID_Cliente, Nombre, Telefono FROM cliente WHERE Visible = 1";
-
-            //    MySqlCommand cmdClientes = new MySqlCommand(consultaClientes, connection);
-            //    MySqlDataReader readerClientes = cmdClientes.ExecuteReader();
-
-            //    while (readerClientes.Read())
-            //    {
-            //        int idCliente = readerClientes.GetInt32("ID_Cliente");
-            //        string nombreCliente = readerClientes.GetString("Nombre");
-            //        string telefonoCliente = readerClientes.GetString("Telefono");
-
-            //        comboListaClientes.Items.Add(new Cliente(idCliente, nombreCliente, telefonoCliente));
-            //    }
-            //}
+            
             using (MySqlConnection connection = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"))
             {
                 connection.Open();

@@ -217,7 +217,7 @@ namespace kenjhi
         private void SeccionAdmin_Click(object sender, EventArgs e)
         {
             
-            //falta implementar
+            
         }
 
         
@@ -225,7 +225,7 @@ namespace kenjhi
         private void labelADM_Click(object sender, EventArgs e)
         {
             
-            //sin uso
+            
 
         }
 
@@ -239,7 +239,7 @@ namespace kenjhi
         private void btnAdm_Click(object sender, EventArgs e)
         {
             
-            //usamos el 1
+            
         }
 
         private void btnVersion_Click(object sender, EventArgs e)

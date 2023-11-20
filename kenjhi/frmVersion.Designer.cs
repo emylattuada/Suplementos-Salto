@@ -48,7 +48,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(572, 62);
             this.label1.TabIndex = 25;
-            this.label1.Text = "Versión 1.89 de aplicación Suplementos Salto \r\n\r\n";
+            this.label1.Text = "Versión 1.91 de aplicación Suplementos Salto \r\n\r\n";
             // 
             // label2
             // 
