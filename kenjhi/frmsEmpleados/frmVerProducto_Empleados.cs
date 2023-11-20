@@ -19,7 +19,7 @@ namespace kenjhi
             InitializeComponent();
             dataGridProductos.CellEndEdit += dataGridProductos_CellEndEdit;
 
-            txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
+            txtBusquedaDGV.Text = "Ingresa un nombre de producto para realizar la búsqueda";
             txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
             dataGridProductos.RowTemplate.Height = 40;
             dataGridProductos.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10);
@@ -137,8 +137,14 @@ namespace kenjhi
                     btnGuardarCambios.Visible = false;
                     btnEliminarProducto.Visible = false;
                     btnCancelarModificacion.Visible = false;
-                    txtBusquedaDGV.Clear();
-                    txtBusquedaDGV.ForeColor = Color.White;
+                    if (txtBusquedaDGV.Text != "Ingresa un nombre de producto para realizar la búsqueda")
+                    {
+                        txtBusquedaDGV.Clear();
+                        txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
+                        txtBusquedaDGV.Text = "Ingresa un nombre de producto para realizar la búsqueda";
+
+                    }
+
 
 
                     foreach (DataGridViewColumn column in dataGridProductos.Columns)
@@ -245,7 +251,7 @@ namespace kenjhi
 
         private void txtBusquedaDGV_MouseClick(object sender, MouseEventArgs e)
         {
-            if (txtBusquedaDGV.Text == "Ingresa un nombre para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
+            if (txtBusquedaDGV.Text == "Ingresa un nombre de producto para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
 
         }
 
@@ -280,8 +286,13 @@ namespace kenjhi
                 catch /*(Exception ex)*/
                 {
                     MessageBox.Show("Producto eliminado", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtBusquedaDGV.Clear();
-                    txtBusquedaDGV.ForeColor = Color.White;
+                    if (txtBusquedaDGV.Text != "Ingresa un nombre de producto para realizar la búsqueda")
+                    {
+                        txtBusquedaDGV.Clear();
+                        txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
+                        txtBusquedaDGV.Text = "Ingresa un nombre de producto para realizar la búsqueda";
+
+                    }
 
                     try
                     {

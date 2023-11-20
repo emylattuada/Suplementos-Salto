@@ -16,7 +16,7 @@ namespace kenjhi.frmsAdmin
         public frmVerVentas_Empleados()
         {
             InitializeComponent();
-            txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
+            txtBusquedaDGV.Text = "Ingresa un nombre de cliente para realizar la búsqueda";
             txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
             dataGridVentas.RowTemplate.Height = 40;
             dataGridVentas.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10);
@@ -169,7 +169,7 @@ namespace kenjhi.frmsAdmin
 
         private void txtBusquedaDGV_MouseClick(object sender, MouseEventArgs e)
         {
-            if (txtBusquedaDGV.Text == "Ingresa un nombre para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
+            if (txtBusquedaDGV.Text == "Ingresa un nombre de cliente para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
 
         }
 
@@ -231,7 +231,13 @@ namespace kenjhi.frmsAdmin
 
                         MessageBox.Show("Devolución exitosa.", "Devolución", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         btnDevolucion.Visible = false;
-                        txtBusquedaDGV.Clear();
+                        if (txtBusquedaDGV.Text != "Ingresa un nombre de cliente para realizar la búsqueda")
+                        {
+                            txtBusquedaDGV.Clear();
+                            txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
+                            txtBusquedaDGV.Text = "Ingresa un nombre de cliente para realizar la búsqueda";
+
+                        }
                         CargaDatosDGV();
 
                     }

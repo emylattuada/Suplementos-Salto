@@ -127,9 +127,15 @@ namespace kenjhi
 
                         CargarClientesCuotas();
                         conexion.Close();
-                        txtBusquedaDGV.Clear();
+                       
                         btnPagarCuotas.Visible = false;
-                        txtBusquedaDGV.ForeColor=System.Drawing.Color.White;    
+                        if (txtBusquedaDGV.Text != "Ingresa un nombre de cliente para realizar la búsqueda")
+                        {
+                            txtBusquedaDGV.Clear();
+                            txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
+                            txtBusquedaDGV.Text = "Ingresa un nombre de cliente para realizar la búsqueda";
+
+                        }
                     }
                     catch (Exception ex)
                     {

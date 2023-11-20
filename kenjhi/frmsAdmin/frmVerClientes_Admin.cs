@@ -84,8 +84,15 @@ namespace kenjhi
                     }
 
                     MessageBox.Show("Datos actualizados.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtBusquedaDGV.Clear();
-                    txtBusquedaDGV.ForeColor = Color.White;
+                    if (txtBusquedaDGV.Text != "Ingresa un nombre para realizar la búsqueda")
+                    {
+                        txtBusquedaDGV.Clear();
+                        txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
+                        txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
+
+
+                    }
+                   
 
                     btnGuardarCambios.Visible = false;
                     btnEliminarCliente.Visible = false;
@@ -183,8 +190,15 @@ namespace kenjhi
                 catch 
                 {
                     MessageBox.Show("Cliente eliminado.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtBusquedaDGV.Clear();
-                    txtBusquedaDGV.ForeColor = Color.White;
+
+                    if (txtBusquedaDGV.Text != "Ingresa un nombre para realizar la búsqueda")
+                    {
+                        txtBusquedaDGV.Clear();
+                        txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
+                        txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
+
+
+                    }
                     try
                     {
                         MySqlConnection conexion = new MySqlConnection("Server=localhost; Database=suple; Uid=suple_admin; Pwd=supleadmin2023!_saltocentro;"); ;
@@ -357,17 +371,23 @@ namespace kenjhi
         {
             if (e.ColumnIndex == dataGridClientes.Columns["CI"].Index)
             {
-                string newValue = e.FormattedValue.ToString();
+                string nuevoValorCI = e.FormattedValue.ToString();
 
-                if (string.IsNullOrEmpty(newValue))
+                if (!EsNumero(nuevoValorCI))
+                {
+                    MessageBox.Show("El campo CI solo debe contener dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                }
+
+                if (string.IsNullOrEmpty(nuevoValorCI))
                 {
                     MessageBox.Show("No se puede dejar vacío el campo CI.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                   
+                    e.Cancel = true;
                 }
-                else if (newValue.Length > 8)
+                else if (nuevoValorCI.Length > 8)
                 {
                     MessageBox.Show("La CI no puede tener más de 8 dígitos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                   
+                    e.Cancel = true;
                 }
             }
 

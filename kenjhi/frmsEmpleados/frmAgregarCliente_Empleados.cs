@@ -32,6 +32,12 @@ namespace kenjhi
 
             }
 
+            if (!EsNumero(txtCICliente.Text))
+            {
+                MessageBox.Show("El campo CI solo debe contener dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
 
 
             if (txtNombreCliente.Text.Length > 25)

@@ -90,7 +90,6 @@ namespace kenjhi
                     }
 
                     MessageBox.Show("Datos de usuarios actualizados.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtBusquedaDGV.ForeColor = Color.White;
 
                     try
                     {
@@ -125,8 +124,14 @@ namespace kenjhi
                     dataGridEmpleados.ReadOnly = true;
                     btnCancelarModificacion.Visible = false;
                     btnModificar.Visible = true;
-                    txtBusquedaDGV.Clear();
+                    if (txtBusquedaDGV.Text != "Ingresa un nombre de usuario para realizar la búsqueda")
+                    {
+                        txtBusquedaDGV.Clear();
+                        txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
+                        txtBusquedaDGV.Text = "Ingresa un nombre de usuario para realizar la búsqueda";
 
+
+                    }
                 }
             }
             catch (Exception ex)
@@ -192,8 +197,13 @@ namespace kenjhi
                 catch
                 {
                     MessageBox.Show("Empleado eliminado", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtBusquedaDGV.Clear();
-                    txtBusquedaDGV.ForeColor = Color.White;
+                    if (txtBusquedaDGV.Text != "Ingresa un nombre de usuario para realizar la búsqueda")
+                    {
+                        txtBusquedaDGV.Clear();
+                        txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
+                        txtBusquedaDGV.Text = "Ingresa un nombre de usuario para realizar la búsqueda";
+
+                    }
 
                 }
                 try

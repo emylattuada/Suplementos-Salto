@@ -570,6 +570,19 @@ namespace kenjhi
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            if (txtNombreUsuario.Text.Length > 45) {
+
+                MessageBox.Show("El nombre de usuario contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            
+            }
+
+            if (txtEmail.Text.Length > 35)
+            {
+                MessageBox.Show("El correo eléctronico ingresado contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             string nuevoNombreUsuario = txtNombreUsuario.Text;
             string nuevoEmail = txtEmail.Text;
 

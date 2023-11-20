@@ -17,7 +17,7 @@ namespace kenjhi.frmsAdmin
         public frmVerCategorias_Admin()
         {
             InitializeComponent();
-            txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
+            txtBusquedaDGV.Text = "Ingresa un nombre de categoría para realizar la búsqueda";
             txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
             dataGridCategorias.RowTemplate.Height = 40;
             dataGridCategorias.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10); 
@@ -113,8 +113,13 @@ namespace kenjhi.frmsAdmin
                     btnGuardarCambios.Visible = false;
                     btnCancelarModificacion.Visible = false;
                     btnModificar.Visible = true;
-                    txtBusquedaDGV.Clear();
-                    txtBusquedaDGV.ForeColor = Color.White;
+                    if (txtBusquedaDGV.Text != "Ingresa un nombre de categoría para realizar la búsqueda")
+                    {
+                        txtBusquedaDGV.Clear();
+                        txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
+                        txtBusquedaDGV.Text = "Ingresa un nombre de categoría para realizar la búsqueda";
+
+                    }
 
                     CargarDatosCate();
                 }
@@ -143,8 +148,13 @@ namespace kenjhi.frmsAdmin
                         comandoActualizarCategoria.ExecuteNonQuery();
 
                         MessageBox.Show("Categoría eliminada.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        txtBusquedaDGV.Clear();
-                        txtBusquedaDGV.ForeColor = Color.White;
+                        if (txtBusquedaDGV.Text != "Ingresa un nombre de producto para realizar la búsqueda")
+                        {
+                            txtBusquedaDGV.Clear();
+                            txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
+                            txtBusquedaDGV.Text = "Ingresa un nombre de producto para realizar la búsqueda";
+
+                        }
                         CargarDatosCate();
 
                     }
@@ -169,7 +179,7 @@ namespace kenjhi.frmsAdmin
 
         private void txtBusquedaDGV_MouseClick(object sender, MouseEventArgs e)
         {
-            if (txtBusquedaDGV.Text == "Ingresa un nombre para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
+            if (txtBusquedaDGV.Text == "Ingresa un nombre de categoría para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
 
         }
 

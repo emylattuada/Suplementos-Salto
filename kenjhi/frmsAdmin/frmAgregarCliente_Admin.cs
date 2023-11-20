@@ -28,12 +28,15 @@ namespace kenjhi
                 MessageBox.Show("La CI ingresada supera los 8 dígitos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
 
-            
+            }
+            if (!EsNumero(txtCICliente.Text))
+            {
+                MessageBox.Show("El campo CI solo debe contener dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
 
-
-            if(txtNombreCliente.Text.Length > 25)
+            if (txtNombreCliente.Text.Length > 25)
             {
                 MessageBox.Show("El nombre de cliente contiene demasiados caracteres.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;

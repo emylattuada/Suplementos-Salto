@@ -19,7 +19,7 @@ namespace kenjhi
         public frmVerClientes_Empleados()
         {
             InitializeComponent();
-            txtBusquedaDGV.Text = "Ingresa un nombre para realizar la búsqueda";
+            txtBusquedaDGV.Text = "Ingresa un nombre de cliente para realizar la búsqueda";
             txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
             dataGridClientes.RowTemplate.Height = 40;
             dataGridClientes.RowTemplate.DefaultCellStyle.Padding = new Padding(0, 10, 0, 10);
@@ -85,8 +85,13 @@ namespace kenjhi
                     }
 
                     MessageBox.Show("Datos actualizados.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtBusquedaDGV.Clear();
-                    txtBusquedaDGV.ForeColor = Color.White;
+                    if (txtBusquedaDGV.Text != "Ingresa un nombre de cliente para realizar la búsqueda")
+                    {
+                        txtBusquedaDGV.Clear();
+                        txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
+                        txtBusquedaDGV.Text = "Ingresa un nombre de cliente para realizar la búsqueda";
+
+                    }
 
                     btnGuardarCambios.Visible = false;
                     btnEliminarCliente.Visible = false;
@@ -184,8 +189,13 @@ namespace kenjhi
                 catch 
                 {
                     MessageBox.Show("Cliente eliminado.", "Actualización", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtBusquedaDGV.Clear();
-                    txtBusquedaDGV.ForeColor = Color.White;
+                    if (txtBusquedaDGV.Text != "Ingresa un nombre de cliente para realizar la búsqueda")
+                    {
+                        txtBusquedaDGV.Clear();
+                        txtBusquedaDGV.ForeColor = System.Drawing.Color.DarkGray;
+                        txtBusquedaDGV.Text = "Ingresa un nombre de cliente para realizar la búsqueda";
+
+                    }
                     try
                     {
                         MySqlConnection conexion = new MySqlConnection("Server = localhost; Database=suple; Uid=suple_empleado; Pwd=supleempleado2023!;"); ;
@@ -343,7 +353,7 @@ namespace kenjhi
         private void txtBusquedaDGV_MouseClick(object sender, MouseEventArgs e)
         {   
 
-            if (txtBusquedaDGV.Text == "Ingresa un nombre para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
+            if (txtBusquedaDGV.Text == "Ingresa un nombre de cliente para realizar la búsqueda") { txtBusquedaDGV.Clear(); txtBusquedaDGV.ForeColor = System.Drawing.Color.White; }
         }
 
         private void dataGridClientes_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -360,17 +370,23 @@ namespace kenjhi
         {
             if (e.ColumnIndex == dataGridClientes.Columns["CI"].Index)
             {
-                string newValue = e.FormattedValue.ToString();
+                string nuevoValorCI = e.FormattedValue.ToString();
 
-                if (string.IsNullOrEmpty(newValue))
+                if (!EsNumero(nuevoValorCI))
+                {
+                    MessageBox.Show("El campo CI solo debe contener dígitos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    e.Cancel = true;
+                }
+
+                if (string.IsNullOrEmpty(nuevoValorCI))
                 {
                     MessageBox.Show("No se puede dejar vacío el campo CI.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                    e.Cancel = true;
                 }
-                else if (newValue.Length > 8)
+                else if (nuevoValorCI.Length > 8)
                 {
                     MessageBox.Show("La CI no puede tener más de 8 dígitos.", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                    e.Cancel = true;
                 }
             }
 
