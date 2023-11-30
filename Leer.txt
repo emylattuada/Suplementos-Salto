@@ -1,0 +1,20 @@
+El usuario insertado en la tabla de usuarios es
+user:nicosuple
+pass:admin
+
+***************
+Creacion usuarios bd
+Admin:
+CREATE USER 'suple_admin'@'%' IDENTIFIED BY 'supleadmin2023!_saltocentro';
+GRANT INSERT, SELECT, UPDATE ON suple.* TO 'suple_admin'@'%';
+
+Empleado:
+CREATE USER 'suple_empleado'@'%' IDENTIFIED BY 'supleempleado2023!';
+GRANT INSERT, SELECT, UPDATE ON suple.asignado TO 'suple_empleado'@'%';
+GRANT INSERT, SELECT, UPDATE ON suple.categoria TO 'suple_empleado'@'%';
+GRANT INSERT, SELECT, UPDATE ON suple.cliente TO 'suple_empleado'@'%';
+GRANT INSERT, SELECT, UPDATE ON suple.ingresos TO 'suple_empleado'@'%';
+GRANT INSERT, SELECT, UPDATE ON suple.pagos TO 'suple_empleado'@'%';
+GRANT INSERT, SELECT, UPDATE ON suple.producto TO 'suple_empleado'@'%';
+GRANT INSERT, SELECT, UPDATE ON suple.venta TO 'suple_empleado'@'%';
+***************
